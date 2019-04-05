@@ -1,0 +1,13 @@
+binary_sensor:
+  - platform: rest
+    name: Travis Status
+    resource: !secret travis_url
+    scan_interval: 60
+    value_template: "{{ value_json.last_build_status|int(1) == 0 }}"
+
+sensor:
+  - platform: rest
+    name: Travis Status Label
+    resource: !secret travis_url
+    scan_interval: 60
+    value_template: "{{ value_json.last_build_number }}"
