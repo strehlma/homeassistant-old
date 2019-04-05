@@ -34,6 +34,8 @@ lovelace:
 # Enables configuration UI
 config:
 
+history:
+
 recorder:
   db_url: !secret mysql_connection
   purge_interval: 1
