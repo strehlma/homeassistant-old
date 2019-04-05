@@ -1,0 +1,64 @@
+tado:
+  username: !secret tado_username
+  password: !secret tado_password
+
+binary_sensor:
+  - platform: template
+    sensors:
+      cl_livingroom_manual:
+        value_template: "{{ is_state('climate.wohnzimmer', 'Manual') }}"
+      cl_livingroom_timer:
+        value_template: "{{ is_state('climate.wohnzimmer', 'Timer') }}"
+      cl_livingroom_tado:
+        value_template: "{{ is_state('climate.wohnzimmer', 'Tado mode') }}"
+      cl_livingroom_smart:
+        value_template: "{{ is_state('climate.wohnzimmer', 'Smart schedule') }}"
+      cl_livingroom_off:
+        value_template: "{{ is_state('climate.wohnzimmer', 'Off') }}"
+
+      cl_bedroom_manual:
+        value_template: "{{ is_state('climate.schlafzimmer', 'Manual') }}"
+      cl_bedroom_timer:
+        value_template: "{{ is_state('climate.schlafzimmer', 'Timer') }}"
+      cl_bedroom_tado:
+        value_template: "{{ is_state('climate.schlafzimmer', 'Tado mode') }}"
+      cl_bedroom_smart:
+        value_template: "{{ is_state('climate.schlafzimmer', 'Smart schedule') }}"
+      cl_bedroom_off:
+        value_template: "{{ is_state('climate.schlafzimmer', 'Off') }}"
+
+      cl_kitchen_manual:
+        value_template: "{{ is_state('climate.kuche', 'Manual') }}"
+      cl_kitchen_timer:
+        value_template: "{{ is_state('climate.kuche', 'Timer') }}"
+      cl_kitchen_tado:
+        value_template: "{{ is_state('climate.kuche', 'Tado mode') }}"
+      cl_kitchen_smart:
+        value_template: "{{ is_state('climate.kuche', 'Smart schedule') }}"
+      cl_kitchen_off:
+        value_template: "{{ is_state('climate.kuche', 'Off') }}"
+
+      cl_office_manual:
+        value_template: "{{ is_state('climate.buro', 'Manual') }}"
+      cl_office_timer:
+        value_template: "{{ is_state('climate.buro', 'Timer') }}"
+      cl_office_tado:
+        value_template: "{{ is_state('climate.buro', 'Tado mode') }}"
+      cl_office_smart:
+        value_template: "{{ is_state('climate.buro', 'Smart schedule') }}"
+      cl_office_off:
+        value_template: "{{ is_state('climate.buro', 'Off') }}"
+
+      cl_bathroom_manual:
+        value_template: "{{ is_state('climate.bad', 'Manual') }}"
+      cl_bathroom_timer:
+        value_template: "{{ is_state('climate.bad', 'Timer') }}"
+      cl_bathroom_tado:
+        value_template: "{{ is_state('climate.bad', 'Tado mode') }}"
+      cl_bathroom_smart:
+        value_template: "{{ is_state('climate.bad', 'Smart schedule') }}"
+      cl_bathroom_off:
+        value_template: "{{ is_state('climate.bad', 'Off') }}"
+
+
+

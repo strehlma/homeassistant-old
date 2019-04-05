@@ -1,0 +1,12 @@
+auto_start: true
+ip_address: !secret homekit_ip
+port: !secret homekit_port
+filter:
+  exclude_domains:
+    - sensor
+    - automation
+    - script
+    - device_tracker
+    - input_boolean
+    - media_player
+#  entity_config:

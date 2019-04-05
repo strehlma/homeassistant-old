@@ -1,0 +1,65 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+    # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 52
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Berlin
+
+  customize: !include customize.yaml
+
+  # Packages
+  packages: !include_dir_named packages/
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+# default_config:
+
+system_health:
+
+http:
+  api_password: !secret http_password
+  base_url: !secret base_url
+
+frontend:
+  javascript_version: auto
+
+lovelace:
+  mode: yaml
+
+# Enables configuration UI
+config:
+
+influxdb:
+  host: !secret influxdb_host
+  port: !secret influxdb_port
+  database: homeassistant
+  username: !secret influxdb_user
+  password: !secret influxdb_password
+  max_retries: 3
+  default_measurement: state
+
+map:
+
+# Track the sun
+sun:
+
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+automation: !include_dir_merge_list automation
+device_tracker: !include ./configuration/device_tracker.yaml
+homekit: !include ./configuration/homekit.yaml
+switch: !include ./configuration/switch.yaml
+weather: !include ./configuration/weather.yaml

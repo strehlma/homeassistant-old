@@ -1,0 +1,5 @@
+tplink:
+  discovery: false
+  switch:
+    - host: !secret tp_link_wellness
+#      name: "wellness"

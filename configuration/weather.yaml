@@ -1,0 +1,3 @@
+- platform: buienradar
+  name: weather_forecast
+  forecast: true
