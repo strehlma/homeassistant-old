@@ -1,0 +1,42 @@
+- alias: "Set stairway_light on before sunset"
+  initial_state: on
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.stairway_light
+
+- alias: "Set stairway_light off for the night"
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '01:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.stairway_light
+
+- alias: "Set stairway_light off after sunsrise"
+  initial_state: on
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '00:30:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.stairway_light
+
+- alias: "Set stairway_light on for the morning"
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '06:00'
+  condition:
+    - condition: sun
+      before: sunrise
+      before_offset: '-00:45:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.stairway_light
+
