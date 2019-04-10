@@ -9,8 +9,12 @@ resources:
     type: js
   - url: /customcards/github/thomasloven/popup-card.js?track=true
     type: js
+  - url: /customcards/github/thomasloven/card-modder.js?track=true
+    type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
+
+
 
 # resources:
 #   - url: /local/mini-graph-card/mini-graph-card.js?v=0.0.4
