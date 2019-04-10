@@ -32,6 +32,8 @@ frontend:
 lovelace:
   mode: yaml
 
+custom_updater:
+
 # Enables configuration UI
 config:
 
