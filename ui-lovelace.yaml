@@ -5,6 +5,13 @@
 resources:
   - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
+  - url: /customcards/github/thomasloven/card-tools.js?track=true
+    type: js
+  - url: /customcards/github/thomasloven/popup-card.js?track=true
+    type: js
+  - url: /customcards/github/maykar/compact-custom-header.js?track=true
+    type: module
+
 # resources:
 #   - url: /local/mini-graph-card/mini-graph-card.js?v=0.0.4
 #     type: module
@@ -18,14 +25,36 @@ resources:
 #     type: js
 
 title: Home
+background: center / cover no-repeat url("/local/images/grey-gradient.png") fixed
+
 views:
 
 # #################################################
 # # Dashboard                                     #
 # #################################################
 
-  - title: Dashboard
+  - badges: []
+    title: Home
+    icon: 'mdi:home'
+    path: home
     cards:
+      - type: custom:compact-custom-header
+        main_config: true
+        notification: true
+        menu: show
+        options: hide
+        voice: hide
+        header: true
+        chevrons: false
+      - type: 'custom:card-modder'
+        style:
+          border-radius: 20px
+          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+        card:
+          type: custom:simple-weather-card
+          entity: weather.dark_sky
+          name: "Eindhoven"
+          backdrop: false
       - type: horizontal-stack
         show_header_toggle: false
         cards:
