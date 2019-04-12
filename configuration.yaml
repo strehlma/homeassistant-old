@@ -69,7 +69,6 @@ tts:
   - platform: google
 
 automation: !include_dir_merge_list automation
-device_tracker: !include ./configuration/device_tracker.yaml
 homekit: !include ./configuration/homekit.yaml
 switch: !include ./configuration/switch.yaml
 weather: !include ./configuration/weather.yaml
