@@ -1,0 +1,18 @@
+person:
+  - name: !secret his_name
+    id: !secret his_id
+    user_id: !secret his_user_id
+    device_trackers:
+      - device_tracker.iphone_von_mario
+  - name: !secret her_name
+    id: !secret her_id
+    user_id: !secret her_user_id
+    device_trackers:
+      - device_tracker.iphone_von_sandra
+
+
+device_tracker:
+  - platform: tado
+    username: !secret tado_username
+    password: !secret tado_password
+    home_id: !secret tado_home_id
