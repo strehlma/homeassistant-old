@@ -53,6 +53,19 @@ influxdb:
   max_retries: 3
   default_measurement: state
 
+person:
+  - name: !secret his_name
+    id: !secret his_id
+    user_id: !secret his_user_id
+    device_trackers:
+      - device_tracker.iphone_von_mario
+  - name: !secret her_name
+    id: !secret her_id
+    user_id: !secret her_user_id
+    device_trackers:
+      - device_tracker.iphone_von_sandra
+
+
 map:
 
 # Track the sun
@@ -69,7 +82,6 @@ tts:
   - platform: google
 
 automation: !include_dir_merge_list automation
-device_tracker: !include ./configuration/device_tracker.yaml
 homekit: !include ./configuration/homekit.yaml
 switch: !include ./configuration/switch.yaml
 weather: !include ./configuration/weather.yaml
