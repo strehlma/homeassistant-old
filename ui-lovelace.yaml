@@ -82,7 +82,7 @@ views:
               elements:
                 # Image
                 - type: image
-                  entity: person.stephanie
+                  entity: person.mario
                   image: !secret facebook_picture_mario
                   tap_action:
                     action: more-info
@@ -95,7 +95,7 @@ views:
                     "home": !secret facebook_picture_mario
                 # State Label
                 - type: state-label
-                  entity: person.stephanie
+                  entity: person.mario
                   style:
                     left: 0
                     bottom: 0
@@ -117,7 +117,7 @@ views:
               elements:
                 # Image
                 - type: image
-                  entity: person.jimmy
+                  entity: person.sandra
                   image: !secret facebook_picture_sandra
                   tap_action:
                     action: more-info
@@ -130,7 +130,7 @@ views:
                     "home": !secret facebook_picture_sandra
                 # State Label
                 - type: state-label
-                  entity: person.jimmy
+                  entity: person.sandra
                   style:
                     left: 0
                     bottom: 0
