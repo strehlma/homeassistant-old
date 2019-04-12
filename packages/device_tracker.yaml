@@ -3,3 +3,11 @@ device_tracker:
     username: !secret tado_username
     password: !secret tado_password
     home_id: !secret tado_home_id
+
+  - platform: unifi
+    host: 192.168.50.20
+    username: !secret unifi_username
+    password: !secret unifi_password
+    ssid_filter:
+      - !secret unifi_main_wifi
+      - !secret unifi_guest_wifi

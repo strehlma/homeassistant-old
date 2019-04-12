@@ -58,19 +58,6 @@ views:
           name: "Heek"
           backdrop: false
       - type: horizontal-stack
-        show_header_toggle: false
-        cards:
-          - type: picture-entity
-            entity: device_tracker.iphone_von_mario
-            image: !secret facebook_picture_mario
-          - type: picture-entity
-            entity: device_tracker.iphone_von_sandra
-            image: !secret facebook_picture_sandra
-
-
-
-
-      - type: horizontal-stack
         cards:
           - type: 'custom:card-modder'
             style:
