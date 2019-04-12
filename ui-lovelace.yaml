@@ -13,14 +13,13 @@ resources:
     type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
-
+  - url: /customcards/simple-weather-card.bundle.js?v=0.3.0
+    type: module
 
 
 # resources:
 #   - url: /local/mini-graph-card/mini-graph-card.js?v=0.0.4
 #     type: module
-#   - url: /local/tracker-card.js?v=0.1.5
-#     type: js
 #   - url: /local/thermostat-card/thermostat-card.js?v=1
 #     type: module
 #   - url: /local/custom-lovelace/swipe-card/swipe-card.js?v=1.0
