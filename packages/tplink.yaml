@@ -2,11 +2,8 @@ tplink:
   discovery: false
   switch:
     - host: !secret tp_link_wellness
-#      name: stairway_plug
     - host: !secret tp_link_stairway
-      name: stairway_plug
     - host: !secret tp_link_cube
-      name: cube_plug
 
 automation:
   - alias: "Turn stairway on"
