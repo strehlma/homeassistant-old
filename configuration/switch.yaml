@@ -1,6 +1,6 @@
 # mqtt  
 - platform: mqtt
-  name: "stairway_light"
+  name: "stairway"
   state_topic: "home/433toMQTT"
   command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
   payload_on: "282961"
