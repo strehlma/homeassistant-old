@@ -1,0 +1,19 @@
+- platform: yr
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_use_percent
+    - type: processor_use
+- platform: rest
+  resource: !secret tankerkoenig_shell
+  name: shell_heek_diesel
+  unit_of_measurement: '€'
+  value_template: !secret tankerkoenig_shell_value
+  scan_interval: 900
+- platform: rest
+  resource: !secret tankerkoenig_esso
+  name: esso_ddorf_diesel
+  unit_of_measurement: '€'
+  value_template: !secret tankerkoenig_esso_value
+  scan_interval: 900
