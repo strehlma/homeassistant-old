@@ -55,6 +55,7 @@ influxdb:
 
 deconz:
   host: !secret deconz_host
+  port: !secret deconz_port
   
 person:
   - name: !secret his_name
