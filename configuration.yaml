@@ -53,6 +53,9 @@ influxdb:
   max_retries: 3
   default_measurement: state
 
+deconz:
+  host: !secret deconz_host
+  
 person:
   - name: !secret his_name
     id: !secret his_id
