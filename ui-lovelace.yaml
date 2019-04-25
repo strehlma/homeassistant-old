@@ -38,7 +38,7 @@ views:
 
   - badges: []
     title: Home
-    icon: 'mdi:home'
+    icon: mdi:home
     path: home
     cards:
       - type: custom:compact-custom-header
@@ -439,39 +439,6 @@ views:
 
 
 # #################################################
-# # Heizung                                       #
-# #################################################
-
-#   - title: Heizung
-#     cards:
-#       - type: entities
-#         title: Heizung
-#         show_header_toggle: true
-#         entities:
-#           - climate.wohnzimmer
-#           - climate.kuche
-#           - climate.schlafzimmer
-#           - climate.buro
-#           - climate.bad
-#       - type: history-graph
-#         title: Heizung Wohnzimmer
-#         entities:
-#           - sensor.wohnzimmer_temperature
-#           - sensor.wohnzimmer_heating
-#       # - type: custom:thermostat-card
-#       #   title: Wohnzimmer
-#       #   entity: climate.wohnzimmer
-#       #   hvac:
-#       #     states:
-#       #       'Manual': 'Manual'
-#       #       'Timer': 'Timer'
-#       #       'Tado mode': 'Tado mode'
-#       #       'Smart schedule': 'Smart schedule'
-#       #       'Off': 'Off'
-#       #     attribute: operation_mode
-
-
-# #################################################
 # # Media                                         #
 # #################################################
 
@@ -510,7 +477,10 @@ views:
 # # System                                        #
 # #################################################
 
-  - title: System
+  - badges: []
+    title: System
+    icon: mdi:server
+    path: home
     cards:
       - type: custom:tracker-card
 #         title:
@@ -529,7 +499,7 @@ views:
 #           - sensor.disk_use_percent_home
       - type: entities
         title: Tado
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - sensor.sandras_und_marios_zuhause_tado_bridge_status
 #       - type: entities
@@ -552,7 +522,7 @@ views:
 
       - type: entities
         title: Wetter
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - sensor.yr_symbol
           - sun.sun
