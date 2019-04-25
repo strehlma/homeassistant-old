@@ -77,7 +77,7 @@ sun:
 
 # Text to speech
 tts:
-  - platform: google_translate
+  - platform: google
     service_name: google_say
 
 automation: !include_dir_merge_list automation
