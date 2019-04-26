@@ -76,9 +76,9 @@ map:
 sun:
 
 # Text to speech
-tts:
-  - platform: google
-    service_name: google_say
+# tts:
+#   - platform: google_translate
+#     service_name: google_say
 
 automation: !include_dir_merge_list automation
 homekit: !include ./configuration/homekit.yaml

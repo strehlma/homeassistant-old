@@ -148,7 +148,6 @@ views:
                   content: '### Wohnzimmer'
                   type: markdown
               - cards:
-                type: horizontal-stack             
                   - type: custom:state-switch
                     entity: light.moon
                     states:
@@ -206,6 +205,7 @@ views:
                              action: toggle
                            hold_action: 
                              action: more-info
+                type: horizontal-stack             
             type: vertical-stack
     icon: 'mdi:lightbulb'
     path: 'lights'
