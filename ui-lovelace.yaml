@@ -150,61 +150,118 @@ views:
               - cards:
                   - type: custom:state-switch
                     entity: light.moon
-                    # states:
-                    #   "on":
-                    #      type: 'custom:card-modder'
-                    #      style:
-                    #        border-radius: 20px
-                    #        border-style: solid
-                    #        border-width: 1px
-                    #        border-color: '#e5e5e5'
-                    #        --paper-card-background-color: rgba(20, 20, 20, 0.4)
-                    #        height: 50px 
-                    #        padding: 20%
-                    #        font-size: 13px
-                    #      card:
-                    #        entity: light.moon
-                    #        icon: 'mdi:ceiling-light'
-                    #        name: Plafond
-                    #        type: entity-button
-                    #        tap_action:
-                    #          action: toggle
-                    #        hold_action: 
-                    #          action: more-info
-                    #   "off":
-                    #      type: 'custom:card-modder'
-                    #      style:
-                    #        border-radius: 20px
-                    #        box-shadow: 2px 2px rgba(0,0,0,0.3) 
-                    #        height: 50px 
-                    #        padding: 20%
-                    #        font-size: 13px
-                    #      card:
-                    #        entity: light.moon
-                    #        icon: 'mdi:ceiling-light'
-                    #        name: Plafond
-                    #        type: entity-button
-                    #        tap_action:
-                    #          action: toggle
-                    #        hold_action: 
-                    #          action: more-info
-                    #   "unavailable":
-                    #      type: 'custom:card-modder'
-                    #      style:
-                    #        border-radius: 20px
-                    #        box-shadow: 2px 2px rgba(0,0,0,0.3) 
-                    #        height: 50px 
-                    #        padding: 20%
-                    #        font-size: 13px
-                    #      card:
-                    #        entity: light.moon
-                    #        icon: 'mdi:ceiling-light'
-                    #        name: Plafond
-                    #        type: entity-button
-                    #        tap_action:
-                    #          action: toggle
-                    #        hold_action: 
-                    #          action: more-info
+                    states:
+                      "on":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           border-style: solid
+                           border-width: 1px
+                           border-color: '#e5e5e5'
+                           --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: light.moon
+                           icon: 'mdi:brightness-3'
+                           name: Plafond
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                      "off":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: light.moon
+                           icon: 'mdi:brightness-3'
+                           name: Plafond
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                      "unavailable":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: light.moon
+                           icon: 'mdi:brightness-3'
+                           name: Plafond
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                  - type: custom:state-switch
+                    entity: switch.cube_plug
+                    states:
+                      "on":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           border-style: solid
+                           border-width: 1px
+                           border-color: '#e5e5e5'
+                           --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: switch.cube_plug
+                           icon: 'mdi:cube'
+                           name: Plafond
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                      "off":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: switch.cube_plug
+                           icon: 'mdi:cube'
+                           name: Plafond
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                      "unavailable":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: switch.cube_plug
+                           icon: 'mdi:cube'
+                           name: Plafond
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
                 type: horizontal-stack             
             type: vertical-stack
           - type: 'custom:card-modder'
