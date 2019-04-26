@@ -140,7 +140,6 @@ views:
       - type: custom:compact-custom-header
       - cards:
           - cards:
-            type: vertical-stack
               - type: 'custom:card-modder'
                 style:
                   --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
@@ -207,9 +206,7 @@ views:
                              action: toggle
                            hold_action: 
                              action: more-info
-
-                
-
+            type: vertical-stack
     icon: 'mdi:lightbulb'
     path: 'lights'
     title: Beleuchtung
