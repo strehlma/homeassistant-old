@@ -13,7 +13,8 @@ resources:
     type: module
   - url: /customcards/simple-weather-card.bundle.js?v=0.3.0
     type: module
-
+  - url: /customcards/github/custom-cards/button-card.js?track=true
+    type: module
 
 title: Home
 background: center / cover no-repeat url("/local/images/grey-gradient.png") fixed
@@ -165,7 +166,7 @@ views:
                          card:
                            entity: light.moon
                            icon: 'mdi:brightness-3'
-                           name: Plafond
+                           name: Mond
                            type: entity-button
                            tap_action:
                              action: toggle
@@ -182,7 +183,7 @@ views:
                          card:
                            entity: light.moon
                            icon: 'mdi:brightness-3'
-                           name: Plafond
+                           name: Mond
                            type: entity-button
                            tap_action:
                              action: toggle
@@ -199,7 +200,7 @@ views:
                          card:
                            entity: light.moon
                            icon: 'mdi:brightness-3'
-                           name: Plafond
+                           name: Mond
                            type: entity-button
                            tap_action:
                              action: toggle
@@ -222,7 +223,7 @@ views:
                          card:
                            entity: switch.cube_plug
                            icon: 'mdi:cube'
-                           name: Plafond
+                           name: Würfel
                            type: entity-button
                            tap_action:
                              action: toggle
@@ -239,7 +240,7 @@ views:
                          card:
                            entity: switch.cube_plug
                            icon: 'mdi:cube'
-                           name: Plafond
+                           name: Würfel
                            type: entity-button
                            tap_action:
                              action: toggle
@@ -256,12 +257,88 @@ views:
                          card:
                            entity: switch.cube_plug
                            icon: 'mdi:cube'
-                           name: Plafond
+                           name: Würfel
                            type: entity-button
                            tap_action:
                              action: toggle
                            hold_action: 
                              action: more-info
+                  - type: 'custom:button-card'
+                    color_type: blank-card
+                  - type: 'custom:button-card'
+                    color_type: blank-card                
+                type: horizontal-stack             
+              - type: 'custom:card-modder'
+                style:
+                  --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
+                  box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                card:
+                  content: '### Küche'
+                  type: markdown
+              - cards:
+                  - type: custom:state-switch
+                    entity: switch.kitchen_plug
+                    states:
+                      "on":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           border-style: solid
+                           border-width: 1px
+                           border-color: '#e5e5e5'
+                           --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: switch.kitchen_plug
+                           icon: 'mdi:led-strip'
+                           name: Küchenlicht
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                      "off":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: switch.kitchen_plug
+                           icon: 'mdi:led-strip'
+                           name: Küchenlicht
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                      "unavailable":
+                         type: 'custom:card-modder'
+                         style:
+                           border-radius: 20px
+                           box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                           height: 50px 
+                           padding: 20%
+                           font-size: 13px
+                         card:
+                           entity: switch.kitchen_plug
+                           icon: 'mdi:led-strip'
+                           name: Küchenlicht
+                           type: entity-button
+                           tap_action:
+                             action: toggle
+                           hold_action: 
+                             action: more-info
+                  - type: 'custom:button-card'
+                    color_type: blank-card
+                  - type: 'custom:button-card'
+                    color_type: blank-card                
+                  - type: 'custom:button-card'
+                    color_type: blank-card                
                 type: horizontal-stack             
             type: vertical-stack
           - type: 'custom:card-modder'
