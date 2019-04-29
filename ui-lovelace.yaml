@@ -421,7 +421,7 @@ views:
                   type: markdown
               - cards:
                   - type: custom:state-switch
-                    entity: switch.kitchen_plug
+                    entity: switch.stairway_plug
                     states:
                       "on":
                          type: 'custom:card-modder'
@@ -437,7 +437,7 @@ views:
                          card:
                            entity: switch.stairway_plug
                            icon: 'mdi:stairs'
-                           name: Küchenlicht
+                           name: Treppenlicht
                            type: entity-button
                            tap_action:
                              action: toggle
@@ -454,7 +454,7 @@ views:
                          card:
                            entity: switch.stairway_plug
                            icon: 'mdi:stairs'
-                           name: Küchenlicht
+                           name: Treppenlicht
                            type: entity-button
                            tap_action:
                              action: toggle
