@@ -120,6 +120,6 @@
   action:
     service_template: >
       switch.turn_{{ trigger.to_state.state}}
-    data_template:
-      transition: 1
+    # data_template:
+    #   transition: 1
     entity_id: switch.kitchen_plug
