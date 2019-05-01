@@ -19,7 +19,7 @@
   scan_interval: 900
 
 - platform: glances
-  host: localhost
+  host: 127.0.0.1
   name: CoreOS
   version: 3
   resources:
