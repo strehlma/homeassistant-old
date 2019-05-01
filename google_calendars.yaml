@@ -1,0 +1,23 @@
+
+- cal_id: !secret google_calendar_id
+  entities:
+  - device_id: get_garbage
+    ignore_availability: true
+    name: Restmülltonne
+    track: true
+    search: "Restmülltonne"
+  - device_id: get_organic
+    ignore_availability: true
+    name: Biotonne
+    track: true
+    search: "Biotonne"
+  - device_id: get_recycling
+    ignore_availability: true
+    name: Gelbe Tonne
+    track: true
+    search: "Gelbe Tonne"
+  - device_id: get_paper
+    ignore_availability: true
+    name: Papiertonne
+    track: true
+    search: "Papiertonne"
