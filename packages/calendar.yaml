@@ -61,3 +61,18 @@ sensor:
           {% endif %}
           {{countdown}}
   
+automation:
+  - id: update_calendar_sensors
+    alias: "Update Calendar Sensors"
+    initial_state: 'on'
+    trigger:
+      - platform: time_pattern
+        minutes: '/5'
+    action:
+      - service: homeassistant.update_entity
+        data:
+          entities:
+            - sensor.next_garbage
+            - sensor.next_organic
+            - sensor.next_recycling
+            - sensor.next_paper
