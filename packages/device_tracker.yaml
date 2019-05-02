@@ -9,6 +9,7 @@ device_tracker:
     username: !secret unifi_username
     password: !secret unifi_password
     verify_ssl: false
+    site_id: !secret unifi_site_id
     ssid_filter:
       - !secret unifi_main_wifi
       - !secret unifi_guest_wifi
