@@ -582,6 +582,25 @@ views:
         cards:
           - type: horizontal-stack
             cards:
+              - type: custom:mini-graph-card
+                entities: 
+                  - sensor.speedtest_ping
+                height: 20
+                line_width: 2
+                font_size: 70
+                hours_to_show: 168
+                points_per_hour: 1
+                show:
+                  #extrema: true
+                  fill: true
+                  graph: bar
+                color_thresholds:
+                  - value: 25
+                    color: "#FFFF00"
+                  - value: 0
+                    color: "#3498db"
+          - type: horizontal-stack
+            cards:
               # - type: custom:bar-card
               #   title_position: inside
               #   show_icon: true
