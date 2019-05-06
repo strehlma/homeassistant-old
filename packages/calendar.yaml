@@ -70,9 +70,10 @@ automation:
         minutes: '/5'
     action:
       - service: homeassistant.update_entity
-        data:
-          entities:
-            - sensor.next_garbage
-            - sensor.next_organic
-            - sensor.next_recycling
-            - sensor.next_paper
+        entity_id: sensor.next_garbage
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_organic
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_recycling
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_paper

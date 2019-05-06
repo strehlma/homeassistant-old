@@ -599,38 +599,6 @@ views:
                     color: "#FFFF00"
                   - value: 0
                     color: "#3498db"
-          - type: horizontal-stack
-            cards:
-              # - type: custom:bar-card
-              #   title_position: inside
-              #   show_icon: true
-              #   align: split
-              #   padding: 4px
-              #   card_style: 
-              #     border-radius: 5px
-              #   columns: 1
-              #   entities:
-              #     - entity: sensor.tpg_nbn
-              #       icon: mdi:earth
-
-              - type: custom:bar-card
-                title_position: inside
-                show_icon: true
-                align: split
-                padding: 4px
-                card_style: 
-                  border-radius: 5px
-                columns: 1
-                max: 100
-                entities:
-                  - entity: sensor.speedtest_ping
-                    severity:
-                    - value: 20
-                      color: '#1db954'
-                    - value: 30
-                      color: '#bf9540'
-                    - value: 50
-                      color: '#bf4040'
       
           - type: horizontal-stack
             cards:
