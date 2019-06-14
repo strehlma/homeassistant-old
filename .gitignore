@@ -29,3 +29,4 @@ ipchange.yaml
 ip_bans.yaml
 production_auth.json
 examples/*
+google_calendars.yaml
