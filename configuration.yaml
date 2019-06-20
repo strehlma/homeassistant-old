@@ -42,7 +42,7 @@ config:
 history:
 
 logger:
-  default: critical
+  default: debug
   logs:
     # log level for HA core
     homeassistant.core: fatal
@@ -55,7 +55,7 @@ logger:
 
     # log level for deCONZ
     homeassistant.components.deconz: debug
-    
+
 recorder:
   db_url: !secret mysql_connection
   purge_interval: 1
