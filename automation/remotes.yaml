@@ -1,0 +1,12 @@
+automation:
+  - alias: 'Toggle bedroom TV from Tradfri remote'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: remote_tradfri
+        event: 1002
+    action:
+      service: switch.toggle
+      entity_id: switch.wellness_plug
