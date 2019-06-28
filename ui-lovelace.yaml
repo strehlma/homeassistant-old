@@ -53,6 +53,7 @@ views:
         voice: hide
         header: true
         chevrons: false
+
       - type: 'custom:card-modder'
         style:
           border-radius: 20px
@@ -61,6 +62,59 @@ views:
           entity: weather.dark_sky
           name: "Heek"
           backdrop: false
+
+  - icon: mdi:car-connected
+    title: BMW 630d X-Drive
+    cards:
+      - type: picture-elements
+        image: /local/images/BMW_6GT.jpg
+        elements:
+        # lock
+        - type: custom:text-element
+          text: "Slot"
+          style:
+            top: 86%
+            left: 10%
+            color: white
+            # background-color: rgba(54, 65, 78, 0.8)
+        - type: state-icon
+          entity:  binary_sensor.630d_xdrive_door_lock_state
+          tap_action: more-info
+          style:
+            top: 91.5%
+            left: 10%              
+            "--paper-item-icon-color": white
+        - type: state-label
+          entity:  binary_sensor.630d_xdrive_door_lock_state
+          style:
+            top: 97.5%
+            left: 10%
+            color: white
+        # remaining fuel
+        - type: custom:circle-sensor-card
+          entity: sensor.630d_xdrive_remaining_fuel
+          max: 63
+          min: 0
+          stroke_width: 15
+          # stroke_color: '#03a9f4'
+          gradient: true
+          fill: rgba(54, 65, 78, 0.6)
+          name: tank
+          units: ' '
+          font_style:
+            font-size: 1.1em
+            color: white
+            # text-shadow: '2px 2px black'
+          color_stops:
+            5: '#09C7E8'
+            63: '#09A50C'
+          style:
+            top: 6%
+            left: 5%
+            width: 4em
+            height: 4em
+            transform: none
+
       - type: horizontal-stack
         cards:
           - type: 'custom:card-modder'
@@ -147,6 +201,7 @@ views:
 
 
     title: Home
+    background: center / cover no-repeat url("/local/images/grey-gradient.png") fixed
     icon: mdi:home
     path: home
 
@@ -159,6 +214,9 @@ views:
       - type: custom:compact-custom-header
       - cards:
           - cards:
+              ###################################
+              # Livingroom                      #
+              ###################################
               - type: 'custom:card-modder'
                 style:
                   --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
@@ -341,6 +399,9 @@ views:
                   - type: 'custom:button-card'
                     color_type: blank-card                
                 type: horizontal-stack             
+              ###################################
+              # Kitchen                         #
+              ###################################
               - type: 'custom:card-modder'
                 style:
                   --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
@@ -413,6 +474,9 @@ views:
                   - type: 'custom:button-card'
                     color_type: blank-card                
                 type: horizontal-stack             
+              ###################################
+              # Bedroom                         #
+              ###################################
               - type: 'custom:card-modder'
                 style:
                   --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
@@ -485,6 +549,9 @@ views:
                   - type: 'custom:button-card'
                     color_type: blank-card                
                 type: horizontal-stack             
+              ###################################
+              # Stairway                        #
+              ###################################
               - type: 'custom:card-modder'
                 style:
                   --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
