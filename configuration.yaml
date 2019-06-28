@@ -42,7 +42,7 @@ config:
 history:
 
 logger:
-  default: debug
+  default: critical
   logs:
     # log level for HA core
     homeassistant.core: fatal

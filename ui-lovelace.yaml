@@ -9,6 +9,8 @@ resources:
     type: js
   - url: /customcards/github/thomasloven/state-switch.js?track=true
     type: js
+  - url: /customcards/github/custom-cards/circle-sensor-card.js?track=true
+    type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
   - url: /customcards/simple-weather-card.bundle.js?v=0.3.0
@@ -63,9 +65,6 @@ views:
           name: "Heek"
           backdrop: false
 
-  - icon: mdi:car-connected
-    title: BMW 630d X-Drive
-    cards:
       - type: picture-elements
         image: /local/images/BMW_6GT.jpg
         elements:
