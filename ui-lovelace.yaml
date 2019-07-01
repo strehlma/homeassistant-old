@@ -84,7 +84,7 @@ views:
           text: "Zustand"
           style:
             top: 86%
-            left: 10%
+            left: 8%
             color: white
             # background-color: rgba(54, 65, 78, 0.8)
         - type: state-icon
@@ -92,13 +92,13 @@ views:
           tap_action: more-info
           style:
             top: 91.5%
-            left: 10%              
+            left: 8%              
             "--paper-item-icon-color": white
         - type: state-label
           entity: binary_sensor.630d_xdrive_door_lock_state
           style:
             top: 97.5%
-            left: 10%
+            left: 8%
             color: white
         # service
         - type: custom:text-element
@@ -126,7 +126,7 @@ views:
           text: "Türen"
           style:
             top: 86%
-            left: 30%
+            left: 32%
             color: white
             # background-color: rgba(54, 65, 78, 0.8)
         - type: state-icon
@@ -134,20 +134,20 @@ views:
           tap_action: more-info
           style:
             top: 91.5%
-            left: 30%              
+            left: 32%              
             "--paper-item-icon-color": white
         - type: state-label
           entity: binary_sensor.630d_xdrive_lids
           style:
             top: 97.5%
-            left: 30%
+            left: 32%
             color: white
         # window
         - type: custom:text-element
           text: "Fenster"
           style:
             top: 86%
-            left: 40%
+            left: 44%
             color: white
             # background-color: rgba(54, 65, 78, 0.8)
         - type: state-icon
@@ -155,13 +155,13 @@ views:
           tap_action: more-info
           style:
             top: 91.5%
-            left: 40%              
+            left: 44%              
             "--paper-item-icon-color": white
         - type: state-label
           entity: binary_sensor.630d_xdrive_windows
           style:
             top: 97.5%
-            left: 40%
+            left: 44%
             color: white
         # mileage
         - type: custom:text-element
