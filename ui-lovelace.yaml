@@ -123,7 +123,7 @@ views:
             color: white
         # doors
         - type: custom:text-element
-          text: "Fenster"
+          text: "Türen"
           style:
             top: 86%
             left: 30%
