@@ -9,7 +9,9 @@ resources:
     type: js
   - url: /customcards/github/thomasloven/state-switch.js?track=true
     type: js
-  - url: /customcards/github/custom-cards/circle-sensor-card.js?track=true
+  - url: /customcards/circle-sensor-card.js?v=0
+    type: module
+  - url: /customcards/text-element.js?v=0
     type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
