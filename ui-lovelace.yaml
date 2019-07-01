@@ -113,20 +113,20 @@ views:
           tap_action: more-info
           style:
             top: 91.5%
-            left: 10%              
+            left: 20%              
             "--paper-item-icon-color": white
         - type: state-label
           entity: binary_sensor.630d_xdrive_windows
           style:
             top: 97.5%
-            left: 10%
+            left: 20%
             color: white
         # mileage
         - type: custom:text-element
           text: "Kilometerstand"
           style:
             top: 86%
-            left: 40%
+            left: 90%
             color: white
             # background-color: rgba(54, 65, 78, 0.8)
         - type: state-icon
@@ -134,7 +134,7 @@ views:
           tap_action: more-info
           style:
             top: 91.5%
-            left: 10%              
+            left: 90%              
             "--paper-item-icon-color": white
         - type: state-label
           entity: sensor.630d_xdrive_mileage
