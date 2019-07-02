@@ -164,19 +164,28 @@ views:
             left: 44%
             color: white
         # aircondition
-        - type: 'custom:button-card'
-          tap_action:
-            action: call-service
-            icon: 'mdi:air-conditioner'
-            confirmation: 'Lüften/Heizen starten?'
-            service: bmw_connected_drive.activate_air_conditioning
-            service_data:
-              vin: !secret bmw_630d_vin
+        # - type: 'custom:button-card'
+        #   tap_action:
+        #     action: call-service
+        #     icon: 'mdi:air-conditioner'
+        #     confirmation: 'Lüften/Heizen starten?'
+        #     service: bmw_connected_drive.activate_air_conditioning
+        #     service_data:
+        #       vin: !secret bmw_630d_vin
           # style:
           #   top: 97.5%
           #   left: 68%
           #   color: white
-        
+
+        - type: service-button
+          title: 'Lüften/Heizen'
+          service: bmw_connected_drive.activate_air_conditioning
+          service_data:
+            vin: !secret bmw_630d_vin
+          style:
+            top: 93%
+            left: 65%
+
         # mileage
         - type: custom:text-element
           text: "Kilometer"
