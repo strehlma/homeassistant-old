@@ -86,6 +86,8 @@ deconz:
 #     device_trackers:
 #       - device_tracker.iphone_von_sandra
 
+alexa:
+  smart_home:
 
 map:
 
