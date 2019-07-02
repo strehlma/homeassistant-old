@@ -166,6 +166,8 @@ views:
         # aircondition
         - type: 'custom:button-card'
           icon: 'mdi:air-conditioner'
+          color_type: blank-card
+          aspect_ratio: 1/1
           confirmation: 'Lüften/Heizen starten?'
         #   tap_action:
         #     action: call-service
