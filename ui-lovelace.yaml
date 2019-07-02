@@ -170,11 +170,11 @@ views:
           color: rgb(0, 0, 0, 0.0)
 #          aspect_ratio: 1/1
           confirmation: 'Lüften/Heizen starten?'
-        #   tap_action:
-        #     action: call-service
-        #     service: bmw_connected_drive.activate_air_conditioning
-        #     service_data:
-        #       vin: !secret bmw_630d_vin
+          tap_action:
+            action: call-service
+            service: bmw_connected_drive.activate_air_conditioning
+            service_data:
+              vin: !secret bmw_630d_vin
           style:
             top: 97.5%
             left: 68%
