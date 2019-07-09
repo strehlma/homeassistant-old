@@ -26,3 +26,19 @@ alexa:
         display_categories: LIGHT
         name: Würfel
         description: Würfellampe im Wohnzimmer
+      switch.stairway_plug:
+        display_categories: LIGHT
+        name: Treppenlicht
+        description: Lichterkette im Treppenhaus
+      switch.tv_plug:
+        display_categories: LIGHT
+        name: Fernseher
+        description: Fernseher im Wohnzimmer
+      switch.wellness_plug:
+        display_categories: LIGHT
+        name: Wellness
+        description: Fernseher im Schlafzimmer
+      switch.kitchen_plug:
+        display_categories: LIGHT
+        name: Küchenlicht
+        description: Licht an der Kaffeemaschine
