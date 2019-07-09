@@ -18,9 +18,11 @@ alexa:
         - automation
         - scene
         - media_player
-    # entity_config:
-      # light.kitchen:
-      #   name: Custom Name for Alexa
-      #   description: The light in the kitchen
-      # switch.stairs:
-      #   display_categories: LIGHT
+    entity_config:
+      light.moon:
+        name: Mond
+        description: Lichtkugel im Wohnzimmer
+      switch.cube_plug:
+        display_categories: LIGHT
+        name: Würfel
+        description: Würfellampe im Wohnzimmer
