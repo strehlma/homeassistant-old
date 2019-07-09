@@ -4,15 +4,21 @@ alexa:
     # client_id: !secret alexa_client_id
     # client_secret: !secret alexa_client_secret
     filter:
-      include_entities:
+      # include_entities:
         # - light.kitchen
         # - light.kitchen_left
       include_domains:
         - switch
         - light
-      exclude_entities:
+      # exclude_entities:
         # - switch.outside
-    entity_config:
+      exclude_domains:
+        - group
+        - script
+        - automation
+        - scene
+        - media_player
+    # entity_config:
       # light.kitchen:
       #   name: Custom Name for Alexa
       #   description: The light in the kitchen
