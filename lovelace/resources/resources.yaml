@@ -1,0 +1,26 @@
+  - url: /customcards/github/custom-cards/tracker-card.js?track=true
+    type: module
+  - url: /customcards/github/thomasloven/card-tools.js?track=true
+    type: js
+  - url: /customcards/github/thomasloven/popup-card.js?track=true
+    type: js
+  - url: /customcards/github/thomasloven/card-modder.js?track=true
+    type: js
+  - url: /customcards/github/thomasloven/state-switch.js?track=true
+    type: js
+  - url: /customcards/circle-sensor-card.js?v=0
+    type: module
+  - url: /customcards/text-element.js?v=0
+    type: js
+  - url: /customcards/github/maykar/compact-custom-header.js?track=true
+    type: module
+  - url: /customcards/simple-weather-card.bundle.js?v=0.3.0
+    type: module
+  - url: /customcards/github/custom-cards/button-card.js?track=true
+    type: module
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/weather-card/weather-card.min.js
+    type: module
+  - url: /customcards/github/custom-cards/bar-card.js?v=1.0.0
+    type: js
+  - url: /customcards/mini-graph-card-bundle.js?v=0.3.3
+    type: module

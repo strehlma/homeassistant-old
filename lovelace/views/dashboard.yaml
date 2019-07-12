@@ -1,0 +1,246 @@
+title: Dashboard
+path: dashboard
+icon: mdi:home
+popup_cards:
+  !include ../popup-cards/dashboard-popup.yaml
+cards:
+  - type: 'custom:card-modder'
+    style:
+      border-radius: 20px
+    card:
+      type: custom:simple-weather-card
+      entity: weather.dark_sky
+      name: "Heek"
+      backdrop: false
+
+  - type: picture-elements
+    image: /local/images/BMW_6GT.jpg
+    elements:
+    # lock
+    - type: custom:text-element
+      text: "Zustand"
+      style:
+        top: 86%
+        left: 8%
+        color: white
+        # background-color: rgba(54, 65, 78, 0.8)
+    - type: state-icon
+      entity: binary_sensor.630d_xdrive_door_lock_state
+      tap_action: more-info
+      style:
+        top: 91.5%
+        left: 8%              
+        "--paper-item-icon-color": white
+    - type: state-label
+      entity: binary_sensor.630d_xdrive_door_lock_state
+      style:
+        top: 97.5%
+        left: 8%
+        color: white
+    # service
+    - type: custom:text-element
+      text: "Service"
+      style:
+        top: 86%
+        left: 20%
+        color: white
+        # background-color: rgba(54, 65, 78, 0.8)
+    - type: state-icon
+      entity: binary_sensor.630d_xdrive_condition_based_services
+      tap_action: more-info
+      style:
+        top: 91.5%
+        left: 20%              
+        "--paper-item-icon-color": white
+    - type: state-label
+      entity: binary_sensor.630d_xdrive_condition_based_services
+      style:
+        top: 97.5%
+        left: 20%
+        color: white
+    # doors
+    - type: custom:text-element
+      text: "Türen"
+      style:
+        top: 86%
+        left: 32%
+        color: white
+        # background-color: rgba(54, 65, 78, 0.8)
+    - type: state-icon
+      entity: binary_sensor.630d_xdrive_lids
+      tap_action: more-info
+      style:
+        top: 91.5%
+        left: 32%              
+        "--paper-item-icon-color": white
+    - type: state-label
+      entity: binary_sensor.630d_xdrive_lids
+      style:
+        top: 97.5%
+        left: 32%
+        color: white
+    # window
+    - type: custom:text-element
+      text: "Fenster"
+      style:
+        top: 86%
+        left: 44%
+        color: white
+        # background-color: rgba(54, 65, 78, 0.8)
+    - type: state-icon
+      entity: binary_sensor.630d_xdrive_windows
+      tap_action: more-info
+      style:
+        top: 91.5%
+        left: 44%              
+        "--paper-item-icon-color": white
+    - type: state-label
+      entity: binary_sensor.630d_xdrive_windows
+      style:
+        top: 97.5%
+        left: 44%
+        color: white
+    # aircondition
+    - type: 'custom:button-card'
+      icon: 'mdi:air-conditioner'
+      color_type: card
+      color: rgb(0, 0, 0, 0.0)
+#          aspect_ratio: 1/1
+      confirmation: 'Lüften/Heizen starten?'
+      tap_action:
+        action: call-service
+        service: bmw_connected_drive.activate_air_conditioning
+        service_data:
+          vin: !secret bmw_630d_vin
+      style:
+        top: 97.5%
+        left: 68%
+        color: white
+
+    # - type: service-button
+    #   title: 'Lüften/Heizen'
+    #   service: bmw_connected_drive.activate_air_conditioning
+    #   service_data:
+    #     vin: !secret bmw_630d_vin
+    #   style:
+    #     top: 93%
+    #     left: 65%
+
+    # mileage
+    - type: custom:text-element
+      text: "Kilometer"
+      style:
+        top: 86%
+        left: 90%
+        color: white
+        # background-color: rgba(54, 65, 78, 0.8)
+    - type: state-icon
+      entity: sensor.630d_xdrive_mileage
+      tap_action: more-info
+      style:
+        top: 91.5%
+        left: 90%              
+        "--paper-item-icon-color": white
+    - type: state-label
+      entity: sensor.630d_xdrive_mileage
+      style:
+        top: 97.5%
+        left: 90%
+        color: white
+    # remaining fuel
+    - type: custom:circle-sensor-card
+      entity: sensor.630d_xdrive_remaining_fuel
+      max: 63
+      min: 0
+      stroke_width: 15
+      # stroke_color: '#03a9f4'
+      gradient: true
+      fill: rgba(54, 65, 78, 0.6)
+      name: Tank
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        # text-shadow: '2px 2px black'
+      color_stops:
+        5: '#09C7E8'
+        63: '#09A50C'
+      style:
+        top: 6%
+        left: 5%
+        width: 4em
+        height: 4em
+        transform: none
+
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:card-modder'
+        style:
+          border-radius: 20px
+          overflow: hidden
+        card:
+          type: picture-elements
+          image: !secret facebook_picture_mario
+          elements:
+            # Image
+            - type: image
+              entity: person.mario
+              image: !secret facebook_picture_mario
+              tap_action:
+                action: more-info
+              style:
+                left: 50%
+                top: 50%
+                width: 100%
+                heigth: 100%
+              state_image:
+                "home": !secret facebook_picture_mario
+            # State Label
+            - type: state-label
+              entity: person.mario
+              style:
+                left: 0
+                bottom: 0
+                pointer-events: none
+                font-size: 16px
+                line-height: 24px
+                color: white
+                background-color: rgba(0, 0, 0, 0.3)
+                width: 100%
+                transform: initial
+                padding: 0 8px
+      - type: 'custom:card-modder'
+        style:
+          border-radius: 20px
+          overflow: hidden
+        card:
+          type: picture-elements
+          image: !secret facebook_picture_sandra
+          elements:
+            # Image
+            - type: image
+              entity: person.sandra
+              image: !secret facebook_picture_sandra
+              tap_action:
+                action: more-info
+              style:
+                left: 50%
+                top: 50%
+                width: 100%
+                heigth: 100%
+              state_image:
+                "home": !secret facebook_picture_sandra
+            # State Label
+            - type: state-label
+              entity: person.sandra
+              style:
+                left: 0
+                bottom: 0
+                pointer-events: none
+                font-size: 16px
+                line-height: 24px
+                color: white
+                background-color: rgba(0, 0, 0, 0.3)
+                width: 100%
+                transform: initial
+                padding: 0 8px

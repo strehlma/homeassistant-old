@@ -1,0 +1,429 @@
+title: Lights
+path:  lights
+  cards:
+#      - type: custom:compact-custom-header
+    - cards:
+        - cards:
+            ###################################
+            # Livingroom                      #
+            ###################################
+            - type: 'custom:card-modder'
+              style:
+                --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
+                box-shadow: 2px 2px rgba(0,0,0,0.3) 
+              card:
+                content: '### Wohnzimmer'
+                type: markdown
+            - cards:
+                - type: custom:state-switch
+                  entity: light.moon
+                  states:
+                    "on":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          border-style: solid
+                          border-width: 1px
+                          border-color: '#e5e5e5'
+                          --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: light.moon
+                          icon: 'mdi:brightness-3'
+                          name: Mond
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "off":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: light.moon
+                          icon: 'mdi:brightness-3'
+                          name: Mond
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "unavailable":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: light.moon
+                          icon: 'mdi:brightness-3'
+                          name: Mond
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                - type: custom:state-switch
+                  entity: switch.cube_plug
+                  states:
+                    "on":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          border-style: solid
+                          border-width: 1px
+                          border-color: '#e5e5e5'
+                          --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.cube_plug
+                          icon: 'mdi:cube'
+                          name: Würfel
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "off":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.cube_plug
+                          icon: 'mdi:cube'
+                          name: Würfel
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "unavailable":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.cube_plug
+                          icon: 'mdi:cube'
+                          name: Würfel
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                - type: custom:state-switch
+                  entity: switch.tv_plug
+                  states:
+                    "on":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          border-style: solid
+                          border-width: 1px
+                          border-color: '#e5e5e5'
+                          --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.tv_plug
+                          icon: 'mdi:television'
+                          name: TV
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "off":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.tv_plug
+                          icon: 'mdi:television'
+                          name: TV
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "unavailable":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.tv_plug
+                          icon: 'mdi:television'
+                          name: TV
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+              type: horizontal-stack             
+            ###################################
+            # Kitchen                         #
+            ###################################
+            - type: 'custom:card-modder'
+              style:
+                --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
+                box-shadow: 2px 2px rgba(0,0,0,0.3) 
+              card:
+                content: '### Küche'
+                type: markdown
+            - cards:
+                - type: custom:state-switch
+                  entity: switch.kitchen_plug
+                  states:
+                    "on":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          border-style: solid
+                          border-width: 1px
+                          border-color: '#e5e5e5'
+                          --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.kitchen_plug
+                          icon: 'mdi:led-strip'
+                          name: Küchenlicht
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "off":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.kitchen_plug
+                          icon: 'mdi:led-strip'
+                          name: Küchenlicht
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "unavailable":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.kitchen_plug
+                          icon: 'mdi:led-strip'
+                          name: Küchenlicht
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                - type: 'custom:button-card'
+                  color_type: blank-card
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+              type: horizontal-stack             
+            ###################################
+            # Bedroom                         #
+            ###################################
+            - type: 'custom:card-modder'
+              style:
+                --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
+                box-shadow: 2px 2px rgba(0,0,0,0.3) 
+              card:
+                content: '### Schlafzimmer'
+                type: markdown
+            - cards:
+                - type: custom:state-switch
+                  entity: switch.wellness_plug
+                  states:
+                    "on":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          border-style: solid
+                          border-width: 1px
+                          border-color: '#e5e5e5'
+                          --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.wellness_plug
+                          icon: 'mdi:bed-empty'
+                          name: Wellness
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "off":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.wellness_plug
+                          icon: 'mdi:bed-empty'
+                          name: Wellness
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "unavailable":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.wellness_plug
+                          icon: 'mdi:bed-empty'
+                          name: Wellness
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                - type: 'custom:button-card'
+                  color_type: blank-card
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+              type: horizontal-stack             
+            ###################################
+            # Stairway                        #
+            ###################################
+            - type: 'custom:card-modder'
+              style:
+                --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
+                box-shadow: 2px 2px rgba(0,0,0,0.3) 
+              card:
+                content: '### Treppenhaus'
+                type: markdown
+            - cards:
+                - type: custom:state-switch
+                  entity: switch.stairway_plug
+                  states:
+                    "on":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          border-style: solid
+                          border-width: 1px
+                          border-color: '#e5e5e5'
+                          --paper-card-background-color: rgba(20, 20, 20, 0.4)
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.stairway_plug
+                          icon: 'mdi:stairs'
+                          name: Treppenlicht
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "off":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.stairway_plug
+                          icon: 'mdi:stairs'
+                          name: Treppenlicht
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                    "unavailable":
+                        type: 'custom:card-modder'
+                        style:
+                          border-radius: 20px
+                          box-shadow: 2px 2px rgba(0,0,0,0.3) 
+                          height: 50px 
+                          padding: 20%
+                          font-size: 13px
+                        card:
+                          entity: switch.stairway_plug
+                          icon: 'mdi:stairs'
+                          name: Treppenlicht
+                          type: entity-button
+                          tap_action:
+                            action: toggle
+                          hold_action: 
+                            action: more-info
+                - type: 'custom:button-card'
+                  color_type: blank-card
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+                - type: 'custom:button-card'
+                  color_type: blank-card                
+              type: horizontal-stack             
+          type: vertical-stack
+        - type: 'custom:card-modder'
+          style:
+            --paper-card-background-color: 'rgba(11, 11, 11, 0.40)'
+            height: 25px
+            box-shadow: 2px 2px rgba(0,0,0,0.3) 
+          card:
+            content: ' '
+            type: markdown
+      type: vertical-stack
+  icon: 'mdi:lightbulb'
+  path: 'lights'
+  title: Beleuchtung
