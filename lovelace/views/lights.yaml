@@ -21,14 +21,14 @@ cards:
             variables:
               - entity: switch.diningroom
               - name: Esszimmerlampe
-              - icon: brightness-3
+              - icon: ceiling-light
               - show_label: false
           - type: custom:decluttering-card
             template: light_button_card
             variables:
               - entity: switch.livingroom
               - name: Wohnzimmerlampe
-              - icon: cube
+              - icon: atom
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
