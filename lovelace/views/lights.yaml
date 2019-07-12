@@ -16,6 +16,11 @@ cards:
 
       - type: horizontal-stack             
         cards:
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
           - type: custom:decluttering-card
             template: light_button_card
             variables:
@@ -32,9 +37,19 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
       - type: horizontal-stack             
         cards:
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
           - type: custom:decluttering-card
             template: light_button_card
             variables:
@@ -55,6 +70,11 @@ cards:
               - name: Fernseher
               - icon: television
               - show_label: false
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
       ###################################
       # Kitchen                         #
@@ -66,6 +86,11 @@ cards:
 
       - type: horizontal-stack             
         cards:
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
           - type: custom:decluttering-card
             template: light_button_card
             variables:
@@ -77,6 +102,11 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
       ###################################
       # Bedroom                         #
@@ -88,6 +118,11 @@ cards:
 
       - type: horizontal-stack             
         cards:
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
           - type: custom:decluttering-card
             template: light_button_card
             variables:
@@ -99,6 +134,11 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
       ###################################
       # Stairway                        #
@@ -110,6 +150,11 @@ cards:
 
       - type: horizontal-stack             
         cards:
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
           - type: custom:decluttering-card
             template: light_button_card
             variables:
@@ -121,4 +166,9 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
