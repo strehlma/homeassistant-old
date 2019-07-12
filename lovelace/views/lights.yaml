@@ -19,6 +19,33 @@ cards:
           - type: custom:decluttering-card
             template: light_button_card
             variables:
+              - entity: switch.diningroom
+              - name: Mond
+              - icon: brightness-3
+              - show_label: false
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.livingroom
+              - name: Würfel
+              - icon: cube
+              - show_label: false
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+
+      - type: horizontal-stack             
+        cards:
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
               - entity: light.moon
               - name: Mond
               - icon: brightness-3
@@ -28,12 +55,19 @@ cards:
               - entity: switch.cube_plug
               - name: Würfel
               - icon: cube
+              - show_label: false
           - type: custom:decluttering-card
             template: light_button_card
             variables:
               - entity: switch.tv_plug
               - name: Fernseher
               - icon: television
+              - show_label: false
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
       ###################################
       # Kitchen                         #
@@ -51,6 +85,7 @@ cards:
               - entity: switch.kitchen_plug
               - name: Küchenlicht
               - icon: led-strip
+              - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
             styles:
@@ -88,6 +123,7 @@ cards:
               - entity: switch.wellness_plug
               - name: Wellness
               - icon: bed-empty
+              - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
             styles:
@@ -120,6 +156,7 @@ cards:
               - entity: switch.stairway_plug
               - name: Treppenlicht
               - icon: stairs
+              - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
             styles:
