@@ -49,6 +49,6 @@ cards:
             template: light_button_card
             variables:
               - entity: switch.kitchen_plug
-              - name: Mond
+              - name: Küchenlicht
               - icon: led-strip
 
