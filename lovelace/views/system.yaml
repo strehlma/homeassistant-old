@@ -68,13 +68,6 @@ cards:
     entities:
       - sensor.sandras_und_marios_zuhause_tado_bridge_status
 
-  - type: entities
-    title: Wetter
-    show_header_toggle: false
-    entities:
-      - sensor.yr_symbol
-      - sun.sun
-
 
 
 

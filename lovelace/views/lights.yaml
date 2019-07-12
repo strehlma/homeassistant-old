@@ -1,8 +1,10 @@
 title: Lights
 path:  lights
 icon: 'mdi:lightbulb'
+# popup_cards:
+#   !include ../popup-cards/light-popup.yaml
 cards:
-#      - type: custom:compact-custom-header
+  - type: vertical-stack
   - cards:
       - cards:
           ###################################
@@ -424,4 +426,3 @@ cards:
         card:
           content: ' '
           type: markdown
-    type: vertical-stack
