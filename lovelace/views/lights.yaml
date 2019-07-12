@@ -22,6 +22,18 @@ cards:
               - entity: light.moon
               - name: Mond
               - icon: brightness-3
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.cube_plug
+              - name: Würfel
+              - icon: cube
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.tv_plug
+              - name: Fernseher
+              - icon: television
 
       ###################################
       # Kitchen                         #
