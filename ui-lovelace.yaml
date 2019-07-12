@@ -16,6 +16,10 @@ cch:
   background: 'rgba(0,0,0,0.3)'
   default_tab: 1
 
+# Decluttering Templates
+decluttering_templates:
+  !include lovelace/decluttering_templates/decluttering_templates.yaml
+
 title: Home
 background: center / cover no-repeat url("/local/images/grey-gradient.png") fixed
 
