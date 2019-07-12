@@ -51,4 +51,88 @@ cards:
               - entity: switch.kitchen_plug
               - name: Küchenlicht
               - icon: led-strip
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+
+      ###################################
+      # Bedroom                         #
+      ###################################
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Schlafzimmer'
+
+      - type: horizontal-stack             
+        cards:
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.wellness_plug
+              - name: Wellness
+              - icon: bed-empty
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+
+      ###################################
+      # Stairway                        #
+      ###################################
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Treppenhaus'
+
+      - type: horizontal-stack             
+        cards:
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.stairway_plug
+              - name: Treppenlicht
+              - icon: stairs
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+          - type: 'custom:button-card'
+            color_type: blank-card
+            styles:
+              card:
+                - width: 10px
 
