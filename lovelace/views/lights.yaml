@@ -20,26 +20,20 @@ cards:
             template: light_button_card
             variables:
               - entity: switch.diningroom
-              - name: Mond
+              - name: Esszimmerlampe
               - icon: brightness-3
               - show_label: false
           - type: custom:decluttering-card
             template: light_button_card
             variables:
               - entity: switch.livingroom
-              - name: Würfel
+              - name: Wohnzimmerlampe
               - icon: cube
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
 
       - type: horizontal-stack             
         cards:
@@ -65,9 +59,6 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
 
       ###################################
       # Kitchen                         #
@@ -88,24 +79,12 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
 
       ###################################
       # Bedroom                         #
@@ -126,19 +105,10 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
 
       ###################################
       # Stairway                        #
@@ -159,17 +129,8 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
           - type: 'custom:button-card'
             color_type: blank-card
-            styles:
-              card:
-                - width: 10px
 
