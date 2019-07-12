@@ -1,4 +1,4 @@
-grey:
+strehlma:
     background-image: 'center / cover no-repeat url("/local/images/grey-gradient.png") fixed'
     background-image2: 'url("/local/images/grey-gradient.png")'
     # TEST

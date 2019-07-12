@@ -32,8 +32,6 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
 
       - type: horizontal-stack             
         cards:
@@ -57,8 +55,6 @@ cards:
               - name: Fernseher
               - icon: television
               - show_label: false
-          - type: 'custom:button-card'
-            color_type: blank-card
 
       ###################################
       # Kitchen                         #
@@ -77,10 +73,6 @@ cards:
               - name: Küchenlicht
               - icon: led-strip
               - show_label: false
-          - type: 'custom:button-card'
-            color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
           - type: 'custom:button-card'
@@ -107,8 +99,6 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
 
       ###################################
       # Stairway                        #
@@ -127,8 +117,6 @@ cards:
               - name: Treppenlicht
               - icon: stairs
               - show_label: false
-          - type: 'custom:button-card'
-            color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
           - type: 'custom:button-card'

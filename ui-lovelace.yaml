@@ -21,7 +21,7 @@ decluttering_templates:
   !include lovelace/decluttering_templates/decluttering_templates.yaml
 
 title: Home
-background: center / cover no-repeat url("/local/images/grey-gradient.png") fixed
+background: var(--background-image)
 
 views:
   - !include lovelace/views/dashboard.yaml
