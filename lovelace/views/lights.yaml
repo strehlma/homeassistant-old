@@ -12,7 +12,15 @@ cards:
       - type: custom:decluttering-card
         template: header_text
         variables:
-          - content: '##### Woonkamer'
+          - content: '##### Wohnzimmer'
+
+      ###################################
+      # Kitchen                         #
+      ###################################
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Küche'
 
           # - type: 'custom:card-modder'
           #   style:
