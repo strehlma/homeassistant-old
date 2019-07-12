@@ -3,7 +3,7 @@
   initial_state: on
   trigger:
     - platform: state
-      entity_id: switch.kitchen_light
+      entity_id: switch.remote_kitchen_light
       to: 'on'  
   action:
     service: homeassistant.turn_on
@@ -14,7 +14,7 @@
   initial_state: on
   trigger:
     - platform: state
-      entity_id: switch.kitchen_light
+      entity_id: switch.remote_kitchen_light
       to: 'off'  
   action:
     service: homeassistant.turn_off
@@ -25,7 +25,7 @@
   initial_state: on
   trigger:
     - platform: state
-      entity_id: switch.television
+      entity_id: switch.remote_television
       to: 'on'  
   action:
     service: homeassistant.turn_on
@@ -36,7 +36,7 @@
   initial_state: on
   trigger:
     - platform: state
-      entity_id: switch.television
+      entity_id: switch.remote_television
       to: 'off'  
   action:
     service: homeassistant.turn_off
@@ -47,7 +47,7 @@
   initial_state: on
   trigger:
     - platform: state
-      entity_id: switch.cube
+      entity_id: switch.remote_cube
       to: 'on'  
   action:
     service: homeassistant.turn_on
@@ -58,7 +58,7 @@
   initial_state: on
   trigger:
     - platform: state
-      entity_id: switch.cube
+      entity_id: switch.remote_cube
       to: 'off'  
   action:
     service: homeassistant.turn_off
