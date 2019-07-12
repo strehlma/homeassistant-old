@@ -1,4 +1,4 @@
-mqtt  
+switch:  
   - platform: mqtt
     name: "remote_stairway"
     state_topic: "home/433toMQTT"
