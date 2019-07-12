@@ -1,6 +1,6 @@
 title: Dashboard
 path: dashboard
-icon: mdi:home
+icon: 'mdi:home'
 popup_cards:
   !include ../popup-cards/dashboard-popup.yaml
 cards:

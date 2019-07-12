@@ -1,6 +1,6 @@
 title: System
 path: system
-icon: mdi:server
+icon: 'mdi:server'
 cards:
   - type: vertical-stack
     cards:
