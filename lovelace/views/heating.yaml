@@ -10,9 +10,9 @@ cards:
         entity: climate.buro
         name: Büro
         icon:
-          heat: 'mdi:fire'
-          auto: 'mdi:timer'
-          'off': 'mdi:power'
+          Heat: 'mdi:fire'
+          Auto: 'mdi:timer'
+          'Off': 'mdi:power'
         step_size: 1
         sensors:
           # - entity: sensor.fibaro_system_fgwpef_wall_plug_gen5_energy
