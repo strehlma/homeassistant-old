@@ -26,3 +26,5 @@
     type: module
   - url: /customcards/decluttering-card.js
     type: module
+  - url: /customcards/simple-thermostat.js?v=1
+    type: module
