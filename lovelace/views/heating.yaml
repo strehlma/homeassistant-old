@@ -9,6 +9,10 @@ cards:
       - type: 'custom:simple-thermostat'
         entity: climate.buro
         name: Büro
+        icon:
+          'heat': mdi:fire
+          'off': mdi:power
+          'auto': mdi:timer
         step_size: 1
         sensors:
           # - entity: sensor.fibaro_system_fgwpef_wall_plug_gen5_energy
