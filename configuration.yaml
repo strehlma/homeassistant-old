@@ -74,7 +74,7 @@ deconz:
   host: !secret deconz_host
   port: !secret deconz_port
 
-# person:
+person:
 #   - name: !secret his_name
 #     id: !secret his_id
 #     user_id: !secret his_user_id
