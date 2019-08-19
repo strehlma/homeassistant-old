@@ -33,3 +33,6 @@ cards:
             name: 'Off'
             icon: mdi:power
             include: true
+
+      - type: thermostat
+        entity: climate.buro
