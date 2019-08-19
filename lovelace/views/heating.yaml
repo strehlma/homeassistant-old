@@ -20,9 +20,12 @@ cards:
           'heat':
             name: 'Heizen'
             icon: mdi:fire
+            include: true
           'auto':
             name: 'Auto'
             icon: mdi:timer
+            include: true
           'off':
             name: 'Off'
             icon: mdi:power
+            include: true
