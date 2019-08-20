@@ -4,7 +4,18 @@ resources:
 
 # Compact Custom Header
 cch:
-  !include lovelace/cch/compact-custom-header.yaml
+  menu: hide
+  options: hide
+  notifications: hide
+  voice: hide
+  header: false
+  chevrons: false
+  notify_indicator_color: "#e80000"
+  swipe: true
+  swipe_wrap: false
+  background: 'rgba(0,0,0,0.3)'
+  #hide_tabs: '5 to 30'
+  default_tab: 1
 
 # Decluttering Templates
 decluttering_templates:
