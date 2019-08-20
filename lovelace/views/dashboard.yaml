@@ -242,6 +242,8 @@ cards:
                   width: 4em
                   height: 4em
                   transform: none
+      - type: horizontal-stack
+        cards:
           - type: picture-elements
             image: /local/images/muellabfuhr.jpg
             style: |
