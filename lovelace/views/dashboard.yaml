@@ -49,46 +49,46 @@ cards:
               #     action: navigate
               #     navigation_path: /lovelace/sandra
 
-    # # Right Photo
-    #     - type: conditional
-    #       conditions:
-    #         - entity: person.mario
-    #           state_not: "home"
-    #       card:
-    #         type: custom:decluttering-card
-    #         template: person_elements
-    #         variables:
-    #           - name: mario
-    #           # - namesensor: !secret jimsensor
-    #           - direction: right
-    #           - image: !secret facebook_picture_mario
-    #           # - postnl: sensor.postnl_jimmy_packages
-    #           # - reistijd: sensor.reistijd_jimmy
-    #           # - battery: sensor.battery_level_16
-    #           - icon: home
-    #           # - tap_action:
-    #           #     action: navigate
-    #           #     navigation_path: /lovelace/mario
-    #     - type: conditional
-    #       conditions:
-    #         - entity: person.mario
-    #           state: "home"
-    #       card:
-    #         type: custom:decluttering-card
-    #         template: person_elements
-    #         variables:
-    #           - name: mario
-    #           # - namesensor: !secret jimsensor
-    #           - direction: right
-    #           - image: !secret facebook_picture_mario
-    #           # - postnl: sensor.postnl_jimmy_packages
-    #           # - reistijd: sensor.reistijd_jimmy_work
-    #           # - battery: sensor.battery_level_16
-    #           - icon: office-building
-    #           # - tap_action:
-    #           #     action: navigate
-    #           #     navigation_path: /lovelace/mario
-    #     - !include ../includes/blank_card.yaml
+    # Right Photo
+        - type: conditional
+          conditions:
+            - entity: person.mario
+              state_not: "home"
+          card:
+            type: custom:decluttering-card
+            template: person_elements
+            variables:
+              - name: mario
+              # - namesensor: !secret jimsensor
+              - direction: right
+              - image: !secret facebook_picture_mario
+              # - postnl: sensor.postnl_jimmy_packages
+              # - reistijd: sensor.reistijd_jimmy
+              # - battery: sensor.battery_level_16
+              - icon: home
+              # - tap_action:
+              #     action: navigate
+              #     navigation_path: /lovelace/mario
+        - type: conditional
+          conditions:
+            - entity: person.mario
+              state: "home"
+          card:
+            type: custom:decluttering-card
+            template: person_elements
+            variables:
+              - name: mario
+              # - namesensor: !secret jimsensor
+              - direction: right
+              - image: !secret facebook_picture_mario
+              # - postnl: sensor.postnl_jimmy_packages
+              # - reistijd: sensor.reistijd_jimmy_work
+              # - battery: sensor.battery_level_16
+              - icon: office-building
+              # - tap_action:
+              #     action: navigate
+              #     navigation_path: /lovelace/mario
+        - !include ../includes/blank_card.yaml
 
   #   - type: picture-elements
   #     image: /local/images/BMW_6GT.jpg
