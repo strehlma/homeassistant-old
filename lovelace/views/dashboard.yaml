@@ -6,7 +6,7 @@ path: home
 cards:
   - type: vertical-stack
     cards:
-    #  - !include ../includes/simple-weather-card.yaml
+      - !include ../includes/simple-weather-card.yaml
       - type: horizontal-stack
         cards:
 #        - !include ../includes/blank_card.yaml
