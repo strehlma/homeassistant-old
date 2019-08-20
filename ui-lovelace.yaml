@@ -4,17 +4,7 @@ resources:
 
 # Compact Custom Header
 cch:
-  menu: show
-  options: hide
-  notifications: show
-  voice: hide
-  header: true
-  chevrons: false
-  notify_indicator_color: "#e80000"
-  swipe: true
-  swipe_wrap: false
-  background: 'rgba(0,0,0,0.3)'
-  default_tab: 1
+  !include lovelace/cch/compact-custom-header.yaml
 
 # Decluttering Templates
 decluttering_templates:
@@ -24,8 +14,8 @@ title: Home
 background: var(--background-image)
 
 views:
-  - !include lovelace/views/dashboard.yaml
   - !include lovelace/views/heating.yaml
+  - !include lovelace/views/dashboard.yaml
   - !include lovelace/views/lights.yaml
   - !include lovelace/views/system.yaml
 
