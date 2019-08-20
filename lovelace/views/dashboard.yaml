@@ -93,6 +93,11 @@ cards:
         cards:
           - type: picture-elements
             image: /local/images/BMW_6GT.jpg
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              }
             elements:
               # lock
               - type: custom:text-element
@@ -237,3 +242,95 @@ cards:
                   width: 4em
                   height: 4em
                   transform: none
+          - type: picture-elements
+            image: /local/images/muellabfuhr.jpg
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              }
+            elements:
+              # garbage
+              - type: custom:text-element
+                text: "Zustand"
+                style:
+                  top: 86%
+                  left: 8%
+                  color: white
+                  # background-color: rgba(54, 65, 78, 0.8)
+              - type: state-icon
+                entity: sensor.next_garbage
+                tap_action: more-info
+                style:
+                  top: 91.5%
+                  left: 8%              
+                  "--paper-item-icon-color": white
+              - type: state-label
+                entity: sensor.next_garbage
+                style:
+                  top: 97.5%
+                  left: 8%
+                  color: white
+              # organic
+              - type: custom:text-element
+                text: "Service"
+                style:
+                  top: 86%
+                  left: 20%
+                  color: white
+                  # background-color: rgba(54, 65, 78, 0.8)
+              - type: state-icon
+                entity: sensor.next_organic
+                tap_action: more-info
+                style:
+                  top: 91.5%
+                  left: 20%              
+                  "--paper-item-icon-color": white
+              - type: state-label
+                entity: sensor.next_organic
+                style:
+                  top: 97.5%
+                  left: 20%
+                  color: white
+              # paper
+              - type: custom:text-element
+                text: "Papiertonne"
+                style:
+                  top: 86%
+                  left: 32%
+                  color: white
+                  # background-color: rgba(54, 65, 78, 0.8)
+              - type: state-icon
+                entity: sensor.next_paper
+                tap_action: more-info
+                style:
+                  top: 91.5%
+                  left: 32%              
+                  "--paper-item-icon-color": white
+              - type: state-label
+                entity: sensor.next_paper
+                style:
+                  top: 97.5%
+                  left: 32%
+                  color: white
+              # recycling
+              - type: custom:text-element
+                text: "Gelbe Tonne"
+                style:
+                  top: 86%
+                  left: 44%
+                  color: white
+                  # background-color: rgba(54, 65, 78, 0.8)
+              - type: state-icon
+                entity:  sensor.next_recycling
+                tap_action: more-info
+                style:
+                  top: 91.5%
+                  left: 44%              
+                  "--paper-item-icon-color": white
+              - type: state-label
+                entity:  sensor.next_recycling
+                style:
+                  top: 97.5%
+                  left: 44%
+                  color: white
