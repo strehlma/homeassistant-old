@@ -94,7 +94,7 @@ cards:
           - type: picture-elements
             image: /local/images/BMW_6GT.jpg
             elements:
-            # lock
+              # lock
               - type: custom:text-element
                 text: "Zustand"
                 style:
@@ -183,7 +183,6 @@ cards:
                 icon: 'mdi:air-conditioner'
                 color_type: card
                 color: rgb(0, 0, 0, 0.0)
-          #          aspect_ratio: 1/1
                 confirmation: 'Lüften/Heizen starten?'
                 tap_action:
                   action: call-service
@@ -194,37 +193,26 @@ cards:
                   top: 97.5%
                   left: 68%
                   color: white
-
-            # - type: service-button
-            #   title: 'Lüften/Heizen'
-            #   service: bmw_connected_drive.activate_air_conditioning
-            #   service_data:
-            #     vin: !secret bmw_630d_vin
-            #   style:
-            #     top: 93%
-            #     left: 65%
-
-              # mileage
-              - type: custom:text-element
-                text: "Kilometer"
-                style:
-                  top: 86%
-                  left: 90%
-                  color: white
-                  # background-color: rgba(54, 65, 78, 0.8)
-              - type: state-icon
-                entity: sensor.630d_xdrive_mileage
-                tap_action: more-info
-                style:
-                  top: 91.5%
-                  left: 90%              
-                  "--paper-item-icon-color": white
-              - type: state-label
-                entity: sensor.630d_xdrive_mileage
-                style:
-                  top: 97.5%
-                  left: 90%
-                  color: white
+              # # mileage
+              # - type: custom:text-element
+              #   text: "Kilometer"
+              #   style:
+              #     top: 86%
+              #     left: 90%
+              #     color: white
+              # - type: state-icon
+              #   entity: sensor.630d_xdrive_mileage
+              #   tap_action: more-info
+              #   style:
+              #     top: 91.5%
+              #     left: 90%              
+              #     "--paper-item-icon-color": white
+              # - type: state-label
+              #   entity: sensor.630d_xdrive_mileage
+              #   style:
+              #     top: 97.5%
+              #     left: 90%
+              #     color: white
               # remaining fuel
               - type: custom:circle-sensor-card
                 entity: sensor.630d_xdrive_remaining_fuel
@@ -249,4 +237,3 @@ cards:
                   width: 4em
                   height: 4em
                   transform: none
-
