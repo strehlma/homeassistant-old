@@ -25,8 +25,8 @@ background: var(--background-image)
 
 views:
   - !include lovelace/views/dashboard.yaml
-  - !include lovelace/views/lights.yaml
   - !include lovelace/views/heating.yaml
+  - !include lovelace/views/lights.yaml
   - !include lovelace/views/system.yaml
 
 
