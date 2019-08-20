@@ -7,47 +7,47 @@ cards:
   - type: vertical-stack
     cards:
     #  - !include ../includes/simple-weather-card.yaml
-    #   - type: horizontal-stack
-    #     cards:
-    #     - !include ../includes/blank_card.yaml
-    #     - type: conditional
-    #       conditions:
-    #         - entity: person.sandra
-    #           state_not: "home"
-    #       card:
-    #         type: custom:decluttering-card
-    #         template: person_elements
-    #         variables:
-    #           - name: sandra
-    #           # - namesensor: !secret stephsensor
-    #           - direction: left
-    #           - image: !secret facebook_picture_sandra
-    #           # - postnl: sensor.postnl_stephanie_packages
-    #           # - reistijd: sensor.reistijd_stephanie
-    #           # - battery: sensor.battery_level_13
-    #           - icon: home
-    #           # - tap_action:
-    #           #     action: navigate
-    #           #     navigation_path: /lovelace/sandra
-    #     - type: conditional
-    #       conditions:
-    #         - entity: person.sandra
-    #           state: "home"
-    #       card:
-    #         type: custom:decluttering-card
-    #         template: person_elements
-    #         variables:
-    #           - name: sandra
-    #           # - namesensor: !secret stephsensor
-    #           - direction: left
-    #           - image: !secret facebook_picture_sandra
-    #           # - postnl: sensor.postnl_stephanie_packages
-    #           # - reistijd: sensor.reistijd_stephanie_work
-    #           # - battery: sensor.battery_level_13
-    #           - icon: office-building
-    #           # - tap_action:
-    #           #     action: navigate
-    #           #     navigation_path: /lovelace/sandra
+      - type: horizontal-stack
+        cards:
+        - !include ../includes/blank_card.yaml
+        - type: conditional
+          conditions:
+            - entity: person.sandra
+              state_not: "home"
+          card:
+            type: custom:decluttering-card
+            template: person_elements
+            variables:
+              - name: sandra
+              # - namesensor: !secret stephsensor
+              - direction: left
+              - image: !secret facebook_picture_sandra
+              # - postnl: sensor.postnl_stephanie_packages
+              # - reistijd: sensor.reistijd_stephanie
+              # - battery: sensor.battery_level_13
+              - icon: home
+              # - tap_action:
+              #     action: navigate
+              #     navigation_path: /lovelace/sandra
+        - type: conditional
+          conditions:
+            - entity: person.sandra
+              state: "home"
+          card:
+            type: custom:decluttering-card
+            template: person_elements
+            variables:
+              - name: sandra
+              # - namesensor: !secret stephsensor
+              - direction: left
+              - image: !secret facebook_picture_sandra
+              # - postnl: sensor.postnl_stephanie_packages
+              # - reistijd: sensor.reistijd_stephanie_work
+              # - battery: sensor.battery_level_13
+              - icon: office-building
+              # - tap_action:
+              #     action: navigate
+              #     navigation_path: /lovelace/sandra
 
     # # Right Photo
     #     - type: conditional
