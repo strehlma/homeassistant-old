@@ -9,7 +9,7 @@ cards:
     #  - !include ../includes/simple-weather-card.yaml
       - type: horizontal-stack
         cards:
-        - !include ../includes/blank_card.yaml
+#        - !include ../includes/blank_card.yaml
         - type: conditional
           conditions:
             - entity: person.sandra
@@ -88,7 +88,7 @@ cards:
               # - tap_action:
               #     action: navigate
               #     navigation_path: /lovelace/mario
-        - !include ../includes/blank_card.yaml
+#        - !include ../includes/blank_card.yaml
 
   #   - type: picture-elements
   #     image: /local/images/BMW_6GT.jpg
