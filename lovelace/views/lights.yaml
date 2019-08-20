@@ -16,20 +16,16 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.diningroom
               - name: Esszimmerlampe
               - icon: ceiling-light
               - show_label: false
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.livingroom
               - name: Wohnzimmerlampe
@@ -37,44 +33,32 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
 
       - type: horizontal-stack             
         cards:
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: light.moon
               - name: Mond
               - icon: brightness-3
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.cube_plug
               - name: Würfel
               - icon: cube
               - show_label: false
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.tv_plug
               - name: Fernseher
               - icon: television
               - show_label: false
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
 
       ###################################
       # Kitchen                         #
@@ -86,13 +70,9 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.kitchen_plug
               - name: Küchenlicht
@@ -102,11 +82,7 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
 
       ###################################
       # Bedroom                         #
@@ -118,13 +94,9 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.wellness_plug
               - name: Wellness
@@ -134,11 +106,7 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
 
       ###################################
       # Stairway                        #
@@ -150,13 +118,9 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
           - type: custom:decluttering-card
-            template: light_button_card
+            template: switch_button_card
             variables:
               - entity: switch.stairway_plug
               - name: Treppenlicht
@@ -166,9 +130,5 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - type: 'custom:button-card'
-            color_type: blank-card
-            styles:
-              card:
-                - width: 10px
+          - !include ../decluttering_templates/blank-card.yaml
 
