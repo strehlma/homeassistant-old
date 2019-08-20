@@ -10,3 +10,6 @@ header_text:
 switch_button_card:
   !include switch_template.yaml
 
+# Person Picture Elements
+person_elements:
+  !include person_template.yaml
