@@ -19,10 +19,10 @@
 # of these 5 files is the swipe order as well.
 # The first view is the page 0. In my setup
 # the interface defaults to view 1.
-# title: Home
-# background: var(--background-image) # This is the background image that will be used in all the views. (currently backgrounds are set in themes, dont edit this if you want themes to work)
-# views:
-#   - !include lovelace/views/heating.yaml
+title: Home
+background: var(--background-image) # This is the background image that will be used in all the views. (currently backgrounds are set in themes, dont edit this if you want themes to work)
+views:
+  - !include lovelace/views/heating.yaml
   # - !include lovelace/views/dashboard.yaml
   # - !include lovelace/views/lights.yaml
 # The views below are used as fake popup cards
