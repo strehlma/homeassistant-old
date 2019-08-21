@@ -12,7 +12,7 @@ cch:
 # These are the templates used to avoid too much
 # duplicate code.
 decluttering_templates:
-  !include lovelace/templates/decluttering-templates.yaml # Changed/Added in 0.12.0
+  !include lovelace/templates/decluttering_templates.yaml # Changed/Added in 0.12.0
      
 # Views
 # The following 5 views are swipable, the order
@@ -24,7 +24,7 @@ background: var(--background-image) # This is the background image that will be 
 views:
   - !include lovelace/views/heating.yaml
 #  - !include lovelace/views/dashboard.yaml
-  - !include lovelace/views/lights.yaml
+#  - !include lovelace/views/lights.yaml
 # The views below are used as fake popup cards
 # They are non swipable and will behave just like
 # a popup card or conditional cards. The order of
