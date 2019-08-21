@@ -32,9 +32,9 @@ frontend:
 lovelace:
   mode: yaml
 
-custom_updater:
-  card_urls:
-    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+# custom_updater:
+#   card_urls:
+#     - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
 # Enables configuration UI
 config:
