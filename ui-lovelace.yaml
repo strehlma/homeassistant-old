@@ -11,8 +11,8 @@ cch:
 # Decluttering Templates
 # These are the templates used to avoid too much
 # duplicate code.
-# decluttering_templates:
-#   !include lovelace/templates/decluttering-templates.yaml # Changed/Added in 0.12.0
+decluttering_templates:
+  !include lovelace/templates/decluttering-templates.yaml # Changed/Added in 0.12.0
      
 # Views
 # The following 5 views are swipable, the order
