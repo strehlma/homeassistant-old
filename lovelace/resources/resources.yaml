@@ -18,13 +18,13 @@
     type: module
   - url: /customcards/github/custom-cards/button-card.js?track=true
     type: module
-  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/weather-card/weather-card.min.js
+  - url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
     type: module
   - url: /customcards/github/custom-cards/bar-card.js?v=1.0.0
     type: js
   - url: /customcards/mini-graph-card-bundle.js?v=0.3.3
     type: module
-  - url: /customcards/decluttering-card.js
+  - url: /community_plugin/decluttering-card/decluttering-card.js
     type: module
   - url: /customcards/simple-thermostat.js?v=1
     type: module
