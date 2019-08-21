@@ -8,15 +8,13 @@
     type: js
   - url: /customcards/github/thomasloven/state-switch.js?track=true
     type: js
-  - url: /customcards/circle-sensor-card.js?v=0
+  - url: /community_plugin/circle-sensor-card/circle-sensor-card.js
     type: module
   - url: /customcards/text-element.js?v=0
     type: js
   - url: /community_plugin/compact-custom-header/compact-custom-header.js
     type: module
-  - url: /customcards/simple-weather-card.bundle.js?v=0.3.0
-    type: module
-  - url: /customcards/github/custom-cards/button-card.js?track=true
+  - url: /community_plugin/button-card/button-card.js
     type: module
   - url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
     type: module
@@ -26,5 +24,5 @@
     type: module
   - url: /community_plugin/decluttering-card/decluttering-card.js
     type: module
-  - url: /customcards/simple-thermostat.js?v=1
+  - url: /community_plugin/simple-thermostat/simple-thermostat.js
     type: module
