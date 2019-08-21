@@ -54,5 +54,5 @@ notify_indicator_color: "#e80000"
 swipe: true
 swipe_wrap: false
 background: 'rgba(0,0,0,0.3)'
-#hide_tabs: '5 to 30'
+hide_tabs: '3'
 default_tab: 1
