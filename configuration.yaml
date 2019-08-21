@@ -36,6 +36,8 @@ lovelace:
 #   card_urls:
 #     - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
+hacs:
+  token: !secret hacs_token
 # Enables configuration UI
 config:
 
