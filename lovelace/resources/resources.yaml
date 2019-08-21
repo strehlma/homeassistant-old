@@ -12,7 +12,7 @@
     type: module
   - url: /customcards/text-element.js?v=0
     type: js
-  - url: /customcards/github/maykar/compact-custom-header.js?track=true
+  - url: /community_plugin/compact-custom-header/compact-custom-header.js
     type: module
   - url: /customcards/simple-weather-card.bundle.js?v=0.3.0
     type: module
@@ -20,7 +20,7 @@
     type: module
   - url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
     type: module
-  - url: /customcards/github/custom-cards/bar-card.js?v=1.0.0
+  - url: /community_plugin/bar-card/bar-card.js
     type: js
   - url: /customcards/mini-graph-card-bundle.js?v=0.3.3
     type: module
