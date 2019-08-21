@@ -48,10 +48,11 @@ menu: hide
 options: hide
 notifications: hide
 voice: hide
-header: false
+header: true
 chevrons: false
 notify_indicator_color: "#e80000"
 swipe: true
+swipe_animate: swipe
 swipe_wrap: false
 background: 'rgba(0,0,0,0.3)'
 hide_tabs: '3'
