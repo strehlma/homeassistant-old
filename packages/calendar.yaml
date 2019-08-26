@@ -60,7 +60,20 @@ sensor:
             {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
           {% endif %}
           {{countdown}}
-  
+
+      next_test:
+        friendly_name: 'Testtonne'
+        entity_id: calendar.get_paper
+        value_template: >
+          {% set due_date = (as_timestamp(states.calendar.get_paper.attributes.end_time) | int) %}
+          {% set todays_date = (now().strftime("%s") | int ) %}
+          {% if todays_date == due_date %}
+           {% set countdown = "Heute" %}
+          {% else %}
+            {% set countdown = 'in ' + ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) + ' Tagen' %}
+          {% endif %}
+          {{countdown}}
+
 automation:
   - id: update_calendar_sensors
     alias: "Update Calendar Sensors"
