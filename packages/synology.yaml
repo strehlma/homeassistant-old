@@ -8,4 +8,3 @@ sensor:
       - memory_real_usage
       - network_up
       - network_down
-      
