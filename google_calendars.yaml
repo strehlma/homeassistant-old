@@ -21,3 +21,8 @@
     name: Papiertonne
     track: true
     search: "Papiertonne"
+  - device_id: get_test
+    ignore_availability: true
+    name: Testtonne
+    track: true
+    search: "Testtonne"
