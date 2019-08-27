@@ -91,3 +91,5 @@ automation:
         entity_id: sensor.next_recycling
       - service: homeassistant.update_entity
         entity_id: sensor.next_paper
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_test
