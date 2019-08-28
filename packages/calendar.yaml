@@ -55,11 +55,25 @@ sensor:
           {% set due_date = (as_timestamp(states.calendar.get_paper.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
           {% if todays_date == due_date %}
-           {% set countdown = "Heute" %}
+            heute
           {% else %}
             {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+            {% if countdown == 1 %}
+              morgen
+            {% else %}
+              in {{ countdown }} Tagen
+            {% endif %}
           {% endif %}
-          {{countdown}}
+
+
+          # {% set due_date = (as_timestamp(states.calendar.get_paper.attributes.end_time) | int) %}
+          # {% set todays_date = (now().strftime("%s") | int ) %}
+          # {% if todays_date == due_date %}
+          #  {% set countdown = "Heute" %}
+          # {% else %}
+          #   {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+          # {% endif %}
+          # {{countdown}}
 
       next_test:
         friendly_name: 'Testtonne'
