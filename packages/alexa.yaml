@@ -49,7 +49,6 @@ intent_script:
     speech:
       type: plain
       text: >
-        {{ bin }}
         {% if bin == 'garbage' %}
           Die Restmülltonne wird {{ states("sensor.next_garbage") }} abgeholt.
         {% endif %}
