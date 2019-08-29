@@ -42,3 +42,9 @@ alexa:
         display_categories: LIGHT
         name: Küchenlicht
         description: Licht an der Kaffeemaschine
+
+intent_script:
+  bin:
+    speech:
+      type: plain
+      text: OK
