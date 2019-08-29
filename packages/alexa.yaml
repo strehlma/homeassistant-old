@@ -47,4 +47,16 @@ intent_script:
   Abfall:
     speech:
       type: plain
-      text: Meintest Du {{ bin }}?
+      text: >
+        {% if {{ bin }} == 'garbage' %}
+          Die Restmülltonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+        {% endif %}
+        {% if {{ bin }} == 'organic' %}
+          Die Biotonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+        {% endif %}
+        {% if {{ bin }} == 'recycling' %}
+          Die Gelbe Tonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+        {% endif %}
+        {% if {{ bin }} == 'paper' %}
+          Die Papiertonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+        {% endif %}
