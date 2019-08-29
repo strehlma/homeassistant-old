@@ -49,14 +49,14 @@ intent_script:
       type: plain
       text: >
         {% if {{ bin }} == 'garbage' %}
-          Die Restmülltonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+          Die Restmülltonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
         {% endif %}
         {% if {{ bin }} == 'organic' %}
-          Die Biotonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+          Die Biotonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
         {% endif %}
         {% if {{ bin }} == 'recycling' %}
-          Die Gelbe Tonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+          Die Gelbe Tonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
         {% endif %}
         {% if {{ bin }} == 'paper' %}
-          Die Papiertonne wird {{ sensor.{{ bin | replace(" ", "_") }} }} abgeholt.
+          Die Papiertonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
         {% endif %}
