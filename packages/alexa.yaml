@@ -47,4 +47,4 @@ intent_script:
   Abfall:
     speech:
       type: plain
-      text: OK
+      text: Meintest Du {{ bin }}?
