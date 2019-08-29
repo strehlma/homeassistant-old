@@ -43,20 +43,19 @@ alexa:
         name: Küchenlicht
         description: Licht an der Kaffeemaschine
 
+        # {% if {{ bin }} == 'organic' %}
+        #   Die Biotonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
+        # {% endif %}
+        # {% if {{ bin }} == 'recycling' %}
+        #   Die Gelbe Tonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
+        # {% endif %}
+        # {% if {{ bin }} == 'paper' %}
+        #   Die Papiertonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
+        # {% endif %}
+
 intent_script:
   Abfall:
     speech:
       type: plain
       text: >
-        {% if {{ bin }} == 'garbage' %}
-          Die Restmülltonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
-        {% endif %}
-        {% if {{ bin }} == 'organic' %}
-          Die Biotonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
-        {% endif %}
-        {% if {{ bin }} == 'recycling' %}
-          Die Gelbe Tonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
-        {% endif %}
-        {% if {{ bin }} == 'paper' %}
-          Die Papiertonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
-        {% endif %}
+        Die Restmülltonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
