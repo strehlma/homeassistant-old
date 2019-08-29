@@ -44,7 +44,7 @@ alexa:
         description: Licht an der Kaffeemaschine
 
 intent_script:
-  bin:
+  Abfall:
     speech:
       type: plain
       text: OK
