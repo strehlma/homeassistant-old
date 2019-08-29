@@ -58,4 +58,4 @@ intent_script:
     speech:
       type: plain
       text: >
-        Die Restmülltonne wird {{ states("sensor." ~ (bin | replace(' ', '_'))) }} abgeholt.
+        Die Restmülltonne wird {{ states("sensor.next_" ~ (bin | replace(' ', '_'))) }} abgeholt.
