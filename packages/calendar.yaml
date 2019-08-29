@@ -16,7 +16,7 @@ sensor:
             heute
           {% else %}
             {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 % }
+            {% if countdown == 1 %}
               morgen
             {% else %}
               in {{ countdown }} Tagen
@@ -34,7 +34,7 @@ sensor:
             heute
           {% else %}
             {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 % }
+            {% if countdown == 1 %}
               morgen
             {% else %}
               in {{ countdown }} Tagen
@@ -52,7 +52,7 @@ sensor:
             heute
           {% else %}
             {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 % }
+            {% if countdown == 1 %}
               morgen
             {% else %}
               in {{ countdown }} Tagen
@@ -70,7 +70,7 @@ sensor:
             heute
           {% else %}
             {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 % }
+            {% if countdown == 1 %}
               morgen
             {% else %}
               in {{ countdown }} Tagen
