@@ -3,77 +3,167 @@ google:
   client_secret: !secret google_client_secret
 
 sensor:
+  # - platform: template
+  #   sensors:
+  #     next_garbage:
+  #       friendly_name: 'Restmülltonne'
+  #       unit_of_measurement: 'days'
+  #       entity_id: calendar.get_garbage
+  #       value_template: >
+  #         {% set due_date = (as_timestamp(states.calendar.get_garbage.attributes.end_time) | int) %}
+  #         {% set todays_date = (now().strftime("%s") | int ) %}
+  #         {% if todays_date == due_date %}
+  #           heute
+  #         {% else %}
+  #           {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+  #           {% if countdown == 1 %}
+  #             morgen
+  #           {% else %}
+  #             in {{ countdown }} Tagen
+  #           {% endif %}
+  #         {% endif %}
+  
+  #     next_organic:
+  #       friendly_name: 'Biotonne'
+  #       unit_of_measurement: 'days'
+  #       entity_id: calendar.get_organic
+  #       value_template: >
+  #         {% set due_date = (as_timestamp(states.calendar.get_organic.attributes.end_time) | int) %}
+  #         {% set todays_date = (now().strftime("%s") | int ) %}
+  #         {% if todays_date == due_date %}
+  #           heute
+  #         {% else %}
+  #           {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+  #           {% if countdown == 1 %}
+  #             morgen
+  #           {% else %}
+  #             in {{ countdown }} Tagen
+  #           {% endif %}
+  #         {% endif %}
+  
+  #     next_recycling:
+  #       friendly_name: 'Gelbe Tonne'
+  #       unit_of_measurement: 'days'
+  #       entity_id: calendar.get_recycling
+  #       value_template: >
+  #         {% set due_date = (as_timestamp(states.calendar.get_recycling.attributes.end_time) | int) %}
+  #         {% set todays_date = (now().strftime("%s") | int ) %}
+  #         {% if todays_date == due_date %}
+  #           heute
+  #         {% else %}
+  #           {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+  #           {% if countdown == 1 %}
+  #             morgen
+  #           {% else %}
+  #             in {{ countdown }} Tagen
+  #           {% endif %}
+  #         {% endif %}
+  
+  #     next_paper:
+  #       friendly_name: 'Papiertonne'
+  #       unit_of_measurement: 'days'
+  #       entity_id: calendar.get_paper
+  #       value_template: >
+  #         {% set due_date = (as_timestamp(states.calendar.get_paper.attributes.end_time) | int) %}
+  #         {% set todays_date = (now().strftime("%s") | int ) %}
+  #         {% if todays_date == due_date %}
+  #           heute
+  #         {% else %}
+  #           {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+  #           {% if countdown == 1 %}
+  #             morgen
+  #           {% else %}
+  #             in {{ countdown }} Tagen
+  #           {% endif %}
+  #         {% endif %}
+
   - platform: template
     sensors:
       next_garbage:
-        friendly_name: 'Restmülltonne'
-        unit_of_measurement: 'days'
         entity_id: calendar.get_garbage
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_garbage.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
-          {% if todays_date == due_date %}
-            heute
-          {% else %}
-            {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 %}
-              morgen
-            {% else %}
-              in {{ countdown }} Tagen
-            {% endif %}
-          {% endif %}
+          {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+          {{ countdown }}
   
       next_organic:
-        friendly_name: 'Biotonne'
-        unit_of_measurement: 'days'
         entity_id: calendar.get_organic
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_organic.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
-          {% if todays_date == due_date %}
-            heute
-          {% else %}
-            {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 %}
-              morgen
-            {% else %}
-              in {{ countdown }} Tagen
-            {% endif %}
-          {% endif %}
+          {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+          {{ countdown }}
   
       next_recycling:
-        friendly_name: 'Gelbe Tonne'
-        unit_of_measurement: 'days'
         entity_id: calendar.get_recycling
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_recycling.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
-          {% if todays_date == due_date %}
-            heute
-          {% else %}
-            {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 %}
-              morgen
-            {% else %}
-              in {{ countdown }} Tagen
-            {% endif %}
-          {% endif %}
+          {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+          {{ countdown }}
   
       next_paper:
-        friendly_name: 'Papiertonne'
-        unit_of_measurement: 'days'
         entity_id: calendar.get_paper
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_paper.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
-          {% if todays_date == due_date %}
+          {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
+          {{ countdown }}
+
+      next_garbage_text:
+        entity_id: sensor.next_garbage
+        value_template: >
+          {% set days = (states.sensor.next_garbage) | int ) %}
+          {% if days == 0 %}
             heute
           {% else %}
-            {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
-            {% if countdown == 1 %}
+            {% if days == 1 %}
               morgen
             {% else %}
-              in {{ countdown }} Tagen
+              in {{ days }} Tagen
+            {% endif %}
+          {% endif %}
+  
+      next_organic_text:
+        entity_id: sensor.next_organic
+        value_template: >
+          {% set days = (states.sensor.next_organic) | int ) %}
+          {% if days == 0 %}
+            heute
+          {% else %}
+            {% if days == 1 %}
+              morgen
+            {% else %}
+              in {{ days }} Tagen
+            {% endif %}
+          {% endif %}
+  
+      next_recycling_text:
+        entity_id: sensor.next_recycling
+        value_template: >
+          {% set days = (states.sensor.next_recycling) | int ) %}
+          {% if days == 0 %}
+            heute
+          {% else %}
+            {% if days == 1 %}
+              morgen
+            {% else %}
+              in {{ days }} Tagen
+            {% endif %}
+          {% endif %}
+  
+      next_paper_text:
+        entity_id: sensor.next_paper
+        value_template: >
+          {% set days = (states.sensor.next_paper) | int ) %}
+          {% if days == 0 %}
+            heute
+          {% else %}
+            {% if days == 1 %}
+              morgen
+            {% else %}
+              in {{ days }} Tagen
             {% endif %}
           {% endif %}
 
@@ -93,3 +183,11 @@ automation:
         entity_id: sensor.next_recycling
       - service: homeassistant.update_entity
         entity_id: sensor.next_paper
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_garbage_text
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_organic_text
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_recycling_text
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_paper_text

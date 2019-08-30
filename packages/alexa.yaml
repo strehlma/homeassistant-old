@@ -50,14 +50,14 @@ intent_script:
       type: plain
       text: >
         {% if bin == 'garbage' %}
-          Die Restmülltonne wird {{ states("sensor.next_garbage") }} abgeholt.
+          Die Restmülltonne wird {{ states("sensor.next_garbage_text") }} abgeholt.
         {% endif %}
         {% if bin == 'organic' %}
-          Die Biotonne wird {{ states("sensor.next_organic") }} abgeholt.
+          Die Biotonne wird {{ states("sensor.next_organic_text") }} abgeholt.
         {% endif %}
         {% if bin == 'recycling' %}
-          Die Gelbe Tonne wird {{ states("sensor.next_recycling") }} abgeholt.
+          Die Gelbe Tonne wird {{ states("sensor.next_recycling_text") }} abgeholt.
         {% endif %}
         {% if bin == 'paper' %}
-          Die Papiertonne wird {{ states("sensor.next_paper") }} abgeholt.
+          Die Papiertonne wird {{ states("sensor.next_paper_text") }} abgeholt.
         {% endif %}
