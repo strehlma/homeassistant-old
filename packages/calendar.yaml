@@ -111,61 +111,61 @@ sensor:
           {% set countdown = ((due_date - todays_date | int) / 24 / 60 / 60) | round(0) %}
           {{ countdown }}
 
-      next_garbage_text:
-        entity_id: sensor.next_garbage
-        value_template: >
-          {% set days = (states.sensor.next_garbage) | int ) %}
-          {% if days == 0 %}
-            heute
-          {% else %}
-            {% if days == 1 %}
-              morgen
-            {% else %}
-              in {{ days }} Tagen
-            {% endif %}
-          {% endif %}
+      # next_garbage_text:
+      #   entity_id: sensor.next_garbage
+      #   value_template: >
+      #     {% set days = (states.sensor.next_garbage) | int ) %}
+      #     {% if days == 0 %}
+      #       heute
+      #     {% else %}
+      #       {% if days == 1 %}
+      #         morgen
+      #       {% else %}
+      #         in {{ days }} Tagen
+      #       {% endif %}
+      #     {% endif %}
   
-      next_organic_text:
-        entity_id: sensor.next_organic
-        value_template: >
-          {% set days = (states.sensor.next_organic) | int ) %}
-          {% if days == 0 %}
-            heute
-          {% else %}
-            {% if days == 1 %}
-              morgen
-            {% else %}
-              in {{ days }} Tagen
-            {% endif %}
-          {% endif %}
+      # next_organic_text:
+      #   entity_id: sensor.next_organic
+      #   value_template: >
+      #     {% set days = (states.sensor.next_organic) | int ) %}
+      #     {% if days == 0 %}
+      #       heute
+      #     {% else %}
+      #       {% if days == 1 %}
+      #         morgen
+      #       {% else %}
+      #         in {{ days }} Tagen
+      #       {% endif %}
+      #     {% endif %}
   
-      next_recycling_text:
-        entity_id: sensor.next_recycling
-        value_template: >
-          {% set days = (states.sensor.next_recycling) | int ) %}
-          {% if days == 0 %}
-            heute
-          {% else %}
-            {% if days == 1 %}
-              morgen
-            {% else %}
-              in {{ days }} Tagen
-            {% endif %}
-          {% endif %}
+      # next_recycling_text:
+      #   entity_id: sensor.next_recycling
+      #   value_template: >
+      #     {% set days = (states.sensor.next_recycling) | int ) %}
+      #     {% if days == 0 %}
+      #       heute
+      #     {% else %}
+      #       {% if days == 1 %}
+      #         morgen
+      #       {% else %}
+      #         in {{ days }} Tagen
+      #       {% endif %}
+      #     {% endif %}
   
-      next_paper_text:
-        entity_id: sensor.next_paper
-        value_template: >
-          {% set days = (states.sensor.next_paper) | int ) %}
-          {% if days == 0 %}
-            heute
-          {% else %}
-            {% if days == 1 %}
-              morgen
-            {% else %}
-              in {{ days }} Tagen
-            {% endif %}
-          {% endif %}
+      # next_paper_text:
+      #   entity_id: sensor.next_paper
+      #   value_template: >
+      #     {% set days = (states.sensor.next_paper) | int ) %}
+      #     {% if days == 0 %}
+      #       heute
+      #     {% else %}
+      #       {% if days == 1 %}
+      #         morgen
+      #       {% else %}
+      #         in {{ days }} Tagen
+      #       {% endif %}
+      #     {% endif %}
 
 automation:
   - id: update_calendar_sensors
@@ -183,11 +183,11 @@ automation:
         entity_id: sensor.next_recycling
       - service: homeassistant.update_entity
         entity_id: sensor.next_paper
-      - service: homeassistant.update_entity
-        entity_id: sensor.next_garbage_text
-      - service: homeassistant.update_entity
-        entity_id: sensor.next_organic_text
-      - service: homeassistant.update_entity
-        entity_id: sensor.next_recycling_text
-      - service: homeassistant.update_entity
-        entity_id: sensor.next_paper_text
+      # - service: homeassistant.update_entity
+      #   entity_id: sensor.next_garbage_text
+      # - service: homeassistant.update_entity
+      #   entity_id: sensor.next_organic_text
+      # - service: homeassistant.update_entity
+      #   entity_id: sensor.next_recycling_text
+      # - service: homeassistant.update_entity
+      #   entity_id: sensor.next_paper_text
