@@ -57,9 +57,9 @@ cards:
         cards:
           - !include ../includes/blank_card.yaml
           - type: thermostat
-            entity: climate.buro
+            entity: climate.wohnzimmer
           - type: thermostat
-            entity: climate.buro
+            entity: climate.kuche
           - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
@@ -67,7 +67,15 @@ cards:
           - type: thermostat
             entity: climate.buro
           - type: thermostat
-            entity: climate.buro
+            entity: climate.schlafzimmer
+          - !include ../includes/blank_card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../includes/blank_card.yaml
+          - type: thermostat
+            entity: climate.bad
+          - type: 'custom:button-card'
+            color_type: blank-card
           - !include ../includes/blank_card.yaml
 
 
