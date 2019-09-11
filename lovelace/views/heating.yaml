@@ -55,20 +55,20 @@ cards:
           - content: '##### Thermostat'
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank-card.yaml
+          - !include ../includes/blank_card.yaml
           - type: thermostat
             entity: climate.buro
           - type: thermostat
             entity: climate.buro
-          - !include ../includes/blank-card.yaml
+          - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank-card.yaml
+          - !include ../includes/blank_card.yaml
           - type: thermostat
             entity: climate.buro
           - type: thermostat
             entity: climate.buro
-          - !include ../includes/blank-card.yaml
+          - !include ../includes/blank_card.yaml
 
 
 #      - !include ../includes/bottom-card.yaml
