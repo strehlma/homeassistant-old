@@ -46,5 +46,76 @@ cards:
             color_type: blank-card
           - !include ../includes/blank_card.yaml
 
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Temperature'
+      - type: horizontal-stack
+        cards:
+          - !include ../includes/blank_card.yaml 
+          - type: custom:decluttering-card
+            template: mini-graph 
+            variables:
+              - entities: 
+                  - sensor.wohnzimmer_temperature
+              - name: Wohnzimmer
+              - line_color: '#ffb414'
+              - font_size: 53
+              - decimals: 1
+              - graph: line # Changed/Added in 0.12.3
+              - extrema: true
+          - type: custom:decluttering-card
+            template: mini-graph 
+            variables:
+              - entities: 
+                  - sensor.kuche_temperature
+              - name: Küche
+              - line_color: '#ffb414'
+              - font_size: 53
+              - decimals: 1
+              - graph: line # Changed/Added in 0.12.3
+              - extrema: true
+          - type: custom:decluttering-card
+            template: mini-graph 
+            variables:
+              - entities: 
+                  - sensor.buro_temperature
+              - name: Büro
+              - line_color: '#ffb414'
+              - font_size: 53
+              - decimals: 1
+              - graph: line # Changed/Added in 0.12.3
+              - extrema: true
+          - !include ../includes/blank_card.yaml 
+      - type: horizontal-stack
+        cards:
+          - !include ../includes/blank_card.yaml 
+          - type: custom:decluttering-card
+            template: mini-graph 
+            variables:
+              - entities: 
+                  - sensor.schlafzimmer_temperature
+              - name: Schlafzimmer
+              - line_color: '#ffb414'
+              - font_size: 53
+              - decimals: 1
+              - graph: line # Changed/Added in 0.12.3
+              - extrema: true
+          - type: custom:decluttering-card
+            template: mini-graph 
+            variables:
+              - entities: 
+                  - sensor.bad_temperature
+              - name: Bad
+              - line_color: '#ffb414'
+              - font_size: 53
+              - decimals: 1
+              - graph: line # Changed/Added in 0.12.3
+              - extrema: true
+          - type: 'custom:button-card'
+            color_type: blank-card
+          - !include ../includes/blank_card.yaml 
 
 #      - !include ../includes/bottom-card.yaml

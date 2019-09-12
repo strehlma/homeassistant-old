@@ -13,3 +13,7 @@ switch_button_card:
 # Person Picture Elements
 person_elements:
   !include person_template.yaml
+
+# Mini Graph Card
+mini-graph:
+  !include mini_graph_template.yaml
