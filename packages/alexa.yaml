@@ -45,7 +45,7 @@ alexa:
 
 
 intent_script:
-  Abfall:
+  RecycleBin:
     speech:
       type: plain
       text: >
@@ -61,3 +61,8 @@ intent_script:
         {% if bin == 'paper' %}
           Die Papiertonne wird {{ states("sensor.next_paper_text") }} abgeholt.
         {% endif %}
+
+  NextCollection:
+    speech:
+      type: plain
+      text: sensor.next_garbage_collection
