@@ -94,6 +94,46 @@ sensor:
             {% endif %}
           {% endif %}
 
+      next_garbage_collection:
+        value_template: >
+          {%- set mysensors = ["sensor.next_garbage", "sensor.next_organic", "sensor.next_recycling", "sensor.next_paper"] %}
+            {%- set garbage = (states('sensor.next_garbage') | int ) %}
+          {%- set organic = (states('sensor.next_organic') | int ) %}
+          {%- set recycling = (states('sensor.next_recycling') | int ) %}
+          {%- set paper = (states('sensor.next_paper') | int ) %}
+          {%- set min_days = (garbage, organic, recycling) | min %}
+          {%- for entity in mysensors if is_state(entity, min_days | string )%}
+            {%- if states[entity.split('.')[0]][entity.split('.')[1]].name  == 'next_garbage'  %}
+              {%- set bin_name = 'Restmülltonne' %}
+            {%- endif %}         
+            {%- if states[entity.split('.')[0]][entity.split('.')[1]].name  == 'next_organic'  %}
+              {%- set bin_name = 'Biotonne' %}
+            {%- endif %}         
+            {%- if states[entity.split('.')[0]][entity.split('.')[1]].name  == 'next_recycling'  %}
+              {%- set bin_name = 'Gelbe Tonne' %}
+            {%- endif %}         
+            {%- if states[entity.split('.')[0]][entity.split('.')[1]].name  == 'next_paper'  %}
+              {%- set bin_name = 'Papiertonne' %}
+            {%- endif %}         
+            {%- if loop.first and loop.last %}
+              Die {{ bin_name }} wird in {{ min_days }} Tagen abgeholt.
+            {%- else %}
+              {%- if loop.first %}Die {% elif loop.last %} und die {% else %}, die {% endif -%}
+              {{ bin_name }}
+              {%- if loop.last %} werden in {{ min_days }} Tagen abgeholt.{%- endif %}
+            {%- endif %}
+          {%- endfor %}
+
+
+
+
+
+
+
+
+
+
+
 automation:
   - id: update_calendar_sensors
     alias: "Update Calendar Sensors"
@@ -118,3 +158,27 @@ automation:
         entity_id: sensor.next_recycling_text
       - service: homeassistant.update_entity
         entity_id: sensor.next_paper_text
+
+
+#           {% set months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] %}
+#           {% set days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"] %}
+#           {% set garbage = states.sensor.next_garbage|int %}
+#           {% set organic = states.sensor.next_organic|int %}
+#           {% set recycling = states.sensor.next_recycling|int %}
+#           {% set paper = states.sensor.next_paper|int %}
+#           {% set bin_list = [] %}
+#           {% set min_days = (garbage, organic, recycling, paper)|min %}
+#           {% if garbage == min_days %}
+#             {{ as_timestamp(states.calendar.get_garbage.attributes.end_time), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%A @ %-I:%M %p') }}
+#             Oven · {{ maximum }} W
+#           {% elif b == maximum  %}
+#             Boiler · {{ maximum }} W
+#           {% elif c == maximum  %}Fan · {{ maximum }} W
+#           {% endif %} '
+
+# Die Mülltonnen werden am {{days[ as_timestamp(states.calendar.get_recycling.attributes.end_time) | timestamp_custom('%-d') | int -1 ]}} den 
+# {{ as_timestamp(states.calendar.get_recycling.attributes.end_time) | timestamp_custom('%-m.') }} {{months[ as_timestamp(states.calendar.get_recycling.attributes.end_time) | timestamp_custom('%-m') | int -1 ]}}
+# {{ netx_date }}
+
+# {{ as_timestamp(states.calendar.get_recycling.attributes.end_time) | timestamp_custom('%-d.') }}
+# {{ months[as_timestamp(states.calendar.get_recycling.attributes.end_time) | timestamp_custom('%-m')|int] }}
