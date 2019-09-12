@@ -65,4 +65,5 @@ intent_script:
   NextCollection:
     speech:
       type: plain
-      text: {{ states("sensor.next_garbage_collection") }}
+      text: > 
+        Hallo
