@@ -66,4 +66,4 @@ intent_script:
     speech:
       type: plain
       text: > 
-        Hallo
+        {{ states("sensor.next_garbage_collection") }}
