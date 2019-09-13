@@ -9,7 +9,7 @@ cards:
       # - !include ../includes/simple-weather-card.yaml
       - type: horizontal-stack
         cards:
-          # - !include ../includes/blank_card.yaml
+          - !include ../includes/blank_card.yaml
           - type: conditional
             conditions:
               - entity: person.sandra
@@ -89,8 +89,10 @@ cards:
                 #     action: navigate
                 #     navigation_path: /lovelace/mario
   #        - !include ../includes/blank_card.yaml
+          - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
+          - !include ../includes/blank_card.yaml
           - type: picture-elements
             image: /local/images/BMW_6GT.jpg
             style: |
@@ -242,8 +244,10 @@ cards:
                   width: 4em
                   height: 4em
                   transform: none
+          - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
+          - !include ../includes/blank_card.yaml
           - type: picture-elements
             image: /local/images/muellabfuhr.jpg
             style: |
@@ -336,7 +340,7 @@ cards:
                   top: 97.5%
                   left: 44%
                   color: white
-
+          - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
           - !include ../includes/blank_card.yaml
