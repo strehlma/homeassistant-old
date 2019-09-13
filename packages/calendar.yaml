@@ -97,11 +97,21 @@ sensor:
       next_garbage_collection:
         value_template: >
           {%- set mysensors = ["sensor.next_garbage", "sensor.next_organic", "sensor.next_recycling", "sensor.next_paper"] %}
-            {%- set garbage = (states('sensor.next_garbage') | int ) %}
+          {%- set garbage = (states('sensor.next_garbage') | int ) %}
           {%- set organic = (states('sensor.next_organic') | int ) %}
           {%- set recycling = (states('sensor.next_recycling') | int ) %}
           {%- set paper = (states('sensor.next_paper') | int ) %}
           {%- set min_days = (garbage, organic, recycling) | min %}
+          {% if min_days == 0 %}
+            {%- set daytext = 'heute' %}            
+          {% else %}
+            {% if min_days == 1 %}
+            {%- set daytext = 'morgen' %}            
+            {% else %}
+              {%- set daytext = 'in ' + min_days|string + ' Tagen' %}                          
+            {% endif %}
+          {% endif %}
+
           {%- for entity in mysensors if is_state(entity, min_days | string )%}
             {%- if states[entity.split('.')[0]][entity.split('.')[1]].name  == 'next_garbage'  %}
               {%- set bin_name = 'Restmülltonne' %}
@@ -116,22 +126,13 @@ sensor:
               {%- set bin_name = 'Papiertonne' %}
             {%- endif %}         
             {%- if loop.first and loop.last %}
-              Die {{ bin_name }} wird in {{ min_days }} Tagen abgeholt.
+              Die {{ bin_name }} wird {{ daytext }} Tagen abgeholt.
             {%- else %}
               {%- if loop.first %}Die {% elif loop.last %} und die {% else %}, die {% endif -%}
               {{ bin_name }}
               {%- if loop.last %} werden in {{ min_days }} Tagen abgeholt.{%- endif %}
             {%- endif %}
           {%- endfor %}
-
-
-
-
-
-
-
-
-
 
 
 automation:
@@ -158,6 +159,8 @@ automation:
         entity_id: sensor.next_recycling_text
       - service: homeassistant.update_entity
         entity_id: sensor.next_paper_text
+      - service: homeassistant.update_entity
+        entity_id: next_garbage_collection
 
 
 #           {% set months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] %}
