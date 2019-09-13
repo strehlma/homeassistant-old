@@ -397,3 +397,4 @@ cards:
           - type: 'custom:button-card'
             color_type: blank-card
           - !include ../includes/blank_card.yaml
+      - !include ../notifications/notifications.yaml

@@ -1,3 +1,5 @@
-# Other
   dummy1:
     initial: off
+
+  garbage_warning:
+    initial: on

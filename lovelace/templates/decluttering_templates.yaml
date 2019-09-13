@@ -22,3 +22,6 @@ mini-graph:
 button:
   !include button_template.yaml
 
+# Notification Card (Frontend)
+notification: 
+  !include notification_template.yaml

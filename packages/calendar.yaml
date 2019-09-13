@@ -134,6 +134,19 @@ sensor:
             {%- endif %}
           {%- endfor %}
 
+      next_garbage_days:
+        value_template: >
+          {{ ((states('sensor.next_garbage') | int ), (states('sensor.next_organic') | int ), (states('sensor.next_recycling') | int ), (states('sensor.next_paper') | int )) | min }}
+
+binary_sensor:
+  - platform: template
+    sensors:
+      garbage_warning:
+        value_template: >
+          {{ states('sensor.next_garbage_days')|int == 1 }}
+      garbage_critical:
+        value_template: >
+          {{ states('sensor.next_garbage_days')|int == 0 }}
 
 automation:
   - id: update_calendar_sensors
@@ -161,6 +174,12 @@ automation:
         entity_id: sensor.next_paper_text
       - service: homeassistant.update_entity
         entity_id: sensor.next_garbage_collection
+      - service: homeassistant.update_entity
+        entity_id: sensor.next_garbage_days
+      - service: homeassistant.update_entity
+        entity_id: binary_sensor.garbage_warning
+      - service: homeassistant.update_entity
+        entity_id: binary_sensor.garbage_critical
 
 
 #           {% set months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] %}

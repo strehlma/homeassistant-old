@@ -4,6 +4,14 @@ icon: 'mdi:server'
 cards:
   - type: vertical-stack
     cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '## System'
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Internet'
       - type: horizontal-stack
         cards:
           - type: custom:mini-graph-card
@@ -60,13 +68,6 @@ cards:
               - value: 13
                 color: "#3498db"
   
-  
-  - type: custom:tracker-card
-  - type: entities
-    title: Tado
-    show_header_toggle: false
-    entities:
-      - sensor.sandras_und_marios_zuhause_tado_bridge_status
 
 
 
