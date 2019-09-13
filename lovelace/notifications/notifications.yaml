@@ -44,7 +44,7 @@ cards:
     card:
       type: horizontal-stack
       cards:
-        - !include ../includes/blank-card.yaml
+        - !include ../includes/blank_card.yaml
         - type: custom:decluttering-card
           template: notification
           variables:
@@ -52,7 +52,7 @@ cards:
             - icon: recycle
             - name: Morgen wird der Müll abgeholt!!!
             - card_color: 'rgba(255, 110, 0, 0.5)'
-        - !include ../includes/blank-card.yaml
+        - !include ../includes/blank_card.yaml
 
 
   # - !include ../includes/bottom-card.yaml
