@@ -101,7 +101,8 @@ sensor:
           {%- set organic = (states('sensor.next_organic') | int ) %}
           {%- set recycling = (states('sensor.next_recycling') | int ) %}
           {%- set paper = (states('sensor.next_paper') | int ) %}
-          {%- set min_days = (garbage, organic, recycling) | min %}
+          {%- set min_days = (garbage, organic, recycling, paper) | min %}
+
           {% if min_days == 0 %}
             {%- set daytext = 'heute' %}            
           {% else %}
