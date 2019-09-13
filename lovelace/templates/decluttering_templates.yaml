@@ -16,4 +16,9 @@ person_elements:
 
 # Mini Graph Card
 mini-graph:
-  !include mini_graph_template.yaml
+  !include 
+  
+# Button Card (This is the main template used everywhere)
+button:
+  !include button_template.yaml
+
