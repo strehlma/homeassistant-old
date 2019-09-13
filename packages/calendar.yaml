@@ -160,7 +160,7 @@ automation:
       - service: homeassistant.update_entity
         entity_id: sensor.next_paper_text
       - service: homeassistant.update_entity
-        entity_id: next_garbage_collection
+        entity_id: sensor.next_garbage_collection
 
 
 #           {% set months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] %}
