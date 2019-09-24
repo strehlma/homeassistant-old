@@ -10,3 +10,39 @@
   action:
     service: switch.toggle
     entity_id: switch.wellness_plug
+
+- alias: 'Turn on bedroom TV'
+  hide_entity: true
+  initial_state: 'on'
+  trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: tradfri_onoff_1
+          event: 1002
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: tradfri_onoff_2
+          event: 1002
+  action:
+    service: switch.turn_on
+    entity_id: switch.wellness_plug
+
+- alias: 'Turn off bedroom TV'
+  hide_entity: true
+  initial_state: 'on'
+  trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: tradfri_onoff_1
+          event: 2002
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: tradfri_onoff_2
+          event: 2002
+  action:
+    service: switch.turn_off
+    entity_id: switch.wellness_plug
