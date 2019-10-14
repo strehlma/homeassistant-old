@@ -1,0 +1,4 @@
+octoprint:
+  - host: !secret octoprint_host
+    api_key: !secret octoprint_api_key
+    name: "Ender 3 pro"

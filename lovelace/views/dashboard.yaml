@@ -398,7 +398,23 @@ cards:
               - entity: input_boolean.dummy1
               - margin-right: 40px
               - opacity: 0.8
-          - type: 'custom:button-card'
-            color_type: blank-card
+          - type: custom:decluttering-card
+            template: button 
+            variables:
+              - name: 3D Printer
+              - label: Control
+              - icon: server
+              - show_state: false
+              - tap_action: 
+                  action: navigate
+                  navigation_path: /lovelace/3dprinter
+                  haptic: light
+              - hold_action: 
+                  action: navigate
+                  navigation_path: /lovelace/3dprinter
+                  haptic: light
+              - entity: input_boolean.dummy1
+              - margin-right: 40px
+              - opacity: 0.8
           - !include ../includes/blank_card.yaml
       - !include ../notifications/notifications.yaml
