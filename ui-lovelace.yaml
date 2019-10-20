@@ -30,6 +30,7 @@ views:
 # a popup card or conditional cards. The order of
 # these files will not change anything.
   - !include lovelace/views/system.yaml
+  - !include lovelace/views/3dprinter.yaml
   # - !include lovelace/views/vacuum.yaml
   # - !include lovelace/views/vacuum-zoned-cleaning.yaml
   # - !include lovelace/views/alarm.yaml

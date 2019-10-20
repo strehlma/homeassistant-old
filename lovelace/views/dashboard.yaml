@@ -1,15 +1,13 @@
 title: Home
-icon: 'mdi:home'
 path: home
-# popup_cards:
-#   !include ../popup-cards/notification-popup.yaml
+icon: 'mdi:home'
 cards:
   - type: vertical-stack
     cards:
       # - !include ../includes/simple-weather-card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
           - type: conditional
             conditions:
               - entity: person.sandra
@@ -88,11 +86,10 @@ cards:
                 # - tap_action:
                 #     action: navigate
                 #     navigation_path: /lovelace/mario
-  #        - !include ../includes/blank_card.yaml
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
           - type: picture-elements
             image: /local/images/BMW_6GT.jpg
             style: |
@@ -244,10 +241,10 @@ cards:
                   width: 4em
                   height: 4em
                   transform: none
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
           - type: picture-elements
             image: /local/images/muellabfuhr.jpg
             style: |
@@ -261,49 +258,49 @@ cards:
                 text: "Zustand"
                 style:
                   top: 86%
-                  left: 8%
-                  color: white
-                  # background-color: rgba(54, 65, 78, 0.8)
-              - type: state-icon
-                entity: sensor.next_garbage
-                tap_action: more-info
-                style:
-                  top: 91.5%
-                  left: 8%              
-                  "--paper-item-icon-color": white
-              - type: state-label
-                entity: sensor.next_garbage
-                style:
-                  top: 97.5%
-                  left: 8%
-                  color: white
-              # organic
-              - type: custom:text-element
-                text: "Service"
-                style:
-                  top: 86%
                   left: 20%
                   color: white
                   # background-color: rgba(54, 65, 78, 0.8)
               - type: state-icon
-                entity: sensor.next_organic
+                entity: sensor.next_garbage
                 tap_action: more-info
                 style:
                   top: 91.5%
                   left: 20%              
                   "--paper-item-icon-color": white
               - type: state-label
-                entity: sensor.next_organic
+                entity: sensor.next_garbage
                 style:
                   top: 97.5%
                   left: 20%
+                  color: white
+              # organic
+              - type: custom:text-element
+                text: "Service"
+                style:
+                  top: 86%
+                  left: 40%
+                  color: white
+                  # background-color: rgba(54, 65, 78, 0.8)
+              - type: state-icon
+                entity: sensor.next_organic
+                tap_action: more-info
+                style:
+                  top: 91.5%
+                  left: 40%              
+                  "--paper-item-icon-color": white
+              - type: state-label
+                entity: sensor.next_organic
+                style:
+                  top: 97.5%
+                  left: 40%
                   color: white
               # paper
               - type: custom:text-element
                 text: "Papiertonne"
                 style:
                   top: 86%
-                  left: 32%
+                  left: 60%
                   color: white
                   # background-color: rgba(54, 65, 78, 0.8)
               - type: state-icon
@@ -311,20 +308,20 @@ cards:
                 tap_action: more-info
                 style:
                   top: 91.5%
-                  left: 32%              
+                  left: 60%              
                   "--paper-item-icon-color": white
               - type: state-label
                 entity: sensor.next_paper
                 style:
                   top: 97.5%
-                  left: 32%
+                  left: 60%
                   color: white
               # recycling
               - type: custom:text-element
                 text: "Gelbe Tonne"
                 style:
                   top: 86%
-                  left: 44%
+                  left: 80%
                   color: white
                   # background-color: rgba(54, 65, 78, 0.8)
               - type: state-icon
@@ -332,18 +329,18 @@ cards:
                 tap_action: more-info
                 style:
                   top: 91.5%
-                  left: 44%              
+                  left: 80%              
                   "--paper-item-icon-color": white
               - type: state-label
                 entity:  sensor.next_recycling
                 style:
                   top: 97.5%
-                  left: 44%
+                  left: 80%
                   color: white
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
           - type: custom:decluttering-card
             template: button 
             variables:
@@ -403,7 +400,7 @@ cards:
             variables:
               - name: 3D Printer
               - label: Control
-              - icon: server
+              - icon: printer-3d-nozzle
               - show_state: false
               - tap_action: 
                   action: navigate
@@ -416,5 +413,5 @@ cards:
               - entity: input_boolean.dummy1
               - margin-right: 40px
               - opacity: 0.8
-          - !include ../includes/blank_card.yaml
+          # - !include ../includes/blank_card.yaml
       - !include ../notifications/notifications.yaml
