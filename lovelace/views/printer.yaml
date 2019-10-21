@@ -1,5 +1,5 @@
-title: 3DPrinter
-path: 3dprinter
+title: Printer
+path: printer
 icon: 'mdi:printer-3d-nozzle'
 cards:
   - type: vertical-stack
@@ -8,7 +8,3 @@ cards:
         template: header_text
         variables:
           - content: '## 3D Printer'
-      - type: custom:decluttering-card
-        template: header_text
-        variables:
-          - content: '##### Ender 3 Pro'
