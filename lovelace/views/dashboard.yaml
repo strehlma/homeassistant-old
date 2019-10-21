@@ -255,7 +255,7 @@ cards:
             elements:
               # garbage
               - type: custom:text-element
-                text: "Zustand"
+                text: "Restmülltonne"
                 style:
                   top: 86%
                   left: 20%
@@ -276,7 +276,7 @@ cards:
                   color: white
               # organic
               - type: custom:text-element
-                text: "Service"
+                text: "Biotonne"
                 style:
                   top: 86%
                   left: 40%
