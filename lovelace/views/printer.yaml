@@ -8,3 +8,42 @@ cards:
         template: header_text
         variables:
           - content: '## 3D Printer'
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '### Ender 3 Pro'
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.ender_3_pro_actual_tool0_temp
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 0
+                color: "#FFFF00"
+              - value: 40
+                color: "#3498db"
+                
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.ender_3_pro_actual_bed_temp
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 0
+                color: "#FFFF00"
+              - value: 13
+                color: "#3498db"

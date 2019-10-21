@@ -404,11 +404,11 @@ cards:
               - show_state: false
               - tap_action: 
                   action: navigate
-                  navigation_path: /lovelace/3dprinter
+                  navigation_path: /lovelace/printer
                   haptic: light
               - hold_action: 
                   action: navigate
-                  navigation_path: /lovelace/3dprinter
+                  navigation_path: /lovelace/printer
                   haptic: light
               - entity: input_boolean.dummy1
               - margin-right: 40px
