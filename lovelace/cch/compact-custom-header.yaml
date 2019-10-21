@@ -55,5 +55,5 @@ swipe: true
 swipe_animate: swipe
 swipe_wrap: false
 background: 'rgba(0,0,0,0.3)'
-hide_tabs: '3,4'
+#hide_tabs: '3,4'
 default_tab: 1
