@@ -1,0 +1,10 @@
+title: Media
+path: media
+icon: 'mdi:monitor-speaker'
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '## Media'
