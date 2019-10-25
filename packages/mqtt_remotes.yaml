@@ -26,7 +26,6 @@ automation:
       service: switch.toggle
       entity_id: switch.tv_plug
 
-automation:
   - alias: "MQTT Remote Moon"
     hide_entity: true
     initial_state: on
@@ -38,7 +37,6 @@ automation:
       service: light.toggle
       entity_id: light.moon
 
-automation:
   - alias: "MQTT Remote Cube"
     hide_entity: true
     initial_state: on
