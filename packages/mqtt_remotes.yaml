@@ -4,8 +4,8 @@
 #       ON          OFF
 # A   4523345     4523348     Television    Moon
 # B   4526417     4526420     Cube          Showcase
-# C   4527185     4527188     Shelf       
-# D   4527377     4527380     Kitchenlight  Stairway
+# C   4527185     4527188     Kitchenlight  Stairway
+# D   4527377     4527380     Shelf 
 #
 # Livingroom remote:
 #       ON          OFF
@@ -65,7 +65,7 @@ automation:
   #   trigger:
   #     - platform: mqtt
   #       topic: home/433toMQTT
-  #       payload: '4526420' 
+  #       payload: '4527377' 
   #   action:
   #     service: switch.toggle
   #     entity_id: switch.shelf_plug
@@ -76,7 +76,7 @@ automation:
     trigger:
       - platform: mqtt
         topic: home/433toMQTT
-        payload: '4527377' 
+        payload: '4527185' 
       - platform: mqtt
         topic: home/433toMQTT
         payload: '279889' 
@@ -90,7 +90,7 @@ automation:
     trigger:
       - platform: mqtt
         topic: home/433toMQTT
-        payload: '4527380' 
+        payload: '4527188' 
       - platform: mqtt
         topic: home/433toMQTT
         payload: '279892' 
