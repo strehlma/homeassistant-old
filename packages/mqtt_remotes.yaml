@@ -1,0 +1,102 @@
+# MQTT Payloads
+#
+# Livingroom remote:
+#       ON          OFF
+# A   4523345     4523348     Television    Moon
+# B   4526417     4526420     Cube          Showcase
+# C   4527185     4527188     Shelf       
+# D   4527377     4527380     Kitchenlight  Stairway
+#
+# Livingroom remote:
+#       ON          OFF
+# A   279889      279892      Kitchenlight  Stairway
+# B   282961      282964
+# C   283729      283732
+# D   283921      283924
+
+automation:
+  - alias: "MQTT Remote Television"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '4523345' 
+    action:
+      service: switch.toggle
+      entity_id: switch.tv_plug
+
+automation:
+  - alias: "MQTT Remote Moon"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '4523348' 
+    action:
+      service: light.toggle
+      entity_id: light.moon
+
+automation:
+  - alias: "MQTT Remote Cube"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '4526417' 
+    action:
+      service: light.toggle
+      entity_id: light.cube
+
+  - alias: "MQTT Remote Showcase"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '4526420' 
+    action:
+      service: switch.toggle
+      entity_id: switch.showcase_plug
+
+  # - alias: "MQTT Remote Shelf"
+  #   hide_entity: true
+  #   initial_state: on
+  #   trigger:
+  #     - platform: mqtt
+  #       topic: home/433toMQTT
+  #       payload: '4526420' 
+  #   action:
+  #     service: switch.toggle
+  #     entity_id: switch.shelf_plug
+
+  - alias: "MQTT Remote Kitchenlight"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '4527377' 
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '279889' 
+    action:
+      service: switch.toggle
+      entity_id: switch.kitchenlight_plug
+
+  - alias: "MQTT Remote Stairway"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '4527380' 
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '279892' 
+    action:
+      service: switch.toggle
+      entity_id: switch.stairway_plug
+
