@@ -1,6 +1,7 @@
 auto_start: true
 ip_address: !secret homekit_ip
 port: !secret homekit_port
+pincode: !secret homekit_pin
 filter:
   exclude_domains:
     - sensor
