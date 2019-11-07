@@ -20,10 +20,9 @@ cards:
             height: 50
             line_width: 2
             font_size: 70
-            hours_to_show: 168
-            points_per_hour: 1
+            hours_to_show: 1
+            points_per_hour: 120
             show:
-              extrema: true
               fill: true
             color_thresholds:
               - value: 0
@@ -37,10 +36,9 @@ cards:
             height: 50
             line_width: 2
             font_size: 70
-            hours_to_show: 168
-            points_per_hour: 1
+            hours_to_show: 1
+            points_per_hour: 120
             show:
-              extrema: true
               fill: true
             color_thresholds:
               - value: 0
