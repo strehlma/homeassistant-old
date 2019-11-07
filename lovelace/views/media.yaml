@@ -8,3 +8,9 @@ cards:
         template: header_text
         variables:
           - content: '## Media'
+      - type: custom:mini-media-player
+        entity: media_player.echo_buro
+      - type: custom:mini-media-player
+        entity: media_player.echo_kathe
+      - type: custom:mini-media-player
+        entity: media_player.echo_kuche
