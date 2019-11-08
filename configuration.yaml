@@ -16,13 +16,17 @@ homeassistant:
   # Packages
   packages: !include_dir_named packages/
 
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
+      api_password: !secret http_password
 # Configure a default setup of Home Assistant (frontend, api, etc)
 # default_config:
 
 system_health:
 
 http:
-  api_password: !secret http_password
+  # api_password: !secret http_password
   base_url: !secret base_url
 
 frontend:
