@@ -9,3 +9,19 @@ alexa_media:
     - email: !secret alexa_user
       password: !secret alexa_password
       url: amazon.de
+
+
+
+media_player:
+
+################# Soundtouch ####################################
+
+  - platform: soundtouch
+    host: !secret soundtouch_bad
+    port: 8090
+    name: Soundtouch Bad
+
+  - platform: soundtouch
+    host: !secret soundtouch_kueche
+    port: 8090
+    name: Soundtouch Küche
