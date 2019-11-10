@@ -42,25 +42,26 @@ lovelace:
 
 hacs:
   token: !secret hacs_token
+
 # Enables configuration UI
 config:
 
 history:
 
 logger:
-  # default: critical
-  # logs:
-  #   # log level for HA core
-  #   homeassistant.core: fatal
+  default: critical
+  logs:
+    # log level for HA core
+    homeassistant.core: fatal
     
-  #   # log level for MQTT integration
-  #   homeassistant.components.mqtt: warning
+    # log level for MQTT integration
+    homeassistant.components.mqtt: warning
     
-  #   # log level for SmartThings lights
-  #   homeassistant.components.smartthings.light: info
+    # log level for SmartThings lights
+    homeassistant.components.smartthings.light: info
 
-  #   # log level for deCONZ
-  #   homeassistant.components.deconz: debug
+    # log level for deCONZ
+    homeassistant.components.deconz: debug
 
 recorder:
   db_url: !secret mysql_connection
