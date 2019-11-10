@@ -15,46 +15,46 @@ cards:
       - type: custom:mini-media-player
         entity: media_player.echo_kuche
       - type: 'custom:mini-media-player'
-        entity: media_player.soundtouch_kueche
+        entity: media_player.soundtouch_kuche
         shortcuts:
           buttons:
             - data:
-                entity_id: media_player.soundtouch_kueche
+                entity_id: media_player.soundtouch_kuche
                 media_content_id: 1
                 media_content_type: PLAYLIST
               id: media_player.play_media
               name: 1
               type: service
             - data:
-                entity_id: media_player.soundtouch_kueche
+                entity_id: media_player.soundtouch_kuche
                 media_content_id: 2
                 media_content_type: PLAYLIST
               id: media_player.play_media
               name: 2
               type: service
             - data:
-                entity_id: media_player.soundtouch_kueche
+                entity_id: media_player.soundtouch_kuche
                 media_content_id: 3
                 media_content_type: PLAYLIST
               id: media_player.play_media
               name: 3
               type: service
             - data:
-                entity_id: media_player.soundtouch_kueche
+                entity_id: media_player.soundtouch_kuche
                 media_content_id: 4
                 media_content_type: PLAYLIST
               id: media_player.play_media
               name: 4
               type: service
             - data:
-                entity_id: media_player.soundtouch_kueche
+                entity_id: media_player.soundtouch_kuche
                 media_content_id: 5
                 media_content_type: PLAYLIST
               id: media_player.play_media
               name: 5
               type: service
             - data:
-                entity_id: media_player.soundtouch_kueche
+                entity_id: media_player.soundtouch_kuche
                 media_content_id: 6
                 media_content_type: PLAYLIST
               id: media_player.play_media
