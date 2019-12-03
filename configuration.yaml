@@ -20,13 +20,16 @@ homeassistant:
     - type: homeassistant
     - type: legacy_api_password
       api_password: !secret http_password
-# Configure a default setup of Home Assistant (frontend, api, etc)
-# default_config:
 
 system_health:
 
+mobile_app:
+
+discovery:
+
+ios:
+
 http:
-  # api_password: !secret http_password
   base_url: !secret base_url
 
 frontend:
@@ -35,10 +38,6 @@ frontend:
 
 lovelace:
   mode: yaml
-
-# custom_updater:
-#   card_urls:
-#     - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
 hacs:
   token: !secret hacs_token

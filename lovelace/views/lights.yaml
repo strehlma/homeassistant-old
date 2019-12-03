@@ -16,7 +16,6 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - !include ../includes/blank_card.yaml
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
@@ -33,11 +32,9 @@ cards:
               - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
-          - !include ../includes/blank_card.yaml
 
       - type: horizontal-stack             
         cards:
-          - !include ../includes/blank_card.yaml
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
@@ -58,7 +55,6 @@ cards:
               - name: Fernseher
               - icon: television
               - show_label: false
-          - !include ../includes/blank_card.yaml
 
       ###################################
       # Kitchen                         #
@@ -70,7 +66,6 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - !include ../includes/blank_card.yaml
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
@@ -82,7 +77,6 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - !include ../includes/blank_card.yaml
 
       ###################################
       # Bedroom                         #
@@ -94,7 +88,6 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - !include ../includes/blank_card.yaml
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
@@ -106,7 +99,6 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - !include ../includes/blank_card.yaml
 
       ###################################
       # Stairway                        #
@@ -118,7 +110,6 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - !include ../includes/blank_card.yaml
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
@@ -130,5 +121,4 @@ cards:
             color_type: blank-card
           - type: 'custom:button-card'
             color_type: blank-card
-          - !include ../includes/blank_card.yaml
 

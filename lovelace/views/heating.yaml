@@ -23,28 +23,22 @@ cards:
           - content: '##### Thermostat'
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
           - type: thermostat
             entity: climate.wohnzimmer
           - type: thermostat
             entity: climate.kuche
-          - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
           - type: thermostat
             entity: climate.buro
           - type: thermostat
             entity: climate.schlafzimmer
-          - !include ../includes/blank_card.yaml
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml
           - type: thermostat
             entity: climate.bad
           - type: 'custom:button-card'
             color_type: blank-card
-          - !include ../includes/blank_card.yaml
 
   - type: vertical-stack
     cards:
@@ -54,7 +48,6 @@ cards:
           - content: '##### Temperature'
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml 
           - type: custom:decluttering-card
             template: mini-graph 
             variables:
@@ -88,10 +81,8 @@ cards:
               - decimals: 1
               - graph: line # Changed/Added in 0.12.3
               - extrema: true
-          - !include ../includes/blank_card.yaml 
       - type: horizontal-stack
         cards:
-          - !include ../includes/blank_card.yaml 
           - type: custom:decluttering-card
             template: mini-graph 
             variables:
@@ -116,6 +107,5 @@ cards:
               - extrema: true
           - type: 'custom:button-card'
             color_type: blank-card
-          - !include ../includes/blank_card.yaml 
 
 #      - !include ../includes/bottom-card.yaml
