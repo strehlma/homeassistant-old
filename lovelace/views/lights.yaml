@@ -73,8 +73,6 @@ cards:
               - name: Küchenlicht
               - icon: led-strip
               - show_label: false
-      - type: horizontal-stack             
-        cards:
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
