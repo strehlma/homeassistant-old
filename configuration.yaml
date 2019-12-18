@@ -21,13 +21,13 @@ homeassistant:
     - type: legacy_api_password
       api_password: !secret http_password
 
-system_health:
-
-mobile_app:
-
 discovery:
 
 ios:
+
+system_health:
+
+mobile_app:
 
 http:
   base_url: !secret base_url

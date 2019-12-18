@@ -10,7 +10,7 @@
 # Livingroom remote:
 #       ON          OFF
 # A   279889      279892      Kitchenlight  Stairway
-# B   282961      282964
+# B   282961      282964      Lightstrip    Xmas
 # C   283729      283732
 # D   283921      283924
 
@@ -98,3 +98,24 @@ automation:
       service: switch.toggle
       entity_id: switch.stairway_plug
 
+  - alias: "MQTT Remote Lightstrip"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '282961' 
+    action:
+      service: switch.toggle
+      entity_id: switch.lightstrip_plug
+
+  - alias: "MQTT Remote Lightstrip"
+    hide_entity: true
+    initial_state: on
+    trigger:
+      - platform: mqtt
+        topic: home/433toMQTT
+        payload: '282964' 
+    action:
+      service: switch.toggle
+      entity_id: switch.xmas_plug
