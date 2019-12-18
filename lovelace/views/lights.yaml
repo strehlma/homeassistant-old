@@ -76,7 +76,7 @@ cards:
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
-              - entity: switch.lightstrip_plug
+              - entity: switch.lightstripe_plug
               - name: Lichterkette
               - icon: led-strip-variant
               - show_label: false

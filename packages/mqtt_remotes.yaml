@@ -98,7 +98,7 @@ automation:
       service: switch.toggle
       entity_id: switch.stairway_plug
 
-  - alias: "MQTT Remote Lightstrip"
+  - alias: "MQTT Remote Lightstripe"
     hide_entity: true
     initial_state: on
     trigger:
@@ -107,9 +107,9 @@ automation:
         payload: '282961' 
     action:
       service: switch.toggle
-      entity_id: switch.lightstrip_plug
+      entity_id: switch.lightstripe_plug
 
-  - alias: "MQTT Remote Lightstrip"
+  - alias: "MQTT Remote XMAS"
     hide_entity: true
     initial_state: on
     trigger:
