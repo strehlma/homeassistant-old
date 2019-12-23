@@ -1,0 +1,19 @@
+- alias: "Set xmas_light on before sunset"
+  initial_state: on
+  trigger:
+    platform: sun
+    event: sunset
+    # offset: '-00:30:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.xmas_plug
+
+- alias: "Set xmas_light off for the night"
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '23:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.xmas_plug
+

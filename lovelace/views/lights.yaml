@@ -126,7 +126,7 @@ cards:
             template: switch_button_card
             variables:
               - entity: switch.xmas_plug
-              - name: Treppenlicht
+              - name: Weihnachtsbaum
               - icon: pine-tree
               - show_label: false
           - type: 'custom:button-card'

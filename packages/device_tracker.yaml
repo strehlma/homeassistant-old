@@ -4,12 +4,12 @@ device_tracker:
     password: !secret tado_password
     home_id: !secret tado_home_id
 
-  - platform: unifi
-    host: !secret unifi_host
-    username: !secret unifi_username
-    password: !secret unifi_password
-    verify_ssl: false
-    site_id: !secret unifi_site_id
-    ssid_filter:
-      - !secret unifi_main_wifi
-      - !secret unifi_guest_wifi
+  # - platform: unifi
+  #   host: !secret unifi_host
+  #   username: !secret unifi_username
+  #   password: !secret unifi_password
+  #   verify_ssl: false
+  #   site_id: !secret unifi_site_id
+  #   ssid_filter:
+  #     - !secret unifi_main_wifi
+  #     - !secret unifi_guest_wifi
