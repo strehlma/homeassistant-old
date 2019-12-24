@@ -21,9 +21,9 @@ homeassistant:
     - type: legacy_api_password
       api_password: !secret http_password
 
- discovery:
+discovery:
 
- ios:
+ios:
 
 system_health:
 
