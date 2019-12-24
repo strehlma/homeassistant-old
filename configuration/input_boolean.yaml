@@ -1,5 +1,5 @@
-  dummy1:
-    initial: off
+  occupied:
+    initial: on
 
   garbage_warning:
     initial: on

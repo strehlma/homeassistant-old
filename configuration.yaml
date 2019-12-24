@@ -23,8 +23,6 @@ homeassistant:
 
 discovery:
 
-ios:
-
 system_health:
 
 mobile_app:
@@ -105,6 +103,7 @@ sun:
 automation: !include_dir_merge_list automation
 homekit: !include ./configuration/homekit.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
+ios: !include ./configuration/ios.yaml
 switch: !include ./configuration/switch.yaml
 sensor: !include ./configuration/sensor.yaml
 weather: !include ./configuration/weather.yaml
