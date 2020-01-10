@@ -33,7 +33,7 @@ cards:
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
-              - entity: switch.cube_plug
+              - entity: switch.showcase_plug
               - name: Vitrine
               - icon: glass-cocktail
               - show_label: false

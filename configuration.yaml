@@ -100,6 +100,11 @@ sun:
 #   - platform: google_translate
 #     service_name: google_say
 
+panel_iframe:
+  nodered:
+    title: 'Node-RED'
+    url: 'http://192.168.50.20:1880'
+
 automation: !include_dir_merge_list automation
 homekit: !include ./configuration/homekit.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
