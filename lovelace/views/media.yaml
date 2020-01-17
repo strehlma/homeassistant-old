@@ -12,20 +12,14 @@ cards:
         entity: media_player.echo_buro
         icon: mdi:amazon-alexa
         artwork: cover
-        hide:
-          power_state: true
       - type: custom:mini-media-player
         entity: media_player.echo_kathe
         icon: mdi:amazon-alexa
         artwork: cover
-        hide:
-          power_state: true
       - type: custom:mini-media-player
         entity: media_player.echo_kuche
         icon: mdi:amazon-alexa
         artwork: cover
-        hide:
-          power_state: true
       - type: 'custom:mini-media-player'
         entity: media_player.soundtouch_kuche
         shortcuts:
