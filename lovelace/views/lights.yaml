@@ -46,6 +46,7 @@ cards:
               - entity: light.moon
               - name: Mond
               - icon: brightness-3
+              - show_label: false
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
