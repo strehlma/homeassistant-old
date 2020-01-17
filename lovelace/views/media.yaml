@@ -122,3 +122,5 @@ cards:
               type: service
           columns: 6
         source: icon
+      - type: 'media-player'
+        entity: media_player.denon_dnp_800ne
