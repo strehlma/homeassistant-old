@@ -4,11 +4,11 @@
 #                                                               #
 #################################################################
 
-alexa_media:
-  accounts:
-    - email: !secret alexa_user
-      password: !secret alexa_password
-      url: amazon.de
+# alexa_media:
+#   accounts:
+#     - email: !secret alexa_user
+#       password: !secret alexa_password
+#       url: amazon.de
 
 
 
