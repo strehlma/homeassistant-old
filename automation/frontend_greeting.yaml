@@ -1,0 +1,21 @@
+# Frontend Header Greeting (If you change this, change the input_select for this as well, use the same names!)
+- alias: Frontend Greeting
+  trigger:
+    - platform: time_pattern
+      minutes: "/5"
+    - platform: homeassistant
+      event: start
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.frontend_greeting
+      option: >
+        {% if (states.sensor.time.state > '00:00') and (states.sensor.time.state < '06:00') %}
+          Gute Nacht
+        {% elif (states.sensor.time.state > '06:00') and (states.sensor.time.state < '12:00') %}
+          Guten Morgen
+        {% elif (states.sensor.time.state > '12:00') and (states.sensor.time.state < '18:00') %}
+          Guten Tag
+        {% elif (states.sensor.time.state > '18:00') and (states.sensor.time.state < '23:59') %}
+          Guten Abend
+        {% endif %}

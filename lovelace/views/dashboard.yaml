@@ -4,6 +4,7 @@ icon: 'mdi:home'
 cards:
   - type: vertical-stack
     cards:
+      - !include '../templates/dashboard_header.yaml'
       # - !include ../includes/simple-weather-card.yaml
       - type: horizontal-stack
         cards:

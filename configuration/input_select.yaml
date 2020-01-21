@@ -1,0 +1,7 @@
+frontend_greeting:
+  name: Frontend Greeting
+  options:
+    - Guten Morgen
+    - Guten Tag
+    - Guten Abend
+    - Gute Nacht
