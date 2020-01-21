@@ -16,7 +16,7 @@ entities:
       - type: horizontal-stack
         cards:
           - type: markdown
-            style:
+            style: |
               ha-card {
                 box-shadow: none;
                 height: 33px;
@@ -24,7 +24,7 @@ entities:
                 padding: 0px 10px;
                 color: var(--header-color);
               }
-            content: 
+            content: |
               ## {{ states('input_select.frontend_greeting') }}
           - !include
             - button_header_badge.yaml
