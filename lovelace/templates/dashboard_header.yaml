@@ -26,22 +26,22 @@ entities:
               }
             content: |
               ## {{ states('input_select.frontend_greeting') }}
-          - !include
-            - button_header_badge.yaml
-            - icon: mdi:door
+          # - !include
+          #   - button_header_badge.yaml
+          #   - icon: mdi:door
               # background_color: "[[[ if (states['sensor.current_doors_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
               # badge: "[[[ if (states['sensor.current_doors_open'].state < 1) return '&nbsp;'; else return states['sensor.current_doors_open'].state ]]]"
               # size: 100%
               # entity: group.all_door_sensors
-          - !include
-            - button_header_badge.yaml
-            - icon: mdi:window-closed
+          # - !include
+          #   - button_header_badge.yaml
+          #   - icon: mdi:window-closed
               # background_color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
               # badge: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
               # entity: group.all_window_sensors
-          - !include
-            - button_header_badge.yaml
-            - icon: mdi:motion-sensor
+          # - !include
+          #   - button_header_badge.yaml
+          #   - icon: mdi:motion-sensor
               # background_color: "[[[ if (states['sensor.current_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
               # badge: "[[[ if (states['sensor.current_sensors_on'].state < 1) return '&nbsp;'; else return states['sensor.current_sensors_on'].state ]]]"
               # entity: group.all_motion_smoke_sensors
