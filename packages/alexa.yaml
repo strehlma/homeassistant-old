@@ -22,7 +22,7 @@ alexa:
       light.moon:
         name: Mond
         description: Lichtkugel im Wohnzimmer
-      switch.cube_plug:
+      light.cube:
         display_categories: LIGHT
         name: Würfel
         description: Würfellampe im Wohnzimmer
@@ -42,6 +42,10 @@ alexa:
         display_categories: LIGHT
         name: Küchenlicht
         description: Licht an der Kaffeemaschine
+      light.kitchenshelf:
+        display_categories: LIGHT
+        name: Küchenregal
+        description: Regal in Käthe's Küche
 
 
 intent_script:
