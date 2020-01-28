@@ -60,6 +60,9 @@ logger:
     # log level for deCONZ
     homeassistant.components.deconz: debug
 
+    # log level for Alexa Media Player
+    alexapy: debug
+
 recorder:
   db_url: !secret mysql_connection
   purge_interval: 1
