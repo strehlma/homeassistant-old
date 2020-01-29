@@ -26,3 +26,5 @@
     type: module
   - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
     type: module
+  - url: /community_plugin/spotify-card/spotify-card.js
+    type: module
