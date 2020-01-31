@@ -3,3 +3,6 @@
 
   garbage_warning:
     initial: on
+
+  dummy1:
+    initial: on

@@ -26,8 +26,8 @@ entities:
               }
             content: |
               ## {{ states('input_select.frontend_greeting') }}
-          # - !include
-          #   - button_header_badge.yaml
+          - !include
+            - button_header_badge.yaml
           #   - icon: mdi:door
               # background_color: "[[[ if (states['sensor.current_doors_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
               # badge: "[[[ if (states['sensor.current_doors_open'].state < 1) return '&nbsp;'; else return states['sensor.current_doors_open'].state ]]]"
