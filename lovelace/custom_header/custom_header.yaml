@@ -15,7 +15,7 @@ hide_config: true
 hide_raw: true
 show_tabs:  
   - home
-  - menu
+  - media
 hidden_tab_redirect: false
 # exceptions:
 #   - conditions:
