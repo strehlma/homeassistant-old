@@ -11,12 +11,12 @@ cards:
       - type: custom:mini-media-player
         entity: media_player.spotify
         icon: mdi:spotify
-#        artwork: cover
+        artwork: cover
         hide:
           power: true
-          power_state: false
-          source: true
-          volume: true
+          power_state: true
+          source: false
+          volume: false
       - type: 'custom:mini-media-player'
         entity: media_player.soundtouch_kuche
         shortcuts:
