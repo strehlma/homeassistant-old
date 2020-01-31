@@ -9,15 +9,7 @@ cards:
         variables:
           - content: '## Media'
       - type: custom:mini-media-player
-        entity: media_player.echo_buro
-        icon: mdi:amazon-alexa
-        artwork: cover
-      - type: custom:mini-media-player
-        entity: media_player.echo_kathe
-        icon: mdi:amazon-alexa
-        artwork: cover
-      - type: custom:mini-media-player
-        entity: media_player.echo_kuche
+        entity: media_player.spotify
         icon: mdi:amazon-alexa
         artwork: cover
       - type: 'custom:mini-media-player'
