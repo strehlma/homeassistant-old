@@ -1,0 +1,19 @@
+## Window Sensors
+all_window_sensors:
+  name: All Window Sensors
+  entities:
+  - binary_sensor.window_bedroom
+  - binary_sensor.window_diningroom
+  - binary_sensor.window_livingroom
+  - binary_sensor.window_office
+
+## Door Sensors
+all_door_sensors:
+  name: All Door Sensors
+  entities:
+
+## Motion Sensors
+all_motion_sensors:
+  name: All Motion Sensors
+  entities:
+    -  binary_sensor.motion_kitchen

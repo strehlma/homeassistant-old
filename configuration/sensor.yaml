@@ -34,3 +34,27 @@
     - 'docker_active'
     - 'docker_cpu_use'
     - 'docker_memory_use'
+
+# Template All Doors
+- platform: template
+  sensors:
+    current_doors_open:
+      friendly_name: All Doors Currently Open
+      value_template: >-
+        {{ states|selectattr('entity_id','in',state_attr('group.all_door_sensors','entity_id'))|selectattr('state','eq','on')|list|count }}
+
+# Template All Windows
+- platform: template
+  sensors:
+    current_windows_open:
+      friendly_name: All Windows Currently Open
+      value_template: >-
+        {{ states|selectattr('entity_id','in',state_attr('group.all_window_sensors','entity_id'))|selectattr('state','eq','on')|list|count }}
+
+# Template All Sensors
+- platform: template
+  sensors:
+    current_sensors_on:
+      friendly_name: All Sensors Currently On
+      value_template: >-
+        {{ states|selectattr('entity_id','in',state_attr('group.all_motion_sensors','entity_id'))|selectattr('state','eq','on')|list|count }}
