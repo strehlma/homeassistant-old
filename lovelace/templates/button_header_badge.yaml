@@ -15,3 +15,26 @@ entity: input_boolean.dummy1
 show_name: false
 show_state: false
 show_label: false
+styles:
+  card:
+    - --ha-card-background: transparant
+    - box-shadow: none
+    - width: 30px
+    - height: 30px
+  img_cell:
+    - align-self: start
+    - text-align: start
+  custom_fields:
+    notification:
+      - background-color: "{{ background_color }}"
+      - color: white
+      - border-radius: 50%
+      - overflow: visible
+      - position: absolute
+      - left: 50%
+      - bottom: 50%
+      - height: 15px
+      - width: 15px
+      - font-size: 11px
+  icon:
+    - color: var(--header-color)
