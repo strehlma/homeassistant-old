@@ -9,50 +9,40 @@
 #### #### #### #### #### #### #### #### #### #### #### #### #### #### #
 
 # Card Config
-type: vertical-stack
-cards:
-  - type: custom:decluttering-card
-    template: header_text
-    variables:
-      - content: '##### Notifications and Events'
+# All Clear
+- type: conditional
+  conditions:
+    - entity: input_boolean.dummy1
+      state: "on"
+  card:
+    !include
+    - '../templates/notification_template.yaml'
+    - icon: mdi:check-box-outline
+      name: Alles OK! Keine Meldungen vorhanden!
+
+# Garbage today
+- type: conditional
+  conditions:
+    - entity: binary_sensor.garbage_critical
+      state: "on"
+  card:
+    !include
+    - '../templates/notification_template.yaml'
+    - icon: recycle
+      name: Heute wird der Müll abgeholt!!!
+      spin: true
 
 
-  # Smoke Detector Triggered
-  - type: conditional
-    conditions:
-      - entity: binary_sensor.garbage_critical
-        state: "on"
-    card:
-      type: horizontal-stack
-      cards:
-        - !include ../includes/blank_card.yaml
-        - type: custom:decluttering-card
-          template: notification
-          variables:
-            - entity: input_boolean.garbage_warning
-            - icon: recycle
-            - name: Heute wird der Müll abgeholt!!!
-            - card_color: 'rgba(255, 0, 0, 0.5)'
-            - spin: true
-        - !include ../includes/blank_card.yaml
-
-  # Alarm Disarmed Not Home
-  - type: conditional
-    conditions:
-      - entity: binary_sensor.garbage_warning
-        state: "on"
-    card:
-      type: horizontal-stack
-      cards:
-        - !include ../includes/blank_card.yaml
-        - type: custom:decluttering-card
-          template: notification
-          variables:
-            - entity: input_boolean.garbage_warning
-            - icon: recycle
-            - name: Morgen wird der Müll abgeholt!!!
-            - card_color: 'rgba(255, 110, 0, 0.5)'
-        - !include ../includes/blank_card.yaml
+  # Garbage tomorrow
+- type: conditional
+  conditions:
+    - entity: binary_sensor.garbage_warning
+      state: "on"
+  card:
+    !include
+    - '../templates/notification_template.yaml'
+    - icon: recycle
+    - name: Morgen wird der Müll abgeholt!!!
 
 
   # - !include ../includes/bottom-card.yaml
