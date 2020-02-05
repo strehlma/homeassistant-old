@@ -55,7 +55,7 @@ hold_action:
           - {{ template|default('popup_device_counters.yaml') }}
           - entity: {{ entity }}
   haptic: heavy
-  styles:
+styles:
   card:
     - --ha-card-background: transparant
     - box-shadow: none
