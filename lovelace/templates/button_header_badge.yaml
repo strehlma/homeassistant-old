@@ -8,7 +8,7 @@ style: |
   }
 name: Button
 icon: {{ icon|default('mdi:menu') }}
-deep_press: {{ deep_press|default('true') }}
+# deep_press: {{ deep_press|default('true') }}
 size: {{ size|default('80%') }}
 color: auto
 entity: input_boolean.dummy1
