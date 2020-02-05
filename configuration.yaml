@@ -42,6 +42,8 @@ lovelace:
 hacs:
   token: !secret hacs_token
 
+browser_mod:
+
 # Enables configuration UI
 config:
 

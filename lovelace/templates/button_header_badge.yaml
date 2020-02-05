@@ -15,7 +15,47 @@ entity: input_boolean.dummy1
 show_name: false
 show_state: false
 show_label: false
-styles:
+tap_action:
+  action: call-service
+  service: browser_mod.popup
+  service_data:
+    title: ' '
+    style:
+      background: rgba(0, 0, 0, 0.5)
+      "--iron-icon-fill-color": "#FFF"
+      "--iron-icon": "#FFF"
+      --paper-item-icon-color: white !important
+      --primary-text-color: white !important
+      --text-primary-color: white !important
+      color: white !important
+    card:
+      type: vertical-stack
+      cards:
+        - !include
+          - {{ template|default('popup_device_counters.yaml') }}
+          - entity: {{ entity }}
+  haptic: light
+hold_action:
+  action: call-service
+  service: browser_mod.popup
+  service_data:
+    title: ' '
+    style:
+      background: rgba(0, 0, 0, 0.5)
+      "--iron-icon-fill-color": "#FFF"
+      "--iron-icon": "#FFF"
+      --paper-item-icon-color: white !important
+      --primary-text-color: white !important
+      --text-primary-color: white !important
+      color: white !important
+    card:
+      type: vertical-stack
+      cards:
+        - !include
+          - {{ template|default('popup_device_counters.yaml') }}
+          - entity: {{ entity }}
+  haptic: heavy
+  styles:
   card:
     - --ha-card-background: transparant
     - box-shadow: none
@@ -38,3 +78,8 @@ styles:
       - font-size: 11px
   icon:
     - color: var(--header-color)
+custom_fields: 
+  notification: "{{ badge }}"
+state:
+  - value: "off"
+    spin: {{ spin_off|default('false') }}
