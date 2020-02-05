@@ -417,4 +417,3 @@ cards:
               - margin-right: 40px
               - opacity: 0.8
           # - !include ../includes/blank_card.yaml
-      - !include ../notifications/notifications.yaml
