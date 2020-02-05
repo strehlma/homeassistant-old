@@ -46,18 +46,18 @@ entities:
               badge: "[[[ if (states['sensor.current_sensors_on'].state < 1) return '&nbsp;'; else return states['sensor.current_sensors_on'].state ]]]"
               entity: group.all_motion_sensors
 
-      # - type: horizontal-stack
-      #   cards:
-      #     # - !include ../includes/blank-card.yaml
-      #     - type: custom:swipe-card
-      #       parameters:
-      #         effect: 'coverflow'
-      #         allowTouchMove: true
-      #         grabCursor: true
-      #         autoplay:
-      #           disableOnInteraction: false
-      #       cards:
-      #         !include ../notifications/notifications.yaml
+      - type: horizontal-stack
+        cards:
+          # - !include ../includes/blank-card.yaml
+          - type: custom:swipe-card
+            parameters:
+              effect: 'coverflow'
+              allowTouchMove: true
+              grabCursor: true
+              autoplay:
+                disableOnInteraction: false
+            cards:
+              !include ../notifications/notifications.yaml
           # - type: custom:button-card
           #   name: Home
           #   icon: "[[[ if (states['alarm_control_panel.home_alarm'].state == 'disarmed') return 'mdi:lock-open'; else return 'mdi:lock-alert'; ]]]"
