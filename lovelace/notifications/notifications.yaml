@@ -12,14 +12,15 @@
 # All Clear
 - type: conditional
   conditions:
-    - entity: input_boolean.dummy1
-      state: "on"
+    - entity: binary_sensor.garbage_critical
+      state: "off"
+    - entity: binary_sensor.garbage_warning
+      state: "off"
   card:
     !include
     - '../templates/notification_template.yaml'
     - icon: mdi:check-box-outline
       name: Alles OK! Keine Meldungen vorhanden!
-
 # Garbage today
 - type: conditional
   conditions:
@@ -31,9 +32,7 @@
     - icon: recycle
       name: Heute wird der Müll abgeholt!!!
       spin: true
-
-
-  # Garbage tomorrow
+# Garbage tomorrow
 - type: conditional
   conditions:
     - entity: binary_sensor.garbage_warning
