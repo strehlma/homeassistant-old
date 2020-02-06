@@ -31,8 +31,8 @@
     - '../templates/notification_template.yaml'
     - icon: recycle
     - name: Heute wird der Müll abgeholt!!!
-    - entity: binary_sensor.garbage_critical
-    - spin: true
+      entity: binary_sensor.garbage_critical
+      spin: true
 # Garbage tomorrow
 - type: conditional
   conditions:
@@ -42,8 +42,8 @@
     !include
     - '../templates/notification_template.yaml'
     - icon: recycle
-    - name: Morgen wird der Müll abgeholt!!!
-    - entity: binary_sensor.garbage_warning
+      name: Morgen wird der Müll abgeholt!!!
+      entity: binary_sensor.garbage_warning
 
 
 
