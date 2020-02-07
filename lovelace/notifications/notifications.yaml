@@ -20,8 +20,8 @@
     !include
     - '../templates/notification_template.yaml'
     - icon: mdi:check-box-outline
-    - name: Alles OK! Keine Meldungen vorhanden!
-    - entity: binary_sensor.garbage_critical
+      name: Alles OK! Keine Meldungen vorhanden!
+      entity: binary_sensor.garbage_critical
 # Garbage today
 - type: conditional
   conditions:
@@ -31,7 +31,7 @@
     !include
     - '../templates/notification_template.yaml'
     - icon: recycle
-    - name: Heute wird der Müll abgeholt!!!
+      name: Heute wird der Müll abgeholt!!!
       entity: binary_sensor.garbage_critical
       spin: true
 # Garbage tomorrow
