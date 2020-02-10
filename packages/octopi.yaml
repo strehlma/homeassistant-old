@@ -4,3 +4,9 @@ octoprint:
     name: "Ender 3 pro"
     bed: true
     number_of_tools: 1
+      monitored_conditions:
+        - 'Current State'
+        - 'Job Percentage'
+        - 'Temperatures'
+        - 'Time Elapsed'
+        - 'Time Remaining'
