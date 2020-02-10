@@ -18,20 +18,6 @@ cards:
         justify_content: start
         layout: vertical
         cards:
-#           - type: custom:air-visual-card
-#             {% raw %}
-#             style: |
-#               ha-card {
-#                 border-radius: {{ states('input_select.border_radius') }};
-#                 box-shadow: {{ states('input_select.box_shadow') }};
-#                 overflow: hidden;
-#               }
-#             {% endraw %}
-#             air_pollution_level: {{ _global.weather.air_pollution_level|default('sensor.u_s_air_pollution_level') }}
-#             air_quality_index: {{ _global.weather.air_quality_index|default('sensor.u_s_air_quality_index') }}
-#             main_pollutant: {{ _global.weather.main_pollutant|default('sensor.u_s_main_pollutant') }}
-#             temp: {{ _global.weather.weather_entity|default('weather.dark_sky') }}
-#             city: {{ _global.weather.city_name|default('Eindhoven') }}
           - type: custom:weather-card
             {% raw %}
             style: |
