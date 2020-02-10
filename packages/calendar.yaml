@@ -7,6 +7,9 @@ calendar:
     url: https://caldav.icloud.com
     username: !secret icloud_user
     password: !secret icloud_password
+    calendars:
+      - "Mario"
+      - "Sandra"
 
 
 sensor:
