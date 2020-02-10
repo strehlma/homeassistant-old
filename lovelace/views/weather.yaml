@@ -3,3 +3,11 @@
 title: Weather
 path: weather
 icon: 'mdi:information-outline'
+cards:   
+  - type: vertical-stack
+    cards:
+      - !include
+        - '../templates/system_header.yaml'
+        - name: "[[[ return `${states['sensor.dark_sky_summary'].state}` ]]]"
+          icon: mdi:information-outline
+          content: 'Wetter'
