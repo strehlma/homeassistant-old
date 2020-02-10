@@ -7,7 +7,10 @@ cards:
   - type: vertical-stack
     cards:
       - !include '../templates/dashboard_header.yaml'
-      # - !include ../includes/simple-weather-card.yaml
+      - !include
+        - '../templates/weather_card.yaml'
+        - city_name: 'Heek'
+          entity: 'weather.dark_sky'
       - type: horizontal-stack
         cards:
           # - !include ../includes/blank_card.yaml
