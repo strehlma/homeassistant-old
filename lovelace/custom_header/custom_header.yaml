@@ -1,4 +1,5 @@
 view_css: 'padding-top: 84px !important'
+default_tab: home
 hide_header: false
 footer_mode: true
 compact_mode: true
