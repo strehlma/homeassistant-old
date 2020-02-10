@@ -1,11 +1,19 @@
 title: Heating
 path:  heating
 icon: 'mdi:fire'
+# popup_cards:
+#   !include ../popup-cards/light-popup.yaml
 cards:
 
   - type: vertical-stack 
     cards:
-     - type: custom:decluttering-card
+      # - type: custom:decluttering-card
+      #   template: quick-access-menu
+      #   variables:
+      #     - name1: Weather
+      #     - icon1: weather-sunny
+      #     - path1: weather
+      - type: custom:decluttering-card
         template: header_text
         variables:
           - content: '## Climate Control'
