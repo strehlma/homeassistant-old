@@ -1,0 +1,59 @@
+# lovelace_gen
+
+title: Weather
+path: weather
+icon: 'mdi:information-outline'
+cards:   
+  - type: vertical-stack
+    cards:
+      - !include
+        - '../templates/system_header.yaml'
+        - name: "[[[ return `${states['sensor.dark_sky_summary'].state}` ]]]"
+          icon: mdi:information-outline
+          content: 'Wetter'
+  - type: custom:layout-card
+    cards:
+      - type: custom:layout-card
+        min_columns: 1
+        justify_content: start
+        layout: vertical
+        cards:
+          - type: custom:weather-card
+            {% raw %}
+            style: |
+              ha-card {
+                font-size: 12px;
+                font-family: Helvetica;
+                box-shadow: {{ states('input_select.box_shadow') }};
+                opacity: 0.8;
+                border-radius: {{ states('input_select.border_radius') }};
+              }
+            {% endraw %}
+            entity: weather.dark_sky
+            current: true
+            details: true
+            forecast: true
+          - type: horizontal-stack
+            cards:
+              - !include
+                - '../templates/button_weather_popup.yaml'
+                - entity: input_boolean.dummy1
+                  name: 'Buienradar'
+                  icon: mdi:weather-pouring
+                  size: 11%
+                  aspect_ratio: 2/1
+                  show_label: false
+                  show_state: false
+                  margin_right: 128px
+                  template: buienradar.yaml
+              - !include
+                - '../templates/button_weather_popup.yaml'
+                - entity: input_boolean.dummy1
+                  name: 'Windy'
+                  icon: mdi:weather-windy
+                  size: 11%
+                  aspect_ratio: 2/1
+                  show_label: false
+                  show_state: false
+                  margin_right: 128px
+                  template: windy.yaml
