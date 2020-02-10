@@ -120,4 +120,4 @@ input_select: !include ./configuration/input_select.yaml
 ios: !include ./configuration/ios.yaml
 switch: !include ./configuration/switch.yaml
 sensor: !include ./configuration/sensor.yaml
-weather: !include ./configuration/weather.yaml
+#weather: !include ./configuration/weather.yaml
