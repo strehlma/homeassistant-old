@@ -1,3 +1,8 @@
+weather:
+  - platform: darksky
+    api_key: !secret darksky
+    mode: daily
+
 sensor:
   - platform: darksky
     api_key: !secret darksky
