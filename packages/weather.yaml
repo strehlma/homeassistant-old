@@ -1,4 +1,4 @@
-weather:
+sensor:
   - platform: darksky
     api_key: !secret darksky
     forecast:
