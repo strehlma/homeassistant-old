@@ -1,7 +1,7 @@
 # lovelace_gen
 
 title: Weather
-path: schnulli
+path: weather
 icon: 'mdi:information-outline'
 cards:   
   - type: vertical-stack

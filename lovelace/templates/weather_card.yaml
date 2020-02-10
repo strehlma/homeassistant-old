@@ -17,4 +17,4 @@ name: {{ city_name|default('Heek') }}
 backdrop: false
 tap_action:
   action: navigate
-  navigation_path: /lovelace/schnulli
+  navigation_path: /lovelace/weather
