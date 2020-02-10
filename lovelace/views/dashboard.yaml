@@ -10,7 +10,7 @@ cards:
       - !include
         - '../templates/weather_card.yaml'
         - city_name: 'Heek'
-          entity: 'weather.dark_sky'
+          entity: weather.dark_sky
       - type: horizontal-stack
         cards:
           # - !include ../includes/blank_card.yaml
