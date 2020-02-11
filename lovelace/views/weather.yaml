@@ -19,16 +19,6 @@ cards:
         layout: vertical
         cards:
           - type: custom:weather-card
-            {% raw %}
-            style: |
-              ha-card {
-                font-size: 12px;
-                font-family: Helvetica;
-                box-shadow: {{ states('input_select.box_shadow') }};
-                opacity: 0.8;
-                border-radius: {{ states('input_select.border_radius') }};
-              }
-            {% endraw %}
             entity: weather.dark_sky
             current: true
             details: true
