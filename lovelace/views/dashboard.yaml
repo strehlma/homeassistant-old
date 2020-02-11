@@ -1,5 +1,6 @@
 # lovelace_gen
 
+# Card
 title: Home
 path: home
 icon: 'mdi:home'
@@ -13,7 +14,7 @@ cards:
           entity: weather.dark_sky
       - type: horizontal-stack
         cards:
-          # - !include ../includes/blank_card.yaml
+          - !include ../includes/blank_card.yaml
           - type: conditional
             conditions:
               - entity: person.sandra
