@@ -45,8 +45,3 @@
     - icon: recycle
       name: Morgen wird der Müll abgeholt!!!
       entity: binary_sensor.garbage_warning
-
-
-
-
-  # - !include ../includes/bottom-card.yaml

@@ -40,10 +40,10 @@ entities:
               background_color: "[[[ if (states['sensor.current_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
               badge: "[[[ if (states['sensor.current_sensors_on'].state < 1) return '&nbsp;'; else return states['sensor.current_sensors_on'].state ]]]"
               entity: group.all_motion_smoke_sensors
-          # - !include ../includes/blank-card.yaml  
+          - !include ../includes/blank-card.yaml  
       - type: horizontal-stack
         cards:
-          # - !include ../includes/blank-card.yaml
+          - !include ../includes/blank-card.yaml
           - !include
             - notification_template.yaml
             - name: "{{ name|default('test') }}"
@@ -51,4 +51,4 @@ entities:
               entity: {{ entity|default('input_boolean.dummy1') }}
               spin: {{ spin|default('false') }}
               font_weight: {{ font_weight|default('normal') }}
-          # - !include ../includes/blank-card.yaml
+          - !include ../includes/blank-card.yaml
