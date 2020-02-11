@@ -14,7 +14,7 @@ cards:
       - content: '##### Overview'
   - type: horizontal-stack
     cards:
-      - !include ../includes/blank_card.yaml
+      - !include ../includes/blank-card.yaml
       - type: custom:simple-weather-card
         style: |
           ha-card {
@@ -34,4 +34,4 @@ cards:
         # tap_action:
         #   action: navigate
         #   navigation_path: /lovelace/weather
-      - !include ../includes/blank_card.yaml
+      - !include ../includes/blank-card.yaml
