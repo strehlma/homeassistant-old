@@ -26,8 +26,10 @@ entities:
                 padding: 0px 10px;
                 color: var(--header-color);
               }
-            content: |
+            {% raw %}
+            content: | 
               ## {{ states('input_select.frontend_greeting') }}
+            {% endraw %}
           - !include
             - button_header_badge.yaml
             - icon: mdi:door
