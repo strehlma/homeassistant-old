@@ -8,10 +8,15 @@ automation:
       from: 'off'
       to: 'on'
     action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.echo_kuche
+        media_content_type: sound
+        media_content_id: amzn_sfx_doorbell_01
     - service: notify.alexa_media
       data:
         target: 
-          - media_player.echo_kathe
+          - media_player.echo_kuche
         data:
           type: tts
         message: "Es hat geklingelt!"
