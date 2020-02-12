@@ -8,12 +8,20 @@ automation:
       from: 'off'
       to: 'on'
     action:
+    - service: input_number.set_value
+      data:
+        entity_id: input_text.echo_kuche_vol
+        value: "{{ state_attr('media_player.echo_kuche'), 'volume_level' }}"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.echo_kuche
+        volume_level: 1
     - service: media_player.play_media
       data:
         entity_id: media_player.echo_kuche
         media_content_type: sound
         media_content_id: amzn_sfx_doorbell_01
-    - delay: '00:00:05'
+    # - delay: '00:00:03'
     - service: notify.alexa_media
       data:
         target: 
@@ -21,3 +29,11 @@ automation:
         data:
           type: tts
         message: "Es hat geklingelt!"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.echo_kuche
+        volume_level: "{{ state('input_number.echo_kuche_vol') }}"
+
+input_number:
+  echo_kuche_vol:
+
