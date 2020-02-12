@@ -13,6 +13,7 @@ automation:
         entity_id: media_player.echo_kuche
         media_content_type: sound
         media_content_id: amzn_sfx_doorbell_01
+    - delay: 0:05
     - service: notify.alexa_media
       data:
         target: 
