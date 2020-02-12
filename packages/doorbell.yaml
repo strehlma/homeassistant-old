@@ -1,0 +1,17 @@
+automation:
+  - id: doorbell_rings
+    alias: "Doorbell rings"
+    initial_state: 'on'
+    trigger:
+    - platform: state
+      entity_id: binary_sensor.doorbell
+      from: 'off'
+      to: 'on'
+    action:
+    - service: notify.alexa_media
+      data:
+        target: 
+          - media_player.echo_kathe
+        data:
+          type: tts
+        message: "Es hat geklingelt!"
