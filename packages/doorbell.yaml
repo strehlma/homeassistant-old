@@ -15,7 +15,7 @@ automation:
     - service: media_player.volume_set
       data:
         entity_id: media_player.echo_kuche
-        volume_level: 1
+        volume_level: 1.0
     - service: media_player.play_media
       data:
         entity_id: media_player.echo_kuche
@@ -32,11 +32,11 @@ automation:
     - service: media_player.volume_set
       data:
         entity_id: media_player.echo_kuche
-        volume_level: "{{ state('input_number.echo_kuche_vol') }}"
+        volume_level: "{{ state('input_number.echo_kuche_vol')|float }}"
 
 input_number:
   echo_kuche_vol:
-    min: 0
-    max: 1
+    min: 0.0
+    max: 1.0
     step: 0.1
 
