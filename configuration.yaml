@@ -50,7 +50,7 @@ config:
 history:
 
 logger:
-  default: debug
+  default: warning
   logs:
     # log level for HA core
     # homeassistant.core: fatal
