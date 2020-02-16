@@ -10,8 +10,8 @@ automation:
     action:
     - service: input_number.set_value
       data_template:
-        entity_id: input_text.echo_kuche_vol
-        value: "{{ state_attr('media_player.echo_kuche', 'volume_level')|float }}"
+        entity_id: input_number.echo_kuche_vol
+        value: "{{ states.media_player.echo_kuche.attributes.volume_level | float }}"
     - service: media_player.volume_set
       data_template:
         entity_id: media_player.echo_kuche
@@ -32,7 +32,7 @@ automation:
     - service: media_player.volume_set
       data_template:
         entity_id: media_player.echo_kuche
-        volume_level: "{{ state('input_number.echo_kuche_vol')|float }}"
+        volume_level: "{{ states.input_number.echo_kuche_vol.state }}"
 
 input_number:
   echo_kuche_vol:

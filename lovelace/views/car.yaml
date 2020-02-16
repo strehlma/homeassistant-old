@@ -1,0 +1,22 @@
+# lovelace_gen
+
+# Card
+title: Car
+path: car
+icon: 'mdi:car'
+cards:
+  - type: vertical-stack
+    cards:
+      - !include '../templates/dashboard_header.yaml'
+  - type: custom:layout-card
+    layout: vertical
+    style: |
+      ha-card {
+        background-color: #C1C1C1;
+      }
+
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+          

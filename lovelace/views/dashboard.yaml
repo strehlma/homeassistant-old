@@ -71,9 +71,9 @@ cards:
                 # - reistijd: sensor.reistijd_jimmy
                 # - battery: sensor.battery_level_16
                 - icon: home
-                # - tap_action:
-                #     action: navigate
-                #     navigation_path: /lovelace/mario
+                - tap_action:
+                    action: navigate
+                    navigation_path: /lovelace/he.yaml
           - type: conditional
             conditions:
               - entity: person.mario
