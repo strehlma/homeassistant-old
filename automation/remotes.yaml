@@ -1,5 +1,4 @@
 - alias: 'Toggle bedroom TV'
-  hide_entity: true
   initial_state: 'on'
   trigger:
       - platform: event
@@ -12,7 +11,6 @@
     entity_id: switch.wellness_plug
 
 - alias: 'Turn on bedroom TV'
-  hide_entity: true
   initial_state: 'on'
   trigger:
       - platform: event
@@ -30,7 +28,6 @@
     entity_id: switch.wellness_plug
 
 - alias: 'Turn off bedroom TV'
-  hide_entity: true
   initial_state: 'on'
   trigger:
       - platform: event

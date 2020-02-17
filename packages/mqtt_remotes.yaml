@@ -7,7 +7,7 @@
 # C   4527185     4527188     Kitchenlight  Stairway
 # D   4527377     4527380     Shelf 
 #
-# Livingroom remote:
+# Kitchen remote:
 #       ON          OFF
 # A   279889      279892      Kitchenlight  Stairway
 # B   282961      282964      Lightstrip    Xmas
@@ -16,7 +16,6 @@
 
 automation:
   - alias: "MQTT Remote Television"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -27,7 +26,6 @@ automation:
       entity_id: switch.tv_plug
 
   - alias: "MQTT Remote Moon"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -38,7 +36,6 @@ automation:
       entity_id: light.moon
 
   - alias: "MQTT Remote Cube"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -49,7 +46,6 @@ automation:
       entity_id: light.cube
 
   - alias: "MQTT Remote Showcase"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -60,7 +56,6 @@ automation:
       entity_id: switch.showcase_plug
 
   # - alias: "MQTT Remote Shelf"
-  #   hide_entity: true
   #   initial_state: on
   #   trigger:
   #     - platform: mqtt
@@ -71,7 +66,6 @@ automation:
   #     entity_id: switch.shelf_plug
 
   - alias: "MQTT Remote Kitchenlight"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -82,10 +76,9 @@ automation:
         payload: '279889' 
     action:
       service: switch.toggle
-      entity_id: switch.kitchenlight_plug
+      entity_id: switch.kitchen_plug
 
   - alias: "MQTT Remote Stairway"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -99,7 +92,6 @@ automation:
       entity_id: switch.stairway_plug
 
   - alias: "MQTT Remote Lightstripe"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt
@@ -110,7 +102,6 @@ automation:
       entity_id: switch.lightstripe_plug
 
   - alias: "MQTT Remote XMAS"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: mqtt

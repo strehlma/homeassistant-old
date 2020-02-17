@@ -7,7 +7,6 @@ tplink:
 
 automation:
   - alias: "Turn stairway on"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: state
@@ -18,7 +17,6 @@ automation:
       entity_id: switch.stairway_plug
   
   - alias: "Turn stairway off"
-    hide_entity: true
     initial_state: on
     trigger:
       - platform: state
