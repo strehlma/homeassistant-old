@@ -1,13 +1,14 @@
 # lovelace_gen
 
-- title: He
-  path: he
-  cards:
-    - type: vertical-stack
-      cards:
-        - type: custom:calendar-card
-          numberOfDays: 1
-          hideHeader: true
-          entities:
-            - calendar.mario
-          showColors: true
+# Card
+title: He
+path: he
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:calendar-card
+        numberOfDays: 1
+        hideHeader: true
+        entities:
+          - calendar.mario
+        showColors: true

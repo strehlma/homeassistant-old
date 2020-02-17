@@ -116,4 +116,4 @@ cards:
       - type: 'media-control'
         entity: media_player.denon_dnp_800ne
       - type: 'media-control'
-        entity: media_player.spotify
+        entity: media_player.spotify_strehlma
