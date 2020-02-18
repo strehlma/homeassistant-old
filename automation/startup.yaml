@@ -1,0 +1,11 @@
+- alias: "Xiaomi Aqara Motion"
+  initial_state: on
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: deconz.configure
+      data:
+        entity: binary_sensor.motion_kitchen
+        field: "/config"
+        data: {"duration": 5}
