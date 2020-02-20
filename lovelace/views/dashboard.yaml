@@ -50,9 +50,9 @@ cards:
                 # - reistijd: sensor.reistijd_stephanie_work
                 # - battery: sensor.battery_level_13
                 - icon: office-building
-                # - tap_action:
-                #     action: navigate
-                #     navigation_path: /lovelace/sandra
+                - tap_action:
+                    action: navigate
+                    navigation_path: /lovelace/person1
 
             # Right Photo
           - type: conditional

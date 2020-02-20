@@ -1,0 +1,398 @@
+title: Person1
+path: person1
+icon: 'mdi:human-female'
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '## Person1'
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Internet'
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.speedtest_ping
+            height: 20
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              #extrema: true
+              fill: true
+              graph: bar
+            color_thresholds:
+              - value: 25
+                color: "#FFFF00"
+              - value: 0
+                color: "#3498db"
+  
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.speedtest_download
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 0
+                color: "#FFFF00"
+              - value: 40
+                color: "#3498db"
+                
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.speedtest_upload
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 0
+                color: "#FFFF00"
+              - value: 13
+                color: "#3498db"
+  
+
+
+
+
+      # - type: vertical-stack
+      #   title: Heizung
+      #   cards:
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: thermostat
+      #           entity: climate.wohnzimmer
+      #         - type: sensor
+      #           entity: sensor.wohnzimmer_temperature
+      #           graph: line
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_livingroom_manual
+      #           name: 'Manuell'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.wohnzimmer
+      #               operation_mode: 'Manual'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_livingroom_timer
+      #           name: 'Timer'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.wohnzimmer
+      #               operation_mode: 'Timer'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_livingroom_tado
+      #           name: 'Tado'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.wohnzimmer
+      #               operation_mode: 'Tado mode'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_livingroom_smart
+      #           name: 'Smart'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.wohnzimmer
+      #               operation_mode: 'Smart schedule'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_livingroom_off
+      #           name: 'Aus'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.wohnzimmer
+      #               operation_mode: 'Off'
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: thermostat
+      #           entity: climate.schlafzimmer
+      #         - type: sensor
+      #           entity: sensor.schlafzimmer_temperature
+      #           graph: line
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bedroom_manual
+      #           name: 'Manuell'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.schlafzimmer
+      #               operation_mode: 'Manual'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bedroom_timer
+      #           name: 'Timer'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.schlafzimmer
+      #               operation_mode: 'Timer'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bedroom_tado
+      #           name: 'Tado'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.schlafzimmer
+      #               operation_mode: 'Tado mode'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bedroom_smart
+      #           name: 'Smart'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.schlafzimmer
+      #               operation_mode: 'Smart schedule'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bedroom_off
+      #           name: 'Aus'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.schlafzimmer
+      #               operation_mode: 'Off'
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: thermostat
+      #           entity: climate.kuche
+      #         - type: sensor
+      #           entity: sensor.kuche_temperature
+      #           graph: line
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_kitchen_manual
+      #           name: 'Manuell'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.kuche
+      #               operation_mode: 'Manual'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_kitchen_timer
+      #           name: 'Timer'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.kuche
+      #               operation_mode: 'Timer'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_kitchen_tado
+      #           name: 'Tado'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.kuche
+      #               operation_mode: 'Tado mode'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_kitchen_smart
+      #           name: 'Smart'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.kuche
+      #               operation_mode: 'Smart schedule'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_kitchen_off
+      #           name: 'Aus'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.kuche
+      #               operation_mode: 'Off'
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: thermostat
+      #           entity: climate.buro
+      #         - type: sensor
+      #           entity: sensor.buro_temperature
+      #           graph: line
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_office_manual
+      #           name: 'Manuell'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.buro
+      #               operation_mode: 'Manual'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_office_timer
+      #           name: 'Timer'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.buro
+      #               operation_mode: 'Timer'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_office_tado
+      #           name: 'Tado'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.buro
+      #               operation_mode: 'Tado mode'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_office_smart
+      #           name: 'Smart'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.buro
+      #               operation_mode: 'Smart schedule'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_office_off
+      #           name: 'Aus'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.buro
+      #               operation_mode: 'Off'
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: thermostat
+      #           entity: climate.bad
+      #         - type: sensor
+      #           entity: sensor.bad_temperature
+      #           graph: line
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bathroom_manual
+      #           name: 'Manuell'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.bad
+      #               operation_mode: 'Manual'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bathroom_timer
+      #           name: 'Timer'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.bad
+      #               operation_mode: 'Timer'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bathroom_tado
+      #           name: 'Tado'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.bad
+      #               operation_mode: 'Tado mode'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bathroom_smart
+      #           name: 'Smart'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.bad
+      #               operation_mode: 'Smart schedule'
+      #         - type: entity-button
+      #           entity: binary_sensor.cl_bathroom_off
+      #           name: 'Aus'
+      #           tap_action:
+      #             action: call-service
+      #             service: climate.set_operation_mode
+      #             service_data:
+      #               entity_id: climate.bad
+      #               operation_mode: 'Off'
+
+      # weather.dark_sky:
+      #   title: Weer
+      #   card:
+      #     type: 'custom:card-modder'
+      #     style:
+      #       border-radius: 20px
+      #       box-shadow: 2px 2px rgba(0,0,0,0.3) 
+      #       --paper-card-background-color: rgba(250, 250, 250, 0.0)
+      #     card:
+      #       type: "custom:weather-card"
+      #       entity: weather.dark_sky
+      #       icons: "/local/custom-lovelace/weather-card/icons/animated/"
+
+
+#         title:
+#         trackers:
+#           - sensor.custom_card_tracker
+#           - sensor.custom_component_tracker
+#       - type: entities
+#         entities:
+#           - binary_sensor.workday_sensor
+#       - type: entities
+#         title: RaspberryPi
+#         show_header_toggle: true
+#         entities:
+#           - sensor.memory_use_percent
+#           - sensor.processor_use
+#           - sensor.disk_use_percent_home
+
+#       - type: glance
+#         title: Fenster
+#         entities:
+#           - entity: binary_sensor.window_diningroom
+#             name: Esszimmer
+#           - entity: binary_sensor.window_bedroom
+#             name: Schlafzimmer
+#           - entity: binary_sensor.window_livingroom
+#             name: Wohnzimmer
+#           - entity: binary_sensor.window_office
+#             name: Büro 
+#           - entity: binary_sensor.window_kitchen
+#             name: Küche
+#           - entity: binary_sensor.window_bathroom
+#             name: Bad
+#       - type: entities
+#         title: Dieselpreise
+#         show_header_toggle: true
+#         entities:
+#           - sensor.shell_heek_diesel
+#           - sensor.esso_ddorf_diesel
