@@ -35,6 +35,6 @@ cards:
             box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,.51);
             margin: 20px;
           }
-         name: "Esso Düsseldorf"
+        name: "Esso Düsseldorf"
         entities:
           - sensor.esso_ddorf_diesel        
