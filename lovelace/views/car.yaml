@@ -16,19 +16,17 @@ cards:
       }
 
     cards:
-      - type: horizontal-stack
-        cards:
-          - type: custom:button-card
-            entity: sensor.shell_heek_diesel
-            layout: icon_state
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.shell_heek_diesel         
-      - type: horizontal-stack
-        cards:
-          - type: custom:button-card
-            entity: sensor.esso_ddorf_diesel
-            layout: icon_state
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.esso_ddorf_diesel        
+      - type: custom:mini-graph-card
+        style: |
+          ha-card {
+            background-color: #C1C1C1;
+            border-radius: .5em;
+            box-shadow: -12px -12px 12px 0 rgba(255,255,255,1), 12px 12px 12px 0 rgba(0,0,0,.03);
+          }
+        name: "Shell Heek"
+        entities:
+          - sensor.shell_heek_diesel         
+      - type: custom:mini-graph-card
+        name: "Esso Düsseldorf"
+        entities:
+          - sensor.esso_ddorf_diesel        
