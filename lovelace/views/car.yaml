@@ -12,21 +12,29 @@ cards:
     layout: horizontal
     style: |
       ha-card {
-        background-color: #C1C1C1;
+        background-color: #EEEEEE;
       }
 
     cards:
       - type: custom:mini-graph-card
         style: |
           ha-card {
-            background-color: #C1C1C1;
-            border-radius: .5em;
-            box-shadow: -12px -12px 12px 0 rgba(255,255,255,1), 12px 12px 12px 0 rgba(0,0,0,.03);
+            border: 1px solid rgba(255,255,255,0.20);
+            padding: 10px;
+            box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,.51);
+            margin: 20px;
           }
         name: "Shell Heek"
         entities:
           - sensor.shell_heek_diesel         
       - type: custom:mini-graph-card
-        name: "Esso Düsseldorf"
+        style: |
+          ha-card {
+            border: 1px solid rgba(255,255,255,0.20);
+            padding: 10px;
+            box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,.51);
+            margin: 20px;
+          }
+         name: "Esso Düsseldorf"
         entities:
           - sensor.esso_ddorf_diesel        
