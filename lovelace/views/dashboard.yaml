@@ -421,3 +421,80 @@ cards:
               - margin-right: 40px
               - opacity: 0.8
           # - !include ../includes/blank_card.yaml
+
+      - type: horizontal-stack
+        cards:
+          # - !include ../includes/blank_card.yaml
+          - type: custom:decluttering-card
+            template: button 
+            variables:
+              - name: Person2
+              - label: Control
+              - icon: human-male
+              - show_state: false
+              - tap_action: 
+                  action: navigate
+                  navigation_path: /lovelace/he
+                  haptic: light
+              - hold_action: 
+                  action: navigate
+                  navigation_path: /lovelace/he
+                  haptic: light
+              - entity: input_boolean.dummy1
+              - margin-right: 40px
+              - opacity: 0.8
+          - type: custom:decluttering-card
+            template: button 
+            variables:
+              - name: Person1
+              - label: Control
+              - icon: human-female
+              - show_state: false
+              - tap_action: 
+                  action: navigate
+                  navigation_path: /lovelace/person1
+                  haptic: light
+              - hold_action: 
+                  action: navigate
+                  navigation_path: /lovelace/person1
+                  haptic: light
+              - entity: input_boolean.dummy1
+              - margin-right: 40px
+              - opacity: 0.8
+          - type: custom:decluttering-card
+            template: button 
+            variables:
+              - name: Car
+              - label: Control
+              - icon: car
+              - show_state: false
+              - tap_action: 
+                  action: navigate
+                  navigation_path: /lovelace/car
+                  haptic: light
+              - hold_action: 
+                  action: navigate
+                  navigation_path: /lovelace/car
+                  haptic: light
+              - entity: input_boolean.dummy1
+              - margin-right: 40px
+              - opacity: 0.8
+          - type: custom:decluttering-card
+            template: button 
+            variables:
+              - name: 3D Printer
+              - label: Control
+              - icon: printer-3d-nozzle
+              - show_state: false
+              - tap_action: 
+                  action: navigate
+                  navigation_path: /lovelace/printer
+                  haptic: light
+              - hold_action: 
+                  action: navigate
+                  navigation_path: /lovelace/printer
+                  haptic: light
+              - entity: input_boolean.dummy1
+              - margin-right: 40px
+              - opacity: 0.8
+          # - !include ../includes/blank_card.yaml

@@ -13,10 +13,10 @@ reverse_button_direction: true
 # # hide_refresh: true
 # # hide_config: true
 # hide_raw: true
-show_tabs:  
-  - home
-  - media
-hidden_tab_redirect: false
+# show_tabs:  
+#   - home
+#   - media
+# hidden_tab_redirect: false
 # exceptions:
 #   - conditions:
 #       user: Jimmy
