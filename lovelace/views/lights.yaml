@@ -8,7 +8,7 @@ cards:
       ha-card {
         padding: 10px;
       }
-    cards:
+    entities:
       ###################################
       # Livingroom                      #
       ###################################
