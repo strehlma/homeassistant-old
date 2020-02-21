@@ -46,7 +46,6 @@ styles:
   card:
     - border: 1px solid rgba(255,255,255,0.20)
     - border-radius: 12px
-    - border-radius: "[[[ return states['input_select.border_radius'].state ]]]"
     - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1)
   label:
     - font-size: 11px
@@ -80,7 +79,7 @@ state:
     styles:
       card:
         - --ha-card-background: #EEEEEE
-        - box-shadow: inset -6px -6px 26px 0 rgba(255,255,255,0.83), inset 6px 6px 16px 0 rgba(217,210,200,1);
+        - box-shadow: inset -6px -6px 26px 0 rgba(255,255,255,0.83), inset 6px 6px 16px 0 rgba(217,210,200,1)
       name:
         - color: black
       state:
@@ -93,7 +92,7 @@ state:
     spin: {{ spin_off|default('false') }}
     styles:
       card:
-        - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
+        - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1)
       icon:
         - color: {{ icon_color_off|default('var(--paper-item-icon-color)') }}
       name:
@@ -107,7 +106,7 @@ state:
   - value: "unavailable"
     styles:
       card:
-        - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
+        - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1)
         - opacity: 0.2
       icon:
         - color: {{ icon_color_off|default('var(--paper-item-icon-color)') }}
