@@ -40,3 +40,7 @@
     type: module
   - url: /community_plugin/calendar-card/calendar-card.js
     type: js
+  - url: /community_plugin/light-popup-card/light-popup-card.js
+    type: module
+  - url: /community_plugin/lovelace-more-info-card/more-info-card.js
+    type: module

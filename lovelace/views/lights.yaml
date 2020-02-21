@@ -1,8 +1,6 @@
 title: Lights
 path:  lights
 icon: 'mdi:lightbulb'
-# popup_cards:
-#   !include ../popup-cards/light-popup.yaml
 cards:
   - type: vertical-stack
     cards:
@@ -12,7 +10,7 @@ cards:
       - type: custom:decluttering-card
         template: header_text
         variables:
-          - content: '##### Wohnzimmer'
+          - content: '### Wohnzimmer'
 
       - type: horizontal-stack             
         cards:
@@ -31,27 +29,6 @@ cards:
             - icon: mdi:glass-cocktail
               name: Esszimmerlampe
               entity: switch.showcase_plug
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.diningroom
-          #     - name: Esszimmerlampe
-          #     - icon: ceiling-light
-          #     - show_label: false
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.livingroom
-          #     - name: Wohnzimmerlampe
-          #     - icon: atom
-          #     - show_label: false
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.showcase_plug
-          #     - name: Vitrine
-          #     - icon: glass-cocktail
-          #     - show_label: false
 
       - type: horizontal-stack             
         cards:
@@ -70,27 +47,6 @@ cards:
             - icon: mdi:television
               name: Fernseher
               entity: switch.tv_plug
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: light.moon
-          #     - name: Mond
-          #     - icon: brightness-3
-          #     - show_label: false
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: light.cube
-          #     - name: Würfel
-          #     - icon: cube
-          #     - show_label: false
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.tv_plug
-          #     - name: Fernseher
-          #     - icon: television
-          #     - show_label: false
 
       ###################################
       # Kitchen                         #
@@ -98,7 +54,7 @@ cards:
       - type: custom:decluttering-card
         template: header_text
         variables:
-          - content: '##### Küche'
+          - content: '### Küche'
 
       - type: horizontal-stack             
         cards:
@@ -112,20 +68,6 @@ cards:
             - icon: mdi:led-strip-variant
               name: Lichterkette
               entity: switch.lightstripe_plug
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.kitchen_plug
-          #     - name: Küchenlicht
-          #     - icon: led-strip
-          #     - show_label: false
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.lightstripe_plug
-          #     - name: Lichterkette
-          #     - icon: led-strip-variant
-          #     - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
 
@@ -135,7 +77,7 @@ cards:
       - type: custom:decluttering-card
         template: header_text
         variables:
-          - content: '##### Schlafzimmer'
+          - content: '### Schlafzimmer'
 
       - type: horizontal-stack             
         cards:
@@ -162,7 +104,7 @@ cards:
       - type: custom:decluttering-card
         template: header_text
         variables:
-          - content: '##### Treppenhaus'
+          - content: '### Treppenhaus'
 
       - type: horizontal-stack             
         cards:
@@ -176,20 +118,6 @@ cards:
             - icon: mdi:pine-tree
               name: Weihnachtsbaum
               entity: switch.xmas_plug
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.stairway_plug
-          #     - name: Treppenlicht
-          #     - icon: stairs
-          #     - show_label: false
-          # - type: custom:decluttering-card
-          #   template: switch_button_card
-          #   variables:
-          #     - entity: switch.xmas_plug
-          #     - name: Weihnachtsbaum
-          #     - icon: pine-tree
-          #     - show_label: false
           - type: 'custom:button-card'
             color_type: blank-card
 

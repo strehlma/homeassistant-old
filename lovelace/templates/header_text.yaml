@@ -8,6 +8,6 @@ style: |
     height: 33px;
     background: none;
     padding: 0px 11px;
-    color: var(--header-color);
+    color: var(--primary-text-color);
   }
 content: '{{ content }}'
