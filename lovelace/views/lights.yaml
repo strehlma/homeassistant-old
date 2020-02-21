@@ -2,13 +2,12 @@ title: Lights
 path:  lights
 icon: 'mdi:lightbulb'
 cards:
-#  - type: vertical-stack
-  - type: entities
+  - type: vertical-stack
     style: |
-      ha-card {
+      .column {
         padding: 10px;
       }
-    entities:
+    cards:
       ###################################
       # Livingroom                      #
       ###################################
