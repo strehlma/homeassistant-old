@@ -3,7 +3,7 @@ path:  lights
 icon: 'mdi:lightbulb'
 cards:
 #  - type: vertical-stack
-  - type: custom:layout-card
+  - type: entities
     style: |
       ha-card {
         padding: 10px;
