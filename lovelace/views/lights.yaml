@@ -55,27 +55,42 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - type: custom:decluttering-card
-            template: switch_button_card
-            variables:
-              - entity: light.moon
-              - name: Mond
-              - icon: brightness-3
-              - show_label: false
-          - type: custom:decluttering-card
-            template: switch_button_card
-            variables:
-              - entity: light.cube
-              - name: Würfel
-              - icon: cube
-              - show_label: false
-          - type: custom:decluttering-card
-            template: switch_button_card
-            variables:
-              - entity: switch.tv_plug
-              - name: Fernseher
-              - icon: television
-              - show_label: false
+          - !include
+            - '../templates/neumorphic_button.yaml'
+            - icon: mdi:brightness-3
+              name: Mond
+              entity: light.moon
+          - !include
+            - '../templates/neumorphic_button.yaml'
+            - icon: mdi:cube
+              name: Würfel
+              entity: light.cube
+          - !include
+            - '../templates/neumorphic_button.yaml'
+            - icon: mdi:television
+              name: Fernseher
+              entity: switch.tv_plug
+          # - type: custom:decluttering-card
+          #   template: switch_button_card
+          #   variables:
+          #     - entity: light.moon
+          #     - name: Mond
+          #     - icon: brightness-3
+          #     - show_label: false
+          # - type: custom:decluttering-card
+          #   template: switch_button_card
+          #   variables:
+          #     - entity: light.cube
+          #     - name: Würfel
+          #     - icon: cube
+          #     - show_label: false
+          # - type: custom:decluttering-card
+          #   template: switch_button_card
+          #   variables:
+          #     - entity: switch.tv_plug
+          #     - name: Fernseher
+          #     - icon: television
+          #     - show_label: false
 
       ###################################
       # Kitchen                         #
