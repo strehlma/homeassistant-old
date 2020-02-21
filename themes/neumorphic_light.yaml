@@ -4,7 +4,7 @@ Neuphormic Light:
   ## Lovelace Theme
   
   # Wallpaper/Background Image
-  background-image: 'linear-gradient(290deg, #a30088 -30%, #111111 65%)'
+  # background-image: 'linear-gradient(290deg, #a30088 -30%, #111111 65%)'
   
   # Lovelace Header Text
   header-color: 'white'
@@ -16,7 +16,7 @@ Neuphormic Light:
   ## Main Home Assistant Colors
   
   # Base colors
-  primary-color: '#333333'
+  primary-color: '#5D9BFF'
   accent-color: 'var(--md-teal-A700)'
   dark-primary-color: 'var(--md-teal-900)'
   light-primary-color: 'var(--md-teal-400)'
@@ -29,7 +29,7 @@ Neuphormic Light:
   label-badge-border-color: 'var(--md-purple-900)'
   
   # Sidebar
-  sidebar-icon-color: 'var(--mdc-grey-darken-2)'
+  sidebar-icon-color: 'var(--primary-color)'
   
   # Background colors
   primary-background-color: 'var(--md-grey-120)'
@@ -50,7 +50,7 @@ Neuphormic Light:
   paper-card-background-color: '##EEEEEE'
   paper-dialog-background-color: 'var(--md-white)'
   paper-item-icon-color: 'var(--primary-text-color)'
-  paper-item-icon-active-color: '#b58e31'
+  paper-item-icon-active-color: 'var(--primary-color)'
   paper-item-icon_-_color: 'var(--secondary-text-color)'
   paper-item-selected_-_background-color: 'var(--mdc-grey-lighten-3)'
   paper-tabs-selection-bar-color: 'var(--secondary-text-color)'
