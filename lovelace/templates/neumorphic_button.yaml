@@ -5,7 +5,7 @@ type: custom:button-card
 name: {{ name }}
 icon: {{ icon }}
 deep_press: false
-color: {{ color|default('auto') }}
+color: '#EEEEEE'
 size: {{ size|default('25%') }}
 lock:
   enabled: {{ lock|default('false') }}
@@ -47,6 +47,7 @@ styles:
     - border: 1px solid rgba(255,255,255,0.20)
     - border-radius: 12px
     - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1)
+    - margin: 10px
   label:
     - font-size: 11px
     - font-family: Helvetica
