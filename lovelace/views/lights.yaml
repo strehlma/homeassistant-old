@@ -16,13 +16,17 @@ cards:
 
       - type: horizontal-stack             
         cards:
-          - type: custom:decluttering-card
-            template: switch_button_card
-            variables:
-              - entity: switch.diningroom
-              - name: Esszimmerlampe
-              - icon: ceiling-light
-              - show_label: false
+          - !include
+            - '../templates/neumorphic_button.yaml'
+            - icon: ceiling-light
+              entity: switch.diningroom
+          # - type: custom:decluttering-card
+          #   template: switch_button_card
+          #   variables:
+          #     - entity: switch.diningroom
+          #     - name: Esszimmerlampe
+          #     - icon: ceiling-light
+          #     - show_label: false
           - type: custom:decluttering-card
             template: switch_button_card
             variables:
