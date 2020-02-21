@@ -32,7 +32,7 @@ Neuphormic Light:
   sidebar-icon-color: 'var(--primary-color)'
   
   # Background colors
-  primary-background-color: 'var(--md-grey-120)'
+  primary-background-color: '#EEEEEE'
   secondary-background-color: 'var(--mdc-grey-lighten-5)'
   divider-color: 'rgba(0, 0, 0, .12)'
   table-row-background-color: '#f0f0f0'
@@ -47,7 +47,7 @@ Neuphormic Light:
   # Paper card
   paper-card-header-color: 'var(--primary-color)'
   # ha-card-background-color: 'var(--light-primary-color)'
-  paper-card-background-color: '##EEEEEE'
+  paper-card-background-color: 'var(--primary-background-color)'
   paper-dialog-background-color: 'var(--md-white)'
   paper-item-icon-color: 'var(--primary-text-color)'
   paper-item-icon-active-color: 'var(--primary-color)'
