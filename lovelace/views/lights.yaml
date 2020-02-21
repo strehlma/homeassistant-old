@@ -18,8 +18,19 @@ cards:
         cards:
           - !include
             - '../templates/neumorphic_button.yaml'
-            - icon: ceiling-light
+            - icon: mdi:ceiling-light
+              name: Esszimmerlampe
               entity: switch.diningroom
+          - !include
+            - '../templates/neumorphic_button.yaml'
+            - icon: mdi:atom
+              name: Wohnzimmerlampe
+              entity: switch.livingroom
+          - !include
+            - '../templates/neumorphic_button.yaml'
+            - icon: mdi:glass-cocktail
+              name: Esszimmerlampe
+              entity: switch.showcase_plug
           # - type: custom:decluttering-card
           #   template: switch_button_card
           #   variables:
@@ -27,20 +38,20 @@ cards:
           #     - name: Esszimmerlampe
           #     - icon: ceiling-light
           #     - show_label: false
-          - type: custom:decluttering-card
-            template: switch_button_card
-            variables:
-              - entity: switch.livingroom
-              - name: Wohnzimmerlampe
-              - icon: atom
-              - show_label: false
-          - type: custom:decluttering-card
-            template: switch_button_card
-            variables:
-              - entity: switch.showcase_plug
-              - name: Vitrine
-              - icon: glass-cocktail
-              - show_label: false
+          # - type: custom:decluttering-card
+          #   template: switch_button_card
+          #   variables:
+          #     - entity: switch.livingroom
+          #     - name: Wohnzimmerlampe
+          #     - icon: atom
+          #     - show_label: false
+          # - type: custom:decluttering-card
+          #   template: switch_button_card
+          #   variables:
+          #     - entity: switch.showcase_plug
+          #     - name: Vitrine
+          #     - icon: glass-cocktail
+          #     - show_label: false
 
       - type: horizontal-stack             
         cards:
