@@ -44,10 +44,10 @@ hold_action:
   haptic: heavy
 styles:
   card:
-    - border: 1px solid rgba(255,255,255,0.20);
-    - border-radius: '12px'
+    - border: 1px solid rgba(255,255,255,0.20)
+    - border-radius: 12px
     - border-radius: "[[[ return states['input_select.border_radius'].state ]]]"
-    - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
+    - box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1)
   label:
     - font-size: 11px
     - font-family: Helvetica
