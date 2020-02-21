@@ -5,12 +5,10 @@ cards:
   - type: entities
     style: |
       ha-card {
-        --ha-card-background: red;
-        box-shadow: none;
-        background: none;
+        padding: 15px;
       }
       .card-content {
-        padding: 0
+        padding: 10px;
       }
     entities:
   # - type: vertical-stack
