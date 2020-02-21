@@ -2,12 +2,23 @@ title: Lights
 path:  lights
 icon: 'mdi:lightbulb'
 cards:
-  - type: vertical-stack
+  - type: entities
     style: |
-      .column {
-        padding: 10px;
+      ha-card {
+        --ha-card-background: red;
+        box-shadow: none;
+        background: none;
       }
-    cards:
+      .card-content {
+        padding: 0
+      }
+    entities:
+  # - type: vertical-stack
+  #   style: |
+  #     .column {
+  #       padding: 10px;
+  #     }
+  #   cards:
       ###################################
       # Livingroom                      #
       ###################################
@@ -16,7 +27,8 @@ cards:
         variables:
           - content: '### Wohnzimmer'
 
-      - type: horizontal-stack             
+      - type: custom:hui-horizontal-stack-card
+      # - type: horizontal-stack             
         cards:
           - !include
             - '../templates/neumorphic_button.yaml'
@@ -34,7 +46,8 @@ cards:
               name: Esszimmerlampe
               entity: switch.showcase_plug
 
-      - type: horizontal-stack             
+      - type: custom:hui-horizontal-stack-card
+      # - type: horizontal-stack             
         cards:
           - !include
             - '../templates/neumorphic_button.yaml'
@@ -60,7 +73,8 @@ cards:
         variables:
           - content: '### Küche'
 
-      - type: horizontal-stack             
+      - type: custom:hui-horizontal-stack-card
+      # - type: horizontal-stack             
         cards:
           - !include
             - '../templates/neumorphic_button.yaml'
@@ -83,7 +97,8 @@ cards:
         variables:
           - content: '### Schlafzimmer'
 
-      - type: horizontal-stack             
+      - type: custom:hui-horizontal-stack-card
+      # - type: horizontal-stack             
         cards:
           - !include
             - '../templates/neumorphic_button.yaml'
@@ -110,7 +125,8 @@ cards:
         variables:
           - content: '### Treppenhaus'
 
-      - type: horizontal-stack             
+      - type: custom:hui-horizontal-stack-card
+      # - type: horizontal-stack             
         cards:
           - !include
             - '../templates/neumorphic_button.yaml'
