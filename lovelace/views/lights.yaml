@@ -5,18 +5,10 @@ cards:
   - type: entities
     style: |
       ha-card {
-        padding: 15px;
-      }
-      .card-content {
-        padding: 10px;
+        border: 0;
+        box-shadow: none;
       }
     entities:
-  # - type: vertical-stack
-  #   style: |
-  #     .column {
-  #       padding: 10px;
-  #     }
-  #   cards:
       ###################################
       # Livingroom                      #
       ###################################
