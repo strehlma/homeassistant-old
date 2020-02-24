@@ -3,6 +3,11 @@ path:  lights
 icon: 'mdi:lightbulb'
 cards:
   - type: entities
+    style: |
+      ha-card {
+        border: 0;
+        box-shadow: none;
+      }
     entities:
       ###################################
       # Livingroom                      #
