@@ -1,7 +1,7 @@
 # lovelace_gen
 
 # card
-- type: entities
+- type: custom:entities
   style: |
     ha-card {
       border: 0;
