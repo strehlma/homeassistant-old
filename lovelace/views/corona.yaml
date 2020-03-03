@@ -26,14 +26,26 @@ cards:
               state: false
               fill: false
             entities:
-              - sensor.worldwide_coronavirus_confirmed
+              - entity: sensor.worldwide_coronavirus_confirmed
+                name: 'Gesamt'
+                color: #ff0000
               - sensor.worldwide_coronavirus_current
+                name: 'Aktuell'
+                color: #ffd800
               - sensor.worldwide_coronavirus_recovered
+                name: 'Erholt'
+                color: #2cd32c
               - sensor.worldwide_coronavirus_deaths
-          - sensor.worldwide_coronavirus_confirmed
+                name: 'Verstorben'
+                color: #969696
+          - entity: sensor.worldwide_coronavirus_confirmed
+            name: 'Gesamt'
           - sensor.worldwide_coronavirus_current
+            name: 'Aktuell'
           - sensor.worldwide_coronavirus_recovered
+            name: 'Erholt'
           - sensor.worldwide_coronavirus_deaths
+            name: 'Verstorben'
       - type: entities
         style: |
           ha-card {
@@ -56,20 +68,24 @@ cards:
               state: false
               fill: false
             entities:
-              - sensor.germany_coronavirus_confirmed
-              - sensor.germany_coronavirus_current
-              - sensor.germany_coronavirus_recovered
-              - sensor.germany_coronavirus_deaths
-          - type: entities
-            style: |
-              ha-card {
-                border: 0;
-                box-shadow: none;
-              }
-            show_header_toggle: false
-            entities:
-              - sensor.germany_coronavirus_confirmed
-              - sensor.germany_coronavirus_current
-              - sensor.germany_coronavirus_recovered
-              - sensor.germany_coronavirus_deaths
+              - entity: sensor.germany_coronavirus_confirmed
+                name: 'Gesamt'
+                color: #ff0000
+              - entity: sensor.germany_coronavirus_current
+                name: 'Aktuell'
+                color: #ffd800
+              - entity: sensor.germany_coronavirus_recovered
+                name: 'Erholt'
+                color: #2cd32c
+              - entity: sensor.germany_coronavirus_deaths
+                name: 'Verstorben'
+                color: #969696
+          - entity: sensor.germany_coronavirus_confirmed
+            name: 'Gesamt'
+          - entity: sensor.germany_coronavirus_current
+            name: 'Aktuell'
+          - entity: sensor.germany_coronavirus_recovered
+            name: 'Erholt'
+          - entity: sensor.germany_coronavirus_deaths
+            name: 'Verstorben'
 
