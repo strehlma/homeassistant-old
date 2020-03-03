@@ -2,13 +2,8 @@ title: Corona
 path: corona
 icon: 'mdi:biohazard'
 cards:
-  - type: entities
-    style: |
-      ha-card {
-        border: 0;
-        box-shadow: none;
-      }
-    entities:
+  - type: vertical-stack
+    cards:
       - type: entities
         style: |
           ha-card {
