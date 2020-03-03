@@ -1,4 +1,4 @@
-  - url: /local/css/neumorphism.yaml
+  - url: /local/css/neumorphism.css
     type: css
 
   - url: /customcards/github/thomasloven/card-tools.js?track=true
