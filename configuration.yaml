@@ -110,7 +110,12 @@ sun:
 panel_iframe:
   nodered:
     title: 'Node-RED'
+    icon: 'mdi:chart-timeline'
     url: 'http://192.168.50.20:1880/' 
+  phoscon:
+    title: 'Phoscon'
+    icon: 'mdi:zigbee'
+    url: 'http://192.168.50.20:9082/' 
 
 automation: !include_dir_merge_list automation
 group: !include_dir_merge_named configuration/groups/ 

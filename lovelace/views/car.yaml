@@ -39,4 +39,10 @@ cards:
           }
         name: "Esso Düsseldorf"
         entities:
-          - sensor.esso_ddorf_diesel        
+          - sensor.esso_ddorf_diesel      
+
+      - type: entities
+        title: Entities card sample
+        show_header_toggle: true
+        entities:
+          - switch.echo_buro_repeat_switch  
