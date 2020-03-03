@@ -1,3 +1,6 @@
+  - url: /local/css/neumorphism.yaml
+    type: css
+
   - url: /customcards/github/thomasloven/card-tools.js?track=true
     type: js
   - url: /customcards/github/thomasloven/popup-card.js?track=true
