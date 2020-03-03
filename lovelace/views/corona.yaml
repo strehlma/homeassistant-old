@@ -89,3 +89,18 @@ cards:
           - entity: sensor.germany_coronavirus_deaths
             name: 'Verstorben'
 
+          - entity: sensor.germany_coronavirus_confirmed
+              type: custom:multiple-entity-row
+              name: Deutschland
+              state_header: Gesamt
+              unit: ''
+              entities:
+                - entity: sensor.germany_coronavirus_current
+                  name: 'Aktuell'
+                  unit: ''
+                - entity: sensor.germany_coronavirus_recovered
+                  name: 'Erholt'
+                  unit: ''
+                - entity: sensor.germany_coronavirus_deaths
+                  name: 'Tote'
+                  unit: ''
