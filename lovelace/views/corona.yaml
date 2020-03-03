@@ -29,22 +29,22 @@ cards:
               - entity: sensor.worldwide_coronavirus_confirmed
                 name: 'Gesamt'
                 color: #ff0000
-              - sensor.worldwide_coronavirus_current
+              - entity: sensor.worldwide_coronavirus_current
                 name: 'Aktuell'
                 color: #ffd800
-              - sensor.worldwide_coronavirus_recovered
+              - entity: sensor.worldwide_coronavirus_recovered
                 name: 'Erholt'
                 color: #2cd32c
-              - sensor.worldwide_coronavirus_deaths
+              - entity: sensor.worldwide_coronavirus_deaths
                 name: 'Verstorben'
                 color: #969696
           - entity: sensor.worldwide_coronavirus_confirmed
             name: 'Gesamt'
-          - sensor.worldwide_coronavirus_current
+          - entity: sensor.worldwide_coronavirus_current
             name: 'Aktuell'
-          - sensor.worldwide_coronavirus_recovered
+          - entity: sensor.worldwide_coronavirus_recovered
             name: 'Erholt'
-          - sensor.worldwide_coronavirus_deaths
+          - entity: sensor.worldwide_coronavirus_deaths
             name: 'Verstorben'
       - type: entities
         style: |
