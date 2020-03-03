@@ -1,0 +1,41 @@
+title: Corona
+path: corona
+icon: 'mdi:biohazard'
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+        - type: history-graph
+          title: 'Weltweit'
+          hours_to_show: 80
+          entities:
+            - sensor.worldwide_coronavirus_confirmed
+            - sensor.worldwide_coronavirus_current
+            - sensor.worldwide_coronavirus_recovered
+            - sensor.worldwide_coronavirus_deaths
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - sensor.worldwide_coronavirus_confirmed
+            - sensor.worldwide_coronavirus_current
+            - sensor.worldwide_coronavirus_recovered
+            - sensor.worldwide_coronavirus_deaths
+      - type: horizontal-stack
+        cards:
+        - type: history-graph
+          title: 'Deutschland'
+          hours_to_show: 80
+          entities:
+            - sensor.germany_coronavirus_confirmed
+            - sensor.germany_coronavirus_current
+            - sensor.germany_coronavirus_recovered
+            - sensor.germany_coronavirus_deaths
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - sensor.germany_coronavirus_confirmed
+            - sensor.germany_coronavirus_current
+            - sensor.germany_coronavirus_recovered
+            - sensor.germany_coronavirus_deaths
+

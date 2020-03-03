@@ -34,3 +34,4 @@ views:
   - !include lovelace/views/weather.yaml
   - !include lovelace/views/car.yaml
   - !include lovelace/views/he.yaml
+  - !include lovelace/views/corona.yaml
