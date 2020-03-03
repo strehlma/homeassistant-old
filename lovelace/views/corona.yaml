@@ -30,18 +30,10 @@ cards:
               - sensor.worldwide_coronavirus_current
               - sensor.worldwide_coronavirus_recovered
               - sensor.worldwide_coronavirus_deaths
-          - type: entities
-            style: |
-              ha-card {
-                border: 0;
-                box-shadow: none;
-              }
-            show_header_toggle: false
-            entities:
-              - sensor.worldwide_coronavirus_confirmed
-              - sensor.worldwide_coronavirus_current
-              - sensor.worldwide_coronavirus_recovered
-              - sensor.worldwide_coronavirus_deaths
+          - sensor.worldwide_coronavirus_confirmed
+          - sensor.worldwide_coronavirus_current
+          - sensor.worldwide_coronavirus_recovered
+          - sensor.worldwide_coronavirus_deaths
       - type: entities
         style: |
           ha-card {
