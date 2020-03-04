@@ -10,7 +10,6 @@ cards:
             border: 1px solid rgba(255,255,255,0.20);
             border-radius: 12px;
             box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
-            padding: 10px;
           }
         entities:
           - type: custom:mini-graph-card
@@ -61,7 +60,6 @@ cards:
             border: 1px solid rgba(255,255,255,0.20);
             border-radius: 12px;
             box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
-            padding: 10px;
           }
         entities:
           - type: custom:mini-graph-card
@@ -95,11 +93,11 @@ cards:
             entity: sensor.germany_coronavirus_confirmed
             name: Deutschland
             state_header: Gesamt
-            unit: none
+            unit: ' '
             entities:
               - entity: sensor.germany_coronavirus_current
                 name: 'Aktuell'
-                unit: none
+                unit: ' '
               - entity: sensor.germany_coronavirus_recovered
                 name: 'Erholt'
                 unit: none
