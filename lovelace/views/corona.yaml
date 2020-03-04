@@ -10,6 +10,7 @@ cards:
             border: 1px solid rgba(255,255,255,0.20);
             border-radius: 12px;
             box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
+            padding: 10px;
           }
         entities:
           - type: custom:mini-graph-card
@@ -38,20 +39,29 @@ cards:
               - entity: sensor.worldwide_coronavirus_deaths
                 name: 'Verstorben'
                 color: #969696
-          - entity: sensor.worldwide_coronavirus_confirmed
-            name: 'Gesamt'
-          - entity: sensor.worldwide_coronavirus_current
-            name: 'Aktuell'
-          - entity: sensor.worldwide_coronavirus_recovered
-            name: 'Erholt'
-          - entity: sensor.worldwide_coronavirus_deaths
-            name: 'Verstorben'
+          - type: custom:multiple-entity-row
+            entity: sensor.worldwide_coronavirus_confirmed
+            name: Weltweit
+            state_header: Gesamt
+            unit: none
+            entities:
+              - entity: sensor.worldwide_coronavirus_current
+                name: 'Aktuell'
+                unit: none
+              - entity: sensor.worldwide_coronavirus_recovered
+                name: 'Erholt'
+                unit: none
+              - entity: sensor.worldwide_coronavirus_deaths
+                name: 'Tote'
+                unit: none
+
       - type: entities
         style: |
           ha-card {
             border: 1px solid rgba(255,255,255,0.20);
             border-radius: 12px;
             box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
+            padding: 10px;
           }
         entities:
           - type: custom:mini-graph-card
@@ -80,27 +90,19 @@ cards:
               - entity: sensor.germany_coronavirus_deaths
                 name: 'Verstorben'
                 color: #969696
-          - entity: sensor.germany_coronavirus_confirmed
-            name: 'Gesamt'
-          - entity: sensor.germany_coronavirus_current
-            name: 'Aktuell'
-          - entity: sensor.germany_coronavirus_recovered
-            name: 'Erholt'
-          - entity: sensor.germany_coronavirus_deaths
-            name: 'Verstorben'
 
           - type: custom:multiple-entity-row
             entity: sensor.germany_coronavirus_confirmed
             name: Deutschland
             state_header: Gesamt
-            unit: ''
+            unit: none
             entities:
               - entity: sensor.germany_coronavirus_current
                 name: 'Aktuell'
-                unit: ''
+                unit: none
               - entity: sensor.germany_coronavirus_recovered
                 name: 'Erholt'
-                unit: ''
+                unit: none
               - entity: sensor.germany_coronavirus_deaths
                 name: 'Tote'
-                unit: ''
+                unit: none
