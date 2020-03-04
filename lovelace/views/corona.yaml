@@ -2,9 +2,15 @@ title: Corona
 path: corona
 icon: 'mdi:biohazard'
 cards:
-  - type: vertical-stack
-    cards:
-      - type: entities
+  - type: entities
+    style: |
+      ha-card {
+        border: 0;
+        box-shadow: none;
+        padding: 10px;
+      }
+    entities:
+      - type: custom:hui-entities-card
         style: |
           ha-card {
             border: 1px solid rgba(255,255,255,0.20);
@@ -43,19 +49,19 @@ cards:
             entity: sensor.worldwide_coronavirus_confirmed
             name: Weltweit
             state_header: Gesamt
-            unit: none
+            unit: ' '
             entities:
               - entity: sensor.worldwide_coronavirus_current
                 name: 'Aktuell'
-                unit: none
+                unit: ' '
               - entity: sensor.worldwide_coronavirus_recovered
                 name: 'Erholt'
-                unit: none
+                unit: ' '
               - entity: sensor.worldwide_coronavirus_deaths
                 name: 'Tote'
-                unit: none
+                unit: ' '
 
-      - type: entities
+      - type: custom:hui-entities-card
         style: |
           ha-card {
             border: 1px solid rgba(255,255,255,0.20);
@@ -102,7 +108,7 @@ cards:
                 unit: ' '
               - entity: sensor.germany_coronavirus_recovered
                 name: 'Erholt'
-                unit: none
+                unit: ' '
               - entity: sensor.germany_coronavirus_deaths
                 name: 'Tote'
-                unit: none
+                unit: ' '
