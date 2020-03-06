@@ -1,6 +1,5 @@
 title: Settings
 path: settings
-icon: 'mdi:gear'
 cards:
   - type: entities
     style: |
