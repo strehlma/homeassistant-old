@@ -1,0 +1,41 @@
+title: Settings
+path: settings
+icon: 'mdi:gear'
+cards:
+  - type: entities
+    style: |
+      ha-card {
+        border: 0;
+        box-shadow: none;
+        padding: 10px;
+      }
+    entities:
+      - type: custom:hui-entities-card
+        style: |
+          ha-card {
+            border: 1px solid rgba(255,255,255,0.20);
+            border-radius: 12px;
+            box-shadow: -6px -6px 26px 0 rgba(255,255,255,0.83), 6px 6px 16px 0 rgba(217,210,200,1);
+            margin: 20px 0;
+          }
+        entities:
+          - type: custom:multiple-entity-row
+            entity: light.nightstand_mario_light
+            name: 'Nachttisch Mario'
+            state_header: 'Licht'
+            unit: ' '
+            entities:
+              - entity: binary_sensor.nightstand_mario_motion
+                name: 'Bewegung'
+              - entity: sensor.nightstand_mario_brightness
+                name: 'Helligkeit'
+          - type: custom:multiple-entity-row
+            entity: light.nightstand_sandra_light
+            name: 'Nachttisch Sandra'
+            state_header: 'Licht'
+            unit: ' '
+            entities:
+              - entity: binary_sensor.nightstand_sandra_motion
+                name: 'Bewegung'
+              - entity: sensor.nightstand_sandra_brightness
+                name: 'Helligkeit'
