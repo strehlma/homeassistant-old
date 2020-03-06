@@ -6,7 +6,6 @@ style: |
   ha-card {
     border: 0;
     box-shadow: none;
-    padding: 10px;
   }
 entities:
   - type: custom:button-card
