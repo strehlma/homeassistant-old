@@ -16,16 +16,8 @@ input_number:
     max: 100
     step: 1
 
-# light:
-#   - platform: template
-#     lights:
-#       - nightstand_mario_light_settings
-#   - platform: template
-#     lights:
-#       - nightstand_sandra_light_settings
-
 automation:
-  - alias: nightstand_mario_motion
+  - id: nightstand_mario_motion
     alias: "Bewegung Nachttisch Mario"
     initial_state: 'on'
     trigger:
@@ -41,9 +33,9 @@ automation:
   #   - condition: numeric_state
       #  entity_id: sensor.nightstand_mario_brightness
   #     below: 100
-  action:
-    service_template: >
-      light.turn_{{ trigger.to_state.state}}
-    # data_template:
-    #   transition: 1
-    entity_id: light.nightstand_mario_light
+    action:
+      service_template: >
+        light.turn_{{ trigger.to_state.state}}
+      # data_template:
+      #   transition: 1
+      entity_id: light.nightstand_mario_light
