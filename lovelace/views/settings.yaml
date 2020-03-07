@@ -18,9 +18,13 @@ cards:
             margin: 20px 0;
           }
         entities:
+          - type: custom:decluttering-card
+            template: header_text
+            variables:
+              - content: '## Nachttische'
           - type: custom:multiple-entity-row
             entity: light.nightstand_mario_light
-            name: 'Nachttisch Mario'
+            name: 'Mario'
             state_header: 'Licht'
             unit: ' '
             entities:
@@ -28,9 +32,16 @@ cards:
                 name: 'Bewegung'
               - entity: sensor.nightstand_mario_brightness
                 name: 'Helligkeit'
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Einstellungen
+            entities:
+              - input_number.nightstand_mario_brightness_trigger
+
           - type: custom:multiple-entity-row
             entity: light.nightstand_sandra_light
-            name: 'Nachttisch Sandra'
+            name: 'Sandra'
             state_header: 'Licht'
             unit: ' '
             entities:
@@ -38,3 +49,9 @@ cards:
                 name: 'Bewegung'
               - entity: sensor.nightstand_sandra_brightness
                 name: 'Helligkeit'
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Einstellungen
+            entities:
+              - input_number.nightstand_sandra_brightness_trigger
