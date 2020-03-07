@@ -1,0 +1,18 @@
+input_boolean:
+  nightstand_mario_manual:
+  nightstand_sandra_manual:
+
+input_number:
+  nightstand_mario_brightness_trigger:
+    name: Schaltschwelle
+    unit_of_measurement: lux
+    min: 0
+    max: 100
+    step: 1
+  nightstand_sandra_brightness_trigger:
+    name: Schaltschwelle
+    unit_of_measurement: lux
+    min: 0
+    max: 100
+    step: 1
+
