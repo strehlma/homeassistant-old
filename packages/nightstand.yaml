@@ -19,10 +19,10 @@ input_number:
 light:
   - platform: template
     lights:
-      nightstand_mario_light_settings:
+      - nightstand_mario_light_settings
   - platform: template
     lights:
-      nightstand_sandra_light_settings:
+      - nightstand_sandra_light_settings
 
 automation:
   - id: nightstand_mario_motion
