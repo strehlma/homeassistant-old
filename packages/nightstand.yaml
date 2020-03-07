@@ -9,11 +9,23 @@ input_number:
     min: 0
     max: 100
     step: 1
+  nightstand_mario_light_duration:
+    name: Schaltzeit
+    unit_of_measurement: Minuten
+    min: 1
+    max: 10
+    step: 1
   nightstand_sandra_brightness_trigger:
     name: Schaltschwelle
     unit_of_measurement: lux
     min: 0
     max: 100
+    step: 1
+  nightstand_sandra_light_duration:
+    name: Schaltzeit
+    unit_of_measurement: Minuten
+    min: 1
+    max: 10
     step: 1
 
 automation:
@@ -28,7 +40,7 @@ automation:
       entity_id: binary_sensor.nightstand_mario_motion
       to: 'off'
       for:
-        minutes: 5
+        minutes: 1
   # condition:
   #   - condition: numeric_state
       #  entity_id: sensor.nightstand_mario_brightness

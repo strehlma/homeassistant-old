@@ -38,7 +38,7 @@ cards:
               label: Einstellungen
             entities:
               - input_number.nightstand_mario_brightness_trigger
-
+              - input_number.nightstand_mario_light_duration
           - type: custom:multiple-entity-row
             entity: light.nightstand_sandra_light
             name: 'Sandra'
@@ -55,3 +55,4 @@ cards:
               label: Einstellungen
             entities:
               - input_number.nightstand_sandra_brightness_trigger
+              - input_number.nightstand_sandra_light_duration
