@@ -12,9 +12,9 @@ input_number:
   nightstand_mario_light_duration:
     name: Schaltzeit
     unit_of_measurement: Minuten
-    min: 1
-    max: 10
-    step: 1
+    min: 10
+    max: 600
+    step: 10
   nightstand_sandra_brightness_trigger:
     name: Schaltschwelle
     unit_of_measurement: lux
@@ -24,9 +24,9 @@ input_number:
   nightstand_sandra_light_duration:
     name: Schaltzeit
     unit_of_measurement: Minuten
-    min: 1
-    max: 10
-    step: 1
+    min: 10
+    max: 600
+    step: 10
 
 automation:
   - id: nightstand_mario_motion
@@ -40,14 +40,26 @@ automation:
       entity_id: binary_sensor.nightstand_mario_motion
       to: 'off'
       for:
-        minutes: 1
-  # condition:
-  #   - condition: numeric_state
-      #  entity_id: sensor.nightstand_mario_brightness
-  #     below: 100
+        seconds: "{{ states('input_number.nightstand_mario_light_duration')|int }}"  
+    condition:
+      - condition: or
+        conditions:
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: binary_sensor.nightstand_mario_motion
+            state: 'on'
+          - condition: template
+            value_template: >
+            {{ states('sensor.nightstand_mario_brightness')|float < states('input_number.nightstand_mario_brightness_trigger')|float }}
+        - condition: state
+          entity_id: binary_sensor.nightstand_mario_motion
+          state: 'off'
     action:
       service_template: >
         light.turn_{{ trigger.to_state.state}}
       # data_template:
       #   transition: 1
       entity_id: light.nightstand_mario_light
+
+
