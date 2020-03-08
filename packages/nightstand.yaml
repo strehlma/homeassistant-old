@@ -51,7 +51,7 @@ automation:
             state: 'on'
           - condition: template
             value_template: >
-            {{ states('sensor.nightstand_mario_brightness')|float < states('input_number.nightstand_mario_brightness_trigger')|float }}
+              {{ states('sensor.nightstand_mario_brightness')|float < states('input_number.nightstand_mario_brightness_trigger')|float }}
         - condition: state
           entity_id: binary_sensor.nightstand_mario_motion
           state: 'off'
