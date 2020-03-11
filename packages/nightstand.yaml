@@ -9,6 +9,12 @@ input_number:
     min: 0
     max: 100
     step: 1
+  nightstand_mario_default_brightness:
+    name: Helligkeit
+    unit_of_measurement: lux
+    min: 0
+    max: 255
+    step: 1
   nightstand_mario_light_duration:
     name: Schaltzeit
     unit_of_measurement: Sekunden
@@ -21,12 +27,25 @@ input_number:
     min: 0
     max: 100
     step: 1
+  nightstand_sandra_default_brightness:
+    name: Helligkeit
+    unit_of_measurement: lux
+    min: 0
+    max: 255
+    step: 1
   nightstand_sandra_light_duration:
     name: Schaltzeit
     unit_of_measurement: Sekunden
     min: 10
     max: 600
     step: 10
+
+input_text:
+  nightstand_mario_default_rgb_color:
+    name: Farbe
+  nightstand_sandra_default_rgb_color:
+    name: Farbe
+
 
 automation:
   - id: nightstand_mario_motion
@@ -58,8 +77,10 @@ automation:
     action:
       service_template: >
         light.turn_{{ trigger.to_state.state}}
-      # data_template:
-      #   transition: 1
+      data:
+        transition: 2
+        # brightness: "{{ states('input_number.nightstand_mario_default_brightness')|int }}"
+        # rgb_color: [255,0,0]
       entity_id: light.nightstand_mario_light
 
   - id: nightstand_sandra_motion
@@ -91,7 +112,9 @@ automation:
     action:
       service_template: >
         light.turn_{{ trigger.to_state.state}}
-      # data_template:
-      #   transition: 1
+      data:
+        transition: 2
+        # brightness: "{{ states('input_number.nightstand_sandra_default_brightness')|int }}"
+        # rgb_color: [255,0,0]
       entity_id: light.nightstand_sandra_light
 
