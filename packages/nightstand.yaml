@@ -48,73 +48,93 @@ input_text:
 
 
 automation:
-  - id: nightstand_mario_motion
+  - id: nightstand_mario_on
     alias: "Bewegung Nachttisch Mario"
     initial_state: 'on'
     trigger:
-    - platform: state
-      entity_id: binary_sensor.nightstand_mario_motion
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.nightstand_mario_motion
-      to: 'off'
-      for:
-        seconds: "{{ states('input_number.nightstand_mario_light_duration')|int }}"  
+      - platform: state
+        entity_id: binary_sensor.nightstand_mario_motion
+        to: 'on'
     condition:
-      - condition: or
+      - condition: and
         conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: binary_sensor.nightstand_mario_motion
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ states('sensor.nightstand_mario_brightness')|float < states('input_number.nightstand_mario_brightness_trigger')|float }}
         - condition: state
           entity_id: binary_sensor.nightstand_mario_motion
-          state: 'off'
+          state: 'on'
+        - condition: template
+          value_template: >
+            {{ states('sensor.nightstand_mario_brightness')|float < states('input_number.nightstand_mario_brightness_trigger')|float }}
     action:
       service_template: >
-        light.turn_{{ trigger.to_state.state}}
+        light.turn_on
       data:
         transition: 2
-        # brightness: "{{ states('input_number.nightstand_mario_default_brightness')|int }}"
-        # rgb_color: [255,0,0]
+        brightness: "{{ states('input_number.nightstand_mario_default_brightness')|int }}"
+        rgb_color: [255,0,0]
       entity_id: light.nightstand_mario_light
 
-  - id: nightstand_sandra_motion
+  - id: nightstand_mario_off
+    alias: "Keine Bewegung Nachttisch Mario"
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.nightstand_mario_motion
+        to: 'off'
+        for:
+          seconds: "{{ states('input_number.nightstand_mario_light_duration')|int }}"  
+    condition:
+      - condition: state
+        entity_id: input_boolean.nightstand_mario_manual
+        state: 'off'
+    action:
+      service_template: >
+        light.turn_off
+      data:
+        transition: 2
+      entity_id: light.nightstand_mario_light
+
+  - id: nightstand_sandra_on
     alias: "Bewegung Nachttisch Sandra"
     initial_state: 'on'
     trigger:
-    - platform: state
-      entity_id: binary_sensor.nightstand_sandra_motion
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.nightstand_sandra_motion
-      to: 'off'
-      for:
-        seconds: "{{ states('input_number.nightstand_sandra_light_duration')|int }}"  
+      - platform: state
+        entity_id: binary_sensor.nightstand_sandra_motion
+        to: 'on'
     condition:
-      - condition: or
+      - condition: and
         conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: binary_sensor.nightstand_sandra_motion
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ states('sensor.nightstand_sandra_brightness')|float < states('input_number.nightstand_sandra_brightness_trigger')|float }}
         - condition: state
           entity_id: binary_sensor.nightstand_sandra_motion
-          state: 'off'
+          state: 'on'
+        - condition: template
+          value_template: >
+            {{ states('sensor.nightstand_sandra_brightness')|float < states('input_number.nightstand_sandra_brightness_trigger')|float }}
     action:
       service_template: >
-        light.turn_{{ trigger.to_state.state}}
+        light.turn_on
       data:
         transition: 2
-        # brightness: "{{ states('input_number.nightstand_sandra_default_brightness')|int }}"
-        # rgb_color: [255,0,0]
+        brightness: "{{ states('input_number.nightstand_sandra_default_brightness')|int }}"
+        rgb_color: [255,0,0]
+      entity_id: light.nightstand_sandra_light
+
+  - id: nightstand_sandra_off
+    alias: "Keine Bewegung Nachttisch Sandra"
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.nightstand_sandra_motion
+        to: 'off'
+        for:
+          seconds: "{{ states('input_number.nightstand_sandra_light_duration')|int }}"  
+    condition:
+      - condition: state
+        entity_id: input_boolean.nightstand_sandra_manual
+        state: 'off'
+    action:
+      service_template: >
+        light.turn_off
+      data:
+        transition: 2
       entity_id: light.nightstand_sandra_light
 
