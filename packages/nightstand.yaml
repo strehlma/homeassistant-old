@@ -69,8 +69,8 @@ automation:
         light.turn_on
       data:
         transition: 2
-        brightness: {{ states('input_number.nightstand_mario_default_brightness')|int }}
-        rgb_color: [255,0,0]
+        # brightness: {{ states('input_number.nightstand_mario_default_brightness')|int }}
+        # rgb_color: [255,0,0]
       entity_id: light.nightstand_mario_light
 
   - id: nightstand_mario_off
@@ -114,8 +114,8 @@ automation:
         light.turn_on
       data:
         transition: 2
-        brightness: {{ states('input_number.nightstand_sandra_default_brightness')|int }}
-        rgb_color: [255,0,0]
+        # brightness: {{ states('input_number.nightstand_sandra_default_brightness')|int }}
+        # rgb_color: [255,0,0]
       entity_id: light.nightstand_sandra_light
 
   - id: nightstand_sandra_off
