@@ -188,8 +188,8 @@ automation:
       data_template:
         entity_id: light.nightstand_sandra_light
         hs_color:
-          - {{states('input_number.nightstand_sandra_default_h') | float}}
-          - {{states('input_number.nightstand_sandra_default_s') | float}}
+          - "{{states('input_number.nightstand_sandra_default_h') | float}}"
+          - "{{states('input_number.nightstand_sandra_default_s') | float}}"
         brightness: "{{states('input_number.nightstand_sandra_default_brightness') | int}}"
 
 
