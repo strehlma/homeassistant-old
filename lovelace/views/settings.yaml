@@ -40,6 +40,8 @@ cards:
               - input_number.nightstand_mario_brightness_trigger
               - input_number.nightstand_mario_light_duration
               - input_number.nightstand_mario_default_brightness
+          - type: custom:light-entity-card
+            entity: light.nightstand_mario_settings
           - type: custom:multiple-entity-row
             entity: light.nightstand_sandra_light
             name: 'Sandra'
@@ -58,3 +60,5 @@ cards:
               - input_number.nightstand_sandra_brightness_trigger
               - input_number.nightstand_sandra_light_duration
               - input_number.nightstand_sandra_default_brightness
+          - type: custom:light-entity-card
+            entity: light.nightstand_sandra_settings

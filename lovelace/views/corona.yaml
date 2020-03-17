@@ -19,6 +19,22 @@ cards:
             margin: 20px 0;
           }
         entities:
+          - type: custom:multiple-entity-row
+            entity: sensor.worldwide_coronavirus_confirmed
+            name: Weltweit
+            icon: false
+            state_header: Gesamt
+            unit: ' '
+            entities:
+              - entity: sensor.worldwide_coronavirus_current
+                name: 'Aktuell'
+                unit: ' '
+              - entity: sensor.worldwide_coronavirus_recovered
+                name: 'Erholt'
+                unit: ' '
+              - entity: sensor.worldwide_coronavirus_deaths
+                name: 'Tote'
+                unit: ' '
           - type: custom:mini-graph-card
             name: 'Weltweit'
             aggregate_func: max
@@ -45,21 +61,6 @@ cards:
               - entity: sensor.worldwide_coronavirus_deaths
                 name: 'Verstorben'
                 color: #969696
-          - type: custom:multiple-entity-row
-            entity: sensor.worldwide_coronavirus_confirmed
-            name: Weltweit
-            state_header: Gesamt
-            unit: ' '
-            entities:
-              - entity: sensor.worldwide_coronavirus_current
-                name: 'Aktuell'
-                unit: ' '
-              - entity: sensor.worldwide_coronavirus_recovered
-                name: 'Erholt'
-                unit: ' '
-              - entity: sensor.worldwide_coronavirus_deaths
-                name: 'Tote'
-                unit: ' '
 
       - type: custom:hui-entities-card
         style: |
@@ -70,6 +71,22 @@ cards:
             margin: 20px 0;
           }
         entities:
+          - type: custom:multiple-entity-row
+            entity: sensor.germany_coronavirus_confirmed
+            name: Deutschland
+            icon: false
+            state_header: Gesamt
+            unit: ' '
+            entities:
+              - entity: sensor.germany_coronavirus_current
+                name: 'Aktuell'
+                unit: ' '
+              - entity: sensor.germany_coronavirus_recovered
+                name: 'Erholt'
+                unit: ' '
+              - entity: sensor.germany_coronavirus_deaths
+                name: 'Tote'
+                unit: ' '
           - type: custom:mini-graph-card
             name: 'Deutschland'
             aggregate_func: max
@@ -97,18 +114,3 @@ cards:
                 name: 'Verstorben'
                 color: #969696
 
-          - type: custom:multiple-entity-row
-            entity: sensor.germany_coronavirus_confirmed
-            name: Deutschland
-            state_header: Gesamt
-            unit: ' '
-            entities:
-              - entity: sensor.germany_coronavirus_current
-                name: 'Aktuell'
-                unit: ' '
-              - entity: sensor.germany_coronavirus_recovered
-                name: 'Erholt'
-                unit: ' '
-              - entity: sensor.germany_coronavirus_deaths
-                name: 'Tote'
-                unit: ' '

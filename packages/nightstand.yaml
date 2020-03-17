@@ -1,6 +1,8 @@
 input_boolean:
   nightstand_mario_manual:
   nightstand_sandra_manual:
+  nightstand_mario_light_setting:
+  nightstand_sandra_light_setting:
 
 input_number:
   nightstand_mario_brightness_trigger:
@@ -49,8 +51,24 @@ input_text:
 light:
   - platform: template
     lights:
-      - nightstand_mario_settings:
-      - nightstand_mario_settings:
+      nightstand_mario_settings:
+        turn_on:
+        - service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.nightstand_mario_light_setting
+        turn_off:
+        - service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.nightstand_mario_light_setting
+      nightstand_sandra_settings:
+        turn_on:
+        - service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.nightstand_mario_light_setting
+        turn_off:
+        - service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.nightstand_mario_light_setting
 
 automation:
   - id: nightstand_mario_on
