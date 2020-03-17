@@ -73,7 +73,7 @@ light:
           data_template:
             value: "{{ brightness }}"
             entity_id: input_number.nightstand_mario_default_brightness
-        color_template: "({{states('input_number.nightstand_mario_default_h') | int}}, {{states('input_number.nightstand_mario_default_s') | int}})"
+        color_template: "({{states('input_number.nightstand_mario_default_h') | float}}, {{states('input_number.nightstand_mario_default_s') | float}})"
         set_color:
           - service: input_number.set_value
             data_template:
@@ -99,7 +99,7 @@ light:
           data_template:
             value: "{{ brightness }}"
             entity_id: input_number.nightstand_sandra_default_brightness
-        color_template: "({{states('input_number.nightstand_sandra_default_h') | int}}, {{states('input_number.nightstand_sandra_default_s') | int}})"
+        color_template: "({{states('input_number.nightstand_sandra_default_h') | float}}, {{states('input_number.nightstand_sandra_default_s') | float}})"
         set_color:
           - service: input_number.set_value
             data_template:
@@ -188,8 +188,8 @@ automation:
       data_template:
         entity_id: light.nightstand_sandra_light
         hs_color:
-          - "({{states('input_number.nightstand_sandra_default_h') | float}}"
-          - "({{states('input_number.nightstand_sandra_default_s') | float}}"
+          - {{states('input_number.nightstand_sandra_default_h') | float}}
+          - {{states('input_number.nightstand_sandra_default_s') | float}}
         brightness: "{{states('input_number.nightstand_sandra_default_brightness') | int}}"
 
 
