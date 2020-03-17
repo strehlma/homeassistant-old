@@ -48,6 +48,12 @@ input_number:
     min: 10
     max: 600
     step: 10
+  nightstand_sandra_default_h:
+    min: 0
+    max: 360
+  nightstand_sandra_default_s:
+    min: 0
+    max: 360
 
 input_text:
   nightstand_mario_default_rgb_color:
