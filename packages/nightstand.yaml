@@ -23,6 +23,13 @@ input_number:
     min: 10
     max: 600
     step: 10
+  nightstand_mario_default_h:
+    min: 0
+    max: 360
+  nightstand_mario_default_s:
+    min: 0
+    max: 360
+
   nightstand_sandra_brightness_trigger:
     name: Schaltschwelle
     unit_of_measurement: lux
@@ -69,6 +76,26 @@ light:
         - service: input_boolean.turn_off
           data:
             entity_id: input_boolean.nightstand_mario_light_setting
+
+        level_template: "{{states('input_number.nightstand_mario_default_brightness') | int}}"
+        set_level:
+          service: input_number.set_value
+          data_template:
+            value: "{{ brightness }}"
+            entity_id: input_number.nightstand_mario_default_brightness
+        color_template: "({{states('input_number.nightstand_mario_default_h') | int}}, {{states('input_number.nightstand_mario_default_s') | int}})"
+        set_color:
+          - service: input_number.set_value
+            data_template:
+              value: "{{ h }}"
+              entity_id: input_number.nightstand_mario_default_h
+          - service: input_number.set_value
+            data_template:
+              value: "{{ s }}"
+              entity_id: input_number.nightstand_mario_default_s
+
+
+
 
 automation:
   - id: nightstand_mario_on
