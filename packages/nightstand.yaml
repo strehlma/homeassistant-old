@@ -67,16 +67,6 @@ light:
         - service: input_boolean.turn_off
           data:
             entity_id: input_boolean.nightstand_mario_light_setting
-      nightstand_sandra_settings:
-        turn_on:
-        - service: input_boolean.turn_on
-          data:
-            entity_id: input_boolean.nightstand_mario_light_setting
-        turn_off:
-        - service: input_boolean.turn_off
-          data:
-            entity_id: input_boolean.nightstand_mario_light_setting
-
         level_template: "{{states('input_number.nightstand_mario_default_brightness') | int}}"
         set_level:
           service: input_number.set_value
@@ -93,6 +83,33 @@ light:
             data_template:
               value: "{{ s }}"
               entity_id: input_number.nightstand_mario_default_s
+
+      nightstand_sandra_settings:
+        turn_on:
+        - service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.nightstand_sandra_light_setting
+        turn_off:
+        - service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.nightstand_sandra_light_setting
+        level_template: "{{states('input_number.nightstand_sandra_default_brightness') | int}}"
+        set_level:
+          service: input_number.set_value
+          data_template:
+            value: "{{ brightness }}"
+            entity_id: input_number.nightstand_sandra_default_brightness
+        color_template: "({{states('input_number.nightstand_sandra_default_h') | int}}, {{states('input_number.nightstand_sandra_default_s') | int}})"
+        set_color:
+          - service: input_number.set_value
+            data_template:
+              value: "{{ h }}"
+              entity_id: input_number.nightstand_sandra_default_h
+          - service: input_number.set_value
+            data_template:
+              value: "{{ s }}"
+              entity_id: input_number.nightstand_sandra_default_s
+
 
 
 
@@ -160,13 +177,21 @@ automation:
           value_template: >
             {{ states('sensor.nightstand_sandra_brightness')|float < states('input_number.nightstand_sandra_brightness_trigger')|float }}
     action:
-      service_template: >
-        light.turn_on
-      data:
-        transition: 2
-        # brightness: {{ states('input_number.nightstand_sandra_default_brightness')|int }}
-        # rgb_color: [255,0,0]
-      entity_id: light.nightstand_sandra_light
+      # service_template: >
+      #   light.turn_on
+      # data:
+      #   transition: 2
+      #   # brightness: {{ states('input_number.nightstand_sandra_default_brightness')|int }}
+      #   # rgb_color: [255,0,0]
+      # entity_id: light.nightstand_sandra_light
+      service: light.turn_on
+      data_template:
+        entity_id: light.nightstand_sandra_light
+        hs_color:
+          - "({{states('input_number.nightstand_sandra_default_h') | int}}"
+          - "({{states('input_number.nightstand_sandra_default_s') | int}}"
+        brightness: "{{states('input_number.nightstand_sandra_default_brightness') | int}}"
+
 
   - id: nightstand_sandra_off
     alias: "Keine Bewegung Nachttisch Sandra"
@@ -188,11 +213,3 @@ automation:
         transition: 2
       entity_id: light.nightstand_sandra_light
 
-      # - service: light.turn_on
-      #   data_template:
-      #     entity_id: light.milight_gu10
-      #     rgb_color:
-      #       - '{{ states.sensor.random_rgb.state.split(",")[0] }}'
-      #       - '{{ states.sensor.random_rgb.state.split(",")[1] }}'
-      #       - '{{ states.sensor.random_rgb.state.split(",")[2] }}'
-      #     brightness: 140

@@ -42,6 +42,7 @@ cards:
               - input_number.nightstand_mario_default_brightness
           - type: custom:light-entity-card
             entity: light.nightstand_mario_settings
+            header: false
             persist_features: true
 
           - type: custom:multiple-entity-row
@@ -64,4 +65,5 @@ cards:
               - input_number.nightstand_sandra_default_brightness
           - type: custom:light-entity-card
             entity: light.nightstand_sandra_settings
+            header: false
             persist_features: true
