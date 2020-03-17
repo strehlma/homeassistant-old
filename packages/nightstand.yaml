@@ -7,8 +7,8 @@ input_number:
     name: Schaltschwelle
     unit_of_measurement: lux
     min: 0
-    max: 100
-    step: 1
+    max: 10
+    step: 0.2
   nightstand_mario_default_brightness:
     name: Helligkeit
     unit_of_measurement: lux
@@ -25,8 +25,8 @@ input_number:
     name: Schaltschwelle
     unit_of_measurement: lux
     min: 0
-    max: 100
-    step: 1
+    max: 10
+    step: 0.2
   nightstand_sandra_default_brightness:
     name: Helligkeit
     unit_of_measurement: lux
@@ -46,6 +46,11 @@ input_text:
   nightstand_sandra_default_rgb_color:
     name: Farbe
 
+light:
+  - platform: template
+    lights:
+      - nightstand_mario_settings:
+      - nightstand_mario_settings:
 
 automation:
   - id: nightstand_mario_on
@@ -138,3 +143,11 @@ automation:
         transition: 2
       entity_id: light.nightstand_sandra_light
 
+      # - service: light.turn_on
+      #   data_template:
+      #     entity_id: light.milight_gu10
+      #     rgb_color:
+      #       - '{{ states.sensor.random_rgb.state.split(",")[0] }}'
+      #       - '{{ states.sensor.random_rgb.state.split(",")[1] }}'
+      #       - '{{ states.sensor.random_rgb.state.split(",")[2] }}'
+      #     brightness: 140
