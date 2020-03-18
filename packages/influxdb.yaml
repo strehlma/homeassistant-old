@@ -1,0 +1,12 @@
+influxdb:
+  host: 192.168.50.20
+  include:
+    entities:
+      - sensor.germany_coronavirus_current
+      - sensor.germany_coronavirus_confirmed
+      - sensor.germany_coronavirus_deaths
+      - sensor.germany_coronavirus_recovered
+      - sensor.worldwide_coronavirus_current
+      - sensor.worldwide_coronavirus_confirmed
+      - sensor.worldwide_coronavirus_deaths
+      - sensor.worldwide_coronavirus_recovered
