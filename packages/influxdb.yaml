@@ -1,5 +1,5 @@
 influxdb:
-  host: 192.168.50.20
+  host: !secret influxdb_host
   include:
     entities:
       - sensor.germany_coronavirus_current

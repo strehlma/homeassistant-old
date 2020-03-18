@@ -11,3 +11,8 @@ octoprint:
         - 'Temperatures'
         - 'Time Elapsed'
         - 'Time Remaining'
+
+camera:
+  - platform: mjpeg
+    name: OctoPrint
+    mjpeg_url: !secret octoprint_camera_stream

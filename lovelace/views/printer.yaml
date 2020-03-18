@@ -45,3 +45,7 @@ cards:
                 color: "#FFFF00"
               - value: 13
                 color: "#3498db"
+
+      - type: picture-glance
+        camera_image: camera.octoprint
+        camera_view: live

@@ -1,9 +1,12 @@
 input_boolean:
   nightstand_mario_manual:
+    initial: off
   nightstand_sandra_manual:
+    initial: off
   nightstand_mario_light_setting:
+    initial: on
   nightstand_sandra_light_setting:
-
+    initial: on
 input_number:
   nightstand_mario_brightness_trigger:
     name: Schaltschwelle
@@ -73,12 +76,6 @@ light:
         - service: input_boolean.turn_off
           data:
             entity_id: input_boolean.nightstand_mario_light_setting
-        level_template: "{{states('input_number.nightstand_mario_default_brightness') | int}}"
-        set_level:
-          service: input_number.set_value
-          data_template:
-            value: "{{ brightness }}"
-            entity_id: input_number.nightstand_mario_default_brightness
         color_template: "({{states('input_number.nightstand_mario_default_h') | float}}, {{states('input_number.nightstand_mario_default_s') | float}})"
         set_color:
           - service: input_number.set_value
@@ -99,12 +96,6 @@ light:
         - service: input_boolean.turn_off
           data:
             entity_id: input_boolean.nightstand_sandra_light_setting
-        level_template: "{{states('input_number.nightstand_sandra_default_brightness') | int}}"
-        set_level:
-          service: input_number.set_value
-          data_template:
-            value: "{{ brightness }}"
-            entity_id: input_number.nightstand_sandra_default_brightness
         color_template: "({{states('input_number.nightstand_sandra_default_h') | float}}, {{states('input_number.nightstand_sandra_default_s') | float}})"
         set_color:
           - service: input_number.set_value
