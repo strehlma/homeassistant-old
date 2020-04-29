@@ -38,6 +38,8 @@ lovelace_gen:
 
 lovelace:
   mode: yaml
+  resources:
+    !include lovelace/resources/resources.yaml
 
 hacs:
   token: !secret hacs_token
