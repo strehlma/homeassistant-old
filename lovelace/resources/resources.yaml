@@ -11,8 +11,8 @@
   #   type: js
   - url: /community_plugin/circle-sensor-card/circle-sensor-card.js
     type: module
-  # - url: /community_plugin/text-element/text-element.js
-  #   type: js
+  - url: /community_plugin/text-element/text-element.js
+    type: js
   - url: /community_plugin/custom-header/custom-header.js
     type: module
   - url: /community_plugin/button-card/button-card.js

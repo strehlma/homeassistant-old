@@ -21,23 +21,6 @@
   value_template: !secret tankerkoenig_esso_value
   scan_interval: 900
 
-- platform: glances
-  host: 127.0.0.1
-  name: CoreOS
-  version: 3
-  resources:
-    - 'disk_use'
-    - 'disk_use_percent'
-    - 'disk_free'
-    - 'cpu_temp'
-    - 'processor_load'
-    - 'memory_use'
-    - 'memory_use_percent'
-    - 'memory_free'
-    - 'docker_active'
-    - 'docker_cpu_use'
-    - 'docker_memory_use'
-
 # Template All Doors
 - platform: template
   sensors:
