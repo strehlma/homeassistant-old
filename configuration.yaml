@@ -11,6 +11,9 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Berlin
 
+  internal_url: "http://10.1.1.1:1234"
+  external_url: "https://abc.de"
+
   #customize: !include customize.yaml
 
   # Packages
@@ -28,7 +31,7 @@ system_health:
 mobile_app:
 
 http:
-  base_url: !secret base_url
+#  base_url: !secret base_url
 
 frontend:
   themes: !include_dir_merge_named ./themes/
