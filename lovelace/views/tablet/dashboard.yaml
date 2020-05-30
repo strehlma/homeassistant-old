@@ -107,7 +107,7 @@ cards:
       #     left: 25.4%
       #     <<: *title-style
 
-      - type: custom:swipe-glance-card
+      - type: custom:swipe-card
         start_card: 1
         parameters:
           roundLengths: true

@@ -55,4 +55,6 @@
   #   type: js
   - url: /community_plugin/swipe-glance-card/swipe-glance-card.js
     type: module
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/swipe-card/swipe-card.js
+    type: module
 
