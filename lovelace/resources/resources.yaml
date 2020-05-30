@@ -53,3 +53,6 @@
     type: module
   # - url: /community_plugin/light-entity-card/light-entity-card.js
   #   type: js
+  - url: /hacsfiles/swipe-glance-card/swipe-glance-card.js
+    type: module
+
