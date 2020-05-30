@@ -100,12 +100,12 @@ cards:
       #                                                                        #
       ##########################################################################
 
-      - prefix: Media
-        <<: *title
-        style:
-          top: 53.4%
-          left: 25.4%
-          <<: *title-style
+      # - prefix: Media
+      #   <<: *title
+      #   style:
+      #     top: 53.4%
+      #     left: 25.4%
+      #     <<: *title-style
 
       - type: custom:swipe-card
         start_card: 1
