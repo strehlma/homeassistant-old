@@ -1,0 +1,72 @@
+title: Home
+path: tablet/home
+icon: 'mdi:home'
+panel: true
+
+cards:
+  - type: picture-elements
+    image: /local/images/background.png
+
+    elements:
+
+      #################################################
+      #                                               #
+      #                   COVID-19                    #
+      #                                               #
+      #################################################
+
+      - type: custom:hui-markdown-card
+        style:
+          top: 93.5%
+          left: 70.2%
+          width: 90vw
+          height: 1px
+          --mdc-icon-size: 1.2vw
+          --ha-card-background: none
+          --ha-card-box-shadow: none
+          --primary-text-color: '#6a7377'
+          font-family: SF Display
+          font-size: 1.15vw
+          font-weight: 400
+          letter-spacing: 0.06vw
+          line-height: 2.05vw
+          opacity: 0.5
+        content: >
+          {% if is_state('sensor.germany_coronavirus_current', 
+          'unavailable') %} {% else %}
+          <font color='#6a7377'>
+          <ha-icon icon="custom:corona-virus"></ha-icon> <b>Coronavirus</b>
+          ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
+          <ha-icon icon="mdi:emoticon-sad"></ha-icon> 
+          <b>{{ states('sensor.germany_coronavirus_current') }}</b> Gesamt
+          ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
+          <ha-icon icon="mdi:chart-bar"></ha-icon> 
+          <b>{{ ((states('sensor.germany_coronavirus_confirmed')
+          | int / 83149300 ) * 100) | round(2) }}%</b> von Deutschland
+          ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
+          <ha-icon icon="mdi:emoticon-happy"></ha-icon> 
+          <b>{{ states('sensor.germany_coronavirus_recovered') }}</b> Genesen
+          ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
+          <ha-icon icon="mdi:grave-stone"></ha-icon> 
+          <b>{{ states('sensor.germany_coronavirus_deaths') }}</b> Verstorben
+          </font>
+          {% endif %}
+
+      ##########################################################################
+      #                                                                        #
+      #                              * SIDEBAR *                               #
+      #                                                                        #
+      ##########################################################################
+
+      - type: image
+        image: local/images/sidebar.png
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        style:
+          top: 50%
+          left: 10.6%
+          width: 21.5%
+          pointer-events: none
+          border-right: 1.5px solid rgba(58,69,73,0.2)

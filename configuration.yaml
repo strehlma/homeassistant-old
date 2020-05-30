@@ -33,6 +33,9 @@ mobile_app:
 http:
 #  base_url: !secret base_url
 
+upnp:
+  local_ip: 192.168.50.20
+
 frontend:
   themes: !include_dir_merge_named ./themes/
   javascript_version: auto
@@ -43,6 +46,13 @@ lovelace:
   mode: yaml
   resources:
     !include lovelace/resources/resources.yaml
+  dashboards:
+    lovelace-tablet:
+      mode: yaml
+      filename: ui-tablet.yaml
+      title: "Tablet UI"
+      icon: mdi:tablet-ipad
+      show_in_sidebar: true
 
 hacs:
   token: !secret hacs_token
