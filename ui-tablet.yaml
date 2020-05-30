@@ -1,3 +1,115 @@
+##########################################################################
+#                                                                        #
+#                              * SETTINGS *                              #
+#                                                                        #
+##########################################################################
+
+custom_header:
+  kiosk_mode: true
+  exceptions:
+    - conditions:
+        user_agent: Mobile
+      config:
+        kiosk_mode: false
+
+
+button_card_templates:
+
+  media:
+    aspect_ratio: 1/1
+    show_state: true
+    show_icon: false
+    state_display: >
+      [[[ if (entity.attributes.media_title === 'Nothing playing' || entity.attributes.media_title === 'No title' && entity.state === 'paused' ) { return 'Es wird nichts gespielt'; }
+      if (entity.attributes.media_title === 'No title' && entity.state === 'playing') { return 'Kein Titel'; }
+      else { return entity.attributes.media_title; } ]]]
+    custom_fields:
+      media_image: >
+        <svg viewBox="0 0 50 50" />
+      blur: >
+        [[[ if (entity.attributes.entity_picture != null) {
+        return '<svg viewBox="0 0 50 50" />'; } ]]]
+      overlay: >
+        [[[ if (entity.state != 'off' && entity.state != 'idle' && entity.state != 'standby' && entity.state != 'unavailable') {
+        return '<svg viewBox="0 0 50 50" />'; } ]]]
+      play_pause: >
+        [[[ const style = `<style>.scale-up { animation: scale-up 0.3s; cubic-bezier(.05,.5,.3,1) 1; transform-origin: center center; }
+        @keyframes scale-up { 0% { opacity: 0; transform: scale(0); } 100% { opacity: 1; transform: scale(1); } }</style>`;
+        if (entity.state === 'playing') { return `<svg viewBox="0 0 166 166">${style}<path class="scale-up" d="M0 0h59.9v166H0zm106.1 0H166v166h-59.9z"/></svg>`; }
+        if (entity.state === 'paused') { return `<svg viewBox="0 0 166 166">${style}<path class="scale-up" d="M0 0l166 83L0 166z"/></svg>`; } ]]]
+    tap_action: &media_tap_action
+      # sound: >
+      #   [[[ if (states['switch.fullykiosk_screensaver'].state === 'off') {
+      #   if (entity.state != 'off' || entity.state != 'idle' || entity.state != 'standby')
+      #   hass.callService('media_player', 'play_media', {entity_id: 'media_player.tablet', media_content_id: '/local/sound/popup.m4a', media_content_type: 'music'}); } ]]]
+      action: >
+        [[[ if (entity.state === 'off' || entity.state === 'idle' || entity.state === 'standby') {
+        return 'none'; } else { return 'call-service'; } ]]]
+      service: media_player.media_play_pause
+      service_data:
+        entity_id: '[[[ return entity.entity_id ]]]'
+      haptic: light
+    styles:
+      custom_fields:
+        media_image:
+          [background-image:
+          "[[[ return entity.attributes.entity_picture == null ? 'linear-gradient(0deg, rgba(115, 115, 115, 0.2) 0%, rgba(115, 115, 115, 0.2) 100%)' 
+          : 'linear-gradient(0deg, rgba(13,17,19,0.9) 0%, rgba(13,17,19,0) 50%), url(' + entity.attributes.entity_picture + ')'; ]]]", 
+          background-size: cover, top: 0%, left: 0%, width: 100%, position: absolute]
+        blur:
+          [background-image:
+          "[[[ return entity.attributes.entity_picture == null ? 'none' : 'url(' + entity.attributes.entity_picture + ')'; ]]]", 
+          background-size: cover, top: 0%, left: 0%, width: 100%, filter: blur(4px), clip-path: inset(16vw 0 0 0), position: absolute]
+        overlay:
+          [background:
+          "[[[ return entity.attributes.entity_picture == null ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.4)'; ]]]", 
+          background-size: cover, z-index: 0, top: 16vw, left: 0%, width: 100%, opacity: 1, position: absolute]
+        play_pause:
+          [filter: 
+          "[[[ return entity.attributes.entity_picture == null ? 'none' : 'drop-shadow(0 0 1.3vw rgba(0,0,0,0.7))'; ]]]", 
+          fill: '#dedede', top: 0, right: 0, bottom: 0, left: 0, margin: auto, width: 21%, height: 21%, position: absolute]
+        icon:
+          [fill:
+          "[[[ if (entity.state === 'off' || entity.state === 'idle' || entity.state === 'standby' || entity.state === 'unavailable') return '#9da0a2'; 
+          else return 'rgba(255, 255, 255, 0.8)'; ]]]", 
+          top: 5.35%, left: 5.35%, width: 2.95vw, position: absolute]
+      name:
+        [top: 79.8%, left: 5.3%, position: absolute, line-height: 2vw, z-index: 10]
+      state:
+        [top: 87.5%, left: 5.3%, position: absolute, line-height: 2vw, z-index: 10, 
+        white-space: nowrap, overflow: hidden, text-overflow: ellipsis, max-width: 90%]
+      card: 
+        [<<: *button_styles_card, background-color: none, 
+        color: &media_font_color "[[[ if (entity.state === 'off' || entity.state === 'idle' || entity.state === 'standby' || entity.state === 'unavailable') { return 'rgba(255, 255, 255, 0.3)'; }
+        if ((entity.state != 'off' && entity.state != 'idle' && entity.state != 'standby') && (entity.attributes.entity_picture == null)) {
+        return 'rgba(0, 0, 0, 0.6)'; } else { return '#efefef'; } ]]]", 
+        text-shadow: &media_text_shadow "[[[ if (entity.attributes.entity_picture == null) return 'none'; 
+        else return '1px 1px 5px rgba(18, 22, 23, 0.9)' ; ]]]"]
+
+  media_small:
+    aspect_ratio: 1/1
+    show_state: true
+    show_icon: false
+    tap_action: *media_tap_action
+    styles:
+      custom_fields:
+        icon:
+          [opacity: "[[[ return entity.attributes.entity_picture == null ? 1 : 0; ]]]", 
+          top: 11.5%, left: 11.5%, width: 2.9vw, position: absolute, fill: '#9da0a2']
+      name: *button_styles_name
+      state: *button_styles_state
+      card:
+        [<<: *button_styles_card, color: *media_font_color, text-shadow: *media_text_shadow, 
+        background-color: none, background-size: cover,
+        background-image: 
+        "[[[ if (entity.state === 'off' || entity.state === 'idle' || entity.state === 'standby' || entity.state === 'unavailable') {
+        return 'linear-gradient(0deg, rgba(115, 115, 115, 0.2) 0%, rgba(115, 115, 115, 0.2) 100%)'; }
+        if ((entity.state != 'off' && entity.state != 'idle' && entity.state != 'standby') && (entity.attributes.entity_picture == null)) {
+        return 'linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)'; }
+        else { return 'linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%), url(' + entity.attributes.entity_picture + ')'; } ]]]"]
+
+
+
 title: Home
 views:
   - !include lovelace/views/tablet/dashboard.yaml
