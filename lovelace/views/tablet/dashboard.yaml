@@ -274,7 +274,7 @@ cards:
             - type: custom:button-card
               entity: media_player.echo_buro
               custom_fields:
-                icon: *icon_apple_tv
+                icon: mdi:amazon-alexa
               style:
                 top: 23.9%
                 left: 23.8%
@@ -285,7 +285,7 @@ cards:
             - type: custom:button-card
               entity: media_player.echo_kuche
               custom_fields:
-                icon: *icon_apple_tv
+                icon: mdi:amazon-alexa
               style:
                 top: 23.9%
                 left: 76.2%
@@ -297,7 +297,7 @@ cards:
               entity: media_player.echo_kathe
               name: Echo Käthe
               custom_fields:
-                icon: *icon_ps4
+                icon: mdi:amazon-alexa
               style:
                 top: 76.2%
                 left: 23.8%
