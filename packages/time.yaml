@@ -3,9 +3,19 @@ sensor:
     display_options:
       - 'time'
       - 'date'
-      - 'date_time'
-      - 'date_time_utc'
-      - 'date_time_iso'
-      - 'time_date'
-      - 'time_utc'
-      - 'beat'
+
+  - platform: template
+    sensors:
+      wochentag:
+        entity_id: sensor.date
+        icon_template: mdi:calendar
+        value_template: >
+          {% set days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'] %}
+          {{ days[now().weekday()] }}
+      monat:
+        icon_template: mdi:calendar
+        value_template: >
+          {% set months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+          'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'] %}
+          {{ strptime(states('sensor.date'), '%Y-%m-%d').day }}
+          {{ months[now().month-1] }}
