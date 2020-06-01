@@ -21,7 +21,7 @@ sensor:
 
   - platform: filesize
     file_paths:
-      - /home-assistant.log
+      - /config/home-assistant.log
 
   - platform: template
     sensors:
