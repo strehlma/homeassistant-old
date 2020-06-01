@@ -58,7 +58,11 @@ hacs:
   token: !secret hacs_token
 
 browser_mod:
+  devices:
+    c7cfd816-f3800c10:
+      name: mbp_chrome
 
+c7cfd816-f3800c10
 # Enables configuration UI
 config:
 
