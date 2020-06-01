@@ -36,9 +36,9 @@
 
                         # - entity: sensor.hass_release_template
 
-                        - entity: sensor.home_assistant_v2_db
-                          icon: mdi:database
-                          name: Datenbank
+                        # - entity: sensor.home_assistant_v2_db
+                        #   icon: mdi:database
+                        #   name: Datenbank
 
                         - entity: sensor.home_assistant_log
                           icon: mdi:file-document
