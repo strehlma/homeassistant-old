@@ -40,65 +40,65 @@
                         #   icon: mdi:database
                         #   name: Datenbank
 
-                        - entity: sensor.home_assistant_log
-                          icon: mdi:file-document
-                          name: Log Datei
+                        # - entity: sensor.home_assistant_log
+                        #   icon: mdi:file-document
+                        #   name: Log Datei
 
                         # - entity: sensor.docker_uptime
 
-                        # - entities:
-                        #     - entity: sensor.docker_cpu
-                        #       tap_action:
-                        #         action: call-service
-                        #         service: homeassistant.update_entity
-                        #         service_data:
-                        #           entity_id: sensor.docker_cpu
-                        #     - entity: sensor.docker_mem
-                        #       tap_action:
-                        #         action: call-service
-                        #         service: homeassistant.update_entity
-                        #         service_data:
-                        #           entity_id: sensor.docker_mem
-                        #   positions: &bar_card_positions
-                        #     icon: outside
-                        #     indicator: 'off'
-                        #     name: outside
-                        #   severity: &bar_card_severity
-                        #     - color: '#303435'
-                        #       from: 0
-                        #       to: 89
-                        #     - color: '#6d2525'
-                        #       from: 90
-                        #       to: 100
-                        #   decimal: 0
-                        #   entity_row: true
-                        #   style: &bar_card_style |
-                        #     bar-card-iconbar {
-                        #       padding-left: 0.23em;
-                        #     }
-                        #     bar-card-name {
-                        #       padding-left: 0.25em;
-                        #     }
-                        #     bar-card-value {
-                        #       margin-right: auto;
-                        #       color: #e0e1e1;
-                        #       text-shadow: none;
-                        #       font-size: 1em;
-                        #       font-weight: 400;
-                        #       letter-spacing: 0.01em;
-                        #     }
-                        #     bar-card-background {
-                        #       background: radial-gradient(circle, rgba(52, 57, 58, 0.1) 0%, rgba(17,18,18,0.2) 75%);
-                        #       box-shadow: inset 0 0 25px #00000045;
-                        #       border-radius: 0.3em;
-                        #     }
-                        #     bar-card-backgroundbar {
-                        #       background: none;
-                        #     }
-                        #   unit_of_measurement: '%'
-                        #   height: 2em
-                        #   width: 55%
-                        #   type: custom:bar-card
+                        - entities:
+                            - entity: sensor.glances_cpu_used
+                              tap_action:
+                                action: call-service
+                                service: homeassistant.update_entity
+                                service_data:
+                                  entity_id: sensor.glances_cpu_used
+                            - entity: sensor.glances_ram_used_percent
+                              tap_action:
+                                action: call-service
+                                service: homeassistant.update_entity
+                                service_data:
+                                  entity_id: sensor.glances_ram_used_percent
+                          positions: &bar_card_positions
+                            icon: outside
+                            indicator: 'off'
+                            name: outside
+                          severity: &bar_card_severity
+                            - color: '#303435'
+                              from: 0
+                              to: 89
+                            - color: '#6d2525'
+                              from: 90
+                              to: 100
+                          decimal: 0
+                          entity_row: true
+                          style: &bar_card_style |
+                            bar-card-iconbar {
+                              padding-left: 0.23em;
+                            }
+                            bar-card-name {
+                              padding-left: 0.25em;
+                            }
+                            bar-card-value {
+                              margin-right: auto;
+                              color: #e0e1e1;
+                              text-shadow: none;
+                              font-size: 1em;
+                              font-weight: 400;
+                              letter-spacing: 0.01em;
+                            }
+                            bar-card-background {
+                              background: radial-gradient(circle, rgba(52, 57, 58, 0.1) 0%, rgba(17,18,18,0.2) 75%);
+                              box-shadow: inset 0 0 25px #00000045;
+                              border-radius: 0.3em;
+                            }
+                            bar-card-backgroundbar {
+                              background: none;
+                            }
+                          unit_of_measurement: '%'
+                          height: 2em
+                          width: 55%
+                          type: custom:bar-card
 
                         - type: custom:hui-horizontal-stack-card
                           style: &horizontal-style |
