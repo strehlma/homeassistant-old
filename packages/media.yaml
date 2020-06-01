@@ -39,3 +39,78 @@ media_player:
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
+
+      ####################################################
+      #                                                  #
+      #                CONDITIONAL MEDIA                 #
+      #                                                  #
+      ####################################################
+
+input_select:
+  conditional_media:
+    initial: Spotify strehlma
+    options:
+      ['Zuletzt heruntergeladen', 'Spotify strehlma', 'Denon DNP-800NE', 'Soundtouch Küche', 'Soundtouch Bad']
+
+automation:
+  - alias: conditional_media_playing
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id: 
+          ['media_player.spotify_strehlma', 'media_player.denon_dnp_800ne', 
+          'media_player.soundtouch_kuche', 'media_player.soundtouch_bad']
+        to: playing
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.conditional_media
+          option: "{{ trigger.to_state.name }}"
+
+  - alias: conditional_media_paused_idle
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id: 
+          ['media_player.spotify_strehlma', 'media_player.denon_dnp_800ne', 
+          'media_player.soundtouch_kuche', 'media_player.soundtouch_bad']
+        to:
+          ['off', 'idle', 'standby']
+      - platform: state
+        entity_id: 
+          ['media_player.spotify_strehlma', 'media_player.denon_dnp_800ne', 
+          'media_player.soundtouch_kuche', 'media_player.soundtouch_bad']
+        to: paused
+        for:
+          minutes: 10
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.conditional_media
+          option: >-
+            {% set media_players = 
+              [states.media_player.spotify_strehlma, states.media_player.denon_dnp_800ne, 
+              states.media_player.soundtouch_kuche, states.media_player.soundtouch_bad] %}
+            {% if media_players | selectattr('state','eq','playing') | list | count == 0 %}
+              {% if media_players | selectattr('state','eq','paused') | list | count == 0 %}
+              Zuletzt heruntergeladen
+              {% else %}
+              {{ media_players | selectattr('state','eq','paused') | map(attribute='name') | max }}
+              {% endif %}
+            {% else %}
+            {{ media_players | selectattr('state','eq','playing') | map(attribute='name') | max }}
+            {% endif %}
+  - alias: conditional_media_all_off
+    initial_state: true
+    trigger:
+      - platform: template
+        value_template: >
+          {{ is_state('media_player.spotify_strehlma', 'idle') and
+          is_state('media_player.denon_dnp_800ne', 'idle') and
+          is_state('media_player.soundtouch_kuche', 'standby') and
+          is_state('media_player.soundtouch_bad', 'off') }}
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.conditional_media
+          option: Zuletzt heruntergeladen
