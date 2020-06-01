@@ -69,7 +69,7 @@
     # {url: /hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js,          type: js},
     {url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js,                type: module},
     {url: /hacsfiles/mini-media-player/mini-media-player-bundle.js,            type: module},
-    # {url: /hacsfiles/popup-backdrop-filter/popup-backdrop-filter.js,           type: module},
+    {url: /hacsfiles/popup-backdrop-filter/popup-backdrop-filter.js,           type: module},
     {url: /hacsfiles/stack-in-card/stack-in-card.js,                           type: module},
     {url: /hacsfiles/swipe-card/swipe-card.js,                                 type: module},
 
