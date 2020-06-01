@@ -1,0 +1,49 @@
+automation:
+
+  - alias: homeassistant_start
+    initial_state: true
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: frontend.set_theme
+        data:
+          name: slate
+
+sensor:
+
+  - platform: version
+    name: hass_version_installed
+
+  - platform: version
+    name: hass_version_latest
+    source: docker
+
+  - platform: filesize
+    file_paths:
+      - /config/home-assistant_v2.db
+      - /config/home-assistant.log
+
+  - platform: template
+    sensors:
+      hass_version_template:
+        icon_template: mdi:home-assistant
+        friendly_name_template: >-
+          Eingerichtet {{ states('sensor.hass_version_installed') }}
+        value_template: >-
+          {% if states('sensor.hass_version_installed') == states('sensor.hass_version_latest') %}
+            neueste
+          {% else %}
+            {{ states('sensor.hass_version_latest') }}
+          {% endif %}
+
+script:
+
+  homeassistant_restart:
+    sequence:
+      - service: browser_mod.toast
+        data:
+          duration: 16000
+          message: 'Home Assistant neu starten ...'
+      - service: shell_command.restart_hass_docker
+
