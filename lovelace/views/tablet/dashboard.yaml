@@ -138,7 +138,7 @@ cards:
           color: rgba(255, 255, 255, 0.10)
           padding: 0.8vw
           --mdc-icon-size: 4vw
-        tap_action: !include tablet/popup/sidebar_information.yaml
+        tap_action: !include popup/sidebar_information.yaml
 
       - type: conditional
         conditions:
@@ -170,7 +170,7 @@ cards:
           color: rgba(255, 255, 255, 0.10)
           padding: 0.8vw
           --mdc-icon-size: 4.6vw
-        tap_action: !include tablet/popup/sidebar_car.yaml
+        tap_action: !include popup/sidebar_car.yaml
 
       #################################################
       #                                               #
