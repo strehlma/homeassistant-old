@@ -17,21 +17,6 @@ preload_cards:
 preload_rows:
   [input-select-entity]
 
-anchors:
-  anchor1: &title
-    entity: sensor.placeholder
-    tap_action:
-      action: none
-    hold_action:
-      action: none
-    type: state-label
-  anchor2: &title-style
-    color: '#bcbebf'
-    font-family: SF Text
-    font-size: 2.4vw
-    font-weight: 500
-    max-width: 1px
-    cursor: default
 
 button_card_templates:
 
