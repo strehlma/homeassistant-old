@@ -18,14 +18,14 @@ preload_rows:
   [input-select-entity]
 
 anchors:
-  ⚓₁: &title
+  anchor1: &title
     entity: sensor.placeholder
     tap_action:
       action: none
     hold_action:
       action: none
     type: state-label
-  ⚓₂: &title-style
+  anchor2: &title-style
     color: '#bcbebf'
     font-family: SF Text
     font-size: 2.4vw
