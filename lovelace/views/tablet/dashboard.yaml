@@ -260,7 +260,7 @@ cards:
       #################################################
 
       - type: custom:button-card
-        entity: light.fonsterlampa
+        entity: switch.livingroom
         name: Skrivbord
         style:
           top: 20.35%
