@@ -199,7 +199,7 @@ button_card_templates:
           [filter: "[[[ return entity.state === 'off' ? 'invert(1)' : 'none'; ]]]", 
            top: 3%, left: 60%, width: 3.7vw, position: absolute, opacity: 0.6]
     tap_action:
-      ui_sound: *ui_sound
+      # ui_sound: *ui_sound
       haptic: light
 
   name_action:
