@@ -1,3 +1,14 @@
+input_number:
+
+  fullykiosk_brightness_slider:
+    name: Helligkeit
+    icon: mdi:brightness-6
+    initial: 20
+    min: 0
+    max: 100
+    step: 1
+    unit_of_measurement: '%'
+
 shell_command:
 
   fullykiosk_brightness_slider: !secret fullykiosk_brightness_slider
