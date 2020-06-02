@@ -61,6 +61,8 @@ browser_mod:
   devices:
     c7cfd816-f3800c10:
       name: mbp_chrome
+    4381d7ed-95427ac3:
+      name: tablet_fkb
 
 # Enables configuration UI
 config:

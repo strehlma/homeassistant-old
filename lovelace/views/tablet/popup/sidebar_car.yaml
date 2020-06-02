@@ -8,7 +8,7 @@
                   --more-info-header-color: rgba(255,255,255,0.6)
                   background: none
                   box-shadow: none
-                  width: calc(400px + 400px + 400px)
+                  width: 400px
                 card:
                   type: custom:layout-card
                   column_num: 3
@@ -16,7 +16,7 @@
                   layout: vertical
                   cards:
                     - type: entities
-                      title: Home Assistant
+                      title: BMW 630d xdrive
                       show_header_toggle: false
                       style: |
                         ha-card {
@@ -38,5 +38,4 @@
                         - entity: lock.630d_xdrive_lock
                         - entity: sensor.630d_xdrive_mileage
                         - entity: sensor.630d_xdrive_remaining_fuel
-                        - entity: sensor.630d_xdrive_remaining_range_fuel
                         - entity: sensor.630d_xdrive_remaining_range_total

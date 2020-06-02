@@ -8,7 +8,7 @@
                   --more-info-header-color: rgba(255,255,255,0.6)
                   background: none
                   box-shadow: none
-                  width: calc(400px + 400px + 400px)
+                  width: calc(400px + 400px)
                 card:
                   type: custom:layout-card
                   column_num: 3
@@ -134,67 +134,68 @@
 
                     - break
 
-                    # - type: entities
-                    #   title: Tablet
-                    #   show_header_toggle: false
-                    #   style: |
-                    #     ha-card {
-                    #       animation: pop-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: 0.05s; transform-origin: center;
-                    #       box-shadow: none; border-radius: 1em; padding: 0.3em 1.25em 0.4em 0.5em; 
-                    #       background: linear-gradient(180deg, rgba(48,52,52,1) 0%, rgba(48,52,52,1) 4.8em, rgba(34,38,39,1) 4.8em, rgba(34,38,39,1) 100%); }
-                    #     .card-header {
-                    #       margin: -0.4em 0 1em 0.4em; font-family: sf text; letter-spacing: 0.005em; font-size: 1.5em;}
-                    #     @keyframes pop-in {
-                    #       0% { transform: scale(0.6); opacity: 0; } 20% { opacity: 0; } 100% { transform: scale(1); opacity: 0.9; }}
-                    #   entities:
+                    - type: entities
+                      title: Tablet
+                      show_header_toggle: false
+                      style: |
+                        ha-card {
+                          animation: pop-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: 0.05s; transform-origin: center;
+                          box-shadow: none; border-radius: 1em; padding: 0.3em 1.25em 0.4em 0.5em; 
+                          background: linear-gradient(180deg, rgba(48,52,52,1) 0%, rgba(48,52,52,1) 4.8em, rgba(34,38,39,1) 4.8em, rgba(34,38,39,1) 100%); }
+                        .card-header {
+                          margin: -0.4em 0 1em 0.4em; font-family: sf text; letter-spacing: 0.005em; font-size: 1.5em;}
+                        @keyframes pop-in {
+                          0% { transform: scale(0.6); opacity: 0; } 20% { opacity: 0; } 100% { transform: scale(1); opacity: 0.9; }}
+                      entities:
 
-                    #     - entity: switch.fullykiosk_screen
-                    #       icon: mdi:tablet
+                        - entity: switch.fullykiosk_screen
+                          icon: mdi:tablet
 
-                    #     - type: custom:slider-entity-row
-                    #       entity: input_number.fullykiosk_brightness_slider
-                    #       style: |
-                    #         div {
-                    #           max-width: 60%;
-                    #           margin: auto;
-                    #         }
-                    #         hui-generic-entity-row > div > span {
-                    #           display: block;
-                    #         }
-                    #     - entity: switch.fullykiosk_screensaver
+                        - type: custom:slider-entity-row
+                          entity: input_number.fullykiosk_brightness_slider
+                          style: |
+                            div {
+                              max-width: 60%;
+                              margin: auto;
+                            }
+                            hui-generic-entity-row > div > span {
+                              display: block;
+                            }
 
-                    #     - entity: sensor.fullykiosk_battery_level
+                        - entity: switch.fullykiosk_screensaver
 
-                    #     - entity: sensor.fullykiosk_plugged
+                        - entity: sensor.fullykiosk_battery_level
 
-                    #     - entity: sensor.fullykiosk_motion_detector_state
+                        - entity: sensor.fullykiosk_plugged
 
-                    #     - entities:
-                    #         - entity: sensor.fullykiosk_memory_percentage
-                    #           name: Minne - 2GB
-                    #           icon: mdi:memory
-                    #           tap_action:
-                    #             action: call-service
-                    #             service: homeassistant.update_entity
-                    #             service_data:
-                    #               entity_id: sensor.fullykiosk_memory_percentage
-                    #         - entity: sensor.fullykiosk_storage_percentage
-                    #           name: Lagring - 32GB
-                    #           icon: mdi:sd
-                    #           tap_action:
-                    #             action: call-service
-                    #             service: homeassistant.update_entity
-                    #             service_data:
-                    #               entity_id: sensor.fullykiosk_storage_percentage
-                    #       positions: *bar_card_positions
-                    #       severity: *bar_card_severity
-                    #       decimal: 0
-                    #       entity_row: true
-                    #       style: *bar_card_style
-                    #       unit_of_measurement: '%'
-                    #       height: 2em
-                    #       width: 55%
-                    #       type: custom:bar-card
+                        - entity: sensor.fullykiosk_motion_detector_state
+
+                        - entities:
+                            - entity: sensor.fullykiosk_memory_percentage
+                              name: RAM - 1GB
+                              icon: mdi:memory
+                              tap_action:
+                                action: call-service
+                                service: homeassistant.update_entity
+                                service_data:
+                                  entity_id: sensor.fullykiosk_memory_percentage
+                            - entity: sensor.fullykiosk_storage_percentage
+                              name: Speicher - 6GB
+                              icon: mdi:sd
+                              tap_action:
+                                action: call-service
+                                service: homeassistant.update_entity
+                                service_data:
+                                  entity_id: sensor.fullykiosk_storage_percentage
+                          positions: *bar_card_positions
+                          severity: *bar_card_severity
+                          decimal: 0
+                          entity_row: true
+                          style: *bar_card_style
+                          unit_of_measurement: '%'
+                          height: 2em
+                          width: 55%
+                          type: custom:bar-card
 
                     #     - type: custom:hui-horizontal-stack-card
                     #       style: *horizontal-style

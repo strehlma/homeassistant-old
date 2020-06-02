@@ -1,0 +1,75 @@
+shell_command:
+
+  fullykiosk_brightness_slider: !secret fullykiosk_brightness_slider
+  fullykiosk_load_start_url: !secret fullykiosk_load_start_url
+  fullykiosk_restart_app: !secret fullykiosk_restart_app
+  fullykiosk_screensaver_on: !secret fullykiosk_screensaver_on
+  fullykiosk_screensaver_off: !secret fullykiosk_screensaver_off
+
+sensor:
+
+  - platform: rest
+    name: fullykiosk
+    json_attributes:
+      ['batteryLevel', 'screenBrightness', 'plugged', 'motionDetectorState', 
+      'lastAppStart', 'internalStorageFreeSpace', 'internalStorageTotalSpace', 
+      'ramFreeMemory', 'ramTotalMemory', 'currentFragment']
+    resource: !secret fullykiosk_rest_resource
+    value_template: '{{ value_json.isScreenOn }}'
+    scan_interval: 3
+
+  - platform: template
+    sensors:
+      fullykiosk_plugged:
+        friendly_name: Strömsladd ansluten
+        value_template: >-
+          {% if is_state_attr('sensor.fullykiosk', 'plugged', true) %} Ja {% else %} Nein {% endif %}
+        icon_template: >-
+          {% if is_state_attr('sensor.fullykiosk', 'plugged', true) %} mdi:power-plug {% else %} mdi:power-plug-off {% endif %}
+      fullykiosk_storage_percentage:
+        friendly_name: Speicher
+        icon_template: mdi:sd
+        unit_of_measurement: '%'
+        value_template: >
+          {% if is_state('sensor.fullykiosk', 'unavailable') %}
+          {% else %}
+          {{ 100 - ( state_attr('sensor.fullykiosk', 'internalStorageFreeSpace') / 
+          state_attr('sensor.fullykiosk', 'internalStorageTotalSpace') * 100 ) | int }}
+          {% endif %}
+      fullykiosk_memory_percentage:
+        friendly_name: Speicher
+        icon_template: mdi:memory
+        unit_of_measurement: '%'
+        value_template: >
+          {% if is_state('sensor.fullykiosk', 'unavailable') %}
+          {% else %}
+          {{ 100 - ( state_attr('sensor.fullykiosk', 'ramFreeMemory') / 
+          state_attr('sensor.fullykiosk', 'ramTotalMemory') * 100 ) | int }}
+          {% endif %}
+      fullykiosk_motion_detector_state:
+        friendly_name: Kamera
+        icon_template: mdi:camera
+        value_template: >-
+          {% if is_state_attr('sensor.fullykiosk', 'motionDetectorState', 0) %}
+          Von
+          {% else %}
+          Auf
+          {% endif %}
+      fullykiosk_battery_level:
+        friendly_name: Batterie
+        unit_of_measurement: '%'
+        value_template: "{{ state_attr('sensor.fullykiosk', 'batteryLevel') }}"
+        icon_template: >-
+          {% set battery_level = state_attr('sensor.fullykiosk', 'batteryLevel')|int('unknown') %}
+          {% set battery_round = (battery_level|int / 10)|int * 10 %}
+          {% if battery_level == 'unknown' %}
+            mdi:battery-unknown
+          {% else %}
+            {% if battery_round >= 100 %}
+              mdi:battery
+            {% elif battery_round > 0 %}
+              mdi:battery-{{ battery_round }}
+            {% else %}
+              mdi:battery-alert
+            {% endif %}
+          {% endif %}
