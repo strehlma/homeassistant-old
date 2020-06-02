@@ -32,7 +32,7 @@ sensor:
   - platform: template
     sensors:
       fullykiosk_plugged:
-        friendly_name: Strömsladd ansluten
+        friendly_name: Netzkabel angeschlossen
         value_template: >-
           {% if is_state_attr('sensor.fullykiosk', 'plugged', true) %} Ja {% else %} Nein {% endif %}
         icon_template: >-
@@ -84,3 +84,27 @@ sensor:
               mdi:battery-alert
             {% endif %}
           {% endif %}
+
+switch:
+
+  - platform: command_line
+    switches:
+      fullykiosk_screen:
+        friendly_name: Display
+        command_on: !secret fullykiosk_screen_on
+        command_off: !secret fullykiosk_screen_off
+        command_state: !secret fullykiosk_screen_state
+        value_template: "{{ value == 'on' }}"
+
+  - platform: template
+    switches:
+      fullykiosk_screensaver:
+        friendly_name: Skärmsläckare
+        icon_template: mdi:power-sleep
+        value_template: >-
+          {% if is_state_attr('sensor.fullykiosk', 'currentFragment', 'screensaver') %}
+            on {% else %} off {% endif %}
+        turn_on:
+          service: shell_command.fullykiosk_screensaver_on
+        turn_off:
+          service: shell_command.fullykiosk_screensaver_off
