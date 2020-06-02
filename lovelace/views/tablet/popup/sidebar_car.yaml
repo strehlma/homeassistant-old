@@ -30,7 +30,6 @@
                       entities:
                         - entity: device_tracker.630d_xdrive
                         - entity: binary_sensor.630d_xdrive_check_control_messages
-                        - entity: inary_sensor.630d_xdrive_condition_based_services
                         - entity: binary_sensor.630d_xdrive_door_lock_state
                         - entity: binary_sensor.630d_xdrive_lids
                         - entity: binary_sensor.630d_xdrive_lights_parking
