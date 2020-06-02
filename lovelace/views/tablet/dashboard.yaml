@@ -251,7 +251,7 @@ cards:
           custom_fields:
             icon_hue:
               [top: 11%, left: 4.5%, width: 3.05vw, position: absolute]
-        template: light
+        template: switch
 
 
 
@@ -262,12 +262,12 @@ cards:
       #                                                                        #
       ##########################################################################
 
-      - prefix: Media
-        <<: *title
-        style:
-          top: 53.4%
-          left: 25.4%
-          <<: *title-style
+      # - prefix: Media
+      #   <<: *title
+      #   style:
+      #     top: 53.4%
+      #     left: 25.4%
+      #     <<: *title-style
 
       - type: custom:swipe-card
         start_card: 1
