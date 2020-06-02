@@ -12,6 +12,26 @@ custom_header:
       config:
         kiosk_mode: false
 
+preload_cards:
+  [map, iframe]
+preload_rows:
+  [input-select-entity]
+
+anchors:
+  ⚓₁: &title
+    entity: sensor.placeholder
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    type: state-label
+  ⚓₂: &title-style
+    color: '#bcbebf'
+    font-family: SF Text
+    font-size: 2.4vw
+    font-weight: 500
+    max-width: 1px
+    cursor: default
 
 button_card_templates:
 
@@ -164,6 +184,23 @@ button_card_templates:
                               header: false
                               show_slider_percent: true
                               smooth_color_wheel: true
+
+  switch:
+    aspect_ratio: 1/1
+    show_state: true
+    show_icon: false
+    state: *button_state
+    styles:
+      name: *button_styles_name
+      state: *button_styles_state
+      card: *button_styles_card
+      custom_fields:
+        loading:
+          [filter: "[[[ return entity.state === 'off' ? 'invert(1)' : 'none'; ]]]", 
+           top: 3%, left: 60%, width: 3.7vw, position: absolute, opacity: 0.6]
+    tap_action:
+      ui_sound: *ui_sound
+      haptic: light
 
   name_action:
     styles:
