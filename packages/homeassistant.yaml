@@ -36,6 +36,9 @@ sensor:
             {{ states('sensor.hass_version_latest') }}
           {% endif %}
 
+      placeholder:
+        value_template: ' '
+
 script:
 
   homeassistant_restart:
