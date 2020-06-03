@@ -150,7 +150,7 @@ cards:
         icon: mdi:information-outline
         title: Information
         style:
-          top: 87.41%
+          top: 83%
           left: 10.7%
           color: rgba(255, 255, 255, 0.10)
           padding: 0.8vw
@@ -167,7 +167,7 @@ cards:
           - type: image
             image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='20.3' fill='%23ac2e2e' /%3E%3Cpath d='M24.4 18.3h0L19 21.9v-3.4l5.3-3.7H28v20.4h-3.6V18.3z' fill='%23bcbebf' /%3E%3C/svg%3E"
             style:
-              top: 85%
+              top: 80.5%
               left: 12.2%
               width: 1.7%
               pointer-events: none
@@ -182,7 +182,7 @@ cards:
         icon: mdi:car
         title: Auto
         style:
-          top: 87.55%
+          top: 83%
           left: 16.55%
           color: rgba(255, 255, 255, 0.10)
           padding: 0.8vw
@@ -204,7 +204,7 @@ cards:
         elements:
           - type: custom:button-card
             style:
-              top: 95%
+              top: 90%
               left: 10.45%
             name: >
               [[[ if (parseInt(states['sensor.hacs'].state) === 1) {
