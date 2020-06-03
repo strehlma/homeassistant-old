@@ -131,7 +131,7 @@ button_card_templates:
                       color: "#ce944b"
                     - service: browser_mod.popup
                       service_data:
-                        title: Stäng
+                        title: Schließen
                         deviceID: this
                         style:
                           --ha-card-border-radius: 1em
