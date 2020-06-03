@@ -206,6 +206,8 @@ button_card_templates:
       name: *button_styles_name
       state: *button_styles_state
       card: *button_styles_card
+      icon:
+        [top: 11%, left: 4.5%, width: 3.05vw, position: absolute]
 
   media:
     aspect_ratio: 1/1

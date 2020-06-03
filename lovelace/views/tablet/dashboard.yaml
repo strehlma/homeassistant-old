@@ -763,7 +763,7 @@ cards:
         template: climate
 
       - type: custom:button-card
-        entity: climate.wohnzimmer
+        entity: climate.schlafzimmer
         style:
           top: 80%
           left: 66.18%
@@ -781,7 +781,7 @@ cards:
         template: climate
 
       - type: custom:button-card
-        entity: climate.kuche
+        entity: climate.buro
         style:
           top: 80%
           left: 77.18%
@@ -799,7 +799,7 @@ cards:
         template: climate
 
       - type: custom:button-card
-        entity: climate.bad
+        entity: climate.flur_oben
         style:
           top: 80%
           left: 88.18%
