@@ -34,7 +34,7 @@ cards:
           - !include
             - '../templates/neumorphic_button.yaml'
             - icon: mdi:glass-cocktail
-              name: Esszimmerlampe
+              name: Vitrine
               entity: switch.showcase_plug
 
       - type: custom:hui-horizontal-stack-card
