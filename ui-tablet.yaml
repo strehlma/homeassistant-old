@@ -203,14 +203,8 @@ button_card_templates:
     show_icon: true
     state: *button_state
     custom_fields:
-      temp: >
-        [[[ 
-          return `<span>${entity.attributes.temperature}°C</span>`
-        ]]]
-      curr_temp: >
-        [[[ 
-          return `<span>${entity.attributes.current_temperature}°C</span>`
-        ]]]
+      temp: [[[ return entity.attributes.temperature + ' °C' ]]]
+      curr_temp: [[[ return entity.attributes.current_temperature + ' °C' ]]]
     styles:
       name:
         [top: 74%, left: 11%, position: absolute, line-height: 2vw]
