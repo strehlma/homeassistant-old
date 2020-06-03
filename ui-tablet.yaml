@@ -216,9 +216,20 @@ button_card_templates:
         [top: -30%, left: 4.5%, width: 3.05vw, position: absolute]
       custom_fields:
         temp:
-          [top: -30%, right: 4.5%, position: absolute, , line-height: 2vw]
+          [top: -30%, right: 4.5%, position: absolute, line-height: 2vw]
         curr_temp:
           [top: -30%, right: 4.5%, position: absolute, line-height: 4vw]
+    tap_action:
+      action: call-service
+      service: browser_mod.popup
+      service_data:
+        title: Schließen
+        deviceID: this
+        style:
+          --ha-card-border-radius: 1em
+          --more-info-header-color: rgba(255,255,255,0.6)
+          background: none
+          box-shadow: none
 
   media:
     aspect_ratio: 1/1
