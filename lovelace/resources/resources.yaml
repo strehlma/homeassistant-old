@@ -62,6 +62,7 @@
     {url: /hacsfiles/custom-header/custom-header.js,                           type: module},
     {url: /hacsfiles/light-entity-card/light-entity-card.js,                   type: js},
     {url: /hacsfiles/light-popup-card/light-popup-card.js,                     type: module},
+    {url: /hacsfiles/thermostat-popup-card/thermostat-popup-card.js,           type: module},
     {url: /hacsfiles/lovelace-card-mod/card-mod.js,                            type: module},
     {url: /hacsfiles/lovelace-card-preloader/lovelace-card-preloader.js,       type: module},
     {url: /hacsfiles/lovelace-hui-element/hui-element.js,                      type: module},

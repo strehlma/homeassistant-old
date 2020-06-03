@@ -230,6 +230,14 @@ button_card_templates:
           --more-info-header-color: rgba(255,255,255,0.6)
           background: none
           box-shadow: none
+        card:
+          type: vertical-stack
+          cards:
+            - type: entities
+              title: '[[[ return entity.attributes.friendly_name ]]]'
+              style: *popup_style
+              show_header_toggle: false
+
 
   media:
     aspect_ratio: 1/1
