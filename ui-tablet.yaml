@@ -201,6 +201,11 @@ button_card_templates:
     aspect_ratio: 1/1
     show_state: true
     show_icon: true
+    state: *button_state
+    styles:
+      name: *button_styles_name
+      state: *button_styles_state
+      card: *button_styles_card
 
   media:
     aspect_ratio: 1/1

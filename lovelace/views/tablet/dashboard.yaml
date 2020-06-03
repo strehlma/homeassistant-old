@@ -711,7 +711,7 @@ cards:
       - type: custom:button-card
         entity: climate.wohnzimmer
         style:
-          top: 76.2%
+          top: 62.6%
           left: 66.18%
           width: 10%
         # custom_fields:
@@ -729,7 +729,7 @@ cards:
       - type: custom:button-card
         entity: climate.kuche
         style:
-          top: 76.2%
+          top: 62.6%
           left: 77.18%
           width: 10%
         # custom_fields:
@@ -747,7 +747,7 @@ cards:
       - type: custom:button-card
         entity: climate.bad
         style:
-          top: 76.2%
+          top: 62.6%
           left: 88.18%
           width: 10%
         # custom_fields:
@@ -765,7 +765,7 @@ cards:
       - type: custom:button-card
         entity: climate.wohnzimmer
         style:
-          top: 93.75%
+          top: 80%
           left: 66.18%
           width: 10%
         # custom_fields:
@@ -783,7 +783,7 @@ cards:
       - type: custom:button-card
         entity: climate.kuche
         style:
-          top: 93.75%
+          top: 80%
           left: 77.18%
           width: 10%
         # custom_fields:
@@ -801,7 +801,7 @@ cards:
       - type: custom:button-card
         entity: climate.bad
         style:
-          top: 93.75%
+          top: 80%
           left: 88.18%
           width: 10%
         # custom_fields:
