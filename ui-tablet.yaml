@@ -197,6 +197,11 @@ button_card_templates:
         font-weight: 500, letter-spacing: 0.015em]
     style: '#name > ha-icon {width: 1.4em; margin-right: 0.3em; }'
 
+  climate:
+    aspect_ratio: 1/1
+    show_state: true
+    show_icon: true
+
   media:
     aspect_ratio: 1/1
     show_state: true
