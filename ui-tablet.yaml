@@ -203,10 +203,10 @@ button_card_templates:
     show_icon: true
     state: *button_state
     custom_fields:
-      temp: >
-        [[[ return entity.attributes.temperature + ' °C' ]]]
       curr_temp: >
         [[[ return entity.attributes.current_temperature + ' °C' ]]]
+      temp: >
+        [[[ return entity.attributes.temperature + ' °C' ]]]
     styles:
       name:
         [top: 74%, left: 11%, position: absolute, line-height: 2vw]
@@ -215,10 +215,10 @@ button_card_templates:
       icon:
         [top: -30%, left: 4.5%, width: 3.05vw, position: absolute]
       custom_fields:
-        temp:
-          [top: -30%, right: 4.5%, position: absolute, line-height: 2vw]
         curr_temp:
-          [top: -30%, right: 4.5%, position: absolute, line-height: 4vw]
+          [top: 0%, right: 4.5%, position: absolute, line-height: 4vw]
+        temp:
+          [top: 30%, right: 4.5%, position: absolute, line-height: 2vw]
     tap_action:
       action: call-service
       service: browser_mod.popup
