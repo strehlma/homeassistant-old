@@ -237,6 +237,10 @@ button_card_templates:
               title: '[[[ return entity.attributes.friendly_name ]]]'
               style: *popup_style
               show_header_toggle: false
+              entities:
+                - type: custom:thermostat-popup-card
+                  entity: '[[[ return entity.entity_id ]]]'
+                  fullscreen: false
 
 
   media:
