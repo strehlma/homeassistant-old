@@ -14,7 +14,7 @@ homeassistant:
   internal_url: "http://10.1.1.1:1234"
   external_url: "https://abc.de"
 
-  #customize: !include customize.yaml
+  customize: !include customize.yaml
 
   # Packages
   packages: !include_dir_named packages/

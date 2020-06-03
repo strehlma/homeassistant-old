@@ -1,0 +1,34 @@
+climate.wohnzimmer:
+  templates:
+    icon: >
+      if (state === 'heat') return 'mdi:fire';
+      if (state === 'auto') return 'mdi:timetable';
+      return 'mdi:power-off';
+
+climate.schlafzimmer:
+  templates:
+    icon: >
+      if (state === 'heat') return 'mdi:fire';
+      if (state === 'auto') return 'mdi:timetable';
+      return 'mdi:power-off';
+
+climate.kuche:
+  templates:
+    icon: >
+      if (state === 'heat') return 'mdi:fire';
+      if (state === 'auto') return 'mdi:timetable';
+      return 'mdi:power-off';
+
+climate.bad:
+  templates:
+    icon: >
+      if (state === 'heat') return 'mdi:fire';
+      if (state === 'auto') return 'mdi:timetable';
+      return 'mdi:power-off';
+
+climate.buro:
+  templates:
+    icon: >
+      if (state === 'heat') return 'mdi:fire';
+      if (state === 'auto') return 'mdi:timetable';
+      return 'mdi:power-off';
