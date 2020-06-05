@@ -1,32 +1,43 @@
 switch.diningroom:
+  friendly_name: Esszimmer
   icon: mdi:ceiling-light
 
 switch.livingroom:
+  friendly_name: Wohnzimmer
   icon: mdi:atom
 
 switch.showcase_plug:
+  friendly_name: Vitrine
   icon: mdi:glass-cocktail
 
 light.moon:
+  friendly_name: Mond
   icon: mdi:brightness-3
 
 light.cube:
+  friendly_name: Würfel
   icon: mdi:cube
 
 switch.tv_plug:
+  friendly_name: Fernseher
   icon: mdi:television
 
 switch.kitchen_plug:
+  friendly_name: Küche
   icon: mdi:led-strip
 
 switch.lightstripe_plug:
+  friendly_name: Regallicht
   icon: mdi:led-strip-variant
 
 switch.wellness_plug:
+  friendly_name: Wellness
   icon: mdi:bed-empty
 
 switch.stairway_plug:
+  friendly_name: Treppe
   icon: mdi:stairs
 
 switch.xmas_plug:
+  friendly_name: X-MAS
   icon: mdi:pine-tree
