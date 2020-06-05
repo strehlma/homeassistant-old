@@ -108,3 +108,26 @@ switch:
           service: shell_command.fullykiosk_screensaver_on
         turn_off:
           service: shell_command.fullykiosk_screensaver_off
+
+automation:
+  - alias: tablet_brightness_slider
+    initial_state: true
+    trigger:
+      platform: state
+      entity_id: input_number.fullykiosk_brightness_slider
+    action:
+      service: shell_command.fullykiosk_brightness_slider
+
+  - alias: close_popups_on_tablet
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id: switch.fullykiosk_screensaver
+        from: 'off'
+        to: 'on'
+        for:
+          minutes: 15
+    action:
+      - service: browser_mod.close_popup
+        data:
+          deviceID: tablet
