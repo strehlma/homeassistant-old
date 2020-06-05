@@ -23,7 +23,7 @@ button_card_templates:
   light:
     aspect_ratio: 1/1
     show_state: true
-    show_icon: false
+    show_icon: true
     state: &button_state
       - value: 'on'
         styles:
