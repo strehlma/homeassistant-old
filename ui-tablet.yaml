@@ -43,6 +43,8 @@ button_card_templates:
         [top: 57.7%, left: 11%, position: absolute, line-height: 2vw]
       state: &button_styles_state
         [top: 74%, left: 11%, position: absolute, line-height: 2vw]
+      icon:
+        [top: -30%, left: 4.5%, width: 3.05vw, position: absolute]
       custom_fields:
         info: &circle_pos
           [top: 8.5%, left: 56.2%, width: 3.5vw, position: absolute, letter-spacing: 0.03vw]
