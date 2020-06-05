@@ -1,34 +1,32 @@
-climate.wohnzimmer:
-  templates:
-    icon: >
-      if (state === 'heat') return 'mdi:fire';
-      if (state === 'auto') return 'mdi:timetable';
-      return 'mdi:power-off';
+switch.diningroom:
+  icon: mdi:ceiling-light
 
-climate.schlafzimmer:
-  templates:
-    icon: >
-      if (state === 'heat') return 'mdi:fire';
-      if (state === 'auto') return 'mdi:timetable';
-      return 'mdi:power-off';
+switch.livingroom:
+  icon: mdi:atom
 
-climate.kuche:
-  templates:
-    icon: >
-      if (state === 'heat') return 'mdi:fire';
-      if (state === 'auto') return 'mdi:timetable';
-      return 'mdi:power-off';
+switch.showcase_plug:
+  icon: mdi:glass-cocktail
 
-climate.bad:
-  templates:
-    icon: >
-      if (state === 'heat') return 'mdi:fire';
-      if (state === 'auto') return 'mdi:timetable';
-      return 'mdi:power-off';
+light.moon:
+  icon: mdi:brightness-3
 
-climate.buro:
-  templates:
-    icon: >
-      if (state === 'heat') return 'mdi:fire';
-      if (state === 'auto') return 'mdi:timetable';
-      return 'mdi:power-off';
+light.cube:
+  icon: mdi:cube
+
+switch.tv_plug:
+  icon: mdi:television
+
+switch.kitchen_plug:
+  icon: mdi:led-strip
+
+switch.lightstripe_plug:
+  icon: mdi:led-strip-variant
+
+switch.wellness_plug:
+  icon: mdi:bed-empty
+
+switch.stairway_plug:
+  icon: mdi:stairs
+
+switch.xmas_plug:
+  icon: mdi:pine-tree
