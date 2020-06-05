@@ -240,7 +240,7 @@ button_card_templates:
               style: *popup_style
               show_header_toggle: false
               entities:
-                - type: thermostat
+                - type: custom:hui-thermostat
                   entity: '[[[ return entity.entity_id ]]]'
                 # - type: custom:thermostat-popup-card
                 #   entity: '[[[ return entity.entity_id ]]]'
