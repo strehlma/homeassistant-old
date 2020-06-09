@@ -237,7 +237,7 @@ button_card_templates:
           cards:
             - type: entities
               title: '[[[ return entity.attributes.friendly_name ]]]'
-              style: *popup_style
+              # style: *popup_style
               show_header_toggle: false
               entities:
                 - type: custom:hui-thermostat-card
