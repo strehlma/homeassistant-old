@@ -237,15 +237,11 @@ button_card_templates:
           cards:
             - type: entities
               title: '[[[ return entity.attributes.friendly_name ]]]'
-              # style: *popup_style
+              style: *popup_style
               show_header_toggle: false
               entities:
                 - type: custom:hui-thermostat-card
                   entity: '[[[ return entity.entity_id ]]]'
-                # - type: custom:thermostat-popup-card
-                #   entity: '[[[ return entity.entity_id ]]]'
-                #   fullscreen: false
-                #   settings: true
 
   media:
     aspect_ratio: 1/1

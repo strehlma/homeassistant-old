@@ -64,6 +64,7 @@ sensor:
   
       next_organic_text:
         entity_id: sensor.next_organic
+        icon_template: mdi:leaf
         value_template: >
           {% set days = (states('sensor.next_organic') | int ) %}
           {% if days == 0 %}
@@ -78,6 +79,7 @@ sensor:
   
       next_recycling_text:
         entity_id: sensor.next_recycling
+        icon_template: mdi:recycle
         value_template: >
           {% set days = (states('sensor.next_recycling') | int ) %}
           {% if days == 0 %}
@@ -92,6 +94,7 @@ sensor:
   
       next_paper_text:
         entity_id: sensor.next_paper
+        icon_template: mdi:trash-can-outline
         value_template: >
           {% set days = (states('sensor.next_paper') | int ) %}
           {% if days == 0 %}
@@ -105,6 +108,7 @@ sensor:
           {% endif %}
 
       next_garbage_collection:
+        icon_template: mdi:trash-can-outline
         value_template: >
           {%- set mysensors = ["sensor.next_garbage", "sensor.next_organic", "sensor.next_recycling", "sensor.next_paper"] %}
           {%- set garbage = (states('sensor.next_garbage') | int ) %}
@@ -146,6 +150,7 @@ sensor:
           {%- endfor %}
 
       next_garbage_days:
+        icon_template: mdi:trash-can-outline
         value_template: >
           {{ ((states('sensor.next_garbage') | int ), (states('sensor.next_organic') | int ), (states('sensor.next_recycling') | int ), (states('sensor.next_paper') | int )) | min }}
 

@@ -142,6 +142,22 @@ cards:
 
       #################################################
       #                                               #
+      #                 Signal Icons                  #
+      #                                               #
+      #################################################
+
+      - !include
+        - button_header_badge.yaml
+        - icon: mdi:window-closed
+          background_color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+          badge: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+          entity: group.all_window_sensors
+          style:
+            top: 20%
+            left: 11.1%
+
+      #################################################
+      #                                               #
       #                  INFO BUTTON                  #
       #                                               #
       #################################################
