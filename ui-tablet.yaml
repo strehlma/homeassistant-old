@@ -345,7 +345,7 @@ button_card_templates:
         margin-top: 12px;
       }
     name: Button
-    icon: {{ icon|default('mdi:menu') }}
+    icon: "{{ icon|default('mdi:menu') }}"
     size: {{ size|default('80%') }}
     color: auto
     entity: input_boolean.dummy1
