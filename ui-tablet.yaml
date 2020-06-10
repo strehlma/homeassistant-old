@@ -366,8 +366,7 @@ button_card_templates:
         card:
           type: vertical-stack
           cards:
-            - !include
-              - "{{ template|default('lovelace/templates/popup_device_counters.yaml') }}"
+            - !include "lovelace/templates/popup_device_counters.yaml"
               - entity: "{{ entity }}"
       haptic: light
     hold_action:
@@ -386,8 +385,7 @@ button_card_templates:
         card:
           type: vertical-stack
           cards:
-            - !include
-              - "{{ template|default('lovelace/templates/popup_device_counters.yaml') }}"
+            - !include "lovelace/templates/popup_device_counters.yaml"
               - entity: "{{ entity }}"
       haptic: heavy
     styles:
