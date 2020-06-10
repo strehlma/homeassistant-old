@@ -346,7 +346,7 @@ button_card_templates:
       }
     name: Button
     icon: "{{ icon|default('mdi:menu') }}"
-    size: {{ size|default('80%') }}
+    size: "{{ size|default('80%') }}"
     color: auto
     entity: input_boolean.dummy1
     tap_action:
