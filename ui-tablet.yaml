@@ -368,7 +368,7 @@ button_card_templates:
           cards:
             - !include
               - "{{ template|default('templates/popup_device_counters.yaml') }}"
-              - entity: {{ entity }}
+              - entity: "{{ entity }}"
       haptic: light
     hold_action:
       action: call-service
@@ -387,8 +387,8 @@ button_card_templates:
           type: vertical-stack
           cards:
             - !include
-              - {{ template|default('popup_device_counters.yaml') }}
-              - entity: {{ entity }}
+              - "{{ template|default('popup_device_counters.yaml') }}"
+              - entity: "{{ entity }}"
       haptic: heavy
     styles:
       card:
@@ -417,7 +417,7 @@ button_card_templates:
       notification: "{{ badge }}"
     state:
       - value: "off"
-        spin: {{ spin_off|default('false') }}
+        spin: "{{ spin_off|default('false') }}"
 
 title: Home
 views:
