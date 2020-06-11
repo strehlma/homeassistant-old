@@ -337,6 +337,8 @@ button_card_templates:
         else { return 'linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%), url(' + entity.attributes.entity_picture + ')'; } ]]]"]
 
   info: 
+    variables:
+      my_icon: "mdi:menu"
     show_name: false
     show_state: false
     show_label: false
@@ -345,9 +347,9 @@ button_card_templates:
         margin-top: 12px;
       }
     name: Button
-    icon: "{{ icon|default('mdi:menu') }}"
+    icon: '[[[ return variables.my_icon ]]]'
     size: "{{ size|default('80%') }}"
-    color: auto
+    color: rgba(255, 255, 255, 0.10)
     entity: input_boolean.dummy1
     tap_action:
       action: call-service
@@ -366,43 +368,43 @@ button_card_templates:
         card:
           type: vertical-stack
           cards: &popup_device_counter
-            type: vertical-stack
-            cards:
-              - type: entities
-                style: |
-                  ha-card {
-                    --ha-card-background: transparant;
-                    background: transparant;
-                    box-shadow: none;
-                    color: white !important;
-                    font-size: 12px;
-                    font-family: Helvetica;
-                    --paper-item-icon-color: white !important;
-                    --primary-text-color: white !important;
-                    --text-primary-color: white !important;
-                  }
-                entities:
-                  - type: 'custom:auto-entities'
-                    card:
-                      type: glance
-                      columns: 3
-                      show_empty: true
-                    filter:
-                      include:
-                        - group: "{{ entity }}"
-                          state: 'on'
-                          options:
-                            tap_action:
-                              action: toggle
-                        - group: "{{ entity }}"
-                          state: 'heat'
-                          options:
-                            style: |
-                              ha-card {
-                                --iron-icon-fill-color: #FFF;
-                              }
-                            tap_action:
-                              action: toggle
+            # type: vertical-stack
+            # cards:
+            - type: entities
+              style: |
+                ha-card {
+                  --ha-card-background: transparant;
+                  background: transparant;
+                  box-shadow: none;
+                  color: white !important;
+                  font-size: 12px;
+                  font-family: Helvetica;
+                  --paper-item-icon-color: white !important;
+                  --primary-text-color: white !important;
+                  --text-primary-color: white !important;
+                }
+              entities:
+                - type: 'custom:auto-entities'
+                  card:
+                    type: glance
+                    columns: 3
+                    show_empty: true
+                  filter:
+                    include:
+                      - group: "{{ entity }}"
+                        state: 'on'
+                        options:
+                          tap_action:
+                            action: toggle
+                      - group: "{{ entity }}"
+                        state: 'heat'
+                        options:
+                          style: |
+                            ha-card {
+                              --iron-icon-fill-color: #FFF;
+                            }
+                          tap_action:
+                            action: toggle
             # - !include lovelace/templates/popup_device_counters.yaml
             #   - entity: "{{ entity }}"
       haptic: light
