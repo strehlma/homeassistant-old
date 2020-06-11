@@ -148,9 +148,11 @@ cards:
 
       - type: custom:button-card
         entity: group.all_window_sensors
+        variables:
+          my_icon: "mdi:window-closed"        
         style:
-          top: 20.35%
-          left: 11.1%
+          top: 26.35%
+          left: 10.1%
           width: 10%
         template: info
 
