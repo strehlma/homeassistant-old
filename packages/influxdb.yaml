@@ -21,7 +21,7 @@ influxdb:
       - sensor.ds213plus_drive_2_temperature
       - sensor.ds213plus_memory_available_real
       - sensor.ds213plus_memory_available_swap
-      - sensor.ds213plus_memory_total_real	
+      - sensor.ds213plus_memory_total_real
       - sensor.ds213plus_memory_total_swap
       - sensor.ds213plus_memory_usage_real
       - sensor.ds213plus_network_down
