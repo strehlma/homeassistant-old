@@ -1,8 +1,8 @@
-  occupied:
-    initial: on
+  # occupied:
+  #   initial: on
 
-  garbage_warning:
-    initial: on
+  # garbage_warning:
+  #   initial: on
 
-  dummy1:
-    initial: on
+  # dummy1:
+  #   initial: on

@@ -1,3 +1,15 @@
+switch:
+  - platform: mqtt
+    name: "shelf"
+    state_topic: "home/433toMQTT"
+    command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+    payload_on: "4527377"
+    payload_off: "4527380"
+    optimistic: false
+    qos: 0
+    retain: true
+
+
 # MQTT Payloads
 #
 # Livingroom remote:

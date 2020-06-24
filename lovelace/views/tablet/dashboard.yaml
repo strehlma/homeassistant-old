@@ -149,6 +149,7 @@ cards:
       - type: custom:button-card
         entity: group.all_window_sensors
         badge: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+        background_color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
         variables:
           my_icon: "mdi:window-closed"        
         style:

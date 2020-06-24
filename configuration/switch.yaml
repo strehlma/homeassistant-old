@@ -1,62 +1,13 @@
+
 # - platform: mqtt
-#   name: "remote_stairway"
+#   name: "shelf"
 #   state_topic: "home/433toMQTT"
 #   command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
-#   payload_on: "282961"
-#   payload_off: "282964"
+#   payload_on: "4527377"
+#   payload_off: "4527380"
 #   optimistic: false
 #   qos: 0
 #   retain: true
-
-# - platform: mqtt
-#   name: "remote_kitchen_light"
-#   state_topic: "home/433toMQTT"
-#   command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
-#   payload_on: "279889"
-#   payload_off: "279892"
-#   optimistic: false
-#   qos: 0
-#   retain: true
-
-# - platform: mqtt
-#   name: "remote_television"
-#   state_topic: "home/433toMQTT"
-#   command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
-#   payload_on: "4523345"
-#   payload_off: "4523348"
-#   optimistic: false
-#   qos: 0
-#   retain: true
-
-# - platform: mqtt
-#   name: "remote_showcase"
-#   state_topic: "home/433toMQTT"
-#   command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
-#   payload_on: "4526417"
-#   payload_off: "4526420"
-#   optimistic: false
-#   qos: 0
-#   retain: true
-
-# - platform: mqtt
-#   name: "moon"
-#   state_topic: "home/433toMQTT"
-#   command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
-#   payload_on: "4527185"
-#   payload_off: "4527188"
-#   optimistic: false
-#   qos: 0
-#   retain: true
-
-- platform: mqtt
-  name: "shelf"
-  state_topic: "home/433toMQTT"
-  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
-  payload_on: "4527377"
-  payload_off: "4527380"
-  optimistic: false
-  qos: 0
-  retain: true
 
 # - platform: mqtt
 #   name: "christmastree"
@@ -68,22 +19,22 @@
 #   qos: 0
 #   retain: true
 
-- platform: mqtt
-  name: "livingroom"
-  state_topic: "shellies/shellyswitch-5B2A1D/relay/0"
-  command_topic: "shellies/shellyswitch-5B2A1D/relay/0/command"
-  payload_on: "on"
-  payload_off: "off"
-  optimistic: false
-  qos: 0
-  retain: true
+# - platform: mqtt
+#   name: "livingroom"
+#   state_topic: "shellies/shellyswitch-5B2A1D/relay/0"
+#   command_topic: "shellies/shellyswitch-5B2A1D/relay/0/command"
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+#   qos: 0
+#   retain: true
 
-- platform: mqtt
-  name: "diningroom"
-  state_topic: "shellies/shellyswitch-5B2A1D/relay/1"
-  command_topic: "shellies/shellyswitch-5B2A1D/relay/1/command"
-  payload_on: "on"
-  payload_off: "off"
-  optimistic: false
-  qos: 0
-  retain: true
+# - platform: mqtt
+#   name: "diningroom"
+#   state_topic: "shellies/shellyswitch-5B2A1D/relay/1"
+#   command_topic: "shellies/shellyswitch-5B2A1D/relay/1/command"
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+#   qos: 0
+#   retain: true

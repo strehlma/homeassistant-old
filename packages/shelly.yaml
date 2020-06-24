@@ -1,0 +1,20 @@
+switch:
+  - platform: mqtt
+    name: "livingroom"
+    state_topic: "shellies/shellyswitch-5B2A1D/relay/0"
+    command_topic: "shellies/shellyswitch-5B2A1D/relay/0/command"
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+    qos: 0
+    retain: true
+
+  - platform: mqtt
+    name: "diningroom"
+    state_topic: "shellies/shellyswitch-5B2A1D/relay/1"
+    command_topic: "shellies/shellyswitch-5B2A1D/relay/1/command"
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+    qos: 0
+    retain: true

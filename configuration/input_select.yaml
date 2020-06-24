@@ -1,24 +1,24 @@
-frontend_greeting:
-  name: Frontend Greeting
-  options:
-    - Guten Morgen
-    - Guten Tag
-    - Guten Abend
-    - Gute Nacht
+# frontend_greeting:
+#   name: Frontend Greeting
+#   options:
+#     - Guten Morgen
+#     - Guten Tag
+#     - Guten Abend
+#     - Gute Nacht
 
-border_radius:
-  name: Border Radius
-  options:
-    - 0px
-    - 6px
-    - 12px
-    - 18px
+# border_radius:
+#   name: Border Radius
+#   options:
+#     - 0px
+#     - 6px
+#     - 12px
+#     - 18px
 
-box_shadow:
-  name: Box Shadow
-  options:
-    - none
-    - 1px 1px 1px 0px rgba(0,0,0,0.75)
-    - 2px 2px 2px 0px rgba(0,0,0,0.75)
-    - 5px 5px 5px 0px rgba(0,0,0,0.75)
+# box_shadow:
+#   name: Box Shadow
+#   options:
+#     - none
+#     - 1px 1px 1px 0px rgba(0,0,0,0.75)
+#     - 2px 2px 2px 0px rgba(0,0,0,0.75)
+#     - 5px 5px 5px 0px rgba(0,0,0,0.75)
     
