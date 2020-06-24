@@ -2,6 +2,7 @@ influxdb:
   host: !secret influxdb_host
   include:
     entities:
+      # Corona
       - sensor.germany_coronavirus_current
       - sensor.germany_coronavirus_confirmed
       - sensor.germany_coronavirus_deaths
@@ -10,3 +11,21 @@ influxdb:
       - sensor.worldwide_coronavirus_confirmed
       - sensor.worldwide_coronavirus_deaths
       - sensor.worldwide_coronavirus_recovered
+
+      # Synology
+      - sensor.ds213plus_cpu_load_15_min
+      - sensor.ds213plus_cpu_load_5_min
+      - sensor.ds213plus_cpu_load_total
+      - sensor.ds213plus_cpu_load_user
+      - sensor.ds213plus_drive_1_temperature	
+      - sensor.ds213plus_drive_2_temperature
+      - sensor.ds213plus_memory_available_real
+      - sensor.ds213plus_memory_available_swap
+      - sensor.ds213plus_memory_total_real	
+      - sensor.ds213plus_memory_total_swap
+      - sensor.ds213plus_memory_usage_real
+      - sensor.ds213plus_network_down
+      - sensor.ds213plus_network_up
+      - sensor.ds213plus_volume_1_average_disk_temp
+      - sensor.ds213plus_volume_1_used_space
+      - sensor.ds213plus_volume_1_volume_used
