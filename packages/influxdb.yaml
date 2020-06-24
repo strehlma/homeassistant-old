@@ -17,7 +17,7 @@ influxdb:
       - sensor.ds213plus_cpu_load_5_min
       - sensor.ds213plus_cpu_load_total
       - sensor.ds213plus_cpu_load_user
-      - sensor.ds213plus_drive_1_temperature	
+      - sensor.ds213plus_drive_1_temperature
       - sensor.ds213plus_drive_2_temperature
       - sensor.ds213plus_memory_available_real
       - sensor.ds213plus_memory_available_swap
