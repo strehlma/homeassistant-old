@@ -33,7 +33,7 @@ mobile_app:
 http:
 
 upnp:
-  local_ip: 192.168.50.20
+  local_ip: !secret local_ip
 
 frontend:
   themes: !include_dir_merge_named ./themes/
