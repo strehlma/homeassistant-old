@@ -257,7 +257,7 @@ cards:
                 card:
                   type: custom:hui-element
                   card_type: iframe
-                  url: !secret external_url
+                  url: !secret local_hacs_url
                   aspect_ratio: 60%
                   style: 'ha-card { border-radius: 1em;}'
 
