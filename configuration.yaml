@@ -11,8 +11,8 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Berlin
 
-  internal_url: "http://10.1.1.1:1234"
-  external_url: "https://abc.de"
+  internal_url: "http://192.168.50.10:8123"
+  external_url: "https://ha.home.strehlm.de"
 
   customize: !include customize.yaml
 
