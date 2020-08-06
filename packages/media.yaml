@@ -36,6 +36,10 @@ media_player:
     port: 8090
     name: Soundtouch Küche
 
+  - platform: androidtv
+    name: Fire TV Cube
+    host: !secret fire_tv_cube
+
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
