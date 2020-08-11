@@ -1,5 +1,0 @@
-fritzbox:
-  devices:
-    - host: !secret fritz_ip
-      username: !secret fritz_user
-      password: !secret fritz_password
