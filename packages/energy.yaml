@@ -76,10 +76,20 @@ sensor:
 
   - platform: template
     sensors:
-      daily_ownconsumption:
+      kostal_yield_day_kwh:
         friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'kWh'
-        value_template: "{{ (states.sensor.kostal_yield_day | int) - (states.sensor.daily_energy_einspeisung | int) }}"
+        value_template: "{{ (states.sensor.kostal_yield_day / 1000 | int) }}"
+        icon: mdi:solar-power
+
+      daily_ownconsumption_kwh:
+        friendly_name: "Eigenverbrauch"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ ((states.sensor.kostal_yield_day / 1000) | int) - (states.sensor.daily_energy_einspeisung | int) }}"
+        icon: mdi:home-import-outline
+  
+
+
 
 utility_meter:
   hourly_energy_bezug:
