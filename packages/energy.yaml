@@ -18,17 +18,17 @@ sensor:
   - platform: kostal_plenticore
     host: !secret wechselrichter_ip
     password: !secret wechselrichter_password
-    # monitored_conditions:
+    monitored_conditions:
     #   - BatteryPercent
     #   - BatteryCycles
     #   - BatteryPower
     #   - HomeGridPower
     #   - HomeOwnPower
-    #   - HomePVPower
+      - HomePVPower
     #   - HomeBatteryPower
     #   - GridPower
-    #   - DCPower
-    #   - PVPower
+      - DCPower
+      - PVPower
     #   - AutarkyDay
     #   - AutarkyMonth
     #   - AutarkyTotal
@@ -37,22 +37,22 @@ sensor:
     #   - CO2SavingMonth
     #   - CO2SavingTotal
     #   - CO2SavingYear
-    #   - PV1Power
-    #   - PV1Voltage
-    #   - PV1Current
-    #   - PV2Power
-    #   - PV2Voltage
-    #   - PV2Current
-    #   - ACFrequency
-    #   - ACL1Current
-    #   - ACL1Power
-    #   - ACL1Voltage
-    #   - ACL2Current
-    #   - ACL2Power
-    #   - ACL2Voltage
-    #   - ACL3Current
-    #   - ACL3Power
-    #   - ACL3Voltage
+      - PV1Power
+      - PV1Voltage
+      - PV1Current
+      - PV2Power
+      - PV2Voltage
+      - PV2Current
+      - ACFrequency
+      - ACL1Current
+      - ACL1Power
+      - ACL1Voltage
+      - ACL2Current
+      - ACL2Power
+      - ACL2Voltage
+      - ACL3Current
+      - ACL3Power
+      - ACL3Voltage
     #   - HomeConsumptionDay
     #   - HomeConsumptionMonth
     #   - HomeConsumptionTotal
