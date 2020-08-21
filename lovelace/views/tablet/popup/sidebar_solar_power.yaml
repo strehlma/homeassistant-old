@@ -32,3 +32,10 @@ service_data:
           - entity: sensor.daily_energy_einspeisung
           - entity: sensor.daily_ownconsumption_kwh
           - entity: sensor.daily_energy_bezug
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.kostal_yield_day_kwh
+              - entity: sensor.daily_energy_einspeisung
+              - entity: sensor.daily_ownconsumption_kwh
+              - entity: sensor.daily_energy_bezug
+    
