@@ -74,6 +74,13 @@ sensor:
       - HomeConsumptionYieldTotal
       - HomeConsumptionYieldYear
 
+  - platform: template
+    sensors:
+      daily_ownconsumption:
+        friendly_name: "Eigenverbrauch"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ (states.sensor.kostal_yield_day | int) - (states.sensor.daily_energy_einspeisung | int) }}"
+
 utility_meter:
   hourly_energy_bezug:
     source: sensor.sml_output_wirkenergie_bezug_summe_kwh
