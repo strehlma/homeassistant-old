@@ -18,58 +18,58 @@ sensor:
   - platform: kostal_plenticore
     host: !secret wechselrichter_ip
     password: !secret wechselrichter_password
-    monitored_conditions:
-      - BatteryPercent
-      - BatteryCycles
-      - BatteryPower
-      - HomeGridPower
-      - HomeOwnPower
-      - HomePVPower
-      - HomeBatteryPower
-      - GridPower
-      - DCPower
-      - PVPower
-      - AutarkyDay
-      - AutarkyMonth
-      - AutarkyTotal
-      - AutarkyYear
-      - CO2SavingDay
-      - CO2SavingMonth
-      - CO2SavingTotal
-      - CO2SavingYear
-      - PV1Power
-      - PV1Voltage
-      - PV1Current
-      - PV2Power
-      - PV2Voltage
-      - PV2Current
-      - ACFrequency
-      - ACL1Current
-      - ACL1Power
-      - ACL1Voltage
-      - ACL2Current
-      - ACL2Power
-      - ACL2Voltage
-      - ACL3Current
-      - ACL3Power
-      - ACL3Voltage
-      - HomeConsumptionDay
-      - HomeConsumptionMonth
-      - HomeConsumptionTotal
-      - HomeConsumptionYear
-      - HomeConsumptionFromBatDay
-      - HomeConsumptionFromBatMonth
-      - HomeConsumptionFromBatTotal
-      - HomeConsumptionFromBatYear
-      - HomeConsumptionFromGridDay
-      - HomeConsumptionFromGridMonth
-      - HomeConsumptionFromGridTotal
-      - HomeConsumptionFromGridYear
-      - HomeConsumptionFromPVDay
-      - HomeConsumptionFromPVMonth
-      - HomeConsumptionFromPVTotal
-      - HomeConsumptionFromPVYear
-      - HomeConsumptionYieldDay
-      - HomeConsumptionYieldMonth
-      - HomeConsumptionYieldTotal
-      - HomeConsumptionYieldYear
+    # monitored_conditions:
+    #   - BatteryPercent
+    #   - BatteryCycles
+    #   - BatteryPower
+    #   - HomeGridPower
+    #   - HomeOwnPower
+    #   - HomePVPower
+    #   - HomeBatteryPower
+    #   - GridPower
+    #   - DCPower
+    #   - PVPower
+    #   - AutarkyDay
+    #   - AutarkyMonth
+    #   - AutarkyTotal
+    #   - AutarkyYear
+    #   - CO2SavingDay
+    #   - CO2SavingMonth
+    #   - CO2SavingTotal
+    #   - CO2SavingYear
+    #   - PV1Power
+    #   - PV1Voltage
+    #   - PV1Current
+    #   - PV2Power
+    #   - PV2Voltage
+    #   - PV2Current
+    #   - ACFrequency
+    #   - ACL1Current
+    #   - ACL1Power
+    #   - ACL1Voltage
+    #   - ACL2Current
+    #   - ACL2Power
+    #   - ACL2Voltage
+    #   - ACL3Current
+    #   - ACL3Power
+    #   - ACL3Voltage
+    #   - HomeConsumptionDay
+    #   - HomeConsumptionMonth
+    #   - HomeConsumptionTotal
+    #   - HomeConsumptionYear
+    #   - HomeConsumptionFromBatDay
+    #   - HomeConsumptionFromBatMonth
+    #   - HomeConsumptionFromBatTotal
+    #   - HomeConsumptionFromBatYear
+    #   - HomeConsumptionFromGridDay
+    #   - HomeConsumptionFromGridMonth
+    #   - HomeConsumptionFromGridTotal
+    #   - HomeConsumptionFromGridYear
+    #   - HomeConsumptionFromPVDay
+    #   - HomeConsumptionFromPVMonth
+    #   - HomeConsumptionFromPVTotal
+    #   - HomeConsumptionFromPVYear
+    #   - HomeConsumptionYieldDay
+    #   - HomeConsumptionYieldMonth
+    #   - HomeConsumptionYieldTotal
+    #   - HomeConsumptionYieldYear
