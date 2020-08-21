@@ -46,6 +46,6 @@ sensor.daily_energy_einspeisung:
   friendly_name: Einspeisung
   icon: mdi:home-export-outline
 
-  sensor.daily_energy_bezug:
+sensor.daily_energy_bezug:
   friendly_name: Netzbezug 
   icon: mdi:power-socket-de
