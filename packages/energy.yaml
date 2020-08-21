@@ -26,7 +26,7 @@ sensor:
     #   - HomeOwnPower
       - HomePVPower
     #   - HomeBatteryPower
-    #   - GridPower
+      - GridPower
       - DCPower
       - PVPower
     #   - AutarkyDay
