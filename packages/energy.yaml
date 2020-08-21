@@ -80,13 +80,13 @@ sensor:
         friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'kWh'
         value_template: "{{ ((states('sensor.kostal_yield_day') | int) / 1000) | round(0) }}"
-        icon: mdi:solar-power
+        icon_template: mdi:solar-power
 
       daily_ownconsumption_kwh:
         friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'kWh'
         value_template: "{{ ((states('sensor.kostal_yield_day') | int) / 1000) | round(0) - (states('sensor.daily_energy_einspeisung') | int)}}"
-        icon: mdi:home-import-outline
+        icon_template: mdi:home-import-outline
   
 
 
