@@ -16,7 +16,7 @@ service_data:
     layout: vertical
     cards:
       - type: entities
-        title: Verbrauch
+        title: Strommix (täglich)
         show_header_toggle: false
         style: |
           ha-card {
