@@ -79,13 +79,13 @@ utility_meter:
     source: sensor.sml_output_wirkenergie_bezug_summe_kwh
     cycle: hourly
   hourly_energy_einspeisung:
-    source: sml_output_wirkenergie_einspeisung_summe_kwh
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
     cycle: hourly
   daily_energy_bezug:
     source: sensor.sml_output_wirkenergie_bezug_summe_kwh
     cycle: daily
   daily_energy_einspeisung:
-    source: sml_output_wirkenergie_einspeisung_summe_kwh
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
     cycle: daily
   monthly_energy_bezug:
     source: sensor.sml_output_wirkenergie_bezug_summe_kwh
