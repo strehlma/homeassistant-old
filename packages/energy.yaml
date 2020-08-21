@@ -73,3 +73,30 @@ sensor:
       - HomeConsumptionYieldMonth
       - HomeConsumptionYieldTotal
       - HomeConsumptionYieldYear
+
+utility_meter:
+  hourly_energy_bezug:
+    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+    cycle: hourly
+  hourly_energy_einspeisung:
+    source: sml_output_wirkenergie_einspeisung_summe_kwh
+    cycle: hourly
+  daily_energy_bezug:
+    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+    cycle: daily
+  daily_energy_einspeisung:
+    source: sml_output_wirkenergie_einspeisung_summe_kwh
+    cycle: daily
+  monthly_energy_bezug:
+    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+    cycle: monthly
+  monthly_energy_einspeisung:
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
+    cycle: monthly
+  yearly_energy_bezug:
+    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+    cycle: yearly
+  yearly_energy_einspeisung:
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
+    cycle: yearly
+      
