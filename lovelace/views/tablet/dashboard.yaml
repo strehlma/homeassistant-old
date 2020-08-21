@@ -170,6 +170,23 @@ cards:
 
       #################################################
       #                                               #
+      #                  ENERGY BUTTON                #
+      #                                               #
+      #################################################
+
+      - type: icon
+        icon: mdi:solar-power
+        title: Solar Power
+        style:
+          top: 83%
+          left: 4.85%
+          color: rgba(255, 255, 255, 0.10)
+          padding: 0.8vw
+          --mdc-icon-size: 4vw
+        tap_action: !include popup/sidebar_solar_power.yaml
+
+      #################################################
+      #                                               #
       #                  INFO BUTTON                  #
       #                                               #
       #################################################
