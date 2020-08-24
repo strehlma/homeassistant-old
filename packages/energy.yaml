@@ -85,35 +85,45 @@ sensor:
       daily_ownconsumption_kwh:
         friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'kWh'
-        value_template: "{{ ((states('sensor.kostal_yield_day') | int) / 1000) | round(0) - (states('sensor.daily_energy_einspeisung') | int)}}"
+        value_template: "{{ ((((states('sensor.kostal_yield_day') | int) | round(0)) - (states('sensor.daily_energy_einspeisung_wh') | int)) / 1000) }}"
         icon_template: mdi:home-import-outline
   
+      daily_energy_bezug_kwh:
+        friendly_name: "Netzbezug"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ (((states('sensor.daily_energy_bezug_wh') | int) / 1000) | round(0)) }}"
+        icon_template: mdi:power-socket-de
 
-
+      daily_energy_einspeisung_kwh:
+        friendly_name: "Einspeisung"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ (((states('sensor.daily_energy_einspeisung_wh') | int) / 1000) | round(0)) }}"
+        icon_template: mdi:home-export-outline
+      
 
 utility_meter:
-  hourly_energy_bezug:
-    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+  hourly_energy_bezug_wh:
+    source: sensor.sml_output_wirkenergie_bezug_summe_wh
     cycle: hourly
-  hourly_energy_einspeisung:
-    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
+  hourly_energy_einspeisung_wh:
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: hourly
-  daily_energy_bezug:
-    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+  daily_energy_bezug_wh:
+    source: sensor.sml_output_wirkenergie_bezug_summe_wh
     cycle: daily
-  daily_energy_einspeisung:
-    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
+  daily_energy_einspeisung_wh:
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: daily
-  monthly_energy_bezug:
-    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+  monthly_energy_bezug_wh:
+    source: sensor.sml_output_wirkenergie_bezug_summe_wh
     cycle: monthly
-  monthly_energy_einspeisung:
-    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
+  monthly_energy_einspeisung_wh:
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: monthly
-  yearly_energy_bezug:
-    source: sensor.sml_output_wirkenergie_bezug_summe_kwh
+  yearly_energy_bezug_wh:
+    source: sensor.sml_output_wirkenergie_bezug_summe_wh
     cycle: yearly
-  yearly_energy_einspeisung:
-    source: sensor.sml_output_wirkenergie_einspeisung_summe_kwh
+  yearly_energy_einspeisung_wh:
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: yearly
-      
+

@@ -29,13 +29,7 @@ service_data:
             0% { transform: scale(0.6); opacity: 0; } 20% { opacity: 0; } 100% { transform: scale(1); opacity: 0.9; }}
         entities:
           - entity: sensor.kostal_yield_day_kwh
-          - entity: sensor.daily_energy_einspeisung
+          - entity: sensor.daily_energy_einspeisung_kwh
           - entity: sensor.daily_ownconsumption_kwh
-          - entity: sensor.daily_energy_bezug
-          - type: custom:mini-graph-card
-            entities:
-              - entity: sensor.kostal_yield_day_kwh
-              - entity: sensor.daily_energy_einspeisung
-              - entity: sensor.daily_ownconsumption_kwh
-              - entity: sensor.daily_energy_bezug
+          - entity: sensor.daily_energy_bezug_kwh
     
