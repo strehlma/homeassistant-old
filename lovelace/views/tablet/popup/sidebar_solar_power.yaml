@@ -15,9 +15,13 @@ service_data:
     column_width: [400, 400, 400]
     layout: vertical
     cards:
-      - type: entities
+      # - type: entities
+      #   title: Strommix (täglich)
+      #   show_header_toggle: false
+        # entities:
+      - type: picture-elements
+        image: /local/images/solar.png
         title: Strommix (täglich)
-        show_header_toggle: false
         style: |
           ha-card {
             animation: pop-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; transform-origin: center;
@@ -27,32 +31,29 @@ service_data:
             margin: -0.4em 0 1em 0.4em; font-family: sf text; letter-spacing: 0.005em; font-size: 1.5em;}
           @keyframes pop-in {
             0% { transform: scale(0.6); opacity: 0; } 20% { opacity: 0; } 100% { transform: scale(1); opacity: 0.9; }}
-        entities:
-          - type: picture-elements
-            image: /local/images/solar.png
-            elements:
-              - type: state-label
-                entity: sensor.kostal_yield_day_kwh
-                style:
-                  top: 20%
-                  left: 20%
-                  color: white
-              - type: state-label
-                entity: sensor.daily_energy_einspeisung_kwh
-                style:
-                  top: 20%
-                  left: 70%
-                  color: white
-              - type: state-label
-                entity: sensor.daily_energy_bezug_kwh
-                style:
-                  top: 80%
-                  left: 20%
-                  color: white
-              - type: state-label
-                entity: sensor.daily_ownconsumption_kwh
-                style:
-                  top: 80%
-                  left: 70%
-                  color: white
+        elements:
+          - type: state-label
+            entity: sensor.kostal_yield_day_kwh
+            style:
+              top: 20%
+              left: 20%
+              color: white
+          - type: state-label
+            entity: sensor.daily_energy_einspeisung_kwh
+            style:
+              top: 20%
+              left: 70%
+              color: white
+          - type: state-label
+            entity: sensor.daily_energy_bezug_kwh
+            style:
+              top: 80%
+              left: 20%
+              color: white
+          - type: state-label
+            entity: sensor.daily_ownconsumption_kwh
+            style:
+              top: 80%
+              left: 70%
+              color: white
                                           
