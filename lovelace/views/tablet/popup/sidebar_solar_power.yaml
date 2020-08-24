@@ -35,25 +35,25 @@ service_data:
           - type: state-label
             entity: sensor.kostal_yield_day_kwh
             style:
-              top: 20%
-              left: 20%
+              top: 45%
+              right: 56.2%
               color: white
           - type: state-label
             entity: sensor.daily_energy_einspeisung_kwh
             style:
-              top: 20%
-              left: 70%
+              top: 45%
+              right: 3%
               color: white
           - type: state-label
             entity: sensor.daily_energy_bezug_kwh
             style:
-              top: 80%
-              left: 20%
+              top: 55%
+              right: 20%
               color: white
           - type: state-label
             entity: sensor.daily_ownconsumption_kwh
             style:
-              top: 80%
-              left: 70%
+              top: 55%
+              right: 3%
               color: white
                                           
