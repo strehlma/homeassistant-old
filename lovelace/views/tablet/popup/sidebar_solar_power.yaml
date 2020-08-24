@@ -28,8 +28,31 @@ service_data:
           @keyframes pop-in {
             0% { transform: scale(0.6); opacity: 0; } 20% { opacity: 0; } 100% { transform: scale(1); opacity: 0.9; }}
         entities:
-          - entity: sensor.kostal_yield_day_kwh
-          - entity: sensor.daily_energy_einspeisung_kwh
-          - entity: sensor.daily_ownconsumption_kwh
-          - entity: sensor.daily_energy_bezug_kwh
-    
+          - type: picture-elements
+            image: /local/images/solar.png
+            elements:
+              - type: state-label
+                entity: sensor.kostal_yield_day_kwh
+                style:
+                  top: 20%
+                  left: 20%
+                  color: white
+              - type: state-label
+                entity: sensor.daily_energy_einspeisung_kwh
+                style:
+                  top: 20%
+                  left: 70%
+                  color: white
+              - type: state-label
+                entity: sensor.daily_energy_bezug_kwh
+                style:
+                  top: 80%
+                  left: 20%
+                  color: white
+              - type: state-label
+                entity: sensor.daily_ownconsumption_kwh
+                style:
+                  top: 80%
+                  left: 70%
+                  color: white
+                                          
