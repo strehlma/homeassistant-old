@@ -1,17 +1,49 @@
 sensor:
   - platform: mqtt
-    state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_kWh"
-    name: sml_output_wirkenergie_bezug_summe_kwh
+    state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_Wh"
+    name: sml_output_wirkenergie_bezug_summe_wh
     force_update: true
-    unit_of_measurement: 'kWh'
+    unit_of_measurement: 'Wh'
+    icon: mdi:power-socket-de
+    device_class: power
+
+  - platform: mqtt
+    state_topic: "sml/ISKRA_MT175/Wirkenergie_Einspeisung_Summe_Wh"
+    name: sml_output_wirkenergie_einspeisung_summe_wh
+    force_update: true
+    unit_of_measurement: 'Wh'
+    icon: mdi:home-export-outline
+    device_class: power
+
+  - platform: mqtt
+    state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_Summe_W"
+    name: sml_output_momentanwirkleistung_summe_w
+    force_update: true
+    unit_of_measurement: 'W'
     icon: mdi:flash
     device_class: power
 
   - platform: mqtt
-    state_topic: "sml/ISKRA_MT175/Wirkenergie_Einspeisung_Summe_kWh"
-    name: sml_output_wirkenergie_einspeisung_summe_kwh
+    state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L1_W"
+    name: sml_output_momentanwirkleistung_l1_w
     force_update: true
-    unit_of_measurement: 'kWh'
+    unit_of_measurement: 'W'
+    icon: mdi:flash
+    device_class: power
+
+  - platform: mqtt
+    state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L2_W"
+    name: sml_output_momentanwirkleistung_l2_w
+    force_update: true
+    unit_of_measurement: 'W'
+    icon: mdi:flash
+    device_class: power
+
+  - platform: mqtt
+    state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L3_W"
+    name: sml_output_momentanwirkleistung_l3_w
+    force_update: true
+    unit_of_measurement: 'W'
     icon: mdi:flash
     device_class: power
 
