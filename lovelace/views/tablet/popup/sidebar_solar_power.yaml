@@ -48,7 +48,7 @@ service_data:
             entity: sensor.daily_energy_bezug_kwh
             style:
               top: 55%
-              right: 20%
+              right: 56.2%
               color: white
           - type: state-label
             entity: sensor.daily_ownconsumption_kwh
