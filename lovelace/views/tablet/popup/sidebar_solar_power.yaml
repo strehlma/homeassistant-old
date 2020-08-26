@@ -8,7 +8,7 @@ service_data:
     --more-info-header-color: rgba(255,255,255,0.6)
     background: none
     box-shadow: none
-    width: 400px
+    width: 800px
   card:
     type: custom:layout-card
     column_num: 2
