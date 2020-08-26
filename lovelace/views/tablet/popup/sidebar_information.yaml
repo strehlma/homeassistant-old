@@ -11,8 +11,8 @@
                   width: calc(400px + 400px)
                 card:
                   type: custom:layout-card
-                  column_num: 3
-                  column_width: [400, 400, 400]
+                  column_num: 2
+                  column_width: [400, 400]
                   layout: vertical
                   cards:
                     - type: entities
