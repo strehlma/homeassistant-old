@@ -117,7 +117,7 @@ sensor:
       daily_ownconsumption_kwh:
         friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'kWh'
-        value_template: "{{ ((((states('sensor.kostal_yield_day') | int) | round(0)) - (states('sensor.daily_energy_einspeisung_wh') | int)) / 1000) }}"
+        value_template: "{{ ((((states('sensor.kostal_yield_day') | int) - (states('sensor.daily_energy_einspeisung_wh') | int)) / 1000)) | round(0) }}"
         icon_template: mdi:home-import-outline
   
       daily_energy_bezug_kwh:
