@@ -76,6 +76,8 @@ service_data:
           - entity: sensor.kostal_power_grid
           - type: custom:bar-card
             unit_of_measurement: 'W'
+            min: 0
+            max: 10000
             height: 2em
             width: 55%
             decimal: 0
