@@ -12,7 +12,7 @@ service_data:
   card:
     type: custom:layout-card
     column_num: 2
-    column_width: [400, 400]
+    column_width: [400px, 400px]
     layout: vertical
     cards:
       # - type: entities
