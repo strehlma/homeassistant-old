@@ -47,5 +47,5 @@ script:
         data:
           duration: 16000
           message: 'Home Assistant neu starten ...'
-      - service: shell_command.restart_hass_docker
+      - service: homeassistant.restart
 
