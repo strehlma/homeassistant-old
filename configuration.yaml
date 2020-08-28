@@ -52,10 +52,10 @@ lovelace:
       title: "Tablet UI"
       icon: mdi:tablet-ipad
       show_in_sidebar: true
-    lovelace-tablet_new:
+    lovelace-tablet-new:
       mode: yaml
       filename: ui-tablet-new.yaml
-      title: "Tablet UI"
+      title: "Tablet UI New"
       icon: mdi:tablet-ipad
       show_in_sidebar: true
   
