@@ -5,4 +5,4 @@ panel: true
 
 cards:
   - elements:
-    - !include 'sidebar.yaml'
+    !include 'sidebar.yaml'
