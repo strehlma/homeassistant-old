@@ -1,5 +1,5 @@
 # Custom Card Resources
-# resources:
+resources:
   !include lovelace/resources/resources.yaml
  
 # Custom Header
