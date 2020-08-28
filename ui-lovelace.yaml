@@ -1,6 +1,6 @@
 # Custom Card Resources
-resources:
-  !include lovelace/resources/resources.yaml
+# resources:
+#   !include lovelace/resources/resources.yaml
  
 # Custom Header
 # You will need to hide views if you want to
