@@ -1,0 +1,16 @@
+compact_mode: true
+editor_warnings: false
+exceptions:
+  - conditions:
+      user_agent: >-
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/605.1.15
+        (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15
+    config:
+      disable_sidebar: true
+      hide_header: true
+      kiosk_mode: true
+  - conditions:
+      user: tablet
+    config:
+      hidden_tab_redirect: false
+      kiosk_mode: true

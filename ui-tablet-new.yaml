@@ -1,0 +1,13 @@
+custom_header:
+  !include lovelace/custom_header/tablet_header.yaml
+
+preload_cards:
+  [map, iframe]
+preload_rows:
+  [input-select-entity]
+  
+title: Home
+views:
+  - !include lovelace/views/tablet_new/dashboard.yaml
+  - !include lovelace/views/tablet_new/media.yaml
+  

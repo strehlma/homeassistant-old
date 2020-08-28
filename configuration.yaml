@@ -52,7 +52,13 @@ lovelace:
       title: "Tablet UI"
       icon: mdi:tablet-ipad
       show_in_sidebar: true
-
+    lovelace-tablet_new:
+      mode: yaml
+      filename: ui-tablet-new.yaml
+      title: "Tablet UI"
+      icon: mdi:tablet-ipad
+      show_in_sidebar: true
+  
 hacs:
   token: !secret hacs_token
 

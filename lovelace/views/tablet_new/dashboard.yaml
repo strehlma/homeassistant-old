@@ -1,0 +1,8 @@
+title: Home
+path: tablet_new/home
+icon: 'mdi:home'
+panel: true
+
+cards:
+  - elements:
+    - !include 'sidebar.yaml'

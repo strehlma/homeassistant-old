@@ -41,3 +41,34 @@ sensor:
       - ozone
       - precip_type
     language: de
+
+  - platform: buienradar
+    name: 'buienradar'
+    latitude: !secret latitude_home
+    longitude: !secret longitude_home
+    timeframe: 120
+    monitored_conditions:
+      - stationname
+      - barometerfc
+      - barometerfcname
+      - conditioncode
+      - condition
+      - conditiondetailed
+      - conditionexact
+      - conditionexact_1d
+      - symbol
+      - feeltemperature
+      - temperature
+      - groundtemperature
+      - windspeed
+      - windforce
+      - windgust
+      - rain_1d 
+      - windspeed_1d 
+      - rainchance_1d
+      - precipitation
+      - irradiance
+      - precipitation_forecast_average
+      - precipitation_forecast_total
+      - rainlast24hour
+      - rainlasthour
