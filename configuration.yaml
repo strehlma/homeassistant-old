@@ -59,8 +59,8 @@ lovelace:
       icon: mdi:tablet-ipad
       show_in_sidebar: true
   
-hacs:
-  token: !secret hacs_token
+# hacs:
+#   token: !secret hacs_token
 
 browser_mod:
   devices:
