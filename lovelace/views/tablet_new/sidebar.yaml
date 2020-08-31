@@ -151,35 +151,35 @@ elements:
       width: 10%
     text: 'People at home:'
 
-  # - type: image
-  #   action: none
-  #   entity: person.luke_vink
-  #   state_image:
-  #     home: /local/people/luke.png
-  #     not_home: /local/people/lukeGone.png
-  #   style:
-  #     background-color: 'rgba(255, 255, 255, 0.0)'
-  #     border-radius: 10vw
-  #     height: 4.5vw
-  #     left: 5.8%
-  #     top: 72%
-  #     width: 4.5vw
-  #   tap_action: none
+  - type: image
+    action: none
+    entity: person.luke_vink
+    state_image:
+      home: /local/images/mario.png
+      not_home: /local/images/mario_gone.png
+    style:
+      background-color: 'rgba(255, 255, 255, 0.0)'
+      border-radius: 10vw
+      height: 4.5vw
+      left: 5.8%
+      top: 72%
+      width: 4.5vw
+    tap_action: none
 
-  # - type: image
-  #   action: none
-  #   entity: person.santa_stibe
-  #   state_image:
-  #     home: /local/people/santa.png
-  #     not_home: /local/people/santaGone.png
-  #   style:
-  #     background-color: 'rgba(255, 255, 255, 0.0)'
-  #     border-radius: 10vw
-  #     height: 4.5vw
-  #     left: 10.8%
-  #     top: 72%
-  #     width: 4.5vw
-  #   tap_action: none
+  - type: image
+    action: none
+    entity: person.santa_stibe
+    state_image:
+      home: /local/images/sani.png
+      not_home: /local/images/sani_gone.png
+    style:
+      background-color: 'rgba(255, 255, 255, 0.0)'
+      border-radius: 10vw
+      height: 4.5vw
+      left: 10.8%
+      top: 72%
+      width: 4.5vw
+    tap_action: none
 
   - type: image
     action: none
