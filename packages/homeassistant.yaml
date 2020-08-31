@@ -19,10 +19,6 @@ sensor:
     name: hass_version_latest
     source: docker
 
-  - platform: filesize
-    file_paths:
-      - /config/home-assistant.log
-
   - platform: template
     sensors:
       hass_version_template:
