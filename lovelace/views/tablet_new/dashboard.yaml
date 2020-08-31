@@ -4,50 +4,52 @@ icon: 'mdi:home'
 panel: true
 
 cards:
-  - elements:
-    - type: image
-      action: none
-      hold_action:
-        action: none
-      image: /local/images/sidebarBG2.png
-      style:
-        height: 100%
-        left: 11.73828125%
-        top: 50%
-        width: 23.4765625%
-      tap_action:
-        action: none
-    
-    - type: state-label
-      entity: sensor.time
-      hold_action:
-        action: none
-      style:
-        color: 'rgba(255, 255, 255, 0.7)'
-        font-size: 5.41vw
-        font-weight: 200
-        left: 2.7%
-        letter-spacing: '-0.05vw'
-        max-width: 1px
-        top: 10%
-      tap_action:
-        action: none
-    
-    - type: state-label
-      entity: sensor.date_string
-      hold_action:
-        action: none
-      style:
-        color: 'rgba(255, 255, 255, 0.3)'
-        font-size: 1.3vw
-        font-weight: 300
-        left: 18.1%
-        letter-spacing: '-0.05vw'
-        text-align: left
-        top: 17%
-        width: 30%
-      tap_action:
-        action: none
+  - !include ./sidebar.yaml
+  # - type: picture-elements
+  #   elements:
+  #     - type: image
+  #       action: none
+  #       hold_action:
+  #         action: none
+  #       image: /local/images/sidebarBG2.png
+  #       style:
+  #         height: 100%
+  #         left: 11.73828125%
+  #         top: 50%
+  #         width: 23.4765625%
+  #       tap_action:
+  #         action: none
+      
+  #     - type: state-label
+  #       entity: sensor.time
+  #       hold_action:
+  #         action: none
+  #       style:
+  #         color: 'rgba(255, 255, 255, 0.7)'
+  #         font-size: 5.41vw
+  #         font-weight: 200
+  #         left: 2.7%
+  #         letter-spacing: '-0.05vw'
+  #         max-width: 1px
+  #         top: 10%
+  #       tap_action:
+  #         action: none
+      
+  #     - type: state-label
+  #       entity: sensor.date_string
+  #       hold_action:
+  #         action: none
+  #       style:
+  #         color: 'rgba(255, 255, 255, 0.3)'
+  #         font-size: 1.3vw
+  #         font-weight: 300
+  #         left: 18.1%
+  #         letter-spacing: '-0.05vw'
+  #         text-align: left
+  #         top: 17%
+  #         width: 30%
+  #       tap_action:
+  #         action: none
     
     #   - action: none
     # image: /local/ui/sidebar/rooms_off.png
