@@ -153,7 +153,7 @@ elements:
 
   - type: image
     action: none
-    entity: person.luke_vink
+    entity: person.mario
     state_image:
       home: /local/images/mario.png
       not_home: /local/images/mario_gone.png
@@ -168,7 +168,7 @@ elements:
 
   - type: image
     action: none
-    entity: person.santa_stibe
+    entity: person.sandra
     state_image:
       home: /local/images/sani.png
       not_home: /local/images/sani_gone.png
