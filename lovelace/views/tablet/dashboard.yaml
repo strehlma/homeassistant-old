@@ -155,7 +155,7 @@ cards:
           color: 'rgba(255, 255, 255, 0.7)'
           font-size: 5.41vw
           font-weight: 200
-          left: 2.7%
+          left: 4%
           letter-spacing: '-0.05vw'
           max-width: 1px
           top: 10%
@@ -194,7 +194,7 @@ cards:
           background-color: 'rgba(255, 255, 255, 0.0)'
           border-radius: 10vw
           height: 4.5vw
-          left: 5.8%
+          left: 7%
           top: 25%
           width: 4.5vw
         tap_action: none
@@ -209,7 +209,7 @@ cards:
           background-color: 'rgba(255, 255, 255, 0.0)'
           border-radius: 10vw
           height: 4.5vw
-          left: 10.8%
+          left: 14%
           top: 25%
           width: 4.5vw
         tap_action: none
@@ -228,7 +228,7 @@ cards:
         variables:
           my_icon: "mdi:window-closed"        
         style:
-          top: 26.35%
+          top: 33%
           left: 10.1%
           width: 10%
         template: info
