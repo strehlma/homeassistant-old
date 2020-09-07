@@ -4,4 +4,85 @@ icon: 'mdi:home'
 panel: true
 
 cards:
-  - !include ./sidebar.yaml
+  # - !include ./sidebar.yaml
+  - type: picture-elements
+    image: /local/images/blurredFloorplan.png
+    style: |
+      ha-card {
+        background: rgba(42, 46, 48, 1)
+      }
+      upcoming-media-card ha-card{
+        background: none;
+        box-shadow: none !important;
+      }
+      upcoming-media-card ha-card div:nth-child(2) {
+        padding:0 !important;
+      }
+      .rece_poster{
+        width: 31% !important;
+        display: inline-block !important;
+        margin: 0% 0.2% !important;
+      }
+      .rece_svg_poster{
+        position: absolute !important;
+        bottom:-5%;
+        left:0;
+        width: 100% !important;
+      }
+      .rece_container_poster{
+        width:100% !important;
+        outline: none !important;
+        margin: 1% 1% !important;
+        overflow: hidden;
+      }
+      .rece_svg_poster > rect{
+        fill:none !important;
+      }
+      .card-header{
+        font-size: 1vw;
+        padding: 0;
+      }
+    elements:
+      - type: image
+        action: none
+        hold_action:
+          action: none
+        image: /local/images/sidebarBG2.png
+        style:
+          height: 100%
+          left: 11.73828125%
+          top: 50%
+          width: 23.4765625%
+        tap_action:
+          action: none
+    
+      - type: state-label
+        entity: sensor.time
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.7)'
+          font-size: 5.41vw
+          font-weight: 200
+          left: 2.7%
+          letter-spacing: '-0.05vw'
+          max-width: 1px
+          top: 10%
+        tap_action:
+          action: none
+    
+      - type: state-label
+        entity: sensor.date_string
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.3)'
+          font-size: 1.3vw
+          font-weight: 300
+          left: 18.1%
+          letter-spacing: '-0.05vw'
+          text-align: left
+          top: 17%
+          width: 30%
+        tap_action:
+          action: none
