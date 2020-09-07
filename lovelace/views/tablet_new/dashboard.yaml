@@ -86,3 +86,60 @@ cards:
           width: 30%
         tap_action:
           action: none
+
+      - type: 'custom:mini-graph-card'
+        color_thresholds:
+          - color: '#ff1a1a'
+            value: 1000
+          - color: '#ffa31a'
+            value: 2500
+          - color: '#B4CD31'
+            value: 4000
+        entities:
+          - sensor.actual_energy_production_w
+        icon: mdi:solar-power
+        show:
+          icon: true
+          legend: false
+          name: false
+        style: |
+          :host {
+            left: 11.6%;
+            top:  92.9%;
+            width: 23.5%;
+            overflow: hidden;
+            height: 15%;
+            background: none  !important;
+            box-shadow: none !important;
+          }
+          .header {
+            font-size: 1vw;
+            position: absolute !important;
+            width: 5% !important;
+            padding: 0 !important;
+            right: 20% !important;
+            top: 15% !important;
+          }
+          ha-card {
+            background: none  !important;
+            padding: 0 !important;
+          }
+          .icon > ha-icon {
+            width:1.8vw !important;
+            height:1.8vw !important;
+          }
+          .state__time{
+            font-size:0.9vw !important;
+            margin-top: 0.2vw;
+            font-weight: 300 !important;
+            opacity: 0.4 !important;
+          }
+          .states {
+            font-size: 0.5vw !important;
+            padding: 1vw 0vw 0vw 0vw  !important;
+            margin: auto !important;
+            width: 68%;
+          }
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/4

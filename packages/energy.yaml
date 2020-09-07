@@ -132,6 +132,12 @@ sensor:
         value_template: "{{ (((states('sensor.daily_energy_einspeisung_wh') | int) / 1000) | round(0)) }}"
         icon_template: mdi:home-export-outline
       
+      actual_energy_production_w:
+        friendly_name: Solarleistung
+        unit_of_measurement: 'W'
+        value_template: "{{ ((states('sensor.kostal_power_grid') | int) * (-1) ) }}"
+        icon_template: mdi:solar-power
+        
 
 utility_meter:
   hourly_energy_bezug_wh:
