@@ -203,19 +203,24 @@ cards:
         - icon: mdi:door
           background_color: "[[[ if (states['sensor.current_doors_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
           badge: "[[[ if (states['sensor.current_doors_open'].state < 1) return '&nbsp;'; else return states['sensor.current_doors_open'].state ]]]"
-          size: 100%
+          top: 40%
+          left: 10%
           entity: group.all_door_sensors
       - !include
         - ../../templates/button_header_badge.yaml
         - icon: mdi:window-closed
           background_color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
           badge: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+          top: 40%
+          left: 10%
           entity: group.all_window_sensors
       - !include
         - ../../templates/button_header_badge.yaml
         - icon: mdi:motion-sensor
           background_color: "[[[ if (states['sensor.current_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
           badge: "[[[ if (states['sensor.current_sensors_on'].state < 1) return '&nbsp;'; else return states['sensor.current_sensors_on'].state ]]]"
+          top: 40%
+          left: 10%
           entity: group.all_motion_sensors
 
 
