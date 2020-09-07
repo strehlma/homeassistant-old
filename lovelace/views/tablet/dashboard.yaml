@@ -177,6 +177,43 @@ cards:
           width: 30%
         tap_action:
           action: none
+
+      #################################################
+      #                                               #
+      #                 Persons                       #
+      #                                               #
+      #################################################
+
+      - type: image
+        action: none
+        entity: person.mario
+        state_image:
+          home: /local/images/mario.png
+          not_home: /local/images/mario_gone.png
+        style:
+          background-color: 'rgba(255, 255, 255, 0.0)'
+          border-radius: 10vw
+          height: 4.5vw
+          left: 5.8%
+          top: 25%
+          width: 4.5vw
+        tap_action: none
+    
+      - type: image
+        action: none
+        entity: person.sandra
+        state_image:
+          home: /local/images/sani.png
+          not_home: /local/images/sani_gone.png
+        style:
+          background-color: 'rgba(255, 255, 255, 0.0)'
+          border-radius: 10vw
+          height: 4.5vw
+          left: 10.8%
+          top: 25%
+          width: 4.5vw
+        tap_action: none
+      
   
       #################################################
       #                                               #
@@ -206,115 +243,115 @@ cards:
       #       top: 20%
       #       left: 11.1%
 
-      #################################################
-      #                                               #
-      #                  ENERGY BUTTON                #
-      #                                               #
-      #################################################
+      # #################################################
+      # #                                               #
+      # #                  ENERGY BUTTON                #
+      # #                                               #
+      # #################################################
 
-      - type: icon
-        icon: mdi:solar-power
-        title: Solar Power
-        style:
-          top: 83%
-          left: 4.85%
-          color: rgba(255, 255, 255, 0.10)
-          padding: 0.8vw
-          --mdc-icon-size: 4vw
-        tap_action: !include popup/sidebar_solar_power.yaml
+      # - type: icon
+      #   icon: mdi:solar-power
+      #   title: Solar Power
+      #   style:
+      #     top: 83%
+      #     left: 4.85%
+      #     color: rgba(255, 255, 255, 0.10)
+      #     padding: 0.8vw
+      #     --mdc-icon-size: 4vw
+      #   tap_action: !include popup/sidebar_solar_power.yaml
 
-      #################################################
-      #                                               #
-      #                  INFO BUTTON                  #
-      #                                               #
-      #################################################
+      # #################################################
+      # #                                               #
+      # #                  INFO BUTTON                  #
+      # #                                               #
+      # #################################################
 
-      - type: icon
-        icon: mdi:information-outline
-        title: Information
-        style:
-          top: 83%
-          left: 10.7%
-          color: rgba(255, 255, 255, 0.10)
-          padding: 0.8vw
-          --mdc-icon-size: 4vw
-        tap_action: !include popup/sidebar_information.yaml
+      # - type: icon
+      #   icon: mdi:information-outline
+      #   title: Information
+      #   style:
+      #     top: 83%
+      #     left: 10.7%
+      #     color: rgba(255, 255, 255, 0.10)
+      #     padding: 0.8vw
+      #     --mdc-icon-size: 4vw
+      #   tap_action: !include popup/sidebar_information.yaml
 
-      - type: conditional
-        conditions:
-          - entity: sensor.hass_version_template
-            state_not: neueste
-          - entity: sensor.hass_version_template
-            state_not: unknown
-        elements:
-          - type: image
-            image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='20.3' fill='%23ac2e2e' /%3E%3Cpath d='M24.4 18.3h0L19 21.9v-3.4l5.3-3.7H28v20.4h-3.6V18.3z' fill='%23bcbebf' /%3E%3C/svg%3E"
-            style:
-              top: 80.5%
-              left: 12.2%
-              width: 1.7%
-              pointer-events: none
+      # - type: conditional
+      #   conditions:
+      #     - entity: sensor.hass_version_template
+      #       state_not: neueste
+      #     - entity: sensor.hass_version_template
+      #       state_not: unknown
+      #   elements:
+      #     - type: image
+      #       image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='20.3' fill='%23ac2e2e' /%3E%3Cpath d='M24.4 18.3h0L19 21.9v-3.4l5.3-3.7H28v20.4h-3.6V18.3z' fill='%23bcbebf' /%3E%3C/svg%3E"
+      #       style:
+      #         top: 80.5%
+      #         left: 12.2%
+      #         width: 1.7%
+      #         pointer-events: none
 
-      #################################################
-      #                                               #
-      #                 CAR BUTTON                    #
-      #                                               #
-      #################################################
+      # #################################################
+      # #                                               #
+      # #                 CAR BUTTON                    #
+      # #                                               #
+      # #################################################
 
-      - type: icon
-        icon: mdi:car
-        title: Auto
-        style:
-          top: 83%
-          left: 16.55%
-          color: rgba(255, 255, 255, 0.10)
-          padding: 0.8vw
-          --mdc-icon-size: 4.6vw
-        tap_action: !include popup/sidebar_car.yaml
+      # - type: icon
+      #   icon: mdi:car
+      #   title: Auto
+      #   style:
+      #     top: 83%
+      #     left: 16.55%
+      #     color: rgba(255, 255, 255, 0.10)
+      #     padding: 0.8vw
+      #     --mdc-icon-size: 4.6vw
+      #   tap_action: !include popup/sidebar_car.yaml
 
-      #################################################
-      #                                               #
-      #                  HACS SENSOR                  #
-      #                                               #
-      #################################################
+      # #################################################
+      # #                                               #
+      # #                  HACS SENSOR                  #
+      # #                                               #
+      # #################################################
 
-      - type: conditional
-        conditions:
-          - entity: sensor.hacs
-            state_not: '0'
-          - entity: sensor.hacs
-            state_not: unknown
-        elements:
-          - type: custom:button-card
-            style:
-              top: 90%
-              left: 10.45%
-            name: >
-              [[[ if (parseInt(states['sensor.hacs'].state) === 1) {
-              return states['sensor.hacs'].state + ' Update verfügbar'; }
-              else { return states['sensor.hacs'].state + ' Updates verfügbar'; } ]]]
-            styles:
-              name:
-                [letter-spacing: 0.06vw, font-family: SF Display, font-weight: 500, 
-                font-size: 1.15vw, color: '#6a7377', padding: 0.4vw 1.2vw 0.4vw 1.2vw]
-              card:
-                [background: '#202a2f90', border-radius: 0.7vw, opacity: 0.5]
-            tap_action:
-              action: call-service
-              service: browser_mod.popup
-              service_data:
-                title: Schließen
-                deviceID: this
-                style:
-                  background: none
-                  box-shadow: none
-                  width: 75em
-                card:
-                  type: custom:hui-element
-                  card_type: iframe
-                  url: !secret local_hacs_url
-                  aspect_ratio: 60%
-                  style: 'ha-card { border-radius: 1em;}'
+      # - type: conditional
+      #   conditions:
+      #     - entity: sensor.hacs
+      #       state_not: '0'
+      #     - entity: sensor.hacs
+      #       state_not: unknown
+      #   elements:
+      #     - type: custom:button-card
+      #       style:
+      #         top: 90%
+      #         left: 10.45%
+      #       name: >
+      #         [[[ if (parseInt(states['sensor.hacs'].state) === 1) {
+      #         return states['sensor.hacs'].state + ' Update verfügbar'; }
+      #         else { return states['sensor.hacs'].state + ' Updates verfügbar'; } ]]]
+      #       styles:
+      #         name:
+      #           [letter-spacing: 0.06vw, font-family: SF Display, font-weight: 500, 
+      #           font-size: 1.15vw, color: '#6a7377', padding: 0.4vw 1.2vw 0.4vw 1.2vw]
+      #         card:
+      #           [background: '#202a2f90', border-radius: 0.7vw, opacity: 0.5]
+      #       tap_action:
+      #         action: call-service
+      #         service: browser_mod.popup
+      #         service_data:
+      #           title: Schließen
+      #           deviceID: this
+      #           style:
+      #             background: none
+      #             box-shadow: none
+      #             width: 75em
+      #           card:
+      #             type: custom:hui-element
+      #             card_type: iframe
+      #             url: !secret local_hacs_url
+      #             aspect_ratio: 60%
+      #             style: 'ha-card { border-radius: 1em;}'
 
       ##########################################################################
       #                                                                        #
