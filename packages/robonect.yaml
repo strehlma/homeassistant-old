@@ -1,0 +1,75 @@
+sensor:
+  - platform: mqtt
+    state_topic: "robonect/turtle/mqtt"
+    name: turtle_mqtt_status
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/device/serial"
+    name: turtle_serial
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/device/name"
+    name: turtle_name
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/wlan/rssi"
+    name: turtle_wlan_rssi
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/status"
+    name: turtle_status
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/status/plain"
+    name: turtle_status_plain
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/status/duration"
+    name: turtle_status_duration
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/substatus"
+    name: turtle_substatus
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/substatus/plain"
+    name: turtle_substatus_plain
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/stopped"
+    name: turtle_stopped
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/mode"
+    name: turtle_mode
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/distance"
+    name: turtle_distance
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/battery/charge"
+    name: turtle_battery_charge
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/error/code"
+    name: turtle_error_code
+    force_update: true
+
+  - platform: mqtt
+    state_topic: "robonect/turtle/mower/error/message"
+    name: turtle_error_message
+    force_update: true
