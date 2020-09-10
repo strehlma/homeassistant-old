@@ -201,9 +201,9 @@ cards:
 
       - type: custom:button-card
         style:
-          - margin-top: 12px
-          - top: 40%
-          - left: 10%;
+          margin-top: 12px
+          top: 40%
+          left: 10%
         name: Button
         icon: mdi:window-closed
         size: 80%
