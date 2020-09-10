@@ -198,30 +198,76 @@ cards:
       #                                               #
       #################################################
 
-      - !include
-        - ../../templates/button_header_badge.yaml
-        - icon: mdi:door
-          background_color: "[[[ if (states['sensor.current_doors_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
-          badge: "[[[ if (states['sensor.current_doors_open'].state < 1) return '&nbsp;'; else return states['sensor.current_doors_open'].state ]]]"
-          top: 40%
-          left: 10%
-          entity: group.all_door_sensors
-      - !include
-        - ../../templates/button_header_badge.yaml
-        - icon: mdi:window-closed
-          background_color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
-          badge: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
-          top: 40%
-          left: 10%
-          entity: group.all_window_sensors
-      - !include
-        - ../../templates/button_header_badge.yaml
-        - icon: mdi:motion-sensor
-          background_color: "[[[ if (states['sensor.current_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
-          badge: "[[[ if (states['sensor.current_sensors_on'].state < 1) return '&nbsp;'; else return states['sensor.current_sensors_on'].state ]]]"
-          top: 40%
-          left: 10%
-          entity: group.all_motion_sensors
+
+      - type: custom:button-card
+        style:
+          - margin-top: 12px
+          - top: 40%
+          - left: 10%;
+        name: Button
+        icon: mdi:window-closed
+        size: 80%
+        color: auto
+        entity: input_boolean.dummy1
+        show_name: false
+        show_state: false
+        show_label: false
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+
+
+
+
+
+
+
+      # - !include
+      #   - ../../templates/button_header_badge.yaml
+      #   - icon: mdi:door
+      #     background_color: "[[[ if (states['sensor.current_doors_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+      #     badge: "[[[ if (states['sensor.current_doors_open'].state < 1) return '&nbsp;'; else return states['sensor.current_doors_open'].state ]]]"
+      #     top: 40%
+      #     left: 10%
+      #     entity: group.all_door_sensors
+      # - !include
+      #   - ../../templates/button_header_badge.yaml
+      #   - icon: mdi:window-closed
+      #     background_color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+      #     badge: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+      #     top: 40%
+      #     left: 10%
+      #     entity: group.all_window_sensors
+      # - !include
+      #   - ../../templates/button_header_badge.yaml
+      #   - icon: mdi:motion-sensor
+      #     background_color: "[[[ if (states['sensor.current_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+      #     badge: "[[[ if (states['sensor.current_sensors_on'].state < 1) return '&nbsp;'; else return states['sensor.current_sensors_on'].state ]]]"
+      #     top: 40%
+      #     left: 10%
+      #     entity: group.all_motion_sensors
 
 
       # - type: custom:button-card
