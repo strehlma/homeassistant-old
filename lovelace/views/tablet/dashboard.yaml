@@ -203,16 +203,17 @@ cards:
         icon: mdi:home
         layout: icon_name
         aspect_ratio: 4/1
-        show_state: false
+        width: 10%
+        # show_state: false
         style:
           top: 40vh
           left: 15vh
         action: navigate
         navigation_path: /lovelace-tablet/tablet/home
-        styles:
-          card:
-            [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
-            background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none]
+        # styles:
+          # card:
+          #   [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
+          #   background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none]
     
 
 
