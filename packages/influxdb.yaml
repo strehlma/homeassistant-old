@@ -29,3 +29,9 @@ influxdb:
       - sensor.ds918plus_volume_1_average_disk_temp
       - sensor.ds918plus_volume_1_used_space
       - sensor.ds918plus_volume_1_volume_used
+
+      # Wechselrichter
+      - sensor.kostal_yield_day
+      - sensor.kostal_yield_month
+      - sensor.kostal_yield_total
+      - sensor.kostal_yield_year
