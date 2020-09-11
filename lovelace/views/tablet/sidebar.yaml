@@ -1,0 +1,30 @@
+type: state-label
+entity: sensor.time
+hold_action:
+  action: none
+style:
+  color: 'rgba(255, 255, 255, 0.7)'
+  font-size: 5.41vw
+  font-weight: 200
+  left: 4%
+  letter-spacing: '-0.05vw'
+  max-width: 1px
+  top: 10%
+tap_action:
+  action: none
+
+type: state-label
+entity: sensor.date_string
+hold_action:
+  action: none
+style:
+  color: 'rgba(255, 255, 255, 0.3)'
+  font-size: 1.3vw
+  font-weight: 300
+  left: 18.1%
+  letter-spacing: '-0.05vw'
+  text-align: left
+  top: 17%
+  width: 30%
+tap_action:
+  action: none
