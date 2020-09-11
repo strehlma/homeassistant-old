@@ -36,3 +36,35 @@ cards:
       "#root > hui-state-label-element":
         $: |
           div {padding: 0 !important;}
+    elements:
+      - type: picture-elements
+        image: /local/images/solar.png
+        title: Strommix (täglich)
+        style: 
+          top: 10%
+          left: 50%
+        elements:
+          - type: state-label
+            entity: sensor.kostal_yield_day_kwh
+            style:
+              top: 45%
+              right: 56.2%
+              color: white
+          - type: state-label
+            entity: sensor.daily_energy_einspeisung_kwh
+            style:
+              top: 45%
+              right: 3%
+              color: white
+          - type: state-label
+            entity: sensor.daily_energy_bezug_kwh
+            style:
+              top: 55%
+              right: 56.2%
+              color: white
+          - type: state-label
+            entity: sensor.daily_ownconsumption_kwh
+            style:
+              top: 55%
+              right: 3%
+              color: white
