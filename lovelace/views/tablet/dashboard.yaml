@@ -198,16 +198,15 @@ cards:
       #################################################
   
       - type: custom:button-card
-        entity: input_boolean.dummy1
         name: Home
         icon: mdi:home
         layout: icon_name
         # aspect_ratio: 4/1
         # show_state: false
         style:
-          top: 33vh
-          left: 20vw
-          width: 10vw
+          top: 35%
+          left: 10.5%
+          width: 15vw
           action: navigate
         navigation_path: /lovelace-tablet/tablet/home
         styles:
