@@ -124,37 +124,36 @@ cards:
       #                                               #
       #################################################
 
-      - !include ./sidebar.yaml
-      # - type: state-label
-      #   entity: sensor.time
-      #   hold_action:
-      #     action: none
-      #   style:
-      #     color: 'rgba(255, 255, 255, 0.7)'
-      #     font-size: 5.41vw
-      #     font-weight: 200
-      #     left: 4%
-      #     letter-spacing: '-0.05vw'
-      #     max-width: 1px
-      #     top: 10%
-      #   tap_action:
-      #     action: none
+      - type: state-label
+        entity: sensor.time
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.7)'
+          font-size: 5.41vw
+          font-weight: 200
+          left: 4%
+          letter-spacing: '-0.05vw'
+          max-width: 1px
+          top: 10%
+        tap_action:
+          action: none
     
-      # - type: state-label
-      #   entity: sensor.date_string
-      #   hold_action:
-      #     action: none
-      #   style:
-      #     color: 'rgba(255, 255, 255, 0.3)'
-      #     font-size: 1.3vw
-      #     font-weight: 300
-      #     left: 18.1%
-      #     letter-spacing: '-0.05vw'
-      #     text-align: left
-      #     top: 17%
-      #     width: 30%
-      #   tap_action:
-      #     action: none
+      - type: state-label
+        entity: sensor.date_string
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.3)'
+          font-size: 1.3vw
+          font-weight: 300
+          left: 18.1%
+          letter-spacing: '-0.05vw'
+          text-align: left
+          top: 17%
+          width: 30%
+        tap_action:
+          action: none
 
       #################################################
       #                                               #
@@ -199,55 +198,29 @@ cards:
       #################################################
   
       - type: custom:button-card
+        template: menu
         name: Home
         icon: mdi:home
-        layout: icon_name
-        # aspect_ratio: 4/1
-        # show_state: false
         style:
           top: 35%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/dashboard.yaml
-        styles:
-          card:
-            [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
-            background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none]
-          name: &button_styles_name
-            [line-height: 2vw]
-          icon:
-            [width: 2vw]
         
       - type: custom:button-card
         name: Media
         icon: mdi:speaker
-        layout: icon_name
-        # aspect_ratio: 4/1
-        # show_state: false
         style:
           top: 42%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/media.yaml
-        styles:
-          card:
-            [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
-            background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none]
-          name: &button_styles_name
-            [line-height: 2vw]
-          icon:
-            [width: 2vw]
     
       - type: custom:button-card
         name: Energie
         icon: mdi:flash
-        layout: icon_name
-        # aspect_ratio: 4/1
-        # show_state: false
         style:
           top: 49%
           left: 10.5%
@@ -255,36 +228,16 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/energy
-        styles:
-          card:
-            [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
-            background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none]
-          name: &button_styles_name
-            [line-height: 2vw]
-          icon:
-            [width: 2vw]
 
       - type: custom:button-card
         name: System
         icon: mdi:server
-        layout: icon_name
-        # aspect_ratio: 4/1
-        # show_state: false
         style:
           top: 56%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/system
-        styles:
-          card:
-            [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
-            background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none]
-          name: &button_styles_name
-            [line-height: 2vw]
-          icon:
-            [width: 2vw]
         
 
       #################################################
