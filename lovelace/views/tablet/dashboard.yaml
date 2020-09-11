@@ -203,12 +203,12 @@ cards:
         icon: mdi:home
         layout: icon_name
         # aspect_ratio: 4/1
-        width: 10%
         # show_state: false
         style:
           top: 33vh
-          left: 20vh
-        action: navigate
+          left: 20vw
+          width: 10vw
+          action: navigate
         navigation_path: /lovelace-tablet/tablet/home
         styles:
           card:
