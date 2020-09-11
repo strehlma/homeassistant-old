@@ -209,6 +209,7 @@ cards:
           navigation_path: /lovelace-tablet/dashboard.yaml
         
       - type: custom:button-card
+        template: menu
         name: Media
         icon: mdi:speaker
         style:
@@ -219,6 +220,7 @@ cards:
           navigation_path: /lovelace-tablet/media.yaml
     
       - type: custom:button-card
+        template: menu
         name: Energie
         icon: mdi:flash
         style:
@@ -230,6 +232,7 @@ cards:
           navigation_path: /lovelace-tablet/energy
 
       - type: custom:button-card
+        template: menu
         name: System
         icon: mdi:server
         style:
