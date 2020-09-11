@@ -246,7 +246,7 @@ cards:
         # aspect_ratio: 4/1
         # show_state: false
         style:
-          top: 45%
+          top: 55%
           left: 10.5%
           width: 15vw
           action: navigate
@@ -267,7 +267,7 @@ cards:
         # aspect_ratio: 4/1
         # show_state: false
         style:
-          top: 45%
+          top: 65%
           left: 10.5%
           width: 15vw
           action: navigate
