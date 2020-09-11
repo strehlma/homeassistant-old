@@ -209,7 +209,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace-tablet/tablet/home/
+          navigation_path: /lovelace/tablet/dashboard.yaml
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -231,7 +231,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace-tablet/tablet/media/
+          navigation_path: /lovelace/tablet/media.yaml
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -253,7 +253,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace-tablet/tablet/energy/
+          navigation_path: /lovelace/tablet/energy.yaml
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -275,7 +275,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace-tablet/tablet/system/
+          navigation_path: /lovelace/tablet/system.yaml
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
