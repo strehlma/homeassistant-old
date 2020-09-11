@@ -207,8 +207,9 @@ cards:
           top: 35%
           left: 10.5%
           width: 15vw
-        action: navigate
-        navigation_path: /lovelace-tablet/tablet/home/
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/tablet/home/
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -228,8 +229,9 @@ cards:
           top: 42%
           left: 10.5%
           width: 15vw
-        action: navigate
-        navigation_path: /lovelace-tablet/tablet/media/
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/tablet/media/
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -249,8 +251,9 @@ cards:
           top: 49%
           left: 10.5%
           width: 15vw
-        action: navigate
-        navigation_path: /lovelace-tablet/tablet/energy/
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/tablet/energy/
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -270,8 +273,9 @@ cards:
           top: 56%
           left: 10.5%
           width: 15vw
-        action: navigate
-        navigation_path: /lovelace-tablet/tablet/system/
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/tablet/system/
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
