@@ -202,7 +202,7 @@ cards:
         name: Home
         icon: mdi:home
         layout: icon_name
-        aspect_ratio: 4/1
+        # aspect_ratio: 4/1
         width: 10%
         # show_state: false
         style:
