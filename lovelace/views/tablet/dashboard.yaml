@@ -204,7 +204,7 @@ cards:
         style:
           top: 35%
           left: 10.5%
-          width: 15vh
+          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/dashboard.yaml
@@ -216,7 +216,7 @@ cards:
         style:
           top: 42%
           left: 10.5%
-          width: 15vh
+          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/media.yaml
@@ -240,7 +240,7 @@ cards:
         style:
           top: 56%
           left: 10.5%
-          width: 15vh
+          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/system
