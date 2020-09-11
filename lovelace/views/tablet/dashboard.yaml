@@ -16,7 +16,7 @@ anchors:
     cursor: default
 
 title: Home
-path: tablet/home
+path: home
 icon: 'mdi:home'
 panel: true
 
@@ -209,7 +209,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace/tablet/dashboard.yaml
+          navigation_path: /lovelace-tablet/dashboard.yaml
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -231,7 +231,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace/tablet/media.yaml
+          navigation_path: /lovelace-tablet/media.yaml
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -253,7 +253,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace/tablet/energy.yaml
+          navigation_path: /lovelace-tablet/energy
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
@@ -275,7 +275,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace/tablet/system.yaml
+          navigation_path: /lovelace-tablet/system
         styles:
           card:
             [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
