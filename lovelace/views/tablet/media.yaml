@@ -1,0 +1,38 @@
+title: Media
+path: tablet/media
+icon: 'mdi:speaker'
+panel: true
+
+cards:
+  - type: picture-elements
+    image: /local/images/background.png
+
+    style:
+      .: |
+        /* Global */
+        #root > hui-icon-element {opacity: 0.1 !important; transition: 0.4s;}
+        #root > hui-icon-element:hover {opacity: 0.25 !important; transition: none;}
+        #root > hui-icon-element:active {opacity: 0.35 !important; transition: none;}
+        #root > hui-icon-element:nth-child(10) {
+          {% if states('sensor.hass_version_installed') != states('sensor.hass_version_latest') and 
+          not is_state('sensor.hass_version_latest', 'unknown') or 
+          not is_state('sensor.hacs', '0') and not is_state('sensor.hacs', 'unknown') %}
+            color: rgb(35,78,106) !important; opacity: 1 !important;
+          {% endif %}
+          }
+      "#root > hui-image":
+        $: |
+          #image {pointer-events: none;}
+      "#root > hui-markdown-card, #key1":
+        $: |
+          ha-card > ha-markdown {padding: 0 !important;}
+      "#root > hui-markdown-card, #key2":
+        $:
+          "ha-card > ha-markdown":
+            $: |
+              ha-markdown-element > font > ha-icon {vertical-align: 3%; opacity: 0.6;}
+              ha-markdown-element > p > span {font-family: SF Text; font-size: 5vw; 
+              font-weight: 200; margin-left: -0.3vw; letter-spacing: -0.05vw;}
+      "#root > hui-state-label-element":
+        $: |
+          div {padding: 0 !important;}
