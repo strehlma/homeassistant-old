@@ -171,7 +171,7 @@ sensor:
     entity_id: sensor.actual_energy_production_w
     filters:
       - filter: time_throttle
-        window_size: 06:00:00
+        window_size: 00:01:00
         precision: 0
 
 utility_meter:
