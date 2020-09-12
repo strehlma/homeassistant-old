@@ -271,41 +271,41 @@ cards:
         hold_action:
           action: none
         style:
-          top: 35%
-          left: 33%
+          top: 53vh
+          left: 33vw
           width: 300px
           pointer-events: none
 
       - type: state-label
         entity: sensor.kostal_yield_day_kwh
         style:
-          top: 33.7%
-          left: 28.3%
+          top: 49.4vh
+          left: 29.5vw
           color: white
       - type: state-label
         entity: sensor.daily_energy_einspeisung_kwh
         style:
-          top: 33.7%
-          left: 36%
+          top: 49.4vh
+          left: 38.3vw
           color: white
       - type: state-label
         entity: sensor.daily_energy_bezug_kwh
         style:
-          top: 36.2%
-          left: 28.3%
+          top: 56vh
+          left: 29.5vw
           color: white
       - type: state-label
         entity: sensor.daily_ownconsumption_kwh
         style:
-          top: 36.2%
-          left: 36%
+          top: 56vh
+          left: 38.3vw
           color: white
 
       - type: custom:mini-graph-card
         name: Solarleistung
         style:
-          top: 36.2%
-          left: 50%
+          top: 35vh
+          left: 55vw
         unit: 'W'
         hours_to_show: 24
         points_per_hour: 60
