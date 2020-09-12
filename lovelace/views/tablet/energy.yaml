@@ -300,3 +300,18 @@ cards:
           top: 36.2%
           left: 36%
           color: white
+
+      - type: custom:mini-graph-card
+        name: Solarleistung
+        style:
+          top: 36.2%
+          left: 50%
+        unit: 'W'
+        hours_to_show: 24
+        points_per_hour: 60
+        hour24: true
+        line_width: 3
+        lower_bound: 0
+        upper_bound: 9000
+        entities:
+          - sensor.actual_energy_production_w_filtered
