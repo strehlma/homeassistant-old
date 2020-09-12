@@ -137,7 +137,42 @@ sensor:
         unit_of_measurement: 'W'
         value_template: "{{ ((states('sensor.kostal_power_grid') | int) * (-1) ) }}"
         icon_template: mdi:solar-power
-        
+
+  - platform: filter
+    name: 'sml_output_momentanwirkleistung_summe_w_filtered'
+    entity_id: sensor.sml_output_momentanwirkleistung_summe_w
+    filters:
+      - filter: time_throttle
+        window_size: 00:01:00
+        precision: 0
+  - platform: filter
+    name: 'sml_output_momentanwirkleistung_l1_w_filtered'
+    entity_id: sensor.sml_output_momentanwirkleistung_l1_w
+    filters:
+      - filter: time_throttle
+        window_size: 00:01:00
+        precision: 0
+  - platform: filter
+    name: 'sml_output_momentanwirkleistung_l2_w_filtered'
+    entity_id: sensor.sml_output_momentanwirkleistung_l2_w
+    filters:
+      - filter: time_throttle
+        window_size: 00:01:00
+        precision: 0
+  - platform: filter
+    name: 'sml_output_momentanwirkleistung_l3_w_filtered'
+    entity_id: sensor.sml_output_momentanwirkleistung_l3_w
+    filters:
+      - filter: time_throttle
+        window_size: 00:01:00
+        precision: 0
+  - platform: filter
+    name: 'actual_energy_production_w_filtered'
+    entity_id: sensor.actual_energy_production_w
+    filters:
+      - filter: time_throttle
+        window_size: 06:00:00
+        precision: 0
 
 utility_meter:
   hourly_energy_bezug_wh:
