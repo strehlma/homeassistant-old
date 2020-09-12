@@ -271,37 +271,32 @@ cards:
         hold_action:
           action: none
         style:
-          top: 50%
-          left: 50%
-          width: 400px
+          top: 35%
+          left: 33%
+          width: 300px
           pointer-events: none
-
-
-
-
-
 
       - type: state-label
         entity: sensor.kostal_yield_day_kwh
         style:
-          top: 45%
-          right: 56.2%
+          top: 33.7%
+          left: 28.3%
           color: white
       - type: state-label
         entity: sensor.daily_energy_einspeisung_kwh
         style:
-          top: 45%
-          right: 3%
+          top: 33.7%
+          left: 36%
           color: white
       - type: state-label
         entity: sensor.daily_energy_bezug_kwh
         style:
-          top: 55%
-          right: 56.2%
+          top: 36.2%
+          left: 28.3%
           color: white
       - type: state-label
         entity: sensor.daily_ownconsumption_kwh
         style:
-          top: 55%
-          right: 3%
+          top: 36.2%
+          left: 36%
           color: white
