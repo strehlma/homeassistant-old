@@ -18,6 +18,7 @@
     {url: /hacsfiles/lovelace-auto-entities/auto-entities.js,                  type: module},
     {url: /hacsfiles/simple-weather-card/simple-weather-card-bundle.js,        type: module},
     {url: /hacsfiles/text-element/text-element.js,                             type: module},
+    {url: /hacsfiles/power-wheel-card/power-wheel-card.js,                     type: module},
     # {url: '/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js?v=12',   type: module},
     # {url: '/local/custom_icons.js?v=25052001',                                 type: module},
     {url: /local/font.css,                                                     type: css} ]
