@@ -313,36 +313,43 @@ cards:
         line_width: 3
         lower_bound: 0
         upper_bound: 9000
+        color_thresholds:
+          - color: '#ff1a1a'
+            value: 1000
+          - color: '#ffa31a'
+            value: 2500
+          - color: '#B4CD31'
+            value: 4000
         entities:
           - sensor.actual_energy_production_w_filtered
 
 
 
-      - type: custom:power-wheel-card
-        title: "Power wheel"
-        title_power: "Leistungsverteilung"
-        title_energy: "Energieverteilung"
-        title_money: "Energiekosten"
-        solar_power_entity: sensor.actual_energy_production_w_filtered
-        grid_power_entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
-        grid_power_consumption_entity: sensor.YOUR_GRID_POWER_CONSUMPTION_SENSOR
-        grid_power_production_entity: sensor.YOUR_GRID_POWER_PRODUCTION_SENSOR
-        energy_price: 0.30
-        money_unit: "€"
-        solar_icon: "mdi:white-balance-sunny"
-        grid_icon: "mdi:transmission-tower"
-        home_icon: "mdi:home-assistant"
-        power_decimals: 2
-        energy_decimals: 2
-        money_decimals: 0
-        color_icons: true
-        consuming_color: "#33ff33"
-        producing_color: "#dd5500"
-        initial_view: "energy"
-        initial_auto_toggle_view: true
-        auto_toggle_view_period: 5
-        style:
-          top: 31vh
-          left: 39vw
-          width: 300px
+      # - type: custom:power-wheel-card
+      #   title: "Power wheel"
+      #   title_power: "Leistungsverteilung"
+      #   title_energy: "Energieverteilung"
+      #   title_money: "Energiekosten"
+      #   solar_power_entity: sensor.actual_energy_production_w_filtered
+      #   grid_power_entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
+      #   grid_power_consumption_entity: sensor.YOUR_GRID_POWER_CONSUMPTION_SENSOR
+      #   grid_power_production_entity: sensor.YOUR_GRID_POWER_PRODUCTION_SENSOR
+      #   energy_price: 0.30
+      #   money_unit: "€"
+      #   solar_icon: "mdi:white-balance-sunny"
+      #   grid_icon: "mdi:transmission-tower"
+      #   home_icon: "mdi:home-assistant"
+      #   power_decimals: 2
+      #   energy_decimals: 2
+      #   money_decimals: 0
+      #   color_icons: true
+      #   consuming_color: "#33ff33"
+      #   producing_color: "#dd5500"
+      #   initial_view: "energy"
+      #   initial_auto_toggle_view: true
+      #   auto_toggle_view_period: 5
+      #   style:
+      #     top: 31vh
+      #     left: 39vw
+      #     width: 300px
 

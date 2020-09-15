@@ -319,6 +319,39 @@ cards:
         custom_fields: 
           notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
   
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 25vh
+        icon: mdi:battery-outline
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+  
 
 
 
