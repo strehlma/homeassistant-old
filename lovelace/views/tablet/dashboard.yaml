@@ -304,7 +304,7 @@ cards:
             - text-align: start
           custom_fields:
             notification:
-              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - background-color: "[[[ if (states['sensor.next_garbage_days'].state < 2) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
               - color: white
               - border-radius: 50%
               - overflow: visible
@@ -317,7 +317,7 @@ cards:
           icon:
             - color: var(--header-color)
         custom_fields: 
-          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+          notification: "[[[ if (states['sensor.next_garbage_days'].state < 2) return '&nbsp;'; else return states['sensor.next_garbage_days'].state ]]]"
   
       - type: custom:button-card
         template: signal_icon
