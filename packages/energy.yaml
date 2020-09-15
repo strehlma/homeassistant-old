@@ -138,8 +138,6 @@ sensor:
         value_template: "{{ ((states('sensor.kostal_power_grid') | int) * (-1) ) }}"
         icon_template: mdi:solar-power
 
-      actual_energy_consumption:
-        friendly_name: 
 
   - platform: filter
     name: 'sml_output_momentanwirkleistung_summe_w_filtered'

@@ -321,9 +321,21 @@ cards:
           - color: '#B4CD31'
             value: 4000
         entities:
-          - sensor.actual_energy_production_w_filtered
+          - entity: sensor.actual_energy_production_w_filtered
+            name: Solarleistung
+            show_state: true
 
-
+      - type: custom:mini-graph-card
+        name: PV Produktion pro Tag
+        style:
+          top: 41vh
+          left: 72vw
+        entities:
+          - entity: sensor.kostal_yield_day_kwh
+        aggregate_func: max
+        group_by: date
+        show:
+          graph: bar
 
       # - type: custom:power-wheel-card
       #   title: "Power wheel"
