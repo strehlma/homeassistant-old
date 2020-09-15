@@ -328,12 +328,14 @@ cards:
       - type: custom:mini-graph-card
         name: PV Produktion pro Tag
         style:
-          top: 41vh
+          top: 55vh
           left: 72vw
         entities:
           - entity: sensor.kostal_yield_day_kwh
+            color: '#B4CD31'
         aggregate_func: max
         group_by: date
+        hours_to_show: 168
         show:
           graph: bar
 
