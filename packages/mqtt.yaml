@@ -1,3 +1,7 @@
+mqtt:
+  discovery: true
+  discovery_prefix: homeassistant
+  
 switch:
   - platform: mqtt
     name: "shelf"
