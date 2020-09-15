@@ -292,7 +292,7 @@ cards:
         entity: sensor.daily_energy_bezug_kwh
         style:
           top: 33.5vh
-          left: 29.5vw
+          left: 31.6vw
           color: white
       - type: state-label
         entity: sensor.daily_ownconsumption_kwh
