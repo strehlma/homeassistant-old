@@ -1,0 +1,26 @@
+recorder:
+  db_url: !secret mysql_connection
+  auto_purge: true
+  purge_keep_days: 30
+  exclude:
+    domains:
+      - device_tracker
+      - media_player
+      - switch
+      - automation
+    entities:
+      - sensor.kostal_frequency  
+      - sensor.steps
+      - sensor.time
+      - sensor.date
+    entity_globs:
+      - switch.*_plug
+      - sensor.*_ipad_*
+      - sensor.*_l1_*
+      - sensor.*_l2_*
+      - sensor.*_l3_*
+      - sensor.iphone*
+      - input_boolean.*
+      - input_text.*
+      - input_number.*
+      - input_select.*

@@ -47,6 +47,10 @@ sensor:
       date_string:
         friendly_name: "Full Date"
         value_template: "{{ states('sensor.day') }}, {{ states('sensor.month') }} {{ now().year }}"
+
+      null_sensor:
+        value_template: '0'
+
     
 
       placeholder:
