@@ -313,7 +313,7 @@ cards:
         hour24: true
         line_width: 3
         lower_bound: 0
-        upper_bound: 2000
+        upper_bound: 9000
         color_thresholds:
           - color: '#ff1a1a'
             value: 1000
@@ -325,9 +325,11 @@ cards:
           - entity: sensor.actual_energy_production_w_filtered
             name: Solarleistung
             show_state: true
+            show_legend: false
           - entity: sensor.actual_energy_consumption_w
             name: Verbrauch
             color: '#888888'
+            show_legend: false
   
       - type: custom:mini-graph-card
         name: Solarleistung
