@@ -36,3 +36,282 @@ cards:
       "#root > hui-state-label-element":
         $: |
           div {padding: 0 !important;}
+
+    elements:
+
+      ##########################################################################
+      #                                                                        #
+      #                              * SIDEBAR *                               #
+      #                                                                        #
+      ##########################################################################
+
+      - type: image
+        image: local/images/sidebar.png
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        style:
+          top: 50%
+          left: 10.6%
+          width: 21.5%
+          pointer-events: none
+          border-right: 1.5px solid rgba(58,69,73,0.2)
+
+      #################################################
+      #                                               #
+      #                   Time and Date               #
+      #                                               #
+      #################################################
+
+      - type: state-label
+        entity: sensor.time
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.7)'
+          font-size: 5.41vw
+          font-weight: 200
+          left: 4%
+          letter-spacing: '-0.05vw'
+          max-width: 1px
+          top: 10%
+        tap_action:
+          action: none
+    
+      - type: state-label
+        entity: sensor.date_string
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.3)'
+          font-size: 1.3vw
+          font-weight: 300
+          left: 18.1%
+          letter-spacing: '-0.05vw'
+          text-align: left
+          top: 17%
+          width: 30%
+        tap_action:
+          action: none
+
+      #################################################
+      #                                               #
+      #                 Persons                       #
+      #                                               #
+      #################################################
+
+      - type: image
+        action: none
+        entity: person.mario
+        state_image:
+          home: /local/images/mario.png
+          not_home: /local/images/mario_gone.png
+        style:
+          background-color: 'rgba(255, 255, 255, 0.0)'
+          border-radius: 10vw
+          height: 4.5vw
+          left: 7%
+          top: 25%
+          width: 4.5vw
+        tap_action: none
+    
+      - type: image
+        action: none
+        entity: person.sandra
+        state_image:
+          home: /local/images/sani.png
+          not_home: /local/images/sani_gone.png
+        style:
+          background-color: 'rgba(255, 255, 255, 0.0)'
+          border-radius: 10vw
+          height: 4.5vw
+          left: 14%
+          top: 25%
+          width: 4.5vw
+        tap_action: none
+      
+      #################################################
+      #                                               #
+      #                 Navigation                    #
+      #                                               #
+      #################################################
+  
+      - type: custom:button-card
+        template: menu
+        name: Home
+        icon: mdi:home
+        style:
+          top: 35%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/dashboard.yaml
+        
+      - type: custom:button-card
+        template: menu
+        name: Media
+        icon: mdi:speaker
+        style:
+          top: 42%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/media.yaml
+    
+      - type: custom:button-card
+        template: menu
+        name: Energie
+        icon: mdi:flash
+        style:
+          top: 49%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/energy
+
+      - type: custom:button-card
+        template: menu
+        name: System
+        icon: mdi:server
+        style:
+          top: 56%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/system
+        
+
+      #################################################
+      #                                               #
+      #                 Signal Icons                  #
+      #                                               #
+      #################################################
+
+
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 5vh
+        icon: mdi:window-closed
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 15vh
+        icon: mdi:trash-can-outline
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.next_garbage_days'].state < 2) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.next_garbage_days'].state < 2) return '&nbsp;'; else return states['sensor.next_garbage_days'].state ]]]"
+  
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 25vh
+        icon: mdi:battery-outline
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+
+      ##########################################################################
+      #                                                                        #
+      #                              * SPOTIFY *                               #
+      #                                                                        #
+      ##########################################################################
+
+      - type: 'custom:spotify-card'
+        account: "default"
+        # height: <optional pixels height for the playlist element. If content is larger scrolling will be enabled>
+        # limit: <optional number of playlists to retrieve (default 10)>
+        # device: <optional name of a device to pre-select>
+        # playlist_type: <optional featured|discover-weekly> Change type of playlists shown. Default are your normal playlists.
+        # always_play_random_song: <optional true> Set to start playlists from a random song.
+        # country_code: <optional country code to show featured playlist relevent to a particular country. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 >
+        # hide_warning: <optional true> Hide warnings if they are displayed.
+        # name: <optional name> Custom title. Leave empty to hide.
+        # display_style: <optional Grid> Change default display style.
+        # grid_covers_per_row: <optional number> Number of covers per row (default 3) in Grid-view.
+        # spotify_entity: <optional> Name of your spotify media player entity if it doesn't start with "spotify"
+        # default_device: <optional> Name of your spotify connect or chromecast device, e.g. "Kitchen"
+        # filter_devices: <optional Array> Hides devices which matches any array entry. The entries have to be regular expressions and are matched against the full device-name. The following are examples
+        #   - .*room <hides all devices ending with room>
+        #   - bath.*,kids.* <hides all devices which start with bath or kids>

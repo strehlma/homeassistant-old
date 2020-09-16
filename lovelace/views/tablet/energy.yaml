@@ -341,8 +341,6 @@ cards:
         points_per_hour: 60
         hour24: true
         line_width: 3
-        # lower_bound: -8000
-        # upper_bound: 3000
         color_thresholds:
           - color: '#B4CD31'
             value: 1
@@ -353,11 +351,11 @@ cards:
             name: Wirkleistung
             show_state: true
             show_legend: false
-          # - entity: sensor.null_sensor
-          #   name: Wirkleistung
-          #   color: '#888888'
-          #   show_state: true
-          #   show_legend: false
+          - entity: sensor.null_sensor
+            name: Wirkleistung
+            color: '#888888'
+            show_state: false
+            show_legend: false
 
       - type: custom:mini-graph-card
         name: PV Produktion pro Tag
