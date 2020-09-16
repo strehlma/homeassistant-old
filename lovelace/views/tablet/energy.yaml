@@ -341,11 +341,11 @@ cards:
         points_per_hour: 60
         hour24: true
         line_width: 3
-        lower_bound: -8000
-        upper_bound: 3000
+        # lower_bound: -8000
+        # upper_bound: 3000
         color_thresholds:
           - color: '#B4CD31'
-            value: 0
+            value: 1
           - color: '#ff1a1a'
             value: 3000
         entities:
