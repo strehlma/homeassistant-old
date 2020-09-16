@@ -147,7 +147,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace-tablet/dashboard.yaml
+          navigation_path: /lovelace-tablet/home
         
       - type: custom:button-card
         template: menu
@@ -159,7 +159,7 @@ cards:
           width: 15vw
         tap_action:
           action: navigate
-          navigation_path: /lovelace-tablet/media.yaml
+          navigation_path: /lovelace-tablet/media
     
       - type: custom:button-card
         template: menu
