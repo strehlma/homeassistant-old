@@ -300,6 +300,10 @@ cards:
 
       - type: 'custom:spotify-card'
         account: "default"
+        style:
+          top: 31vh
+          left: 39vw
+          width: 300px
         # height: <optional pixels height for the playlist element. If content is larger scrolling will be enabled>
         # limit: <optional number of playlists to retrieve (default 10)>
         # device: <optional name of a device to pre-select>
