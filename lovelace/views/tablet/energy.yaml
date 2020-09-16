@@ -332,7 +332,7 @@ cards:
             show_legend: false
   
       - type: custom:mini-graph-card
-        name: Solarleistung
+        name: Wirkleistung
         style:
           top: 21vh
           left: 72vw
@@ -341,19 +341,23 @@ cards:
         points_per_hour: 60
         hour24: true
         line_width: 3
-        lower_bound: 0
-        upper_bound: 9000
+        lower_bound: -8000
+        upper_bound: 3000
         color_thresholds:
-          - color: '#ff1a1a'
-            value: 1000
-          - color: '#ffa31a'
-            value: 2500
           - color: '#B4CD31'
-            value: 4000
+            value: 0
+          - color: '#ff1a1a'
+            value: 3000
         entities:
-          - entity: sensor.actual_energy_production_w_filtered
-            name: Solarleistung
+          - entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
+            name: Wirkleistung
             show_state: true
+            show_legend: false
+          - entity: sensor.nullsensor
+            name: Wirkleistung
+            color: '#888888'
+            show_state: true
+            show_legend: false
 
       - type: custom:mini-graph-card
         name: PV Produktion pro Tag
