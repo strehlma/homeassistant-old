@@ -312,7 +312,7 @@ cards:
         # country_code: <optional country code to show featured playlist relevent to a particular country. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 >
         # hide_warning: <optional true> Hide warnings if they are displayed.
         # name: <optional name> Custom title. Leave empty to hide.
-        # display_style: <optional Grid> Change default display style.
+        display_style: Grid
         # grid_covers_per_row: <optional number> Number of covers per row (default 3) in Grid-view.
         # spotify_entity: <optional> Name of your spotify media player entity if it doesn't start with "spotify"
         # default_device: <optional> Name of your spotify connect or chromecast device, e.g. "Kitchen"
