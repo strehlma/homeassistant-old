@@ -304,7 +304,7 @@ cards:
           top: 31vh
           left: 39vw
           width: 300px
-        height: 300px
+          height: 300px
         limit: 21
         # device: <optional name of a device to pre-select>
         # playlist_type: <optional featured|discover-weekly> Change type of playlists shown. Default are your normal playlists.
