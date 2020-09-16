@@ -349,11 +349,11 @@ cards:
         #   - color: '#ff1a1a'
         #     value: 3000
         entities:
-          # - entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
-          #   name: Wirkleistung
-          #   show_state: true
-          #   show_legend: false
-          - entity: sensor.nullsensor
+          - entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
+            name: Wirkleistung
+            show_state: true
+            show_legend: false
+          - entity: sensor.null_sensor
             name: Wirkleistung
             color: '#888888'
             show_state: true
