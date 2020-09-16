@@ -304,7 +304,7 @@ cards:
       - type: custom:mini-graph-card
         name: Solarleistung / Verbrauch
         style:
-          top: 55vh
+          top: 77vh
           left: 39vw
           width: 300px
           unit: 'W'
