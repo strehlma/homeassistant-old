@@ -137,6 +137,17 @@ sensor:
         unit_of_measurement: 'W'
         value_template: "{{ ((states('sensor.kostal_power_grid') | int) * (-1) ) }}"
         icon_template: mdi:solar-power
+      
+      actual_energy_consumption_w:
+        friendly_name: Stromverbrauch
+        unit_of_measurement: 'W'
+        value_template: >
+          {% if states('sensor.sml_output_momentanwirkleistung_summe_w_filtered') | int < 0 %}
+              {{ (states('sensor.actual_energy_production_w_filtered')|int) + (states('sensor.sml_output_momentanwirkleistung_summe_w_filtered')|int) }}
+            {% else %}
+              {{ (states('sensor.sml_output_momentanwirkleistung_summe_w_filtered')|int) }}
+          {% endif %}
+        icon_template: mdi:home-import-outline
 
 
   - platform: filter

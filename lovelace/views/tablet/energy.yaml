@@ -302,6 +302,34 @@ cards:
           color: white
 
       - type: custom:mini-graph-card
+        name: Solarleistung / Verbrauch
+        style:
+          top: 55vh
+          left: 39vw
+          width: 300px
+          unit: 'W'
+        hours_to_show: 24
+        points_per_hour: 60
+        hour24: true
+        line_width: 3
+        lower_bound: 0
+        upper_bound: 2000
+        color_thresholds:
+          - color: '#ff1a1a'
+            value: 1000
+          - color: '#ffa31a'
+            value: 2500
+          - color: '#B4CD31'
+            value: 4000
+        entities:
+          - entity: sensor.actual_energy_production_w_filtered
+            name: Solarleistung
+            show_state: true
+          - entity: sensor.actual_energy_consumption_w
+            name: Verbrauch
+            color: '#888888'
+  
+      - type: custom:mini-graph-card
         name: Solarleistung
         style:
           top: 21vh
