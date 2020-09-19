@@ -319,3 +319,17 @@ cards:
         # filter_devices: <optional Array> Hides devices which matches any array entry. The entries have to be regular expressions and are matched against the full device-name. The following are examples
         #   - .*room <hides all devices ending with room>
         #   - bath.*,kids.* <hides all devices which start with bath or kids>
+
+      - type: 'custom:mini-media-player'
+        entity:  media_player.spotify_strehlma
+        style:
+          top: 31vh
+          left: 70vw
+          width: 300px
+
+      - type: media-control
+        entity: media_player.spotify_strehlma
+        style:
+          top: 50vh
+          left: 70vw
+          
