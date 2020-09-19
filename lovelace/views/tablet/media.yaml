@@ -327,9 +327,8 @@ cards:
           left: 70vw
           width: 300px
 
-      - type: media-control
+      - type: 'custom:media-control'
         entity: media_player.spotify_strehlma
         style:
           top: 50vh
           left: 70vw
-          
