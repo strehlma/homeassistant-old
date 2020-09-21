@@ -56,49 +56,6 @@ cards:
 
     elements:
 
-      #################################################
-      #                                               #
-      #                   COVID-19                    #
-      #                                               #
-      #################################################
-
-      # - type: custom:hui-markdown-card
-      #   style:
-      #     top: 90%
-      #     left: 70.2%
-      #     width: 95vw
-      #     height: 1px
-      #     --mdc-icon-size: 1.2vw
-      #     --ha-card-background: none
-      #     --ha-card-box-shadow: none
-      #     --primary-text-color: '#6a7377'
-      #     font-family: SF Display
-      #     font-size: 1.15vw
-      #     font-weight: 400
-      #     letter-spacing: 0.06vw
-      #     line-height: 2.05vw
-      #     opacity: 0.5
-      #   content: >
-      #     {% if is_state('sensor.germany_coronavirus_current', 
-      #     'unavailable') %} {% else %}
-      #     <font color='#6a7377'>
-      #     <ha-icon icon="custom:corona-virus"></ha-icon> <b>Coronavirus</b>
-      #     ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
-      #     <ha-icon icon="mdi:emoticon-sad"></ha-icon> 
-      #     <b>{{ states('sensor.germany_coronavirus_current') }}</b> Gesamt
-      #     ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
-      #     <ha-icon icon="mdi:chart-bar"></ha-icon> 
-      #     <b>{{ ((states('sensor.germany_coronavirus_confirmed')
-      #     | int / 83149300 ) * 100) | round(2) }}%</b> von Deutschland
-      #     ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
-      #     <ha-icon icon="mdi:emoticon-happy"></ha-icon> 
-      #     <b>{{ states('sensor.germany_coronavirus_recovered') }}</b> Genesen
-      #     ‍  ‍  ‍   ‍  ‍  ‍ <font color='#2f3436'>|‍</font>  ‍  ‍  ‍   ‍  ‍  ‍ 
-      #     <ha-icon icon="mdi:grave-stone"></ha-icon> 
-      #     <b>{{ states('sensor.germany_coronavirus_deaths') }}</b> Verstorben
-      #     </font>
-      #     {% endif %}
-
       ##########################################################################
       #                                                                        #
       #                              * SIDEBAR *                               #
