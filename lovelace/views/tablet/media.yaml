@@ -327,8 +327,10 @@ cards:
           left: 70vw
           width: 300px
 
-      - type: 'custom:media-control'
-        entity: media_player.spotify_strehlma
+      - type: 'custom:mini-media-player'
+        entity:  media_player.fire_tv_cube
         style:
           top: 50vh
           left: 70vw
+          width: 300px
+  

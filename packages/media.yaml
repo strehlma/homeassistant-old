@@ -39,7 +39,17 @@ media_player:
   - platform: androidtv
     name: Fire TV Cube
     host: !secret fire_tv_cube
-
+    device_class: androidtv
+    host: 192.168.0.222
+    adbkey: "/config/android/adbkey"
+    exclude_unnamed_apps: true
+    apps:
+      com.amazon.tv.launcher: "Fire TV"
+      com.einsundeinstv.player:  "1&1 Fernsehen"
+      Netflix: "Netflix"  
+      com.amazon.firebat: "Amazon Prime"
+      com.amazon.firetv.youtube: "YouTube"
+      
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
