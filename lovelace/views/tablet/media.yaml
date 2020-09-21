@@ -304,15 +304,15 @@ cards:
           top: 31vh
           left: 39vw
           width: 300px
-          height: 300px
         limit: 21
+        height: 300px
         # device: <optional name of a device to pre-select>
         # playlist_type: <optional featured|discover-weekly> Change type of playlists shown. Default are your normal playlists.
         # always_play_random_song: <optional true> Set to start playlists from a random song.
         # country_code: <optional country code to show featured playlist relevent to a particular country. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 >
         # hide_warning: <optional true> Hide warnings if they are displayed.
         # name: <optional name> Custom title. Leave empty to hide.
-        display_style: Grid
+        # display_style: Grid
         # grid_covers_per_row: <optional number> Number of covers per row (default 3) in Grid-view.
         # spotify_entity: <optional> Name of your spotify media player entity if it doesn't start with "spotify"
         # default_device: <optional> Name of your spotify connect or chromecast device, e.g. "Kitchen"
