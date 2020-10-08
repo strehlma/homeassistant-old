@@ -204,9 +204,6 @@ automation:
         entity_id: input_boolean.nightstand_sandra_manual
         state: 'off'
     action:
-      service_template: >
-        light.turn_off
-      data:
-        transition: 2
+      service: light.turn_off
       entity_id: light.nightstand_sandra_light
 
