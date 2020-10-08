@@ -1,4 +1,4 @@
-- alias: "Xiaomi Aqara Motion"
+- alias: "Xiaomi Aqara Motion Duration Setup"
   initial_state: on
   trigger:
     - platform: homeassistant
