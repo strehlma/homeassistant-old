@@ -20,7 +20,3 @@ recorder:
       - sensor.*_l2_*
       - sensor.*_l3_*
       - sensor.iphone*
-      - input_boolean.*
-      - input_text.*
-      - input_number.*
-      - input_select.*
