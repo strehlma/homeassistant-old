@@ -1,27 +1,3 @@
-#################################################################
-#                                                               #
-#                          Alexa Media                          #
-#                                                               #
-#################################################################
-
-# alexa_media:
-#   accounts:
-#     - email: !secret alexa_user
-#       password: !secret alexa_password
-#       url: amazon.de
-#       exclude_devices:
-#         - "This Device"
-#         - "Sandra's Alexa Apps"
-#         - "Echo B"
-#         - "Echo Offline"
-#         - "Überall"
-#         - "Marios 2. Fire"
-#         - "Marios 3. Fire"
-#         - "Mario's Fire TV stick Büro"
-#         - "Mario's Fire TV stick"
-#         - "Mario's Fire TV"
-#"This Device","Sandra's Alexa Apps","Echo B","Echo Offline","Überall","Marios 2. Fire","Marios 3. Fire","Mario's Fire TV stick Büro","Mario's Fire TV stick","Mario's Fire TV"
-
 media_player:
 
 ################# Soundtouch ####################################

@@ -17,7 +17,7 @@ sensor:
   - platform: template
     sensors:
       next_garbage:
-        entity_id: calendar.get_garbage
+        # entity_id: calendar.get_garbage
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_garbage.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
@@ -25,7 +25,7 @@ sensor:
           {{ countdown }}
   
       next_organic:
-        entity_id: calendar.get_organic
+        # entity_id: calendar.get_organic
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_organic.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
@@ -33,7 +33,7 @@ sensor:
           {{ countdown }}
   
       next_recycling:
-        entity_id: calendar.get_recycling
+        # entity_id: calendar.get_recycling
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_recycling.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
@@ -41,7 +41,7 @@ sensor:
           {{ countdown }}
   
       next_paper:
-        entity_id: calendar.get_paper
+        # entity_id: calendar.get_paper
         value_template: >
           {% set due_date = (as_timestamp(states.calendar.get_paper.attributes.end_time) | int) %}
           {% set todays_date = (now().strftime("%s") | int ) %}
@@ -49,7 +49,7 @@ sensor:
           {{ countdown }}
 
       next_garbage_text:
-        entity_id: sensor.next_garbage
+        # entity_id: sensor.next_garbage
         value_template: >
           {% set days = (states('sensor.next_garbage') | int ) %}
           {% if days == 0 %}
@@ -63,7 +63,7 @@ sensor:
           {% endif %}
   
       next_organic_text:
-        entity_id: sensor.next_organic
+        # entity_id: sensor.next_organic
         icon_template: mdi:leaf
         value_template: >
           {% set days = (states('sensor.next_organic') | int ) %}
@@ -78,7 +78,7 @@ sensor:
           {% endif %}
   
       next_recycling_text:
-        entity_id: sensor.next_recycling
+        # entity_id: sensor.next_recycling
         icon_template: mdi:recycle
         value_template: >
           {% set days = (states('sensor.next_recycling') | int ) %}
@@ -93,7 +93,7 @@ sensor:
           {% endif %}
   
       next_paper_text:
-        entity_id: sensor.next_paper
+        # entity_id: sensor.next_paper
         icon_template: mdi:trash-can-outline
         value_template: >
           {% set days = (states('sensor.next_paper') | int ) %}
@@ -108,7 +108,7 @@ sensor:
           {% endif %}
 
       next_garbage_collection:
-        icon_template: mdi:trash-can-outline
+        # icon_template: mdi:trash-can-outline
         value_template: >
           {%- set mysensors = ["sensor.next_garbage", "sensor.next_organic", "sensor.next_recycling", "sensor.next_paper"] %}
           {%- set garbage = (states('sensor.next_garbage') | int ) %}

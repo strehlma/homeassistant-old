@@ -33,7 +33,7 @@ sensor:
           {% endif %}
 
       day:
-        entity_id: sensor.date
+        # entity_id: sensor.date
         value_template: >
           {% set days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %}
           {{ days[now().weekday()] }}
