@@ -8,7 +8,7 @@ input_boolean:
   nightstand_sandra_light_setting:
     initial: on
 
-    input_number:
+input_number:
   nightstand_mario_brightness_trigger:
     name: Schaltschwelle
     unit_of_measurement: lux
