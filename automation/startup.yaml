@@ -14,4 +14,9 @@
         entity: binary_sensor.motion_nightstand_sandra
         field: "/config"
         data: {"duration": 5}
-  
+    - service: deconz.configure
+      data:
+        entity: binary_sensor.motion_nightstand_mario
+        field: "/config"
+        data: {"duration": 5}
+    

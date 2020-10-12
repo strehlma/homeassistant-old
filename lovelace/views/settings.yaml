@@ -28,9 +28,9 @@ cards:
             state_header: 'Licht'
             unit: ' '
             entities:
-              - entity: binary_sensor.nightstand_mario_motion
+              - entity: binary_sensor.motion_nightstand_mario
                 name: 'Bewegung'
-              - entity: sensor.nightstand_mario_brightness
+              - entity: sensor.lightlevel_nightstand_sandra
                 name: 'Helligkeit'
           - type: custom:fold-entity-row
             head:
