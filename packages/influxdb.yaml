@@ -2,16 +2,6 @@ influxdb:
   host: !secret influxdb_host
   include:
     entities:
-      # Corona
-      - sensor.germany_coronavirus_current
-      - sensor.germany_coronavirus_confirmed
-      - sensor.germany_coronavirus_deaths
-      - sensor.germany_coronavirus_recovered
-      - sensor.worldwide_coronavirus_current
-      - sensor.worldwide_coronavirus_confirmed
-      - sensor.worldwide_coronavirus_deaths
-      - sensor.worldwide_coronavirus_recovered
-
       # Synology
       - sensor.ds918plus_cpu_load_15_min
       - sensor.ds918plus_cpu_load_5_min
@@ -35,3 +25,11 @@ influxdb:
       - sensor.kostal_yield_month
       - sensor.kostal_yield_total
       - sensor.kostal_yield_year
+
+      - sensor.daily_energy_bezug_kwh
+      - sensor.daily_energy_einspeisung_kwh
+      - sensor.daily_ownconsumption_kwh
+      - sensor.kostal_yield_day_kwh
+
+      - sensor.sml_output_wirkenergie_bezug_summe_wh
+      - sensor.sml_output_wirkenergie_einspeisung_summe_wh
