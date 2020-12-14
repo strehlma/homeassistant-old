@@ -33,3 +33,7 @@ influxdb:
 
       - sensor.sml_output_wirkenergie_bezug_summe_wh
       - sensor.sml_output_wirkenergie_einspeisung_summe_wh
+
+      - sensor.actual_energy_production_w_filtered
+      - sensor.actual_energy_consumption_w
+      - sensor.sml_output_momentanwirkleistung_summe_w_filtered
