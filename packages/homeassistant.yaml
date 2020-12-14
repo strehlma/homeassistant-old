@@ -9,6 +9,10 @@ automation:
       - service: frontend.set_theme
         data:
           name: tablet
+      - service: light.turn_on
+        entity_id:
+          - light.nightstand_mario_settings
+          - light.nightstand_sandra_settings
 
 sensor:
 
