@@ -26,14 +26,23 @@ influxdb:
       - sensor.kostal_yield_total
       - sensor.kostal_yield_year
 
-      - sensor.daily_energy_bezug_kwh
-      - sensor.daily_energy_einspeisung_kwh
-      - sensor.daily_ownconsumption_kwh
-      - sensor.kostal_yield_day_kwh
-
       - sensor.sml_output_wirkenergie_bezug_summe_wh
       - sensor.sml_output_wirkenergie_einspeisung_summe_wh
 
       - sensor.actual_energy_production_w_filtered
-      - sensor.actual_energy_consumption_w
+      - sensor.actual_energy_consumption_w_filtered
       - sensor.sml_output_momentanwirkleistung_summe_w_filtered
+      - sensor.sml_output_momentanwirkleistung_l1_w_filtered
+      - sensor.sml_output_momentanwirkleistung_l2_w_filtered
+      - sensor.sml_output_momentanwirkleistung_l3_w_filtered
+
+      - sensor.hourly_energy_bezug_wh                                             # stündliche Bezugsmenge in Wattstunden
+      - sensor.hourly_energy_einspeisung_wh                                       # stündliche Einspeisung in Wattstunden
+      - sensor.daily_energy_bezug_wh                                              # tägliche Bezugsmenge in Wattstunden
+      - sensor.daily_energy_einspeisung_wh                                        # tägliche Einspeisung in Wattstunden
+      - sensor.monthly_energy_bezug_wh                                            # monatliche Bezugsmenge in Wattstunden
+      - sensor.monthly_energy_einspeisung_wh                                      # monatliche Einspeisung in Wattstunden
+      - sensor.yearly_energy_bezug_wh                                             # jährliche Bezugsmenge in Wattstunden
+      - sensor.yearly_energy_einspeisung_wh                                       # monatliche Einspeisung in Wattstunden
+
+      - sun.sun

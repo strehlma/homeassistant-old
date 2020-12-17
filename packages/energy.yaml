@@ -1,7 +1,7 @@
 sensor:
   - platform: mqtt
-    state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_Wh"
-    name: sml_output_wirkenergie_bezug_summe_wh
+    state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_Wh"             
+    name: sml_output_wirkenergie_bezug_summe_wh                           # Zählerstand Bezug in Wattstunden
     force_update: true
     unit_of_measurement: 'Wh'
     icon: mdi:power-socket-de
@@ -9,7 +9,7 @@ sensor:
 
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Wirkenergie_Einspeisung_Summe_Wh"
-    name: sml_output_wirkenergie_einspeisung_summe_wh
+    name: sml_output_wirkenergie_einspeisung_summe_wh                     # Zählerstand Einspeisung in Wattstunden
     force_update: true
     unit_of_measurement: 'Wh'
     icon: mdi:home-export-outline
@@ -17,15 +17,15 @@ sensor:
 
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_Summe_W"
-    name: sml_output_momentanwirkleistung_summe_w
+    name: sml_output_momentanwirkleistung_summe_w                         # Zählerstand Momentanwirklestung in Watt
     force_update: true
     unit_of_measurement: 'W'
     icon: mdi:flash
     device_class: power
 
   - platform: mqtt
-    state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L1_W"
-    name: sml_output_momentanwirkleistung_l1_w
+    state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L1_W"              
+    name: sml_output_momentanwirkleistung_l1_w                            # Zählerstand Momentanwirklestung L1 in Watt
     force_update: true
     unit_of_measurement: 'W'
     icon: mdi:flash
@@ -33,7 +33,7 @@ sensor:
 
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L2_W"
-    name: sml_output_momentanwirkleistung_l2_w
+    name: sml_output_momentanwirkleistung_l2_w                            # Zählerstand Momentanwirklestung L2 in Watt
     force_update: true
     unit_of_measurement: 'W'
     icon: mdi:flash
@@ -41,7 +41,7 @@ sensor:
 
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Momentanwirkleistung_L3_W"
-    name: sml_output_momentanwirkleistung_l3_w
+    name: sml_output_momentanwirkleistung_l3_w                            # Zählerstand Momentanwirklestung L3 in Watt
     force_update: true
     unit_of_measurement: 'W'
     icon: mdi:flash
@@ -56,7 +56,7 @@ sensor:
     #   - BatteryPower
     #   - HomeGridPower
     #   - HomeOwnPower
-      - HomePVPower
+    #   - HomePVPower
     #   - HomeBatteryPower
       - GridPower
       - DCPower
@@ -69,42 +69,42 @@ sensor:
     #   - CO2SavingMonth
     #   - CO2SavingTotal
     #   - CO2SavingYear
-      - PV1Power
-      - PV1Voltage
-      - PV1Current
-      - PV2Power
-      - PV2Voltage
-      - PV2Current
-      - ACFrequency
-      - ACL1Current
-      - ACL1Power
-      - ACL1Voltage
-      - ACL2Current
-      - ACL2Power
-      - ACL2Voltage
-      - ACL3Current
-      - ACL3Power
-      - ACL3Voltage
-      - HomeConsumptionDay
-      - HomeConsumptionMonth
-      - HomeConsumptionTotal
-      - HomeConsumptionYear
-      - HomeConsumptionFromBatDay
-      - HomeConsumptionFromBatMonth
-      - HomeConsumptionFromBatTotal
-      - HomeConsumptionFromBatYear
-      - HomeConsumptionFromGridDay
-      - HomeConsumptionFromGridMonth
-      - HomeConsumptionFromGridTotal
-      - HomeConsumptionFromGridYear
-      - HomeConsumptionFromPVDay
-      - HomeConsumptionFromPVMonth
-      - HomeConsumptionFromPVTotal
-      - HomeConsumptionFromPVYear
-      - HomeConsumptionYieldDay
-      - HomeConsumptionYieldMonth
-      - HomeConsumptionYieldTotal
-      - HomeConsumptionYieldYear
+      # - PV1Power
+      # - PV1Voltage
+      # - PV1Current
+      # - PV2Power
+      # - PV2Voltage
+      # - PV2Current
+      # - ACFrequency
+      # - ACL1Current
+      # - ACL1Power
+      # - ACL1Voltage
+      # - ACL2Current
+      # - ACL2Power
+      # - ACL2Voltage
+      # - ACL3Current
+      # - ACL3Power
+      # - ACL3Voltage
+      # - HomeConsumptionDay
+      # - HomeConsumptionMonth
+      # - HomeConsumptionTotal
+      # - HomeConsumptionYear
+      # - HomeConsumptionFromBatDay
+      # - HomeConsumptionFromBatMonth
+      # - HomeConsumptionFromBatTotal
+      # - HomeConsumptionFromBatYear
+      # - HomeConsumptionFromGridDay
+      # - HomeConsumptionFromGridMonth
+      # - HomeConsumptionFromGridTotal
+      # - HomeConsumptionFromGridYear
+      # - HomeConsumptionFromPVDay
+      # - HomeConsumptionFromPVMonth
+      # - HomeConsumptionFromPVTotal
+      # - HomeConsumptionFromPVYear
+      # - HomeConsumptionYieldDay
+      # - HomeConsumptionYieldMonth
+      # - HomeConsumptionYieldTotal
+      # - HomeConsumptionYieldYear
 
   - platform: template
     sensors:
@@ -114,8 +114,14 @@ sensor:
         value_template: "{{ ((states('sensor.kostal_yield_day') | int) / 1000) | round(0) }}"
         icon_template: mdi:solar-power
 
+      daily_ownconsumption_wh:
+        friendly_name: "Eigenverbrauch [Wh]"
+        unit_of_measurement: 'Wh'
+        value_template: "{{ (states('sensor.kostal_yield_day') | int) - (states('sensor.daily_energy_einspeisung_wh') | int) }}"
+        icon_template: mdi:home-import-outline
+
       daily_ownconsumption_kwh:
-        friendly_name: "Eigenverbrauch"
+        friendly_name: "Eigenverbrauch [kWh]"
         unit_of_measurement: 'kWh'
         value_template: "{{ ((((states('sensor.kostal_yield_day') | int) - (states('sensor.daily_energy_einspeisung_wh') | int)) / 1000)) | round(0) }}"
         icon_template: mdi:home-import-outline
@@ -185,30 +191,37 @@ sensor:
       - filter: time_throttle
         window_size: 00:01:00
         precision: 0
-
+  - platform: filter
+    name: 'actual_energy_consumption_w_filtered'
+    entity_id: sensor.actual_energy_consumption_w
+    filters:
+      - filter: time_throttle
+        window_size: 00:01:00
+        precision: 0
+    
 utility_meter:
-  hourly_energy_bezug_wh:
-    source: sensor.sml_output_wirkenergie_bezug_summe_wh
+  hourly_energy_bezug_wh:                                             # stündliche Bezugsmenge in Wattstunden
+    source: sensor.sml_output_wirkenergie_bezug_summe_wh              
     cycle: hourly
-  hourly_energy_einspeisung_wh:
-    source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
+  hourly_energy_einspeisung_wh:                                       # stündliche Einspeisung in Wattstunden
+    source: sensor.sml_output_wirkenergie_einspeisung_summe_wh        
     cycle: hourly
-  daily_energy_bezug_wh:
-    source: sensor.sml_output_wirkenergie_bezug_summe_wh
+  daily_energy_bezug_wh:                                              # tägliche Bezugsmenge in Wattstunden
+    source: sensor.sml_output_wirkenergie_bezug_summe_wh  
     cycle: daily
-  daily_energy_einspeisung_wh:
+  daily_energy_einspeisung_wh:                                        # tägliche Einspeisung in Wattstunden
     source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: daily
-  monthly_energy_bezug_wh:
+  monthly_energy_bezug_wh:                                            # monatliche Bezugsmenge in Wattstunden
     source: sensor.sml_output_wirkenergie_bezug_summe_wh
     cycle: monthly
-  monthly_energy_einspeisung_wh:
+  monthly_energy_einspeisung_wh:                                      # monatliche Einspeisung in Wattstunden
     source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: monthly
-  yearly_energy_bezug_wh:
+  yearly_energy_bezug_wh:                                             # jährliche Bezugsmenge in Wattstunden
     source: sensor.sml_output_wirkenergie_bezug_summe_wh
     cycle: yearly
-  yearly_energy_einspeisung_wh:
+  yearly_energy_einspeisung_wh:                                       # monatliche Einspeisung in Wattstunden
     source: sensor.sml_output_wirkenergie_einspeisung_summe_wh
     cycle: yearly
 
