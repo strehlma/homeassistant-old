@@ -44,5 +44,3 @@ influxdb:
       - sensor.monthly_energy_einspeisung_wh                                      # monatliche Einspeisung in Wattstunden
       - sensor.yearly_energy_bezug_wh                                             # jährliche Bezugsmenge in Wattstunden
       - sensor.yearly_energy_einspeisung_wh                                       # monatliche Einspeisung in Wattstunden
-
-      - sun.sun

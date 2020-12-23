@@ -1,9 +1,48 @@
 homekit:
+  name: Home Assistant
   auto_start: true
   ip_address: !secret homekit_ip
   port: !secret homekit_port
   pincode: !secret homekit_pin
   filter:
-    include_domains:
-      - switch
-      - light
+    include_entities:
+      # Heizung
+      - climate.bad
+      - climate.buro
+      - climate.kuche
+      - climate.schlafzimmer
+      - climate.wohnzimmer
+
+      # Licht / Schalter
+      - light.cube
+      - light.moon
+      - switch.diningroom
+      - switch.livingroom
+      - switch.shelf
+      - switch.showcase
+
+  entity_config:
+    climate.bad:
+      name: Bad
+    climate.buro:
+      name: Büro
+    climate.kuche:
+      name: Küche
+    climate.schlafzimmer:
+      name: Schlafzimmer
+    climate.wohnzimmer:
+      name: Wohnzimmer
+
+    light.cube:
+      name: Würfel
+    light.moon:
+      name: Mond
+
+    switch.diningroom:
+      name: Esszimmerlicht
+    switch.livingroom:
+      name: Wohnzimmerlicht
+    switch.shelf:
+      name: Wohnzimmerregal
+    switch.showcase:
+      name: Vitrine
