@@ -503,6 +503,9 @@ button_card_templates:
         spin: "{{ spin_off|default('false') }}"
 
 title: Home
+
+kiosk_mode:
+  kiosk: true
 views:
   - !include lovelace/views/tablet/dashboard.yaml
   - !include lovelace/views/tablet/energy.yaml
