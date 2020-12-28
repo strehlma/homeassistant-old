@@ -105,13 +105,13 @@ sensor:
       - HomeConsumptionYieldMonth
       - HomeConsumptionYieldTotal
       - HomeConsumptionYieldYear
-      - OwnConsumptionRateDay
-      - OwnConsumptionRateMonth
-      - OwnConsumptionRateTotal
-      - OwnConsumptionRateYear
-      - MinSoC
-      - SmartBatteryControl
-      
+      # - OwnConsumptionRateDay
+      # - OwnConsumptionRateMonth
+      # - OwnConsumptionRateTotal
+      # - OwnConsumptionRateYear
+      # - MinSoC
+      # - SmartBatteryControl
+
   - platform: template
     sensors:
       kostal_yield_day_kwh:
