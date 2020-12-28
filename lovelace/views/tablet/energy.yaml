@@ -300,6 +300,18 @@ cards:
           top: 33.5vh
           left: 46.4vw
           color: white
+      
+          
+      - type: custom:hui-entities-card
+        style:
+          top: 50vh
+          left: 39vw
+          width: 300px
+        entities:
+            - sensor.energy_costs_today
+            - sensor.energy_cost_saving_today
+            - sensor.energy_compensation_today
+  
 
       - type: custom:mini-graph-card
         name: Solarleistung / Verbrauch
