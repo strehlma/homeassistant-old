@@ -197,6 +197,14 @@ sensor:
           {{ (((states('sensor.daily_energy_bezug_wh') | int) / 1000) * (states('input_number.bezugskosten') | float)) | round(2) }}
         icon_template: mdi:currency-eur
 
+      energy_cost_balance_today:
+        friendly_name: Stromkostenbilanz (heute)
+        unit_of_measurement: €
+        value_template: >
+          {{ (states('energy_costs_today') | float) - (states('energy_compensation_today') | float) }}
+        icon_template: mdi:currency-eur
+  
+
 
   - platform: filter
     name: 'sml_output_momentanwirkleistung_summe_w_filtered'
