@@ -1,3 +1,13 @@
+input_number:
+  einspeiseverguetung:
+    name: Einspeisevergütung [€/kWh]
+    mode: box
+    initial: 0.0917
+  bezugskosten:
+    name: Bezugskosten [€/kWh]
+    mode: box
+    initial: 0.2746
+  
 sensor:
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_Wh"             
@@ -160,6 +170,20 @@ sensor:
               {{ (states('sensor.sml_output_momentanwirkleistung_summe_w_filtered')|int) }}
           {% endif %}
         icon_template: mdi:home-import-outline
+
+      energy_cost_saving_today:
+        friendly_name: Stromkostenersparnis (heute)
+        unit_of_measurement: €
+        value_template: >
+          {{ (((((states('sensor.kostal_yield_day') | int) - (states('sensor.daily_energy_einspeisung_wh') | int)) / 1000) * 0.2746) * -1) | round(2) }}
+        icon_template: mdi:currency-eur
+
+      energy_costs_today:
+        friendly_name: Stromkosten (heute)
+        unit_of_measurement: €
+        value_template: >
+          {{ (((states('sensor.daily_energy_bezug_wh') | int) / 1000) * 0.2746) | round(2) }}
+        icon_template: mdi:currency-eur
 
 
   - platform: filter
