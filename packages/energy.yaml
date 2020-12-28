@@ -3,10 +3,15 @@ input_number:
     name: Einspeisevergütung [€/kWh]
     mode: box
     initial: 0.0917
+    min: 0
+    max: 1
+
   bezugskosten:
     name: Bezugskosten [€/kWh]
     mode: box
     initial: 0.2746
+    min: 0
+    max: 1
   
 sensor:
   - platform: mqtt
