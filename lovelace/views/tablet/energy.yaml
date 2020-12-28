@@ -277,7 +277,7 @@ cards:
           pointer-events: none
 
       - type: state-label
-        entity: sensor.kostal_yield_day
+        entity: sensor.kostal_yield_day_rounded
         style:
           top: 28.5vh
           left: 31.6vw

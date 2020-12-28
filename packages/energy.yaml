@@ -114,11 +114,11 @@ sensor:
 
   - platform: template
     sensors:
-      # kostal_yield_day_kwh:
-      #   friendly_name: "Stromerzeugung"
-      #   unit_of_measurement: 'kWh'
-      #   value_template: "{{ ((states('sensor.kostal_yield_day') | int) / 1000) | round(0) }}"
-      #   icon_template: mdi:solar-power
+      kostal_yield_day_rounded:
+        friendly_name: "Stromerzeugung"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ (states('sensor.kostal_yield_day') | int) | round(0) }}"
+        icon_template: mdi:solar-power
 
       daily_ownconsumption_wh:
         friendly_name: "Eigenverbrauch [Wh]"
