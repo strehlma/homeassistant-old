@@ -201,7 +201,7 @@ sensor:
         friendly_name: Stromkostenbilanz (heute)
         unit_of_measurement: €
         value_template: >
-          {{ (states('energy_costs_today') | float) - (states('energy_compensation_today') | float) }}
+        {{ (states('sensor.energy_costs_today') | float) - (states('sensor.energy_compensation_today') | float) }}
         icon_template: mdi:currency-eur
   
 
