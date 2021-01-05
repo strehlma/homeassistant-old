@@ -271,40 +271,40 @@ cards:
         hold_action:
           action: none
         style:
-          top: 31vh
+          top: 29vh
           left: 39vw
-          width: 300px
+          width: 350px
           pointer-events: none
 
       - type: state-label
         entity: sensor.kostal_yield_day_rounded
         style:
-          top: 28.5vh
-          left: 31.6vw
+          top: 26.8vh
+          left: 32.6vw
           color: white
       - type: state-label
         entity: sensor.daily_energy_einspeisung_kwh
         style:
-          top: 28.5vh
-          left: 46.4vw
+          top: 26.8vh
+          left: 46vw
           color: white
       - type: state-label
         entity: sensor.daily_energy_bezug_kwh
         style:
-          top: 33.5vh
-          left: 31.6vw
+          top: 31.3vh
+          left: 32.6vw
           color: white
       - type: state-label
         entity: sensor.daily_ownconsumption_kwh
         style:
-          top: 33.5vh
-          left: 46.4vw
+          top: 31.3vh
+          left: 46vw
           color: white
       
 
       - type: custom:hui-entities-card
         style:
-          top: 60vh
+          top: 78vh
           left: 39vw
           width: 400px
         entities:
@@ -315,11 +315,38 @@ cards:
   
 
       - type: custom:mini-graph-card
+        name: Wirkleistung
+        style:
+          top: 19vh
+          left: 75vw
+          width: 450px
+        unit: 'W'
+        hours_to_show: 24
+        points_per_hour: 60
+        hour24: true
+        line_width: 3
+        color_thresholds:
+          - color: '#B4CD31'
+            value: 1
+          - color: '#ff1a1a'
+            value: 3000
+        entities:
+          - entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
+            name: Wirkleistung
+            show_state: true
+            show_legend: false
+          - entity: sensor.null_sensor
+            name: Wirkleistung
+            color: '#888888'
+            show_state: false
+            show_legend: false
+
+      - type: custom:mini-graph-card
         name: Solarleistung / Verbrauch
         style:
-          top: 77vh
-          left: 39vw
-          width: 300px
+          top: 48vh
+          left: 75vw
+          width: 450px
           unit: 'W'
         hours_to_show: 24
         points_per_hour: 60
@@ -343,38 +370,14 @@ cards:
             name: Verbrauch
             color: '#888888'
             show_legend: false
-  
-      - type: custom:mini-graph-card
-        name: Wirkleistung
-        style:
-          top: 21vh
-          left: 72vw
-        unit: 'W'
-        hours_to_show: 24
-        points_per_hour: 60
-        hour24: true
-        line_width: 3
-        color_thresholds:
-          - color: '#B4CD31'
-            value: 1
-          - color: '#ff1a1a'
-            value: 3000
-        entities:
-          - entity: sensor.sml_output_momentanwirkleistung_summe_w_filtered
-            name: Wirkleistung
-            show_state: true
-            show_legend: false
-          - entity: sensor.null_sensor
-            name: Wirkleistung
-            color: '#888888'
-            show_state: false
-            show_legend: false
-
+      
+    
       - type: custom:mini-graph-card
         name: PV Produktion pro Tag
         style:
-          top: 55vh
-          left: 72vw
+          top: 77vh
+          left: 75vw
+          width: 450px;
         entities:
           - entity: sensor.kostal_yield_day
             color: '#B4CD31'
