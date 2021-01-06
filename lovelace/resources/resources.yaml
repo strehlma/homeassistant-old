@@ -24,6 +24,5 @@
     {url: /hacsfiles/decluttering-card/decluttering-card.js,                   type: module},
     {url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js,      type: module},
     {url: /hacsfiles/kiosk-mode/kiosk-mode.js,                                 type: module},
-    # {url: '/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js?v=12',   type: module},
-    # {url: '/local/custom_icons.js?v=25052001',                                 type: module},
+    {url: /hacsfiles/tesla-style-solar-power-card/tesla-style-solar-power-card.js, type: module},
     {url: /local/font.css,                                                     type: css} ]
