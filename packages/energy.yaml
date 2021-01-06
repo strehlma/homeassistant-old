@@ -132,7 +132,7 @@ sensor:
       kostal_yield_day_rounded:
         friendly_name: "Stromerzeugung"
         unit_of_measurement: 'kWh'
-        value_template: "{{ (states('sensor.kostal_yield_day') | int) | round(0) }}"
+        value_template: "{{ (states('sensor.kostal_yield_day') | int) | round(1) }}"
         icon_template: mdi:solar-power
 
       daily_ownconsumption_wh:
@@ -201,7 +201,7 @@ sensor:
         friendly_name: Stromkostenbilanz (heute)
         unit_of_measurement: €
         value_template: >
-          {{ (states('sensor.energy_costs_today') | float) - (states('sensor.energy_compensation_today') | float) }}
+          {{ ((states('sensor.energy_costs_today') | float) - (states('sensor.energy_compensation_today') | float)) | round(2) }}
         icon_template: mdi:currency-eur
   
 

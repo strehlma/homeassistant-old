@@ -259,9 +259,11 @@ cards:
           notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
  
 
-
-
-
+      #################################################
+      #                                               #
+      #                Solar Overview                 #
+      #                                               #
+      #################################################
 
 
       - type: image
