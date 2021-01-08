@@ -1,5 +1,5 @@
 - alias: 'Toggle bedroom TV'
-  initial_state: 'on'
+  initial_state: true
   trigger:
       - platform: event
         event_type: deconz_event
@@ -11,7 +11,7 @@
     entity_id: switch.wellness_plug
 
 - alias: 'Turn on bedroom TV'
-  initial_state: 'on'
+  initial_state: true
   trigger:
       - platform: event
         event_type: deconz_event
@@ -28,7 +28,7 @@
     entity_id: switch.wellness_plug
 
 - alias: 'Turn off bedroom TV'
-  initial_state: 'on'
+  initial_state: true
   trigger:
       - platform: event
         event_type: deconz_event

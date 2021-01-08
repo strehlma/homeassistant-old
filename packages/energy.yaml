@@ -199,7 +199,7 @@ sensor:
         icon_template: mdi:home-import-outline
 
       actual_solar_consumption_w:
-        friendly_name: Einspeisung
+        friendly_name: Solarbezug
         unit_of_measurement: 'W'
         value_template: >
           {% if states('sensor.actual_energy_production_w_filtered') | int > 0 %}
