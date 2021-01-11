@@ -321,16 +321,8 @@ cards:
         #   - bath.*,kids.* <hides all devices which start with bath or kids>
 
       - type: 'custom:mini-media-player'
-        entity:  media_player.spotify_strehlma
+        entity:  media_player.spotify_strehlma_sfy
         style:
           top: 31vh
           left: 70vw
           width: 300px
-
-      - type: 'custom:mini-media-player'
-        entity:  media_player.fire_tv_cube
-        style:
-          top: 50vh
-          left: 70vw
-          width: 300px
-  
