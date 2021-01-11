@@ -281,25 +281,25 @@ cards:
       - type: state-label
         entity: sensor.kostal_yield_day_rounded
         style:
-          top: 26.8vh
+          top: 23.8vh
           left: 32.6vw
           color: white
       - type: state-label
         entity: sensor.daily_energy_einspeisung_kwh
         style:
-          top: 26.8vh
+          top: 23.8vh
           left: 46vw
           color: white
       - type: state-label
         entity: sensor.daily_energy_bezug_kwh
         style:
-          top: 31.3vh
+          top: 34.3vh
           left: 32.6vw
           color: white
       - type: state-label
         entity: sensor.daily_ownconsumption_kwh
         style:
-          top: 31.3vh
+          top: 34.3vh
           left: 46vw
           color: white
       
