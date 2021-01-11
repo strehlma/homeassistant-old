@@ -308,6 +308,7 @@ cards:
           top: 78vh
           left: 39vw
           width: 400px
+          height: 260px
         #  width: 400px
         #general
         house_consumption_entity: sensor.actual_energy_consumption_w #expects (k)W for the power being consumed in the house (can be a template sensor sum (grid_consumption, solar_consumptio and battery_consumption)
