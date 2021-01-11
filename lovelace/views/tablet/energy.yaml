@@ -317,6 +317,8 @@ cards:
         #solar
         solar_consumption_entity: sensor.actual_solar_consumption_w  #expects (k)W for the power being fed from the panels to the house
         solar_yield_entity: sensor.actual_energy_production_w #expects (k)W for the power being produced currently from the panels
+        tap_action: !include popup/sidebar_solar_power.yaml
+
 
       # - type: custom:hui-entities-card
       #   style:
