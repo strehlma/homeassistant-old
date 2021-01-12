@@ -81,7 +81,7 @@ cards:
       #                                               #
       #################################################
 
-      - type: state-label
+      - type: state-label             # Time
         entity: sensor.time
         hold_action:
           action: none
@@ -96,7 +96,7 @@ cards:
         tap_action:
           action: none
     
-      - type: state-label
+      - type: state-label             # Date
         entity: sensor.date_string
         hold_action:
           action: none
@@ -118,7 +118,7 @@ cards:
       #                                               #
       #################################################
 
-      - type: image
+      - type: image                   # Mario
         action: none
         entity: person.mario
         state_image:
@@ -133,7 +133,7 @@ cards:
           width: 4.5vw
         tap_action: none
     
-      - type: image
+      - type: image                   # Sandra
         action: none
         entity: person.sandra
         state_image:
@@ -154,7 +154,7 @@ cards:
       #                                               #
       #################################################
   
-      - type: custom:button-card
+      - type: custom:button-card      # Home
         template: menu
         name: Home
         icon: mdi:home
@@ -166,7 +166,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/home
         
-      - type: custom:button-card
+      - type: custom:button-card      # Media
         template: menu
         name: Media
         icon: mdi:speaker
@@ -178,7 +178,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/media
     
-      - type: custom:button-card
+      - type: custom:button-card      # Energy
         template: menu
         name: Energie
         icon: mdi:flash
@@ -190,7 +190,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/energy
 
-      - type: custom:button-card
+      - type: custom:button-card      # System
         template: menu
         name: System
         icon: mdi:server
@@ -210,7 +210,7 @@ cards:
       #################################################
 
 
-      - type: custom:button-card
+      - type: custom:button-card      # Windows
         template: signal_icon
         style:
           margin-top: 12px
@@ -243,7 +243,7 @@ cards:
         custom_fields: 
           notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
 
-      - type: custom:button-card
+      - type: custom:button-card      # Trash
         template: signal_icon
         style:
           margin-top: 12px
@@ -276,7 +276,7 @@ cards:
         custom_fields: 
           notification: "[[[ if (states['sensor.next_garbage_days'].state < 2) return '&nbsp;'; else return states['sensor.next_garbage_days'].state ]]]"
   
-      - type: custom:button-card
+      - type: custom:button-card      # Battery
         template: signal_icon
         style:
           margin-top: 12px
@@ -362,22 +362,6 @@ cards:
       #       top: 20%
       #       left: 11.1%
 
-      # #################################################
-      # #                                               #
-      # #                  ENERGY BUTTON                #
-      # #                                               #
-      # #################################################
-
-      # - type: icon
-      #   icon: mdi:solar-power
-      #   title: Solar Power
-      #   style:
-      #     top: 83%
-      #     left: 4.85%
-      #     color: rgba(255, 255, 255, 0.10)
-      #     padding: 0.8vw
-      #     --mdc-icon-size: 4vw
-      #   tap_action: !include popup/sidebar_solar_power.yaml
 
       # #################################################
       # #                                               #

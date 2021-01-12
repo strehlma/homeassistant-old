@@ -63,7 +63,7 @@ cards:
       #                                               #
       #################################################
 
-      - type: state-label
+      - type: state-label             # Time
         entity: sensor.time
         hold_action:
           action: none
@@ -78,7 +78,7 @@ cards:
         tap_action:
           action: none
     
-      - type: state-label
+      - type: state-label             # Date
         entity: sensor.date_string
         hold_action:
           action: none
@@ -100,7 +100,7 @@ cards:
       #                                               #
       #################################################
 
-      - type: image
+      - type: image                   # Mario
         action: none
         entity: person.mario
         state_image:
@@ -115,7 +115,7 @@ cards:
           width: 4.5vw
         tap_action: none
     
-      - type: image
+      - type: image                   # Sandra
         action: none
         entity: person.sandra
         state_image:
@@ -136,7 +136,7 @@ cards:
       #                                               #
       #################################################
   
-      - type: custom:button-card
+      - type: custom:button-card      # Home
         template: menu
         name: Home
         icon: mdi:home
@@ -148,7 +148,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/home
         
-      - type: custom:button-card
+      - type: custom:button-card      # Media
         template: menu
         name: Media
         icon: mdi:speaker
@@ -160,7 +160,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/media
     
-      - type: custom:button-card
+      - type: custom:button-card      # Energy
         template: menu
         name: Energie
         icon: mdi:flash
@@ -172,7 +172,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/energy
 
-      - type: custom:button-card
+      - type: custom:button-card      # System
         template: menu
         name: System
         icon: mdi:server
@@ -192,7 +192,7 @@ cards:
       #################################################
 
 
-      - type: custom:button-card
+      - type: custom:button-card      # Windows
         template: signal_icon
         style:
           margin-top: 12px
@@ -225,13 +225,46 @@ cards:
         custom_fields: 
           notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
 
-      - type: custom:button-card
+      - type: custom:button-card      # Trash
         template: signal_icon
         style:
           margin-top: 12px
           top: 90vh
           left: 15vh
         icon: mdi:trash-can-outline
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.next_garbage_days'].state < 2) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.next_garbage_days'].state < 2) return '&nbsp;'; else return states['sensor.next_garbage_days'].state ]]]"
+  
+      - type: custom:button-card      # Battery
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 25vh
+        icon: mdi:battery-outline
         styles:
           card:
             - --ha-card-background: transparant
@@ -257,7 +290,10 @@ cards:
             - color: var(--header-color)
         custom_fields: 
           notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
- 
+  
+
+
+
 
       #################################################
       #                                               #
