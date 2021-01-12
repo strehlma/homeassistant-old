@@ -266,46 +266,46 @@ cards:
       #################################################
 
 
-      - type: image
-        image: /local/images/solar.png
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        style:
-          top: 29vh
-          left: 39vw
-          width: 350px
-          pointer-events: none
+      # - type: image
+      #   image: /local/images/solar.png
+      #   tap_action:
+      #     action: none
+      #   hold_action:
+      #     action: none
+      #   style:
+      #     top: 29vh
+      #     left: 39vw
+      #     width: 350px
+      #     pointer-events: none
 
-      - type: state-label
-        entity: sensor.kostal_yield_day_rounded
-        style:
-          top: 23.8vh
-          left: 32.6vw
-          color: white
-      - type: state-label
-        entity: sensor.daily_energy_einspeisung_kwh
-        style:
-          top: 23.8vh
-          left: 46vw
-          color: white
-      - type: state-label
-        entity: sensor.daily_energy_bezug_kwh
-        style:
-          top: 34.3vh
-          left: 32.6vw
-          color: white
-      - type: state-label
-        entity: sensor.daily_ownconsumption_kwh
-        style:
-          top: 34.3vh
-          left: 46vw
-          color: white
+      # - type: state-label
+      #   entity: sensor.kostal_yield_day_rounded
+      #   style:
+      #     top: 23.8vh
+      #     left: 32.6vw
+      #     color: white
+      # - type: state-label
+      #   entity: sensor.daily_energy_einspeisung_kwh
+      #   style:
+      #     top: 23.8vh
+      #     left: 46vw
+      #     color: white
+      # - type: state-label
+      #   entity: sensor.daily_energy_bezug_kwh
+      #   style:
+      #     top: 34.3vh
+      #     left: 32.6vw
+      #     color: white
+      # - type: state-label
+      #   entity: sensor.daily_ownconsumption_kwh
+      #   style:
+      #     top: 34.3vh
+      #     left: 46vw
+      #     color: white
       
       - type: custom:tesla-style-solar-power-card
         style:
-          top: 78vh
+          top: 22.6vh
           left: 39vw
           width: 400px
           height: 260px
@@ -319,6 +319,19 @@ cards:
         solar_consumption_entity: sensor.actual_solar_consumption_w  #expects (k)W for the power being fed from the panels to the house
         solar_yield_entity: sensor.actual_energy_production_w #expects (k)W for the power being produced currently from the panels
         tap_action: !include popup/sidebar_solar_power.yaml
+
+      - type: custom:hui-entities-card
+        style:
+          top: 78vh
+          left: 39vw
+          width: 400px
+        entities:
+            - sensor.kostal_yield_day_rounded
+            - sensor.daily_energy_einspeisung_kwh
+            - sensor.daily_energy_bezug_kwh
+            - sensor.daily_ownconsumption_kwh
+            - sensor.sml_output_wirkenergie_bezug_summe_wh
+            - sensor.sml_output_wirkenergie_einspeisung_summe_wh
 
 
       # - type: custom:hui-entities-card
