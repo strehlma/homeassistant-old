@@ -203,7 +203,7 @@ sensor:
         unit_of_measurement: 'W'
         value_template: >
           {% if states('sensor.actual_energy_production_w_filtered') | int > 0 %}
-              {{ (states('sensor.actual_energy_production_w_filtered')|int) - (states('sensor.actual_grid_feed_in_w')) }}
+              {{ (states('sensor.actual_energy_production_w_filtered') | int) - (states('sensor.actual_grid_feed_in_w') | int) }}
             {% else %}
               0
           {% endif %}
