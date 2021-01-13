@@ -443,12 +443,12 @@ cards:
             #   template: name_action
 
       - prefix: Fully Kiosk
-      <<: *title
-      style:
-        top: 9.15%
-        left: 50.4%
-        <<: *title-style
-    
+        <<: *title
+        style:
+          top: 9.15%
+          left: 50.4%
+          <<: *title-style
+      
       - type: custom:hui-entities-card
         style:
           top: 78vh
