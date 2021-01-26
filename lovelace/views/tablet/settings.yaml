@@ -1,0 +1,364 @@
+anchors:
+  anchor1: &title
+    entity: sensor.placeholder
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    type: state-label
+
+anchor2: &title-style
+  color: '#bcbebf'
+  font-family: SF Text
+  font-size: 2.4vw
+  font-weight: 500
+  max-width: 1px
+  cursor: default
+
+
+
+title: Settings
+path: settings
+icon: 'mdi:cog-outline'
+panel: true
+
+cards:
+  - type: picture-elements
+    image: /local/images/background.png
+
+    style:
+      .: |
+        /* Global */
+        #root > hui-icon-element {opacity: 0.1 !important; transition: 0.4s;}
+        #root > hui-icon-element:hover {opacity: 0.25 !important; transition: none;}
+        #root > hui-icon-element:active {opacity: 0.35 !important; transition: none;}
+        #root > hui-icon-element:nth-child(10) {
+          {% if states('sensor.hass_version_installed') != states('sensor.hass_version_latest') and 
+          not is_state('sensor.hass_version_latest', 'unknown') or 
+          not is_state('sensor.hacs', '0') and not is_state('sensor.hacs', 'unknown') %}
+            color: rgb(35,78,106) !important; opacity: 1 !important;
+          {% endif %}
+          }
+      "#root > hui-image":
+        $: |
+          #image {pointer-events: none;}
+      "#root > hui-markdown-card, #key1":
+        $: |
+          ha-card > ha-markdown {padding: 0 !important;}
+      "#root > hui-markdown-card, #key2":
+        $:
+          "ha-card > ha-markdown":
+            $: |
+              ha-markdown-element > font > ha-icon {vertical-align: 3%; opacity: 0.6;}
+              ha-markdown-element > p > span {font-family: SF Text; font-size: 5vw; 
+              font-weight: 200; margin-left: -0.3vw; letter-spacing: -0.05vw;}
+      "#root > hui-state-label-element":
+        $: |
+          div {padding: 0 !important;}
+
+    elements:
+
+      ##########################################################################
+      #                                                                        #
+      #                              * SIDEBAR *                               #
+      #                                                                        #
+      ##########################################################################
+
+      - type: image
+        image: local/images/sidebar.png
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        style:
+          top: 50%
+          left: 10.6%
+          width: 21.5%
+          pointer-events: none
+          border-right: 1.5px solid rgba(58,69,73,0.2)
+
+      #################################################
+      #                                               #
+      #                   Time and Date               #
+      #                                               #
+      #################################################
+
+      - type: state-label
+        entity: sensor.time
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.7)'
+          font-size: 5.41vw
+          font-weight: 200
+          left: 4%
+          letter-spacing: '-0.05vw'
+          max-width: 1px
+          top: 10%
+        tap_action:
+          action: none
+    
+      - type: state-label
+        entity: sensor.date_string
+        hold_action:
+          action: none
+        style:
+          color: 'rgba(255, 255, 255, 0.3)'
+          font-size: 1.3vw
+          font-weight: 300
+          left: 18.1%
+          letter-spacing: '-0.05vw'
+          text-align: left
+          top: 17%
+          width: 30%
+        tap_action:
+          action: none
+
+      #################################################
+      #                                               #
+      #                 Persons                       #
+      #                                               #
+      #################################################
+
+      - type: image
+        action: none
+        entity: person.mario
+        state_image:
+          home: /local/images/mario.png
+          not_home: /local/images/mario_gone.png
+        style:
+          background-color: 'rgba(255, 255, 255, 0.0)'
+          border-radius: 10vw
+          height: 4.5vw
+          left: 7%
+          top: 25%
+          width: 4.5vw
+        tap_action: none
+    
+      - type: image
+        action: none
+        entity: person.sandra
+        state_image:
+          home: /local/images/sani.png
+          not_home: /local/images/sani_gone.png
+        style:
+          background-color: 'rgba(255, 255, 255, 0.0)'
+          border-radius: 10vw
+          height: 4.5vw
+          left: 14%
+          top: 25%
+          width: 4.5vw
+        tap_action: none
+      
+      #################################################
+      #                                               #
+      #                 Navigation                    #
+      #                                               #
+      #################################################
+  
+      - type: custom:button-card
+        template: menu
+        name: Home
+        icon: mdi:home
+        style:
+          top: 35%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/home
+        
+      - type: custom:button-card
+        template: menu
+        name: Media
+        icon: mdi:speaker
+        style:
+          top: 42%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/media
+    
+      - type: custom:button-card
+        template: menu
+        name: Energie
+        icon: mdi:flash
+        style:
+          top: 49%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/energy
+
+      - type: custom:button-card
+        template: menu
+        name: System
+        icon: mdi:server
+        style:
+          top: 56%
+          left: 10.5%
+          width: 15vw
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/system
+        
+
+      #################################################
+      #                                               #
+      #                 Signal Icons                  #
+      #                                               #
+      #################################################
+
+
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 5vh
+        icon: mdi:window-closed
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 15vh
+        icon: mdi:trash-can-outline
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.next_garbage_days'].state < 2) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.next_garbage_days'].state < 2) return '&nbsp;'; else return states['sensor.next_garbage_days'].state ]]]"
+  
+      - type: custom:button-card
+        template: signal_icon
+        style:
+          margin-top: 12px
+          top: 90vh
+          left: 25vh
+        icon: mdi:battery-outline
+        styles:
+          card:
+            - --ha-card-background: transparant
+            - box-shadow: none
+            - width: 30px
+            - height: 30px
+          img_cell:
+            - align-self: start
+            - text-align: start
+          custom_fields:
+            notification:
+              - background-color: "[[[ if (states['sensor.current_windows_open'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'red' ]]]"
+              - color: white
+              - border-radius: 50%
+              - overflow: visible
+              - position: absolute
+              - left: 50%
+              - bottom: 50%
+              - height: 15px
+              - width: 15px
+              - font-size: 11px
+          icon:
+            - color: var(--header-color)
+        custom_fields: 
+          notification: "[[[ if (states['sensor.current_windows_open'].state < 1) return '&nbsp;'; else return states['sensor.current_windows_open'].state ]]]"
+
+      ##########################################################################
+      #                                                                        #
+      #                              * Main *                                  #
+      #                                                                        #
+      ##########################################################################
+
+      - prefix: Battery Alert Main
+        <<: *title
+        style:
+          top: 9.15%
+          left: 25.4%
+          <<: *title-style
+
+      - type: custom:hui-entities-card
+        style:
+          top: 34vh
+          left: 39vw
+          width: 400px
+        entities:
+  
+          - entity: input_boolean.low_batteries
+          - entity: input_number.battery_alert_threshold_min
+          - entity: input_number.battery_alert_threshold_max
+          - entity: input_text.delete_battery_sensor
+          - entity: input_text.notifier_name
+          - entity: input_select.notifier_format
+          - entity: automation.battery_persistent_notification
+          - entity: automation.battery_persistent_notification_clear
+          - entity: automation.battery_notification_default
+          - entity: automation.battery_notification_slack
+          - entity: automation.battery_sensor_from_attributes
+          - entity: automation.update_battery_status_group_members
+          - entity: automation.delete_battery_sensor
+
+      - prefix: Battery Alert View
+        <<: *title
+        style:
+          top: 9.15%
+          left: 50.4%
+          <<: *title-style
+      
+      - type: custom:hui-entities-card
+        style:
+          top: 54vh
+          left: 77vw
+          width: 400px
+        entities:
+
+          - entity: group.battery_status
+          - entity: group.battery_alert
+          - entity: group.battery_view

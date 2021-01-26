@@ -224,6 +224,23 @@ button_card_templates:
       # ui_sound: *ui_sound
       haptic: light
 
+  switch:
+    aspect_ratio: 1/1
+    show_state: true
+    show_icon: false
+    state: *button_state
+    styles:
+      name: *button_styles_name
+      state: *button_styles_state
+      card: *button_styles_card
+      custom_fields:
+        loading:
+          [filter: "[[[ return entity.state === 'off' ? 'invert(1)' : 'none'; ]]]", 
+            top: 3%, left: 60%, width: 3.7vw, position: absolute, opacity: 0.6]
+    tap_action:
+      # ui_sound: *ui_sound
+      haptic: light
+    
   menu:
     layout: icon_name
     styles:
@@ -511,3 +528,4 @@ views:
   - !include lovelace/views/tablet/energy.yaml
   - !include lovelace/views/tablet/media.yaml
   - !include lovelace/views/tablet/system.yaml
+  - !include lovelace/views/tablet/settings.yaml
