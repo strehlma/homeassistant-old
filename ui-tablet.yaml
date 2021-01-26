@@ -225,28 +225,15 @@ button_card_templates:
       haptic: light
 
   sensor:
-    # aspect_ratio: 1/1
-    show_state: true
-    show_icon: true
-    state: *button_state
-    # custom_fields:
-    #   curr_temp: >
-    #     [[[ return entity.attributes.current_temperature + ' °C' ]]]
-    #   temp: >
-    #     [[[ return entity.attributes.temperature + ' °C' ]]]
+    layout: icon_name
     styles:
-      width: 15vw
-      name:
-        [top: 74%, left: 11%, position: absolute, line-height: 2vw]
-      state: *button_styles_state
-      card: *button_styles_card
+      card:
+        [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
+        background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none, width: 15vw]
+      name: 
+        [line-height: 2vw]
       icon:
-        [top: -30%, left: 4.5%, width: 3.05vw, position: absolute]
-      custom_fields:
-        curr_temp:
-          [top: 0%, right: 4.5%, position: absolute, line-height: 4vw]
-        temp:
-          [top: 30%, right: 4.5%, position: absolute, line-height: 2vw]
+        [width: 2vw]
     tap_action:
       action: call-service
       service: browser_mod.popup
