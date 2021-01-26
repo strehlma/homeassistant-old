@@ -369,7 +369,19 @@ cards:
             - sensor.sml_output_wirkenergie_bezug_summe_wh
             - sensor.sml_output_wirkenergie_einspeisung_summe_wh
 
-
+      - type: custom:mini-graph-card
+        style:
+          top: 78vh
+          left: 39vw
+          width: 100px
+          height: 100px
+        entities:
+          - sensor.kostal_yield_day_rounded
+        align_icon: left
+        align_state: center
+        show:
+          fill: false
+          
       # - type: custom:hui-entities-card
       #   style:
       #     top: 78vh
