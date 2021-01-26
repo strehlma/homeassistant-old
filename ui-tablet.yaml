@@ -225,7 +225,7 @@ button_card_templates:
       haptic: light
 
   sensor:
-    aspect_ratio: 1/1
+    # aspect_ratio: 1/1
     show_state: true
     show_icon: true
     state: *button_state
@@ -235,6 +235,7 @@ button_card_templates:
     #   temp: >
     #     [[[ return entity.attributes.temperature + ' °C' ]]]
     styles:
+      width: 15vw
       name:
         [top: 74%, left: 11%, position: absolute, line-height: 2vw]
       state: *button_styles_state

@@ -374,7 +374,6 @@ cards:
         style:
           top: 78vh
           left: 39vw
-          width: 10%
         entity: sensor.kostal_yield_day_rounded
           
       # - type: custom:hui-entities-card
