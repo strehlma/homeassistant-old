@@ -225,15 +225,18 @@ button_card_templates:
       haptic: light
 
   sensor:
-    layout: icon_name
+    layout: icon_name_state2nd
+    show_state: true
     styles:
       card:
-        [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 1.34vw, 
-        background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none, width: 15vw]
+        [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 0.9vw, 
+        background-color: 'rgba(115, 115, 115, 0.2)', border-radius: 0.8vw, box-shadow: none, transition: none, hight: 4vh, width: 15vw]
       name: 
         [line-height: 2vw]
       icon:
         [width: 2vw]
+      state:
+        [font-size: 2.0vw]
     tap_action:
       action: call-service
       service: browser_mod.popup

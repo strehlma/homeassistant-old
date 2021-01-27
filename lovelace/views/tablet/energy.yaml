@@ -356,26 +356,61 @@ cards:
         solar_yield_entity: sensor.actual_energy_production_w #expects (k)W for the power being produced currently from the panels
         tap_action: !include popup/sidebar_solar_power.yaml
 
-      - type: custom:hui-entities-card
-        style:
-          top: 78vh
-          left: 39vw
-          width: 400px
-        entities:
-            - sensor.kostal_yield_day_rounded
-            - sensor.daily_energy_einspeisung_kwh
-            - sensor.daily_energy_bezug_kwh
-            - sensor.daily_ownconsumption_kwh
-            - sensor.sml_output_wirkenergie_bezug_summe_wh
-            - sensor.sml_output_wirkenergie_einspeisung_summe_wh
+      # - type: custom:hui-entities-card
+      #   style:
+      #     top: 78vh
+      #     left: 39vw
+      #     width: 400px
+      #   entities:
+      #       - sensor.kostal_yield_day_rounded
+      #       - sensor.daily_energy_einspeisung_kwh
+      #       - sensor.daily_energy_bezug_kwh
+      #       - sensor.daily_ownconsumption_kwh
+      #       - sensor.sml_output_wirkenergie_bezug_summe_wh
+      #       - sensor.sml_output_wirkenergie_einspeisung_summe_wh
 
       - type: custom:button-card
         template: sensor
         style:
-          top: 78vh
+          top: 45vh
           left: 39vw
         entity: sensor.kostal_yield_day_rounded
           
+      - type: custom:button-card
+        template: sensor
+        style:
+          top: 55vh
+          left: 39vw
+        entity: sensor.daily_energy_einspeisung_kwh
+
+      - type: custom:button-card
+        template: sensor
+        style:
+          top: 65vh
+          left: 39vw
+        entity: sensor.daily_energy_bezug_kwh
+
+      - type: custom:button-card
+        template: sensor
+        style:
+          top: 75vh
+          left: 39vw
+        entity: sensor.daily_ownconsumption_kwh
+
+      - type: custom:button-card
+        template: sensor
+        style:
+          top: 85vh
+          left: 39vw
+        entity: sensor.sml_output_wirkenergie_bezug_summe_wh
+
+      - type: custom:button-card
+        template: sensor
+        style:
+          top: 95vh
+          left: 39vw
+        entity: sensor.sml_output_wirkenergie_einspeisung_summe_wh
+
       # - type: custom:hui-entities-card
       #   style:
       #     top: 78vh
