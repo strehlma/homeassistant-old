@@ -373,42 +373,42 @@ cards:
         template: sensor
         style:
           top: 45vh
-          left: 39vw
+          left: 31vw
         entity: sensor.kostal_yield_day_rounded
           
       - type: custom:button-card
         template: sensor
         style:
           top: 55vh
-          left: 39vw
+          left: 47vw
         entity: sensor.daily_energy_einspeisung_kwh
 
       - type: custom:button-card
         template: sensor
         style:
           top: 65vh
-          left: 39vw
+          left: 31vw
         entity: sensor.daily_energy_bezug_kwh
 
       - type: custom:button-card
         template: sensor
         style:
           top: 75vh
-          left: 39vw
+          left: 47vw
         entity: sensor.daily_ownconsumption_kwh
 
       - type: custom:button-card
         template: sensor
         style:
           top: 85vh
-          left: 39vw
+          left: 31vw
         entity: sensor.sml_output_wirkenergie_bezug_summe_wh
 
       - type: custom:button-card
         template: sensor
         style:
           top: 95vh
-          left: 39vw
+          left: 47vw
         entity: sensor.sml_output_wirkenergie_einspeisung_summe_wh
 
       # - type: custom:hui-entities-card
