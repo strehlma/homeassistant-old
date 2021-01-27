@@ -17,7 +17,7 @@ sensor:
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_Wh"             
     name: sml_output_wirkenergie_bezug_summe_wh                           # Zählerstand Bezug in Wattstunden
-    value_template: “{{ ( value / 1000 ) | round(0) }}”
+    value_template: “{{ ( (value | float) / 1000 ) | round(0) }}”
     force_update: true
     unit_of_measurement: 'Wh'
     icon: mdi:power-socket-de
@@ -26,7 +26,7 @@ sensor:
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Wirkenergie_Einspeisung_Summe_Wh"
     name: sml_output_wirkenergie_einspeisung_summe_wh                     # Zählerstand Einspeisung in Wattstunden
-    value_template: “{{ ( value / 1000 ) | round(0) }}”
+    value_template: “{{ ( (value | float) / 1000 ) | round(0) }}”
     force_update: true
     unit_of_measurement: 'Wh'
     icon: mdi:home-export-outline

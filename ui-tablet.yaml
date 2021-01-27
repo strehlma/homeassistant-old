@@ -227,6 +227,7 @@ button_card_templates:
   sensor:
     layout: icon_name_state2nd
     show_state: true
+    size: 50%
     styles:
       card:
         [font-family: Sf Display, letter-spacing: 0.05vw, text-rendering: optimizeLegibility, font-weight: 400, color: 'rgba(255, 255, 255, 0.3)', font-size: 0.9vw, 
