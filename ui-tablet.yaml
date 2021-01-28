@@ -258,6 +258,7 @@ button_card_templates:
               show_header_toggle: false
               entities:
                 - type: custom:hui-sensor-card
+                  graph: line
                   entity: '[[[ return entity.entity_id ]]]'
         
   menu:
