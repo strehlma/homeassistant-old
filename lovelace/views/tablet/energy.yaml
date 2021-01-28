@@ -143,7 +143,6 @@ cards:
         style:
           top: 35%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/home
@@ -153,9 +152,8 @@ cards:
         name: Media
         icon: mdi:speaker
         style:
-          top: 42%
+          top: 43%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/media
@@ -165,9 +163,8 @@ cards:
         name: Energie
         icon: mdi:flash
         style:
-          top: 49%
+          top: 51%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/energy
@@ -177,9 +174,8 @@ cards:
         name: System
         icon: mdi:server
         style:
-          top: 56%
+          top: 59%
           left: 10.5%
-          width: 15vw
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/system
