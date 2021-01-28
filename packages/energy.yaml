@@ -17,16 +17,14 @@ sensor:
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Wirkenergie_Bezug_Summe_Wh"             
     name: sml_output_wirkenergie_bezug_summe_wh                           # Zählerstand Bezug in Wattstunden
-    value_template: "{{ ( (value | float) / 1000 ) | round(0) }}"
     force_update: true
     unit_of_measurement: 'Wh'
-    icon: mdi:power-socket-de
+    icon:  mdi:home-import-outline
     device_class: power
 
   - platform: mqtt
     state_topic: "sml/ISKRA_MT175/Wirkenergie_Einspeisung_Summe_Wh"
     name: sml_output_wirkenergie_einspeisung_summe_wh                     # Zählerstand Einspeisung in Wattstunden
-    value_template: "{{ ( (value | float) / 1000 ) | round(0) }}"
     force_update: true
     unit_of_measurement: 'Wh'
     icon: mdi:home-export-outline
@@ -131,6 +129,18 @@ sensor:
 
   - platform: template
     sensors:
+      feed_in_counter_kwh:
+        friendly_name: "Zähler Einspeisung"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ (((states('sensor.sml_output_wirkenergie_einspeisung_summe_wh') | float) / 1000) | round(0)) }}"
+        icon_template: mdi:home-export-outline
+
+      consumption_counter_kwh:
+        friendly_name: "Zähler Bezug"
+        unit_of_measurement: 'kWh'
+        value_template: "{{ (((states('sensor.sml_output_wirkenergie_bezug_summe_wh') | float) / 1000) | round(0)) }}"
+        icon_template: mdi:home-import-outline
+  
       kostal_yield_day_rounded:
         friendly_name: "Stromerzeugung"
         unit_of_measurement: 'kWh'
@@ -138,13 +148,13 @@ sensor:
         icon_template: mdi:solar-power
 
       daily_ownconsumption_wh:
-        friendly_name: "Eigenverbrauch [Wh]"
+        friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'Wh'
         value_template: "{{ (states('sensor.kostal_yield_day') | int) - (states('sensor.daily_energy_einspeisung_wh') | int) }}"
         icon_template: mdi:home-import-outline
 
       daily_ownconsumption_kwh:
-        friendly_name: "Eigenverbrauch [kWh]"
+        friendly_name: "Eigenverbrauch"
         unit_of_measurement: 'kWh'
         value_template: "{{ ((((states('sensor.kostal_yield_day') | int) - (states('sensor.daily_energy_einspeisung_wh') | int)) / 1000)) | round(0) }}"
         icon_template: mdi:home-import-outline

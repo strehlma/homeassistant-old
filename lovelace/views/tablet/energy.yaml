@@ -398,14 +398,14 @@ cards:
         style:
           top: 70vh
           left: 31vw
-        entity: sensor.sml_output_wirkenergie_bezug_summe_wh
+        entity: sensor.consumption_counter_kwh
 
       - type: custom:button-card
         template: sensor
         style:
           top: 70vh
           left: 47vw
-        entity: sensor.sml_output_wirkenergie_einspeisung_summe_wh
+        entity: sensor.feed_in_counter_kwh
 
       # - type: custom:hui-entities-card
       #   style:
