@@ -114,6 +114,23 @@ cards:
 
       #################################################
       #                                               #
+      #                   Weather                     #
+      #                                               #
+      #################################################
+
+      - type: image
+        image: {{ state_attr("sensor.buienradar_condition", "entity_picture") }}
+        action: none
+        style:
+          height: 4,5vh
+          width: 4,5vh
+          top: 30%
+          left: 7%
+        tap_action: none
+        
+
+      #################################################
+      #                                               #
       #                 Persons                       #
       #                                               #
       #################################################

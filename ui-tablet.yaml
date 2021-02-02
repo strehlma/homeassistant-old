@@ -257,9 +257,9 @@ button_card_templates:
               style: *popup_style
               show_header_toggle: false
               entities:
-                - type: custom:hui-sensor-card
-                  graph: line
-                  entity: '[[[ return entity.entity_id ]]]'
+                - type: custom:mini-graph-card
+                  entities: 
+                    - '[[[ return entity.entity_id ]]]'
         
   menu:
     layout: icon_name

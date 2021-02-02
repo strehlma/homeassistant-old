@@ -445,6 +445,11 @@ cards:
             color: '#888888'
             show_state: false
             show_legend: false
+          - entity: sensor.sun_elevation
+            name: Sonnenhöhe
+            color: '#ffcc00'
+            show_state: false
+            show_legend: false
 
       - type: custom:mini-graph-card
         name: Solarleistung / Verbrauch

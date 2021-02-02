@@ -1,3 +1,10 @@
+weather:
+  - platform: buienradar
+    name: 'heek'
+    latitude: !secret latitude_home
+    longitude: !secret longitude_home
+    forecast: true
+
 sensor:
   - platform: buienradar
     name: 'buienradar'
@@ -30,9 +37,17 @@ sensor:
       - rainlast24hour
       - rainlasthour
 
-weather:
-  - platform: buienradar
-    name: 'heek'
-    latitude: !secret latitude_home
-    longitude: !secret longitude_home
-    forecast: true
+  - platform: template
+    sensors:
+      sun_elevation:
+        friendly_name: "Sonnenhöhe"
+        unit_of_measurement: '°'
+        value_template: "{{ state_attr('sun.sun', 'elevation') }}"
+        icon_template: mdi:weather-sunny
+
+      sun_azimuth:
+        friendly_name: "Sonnenrichtung"
+        unit_of_measurement: '°'
+        value_template: "{{ state_attr('sun.sun', 'azimuth') }}"
+        icon_template: mdi:weather-sunny
+  
