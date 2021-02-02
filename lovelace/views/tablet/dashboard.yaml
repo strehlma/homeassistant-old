@@ -119,7 +119,7 @@ cards:
       #################################################
 
       - type: image
-        image: {{ state_attr("sensor.buienradar_condition", "entity_picture") }}
+        image: "{{ state_attr('sensor.buienradar_condition', 'entity_picture') }}"
         action: none
         style:
           height: 4,5vh
