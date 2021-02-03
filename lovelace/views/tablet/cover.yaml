@@ -350,7 +350,7 @@ cards:
             name: Büro
             buttons_position: left
             title_position: bottom
-        - entity: cover.office_hmip
+          - entity: cover.office_hmip
             name: Büro (Homematic)
             buttons_position: left
             title_position: bottom
