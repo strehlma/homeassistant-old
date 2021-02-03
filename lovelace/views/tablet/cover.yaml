@@ -1,6 +1,6 @@
-title: Home
-path: home
-icon: 'mdi:home'
+title: Cover
+path: cover
+icon: 'mdi:window-shutter'
 panel: true
 
 cards:
@@ -165,7 +165,7 @@ cards:
           action: navigate
           navigation_path: /lovelace-tablet/home
 
-      - type: custom:button-card      # Home
+      - type: custom:button-card      # Cover
         template: menu
         name: Cover
         icon: mdi:window-shutter
