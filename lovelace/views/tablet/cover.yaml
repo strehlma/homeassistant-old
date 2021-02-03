@@ -333,12 +333,12 @@ cards:
       #                                                                        #
       ##########################################################################
 
-      - prefix: Büro
-        <<: *title
-        style:
-          top: 9.15%
-          left: 25.4%
-          <<: *title-style
+      # - prefix: Büro
+      #   <<: *title
+      #   style:
+      #     top: 9.15%
+      #     left: 25.4%
+      #     <<: *title-style
 
       - type: 'custom:shutter-card'
         title: Rolläden
