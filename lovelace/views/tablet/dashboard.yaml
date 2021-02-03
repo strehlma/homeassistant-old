@@ -181,13 +181,24 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace-tablet/home
-        
+
+      - type: custom:button-card      # Home
+        template: menu
+        name: Cover
+        icon: mdi:window-shutter
+        style:
+          top: 43%
+          left: 10.5%
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace-tablet/cover
+            
       - type: custom:button-card      # Media
         template: menu
         name: Media
         icon: mdi:speaker
         style:
-          top: 43%
+          top: 51%
           left: 10.5%
         tap_action:
           action: navigate
@@ -198,7 +209,7 @@ cards:
         name: Energie
         icon: mdi:flash
         style:
-          top: 51%
+          top: 59%
           left: 10.5%
         tap_action:
           action: navigate
@@ -209,7 +220,7 @@ cards:
         name: System
         icon: mdi:server
         style:
-          top: 59%
+          top: 67%
           left: 10.5%
         tap_action:
           action: navigate
@@ -220,7 +231,7 @@ cards:
         name: Settings
         icon: mdi:cog-outline
         style:
-          top: 67%
+          top: 75%
           left: 10.5%
         tap_action:
           action: navigate

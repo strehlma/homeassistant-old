@@ -25,5 +25,6 @@
     {url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js,      type: module},
     {url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js,          type: module},
     {url: /hacsfiles/kiosk-mode/kiosk-mode.js,                                 type: module},
+    {url: /hacsfiles/hass-shutter-card/hass-shutter-card.js,                   type: module},
     {url: /hacsfiles/tesla-style-solar-power-card/tesla-style-solar-power-card.js, type: module},
     {url: /local/font.css,                                                     type: css} ]

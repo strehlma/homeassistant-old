@@ -1,0 +1,23 @@
+cover:
+  - platform: template
+    covers:
+      office:
+        friendly_name: "Büro"
+        open_cover:
+          service: cover.open_cover
+          data:
+            entity_id: cover.office_hmip
+        close_cover:
+          service: cover.close_cover
+          data:
+            entity_id: cover.office_hmip
+        stop_cover:
+          service: cover.stop_cover
+          data:
+            entity_id: cover.office_hmip
+        set_cover_position:
+          service: cover.set_cover_position
+          data:
+            entity_id: cover.office_hmip
+            position: "{{position}}"
+        value_template: "{{is_state('cover.office_hmip', 'open')}}"
