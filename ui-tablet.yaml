@@ -545,6 +545,7 @@ kiosk_mode:
   kiosk: true
 views:
   - !include lovelace/views/tablet/dashboard.yaml
+  - !include lovelace/views/tablet/cover.yaml
   - !include lovelace/views/tablet/energy.yaml
   - !include lovelace/views/tablet/media.yaml
   - !include lovelace/views/tablet/system.yaml
