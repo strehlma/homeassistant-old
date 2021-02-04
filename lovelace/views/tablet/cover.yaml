@@ -341,16 +341,55 @@ cards:
       #     <<: *title-style
 
       - type: 'custom:shutter-card'
-        title: Rolläden
-        style:
+        style: |
           top: 20.35%
-          left: 30.31%
+          left: 40.31%
         entities:
-          - entity: cover.office
+          - entity: cover.livingroom_hmip
             name: Büro
             buttons_position: left
-            title_position: bottom
-          - entity: cover.office_hmip
-            name: Büro (Homematic)
+            title_position: top
+
+      - type: 'custom:shutter-card'
+        style: |
+          top: 20.35%
+          left: 50.31%
+        entities:
+          - entity: cover.diningroom_hmip
+            name: Büro
             buttons_position: left
-            title_position: bottom
+            title_position: top
+    
+      - type: 'custom:shutter-card'
+        style: |
+          top: 20.35%
+          left: 60.31%
+        entities:
+          - entity: cover.bedroom_hmip
+            name: Büro
+            buttons_position: left
+            title_position: top
+        
+      - type: 'custom:shutter-card'
+        style: |
+          top: 20.35%
+          left: 70.31%
+        entities:
+          - entity: cover.office_hmip
+            name: Büro
+            buttons_position: left
+            title_position: top
+            
+          # - entity: cover.office_hmip
+          #   name: Büro (Homematic)
+          #   buttons_position: left
+          #   title_position: bottom
+
+          #   - type: horizontal-stack
+          #   cards:                
+          #     - type: 'custom:shutter-card'
+          #       entities:
+          #         - entity: cover.google_eetkamer
+          #     - type: 'custom:shutter-card'
+          #       entities:
+          #         - entity: cover.google_living
