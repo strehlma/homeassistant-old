@@ -341,7 +341,7 @@ cards:
       #     <<: *title-style
 
       - type: 'custom:shutter-card'
-        style: |
+        style: 
           top: 20.35%
           left: 40.31%
         entities:
@@ -351,7 +351,7 @@ cards:
             title_position: top
 
       - type: 'custom:shutter-card'
-        style: |
+        style: 
           top: 20.35%
           left: 50.31%
         entities:
@@ -361,7 +361,7 @@ cards:
             title_position: top
     
       - type: 'custom:shutter-card'
-        style: |
+        style: 
           top: 20.35%
           left: 60.31%
         entities:
@@ -371,7 +371,7 @@ cards:
             title_position: top
         
       - type: 'custom:shutter-card'
-        style: |
+        style: 
           top: 20.35%
           left: 70.31%
         entities:
