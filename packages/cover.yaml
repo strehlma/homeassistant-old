@@ -22,6 +22,6 @@ cover:
             entity_id: cover.office_hmip
             position: >
               {% set desired_position = "{{ position }}" %}
-              {% set requested_position = ( (desired_positon * 0.8) | round 0 ) %}
+              {% set requested_position = "( (desired_positon * 0.8) | round 0 )"" %}
               {{ desired_position }}
             
