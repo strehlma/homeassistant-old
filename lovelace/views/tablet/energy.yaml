@@ -430,6 +430,8 @@ cards:
         points_per_hour: 60
         hour24: true
         line_width: 3
+        lower_bound_secondary: -80
+        upper_bound_secondary: 80
         color_thresholds:
           - color: '#B4CD31'
             value: 1
@@ -447,6 +449,7 @@ cards:
             show_legend: false
           - entity: sensor.sun_elevation
             name: Sonnenhöhe
+            y_axis: secondary
             color: '#ffcc00'
             show_state: false
             show_legend: false
