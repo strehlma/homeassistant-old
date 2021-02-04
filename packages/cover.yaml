@@ -20,7 +20,48 @@ cover:
           service: cover.set_cover_position
           data_template:
             entity_id: cover.office_hmip
-            position: >
-              {% set desired_position = "{{ position }}" | int %}
-              {{ (desired_position * 0.8) | int }}
-            
+            position: "{{ (( position | int ) * 0.8 ) | int }}"
+              
+# script:              
+#   set_cover_position:
+#     mode: single
+#     sequence:
+# #      - service: system_log.write
+# #        data_template:
+# #          message: "{{ ( position | int ) - ( states('sensor.'~shade) | int ) }}"
+#       - choose:
+#         # IF must open_shades
+#         - conditions:
+#             - condition: template
+#               value_template: "{{ ( position | int ) > (states('sensor.'~shade)|int + 9) }}" #min 10% change
+#           sequence:
+#             - service: script.turn_on
+#               entity_id:
+#                 - script.rise_shades 
+#               data_template:
+#                 variables:
+#                   deltaporcento: "{{ ( position | int ) - ( states('sensor.'~shade) ) | int }}"
+#                   shade: "{{ shade }}"
+#             - service: mqtt.publish
+#               data:
+#                 topic: "void/Shades/Position"
+#               data_template:
+#                 payload: "{{ position }}"
+#       # ELSEIF must close_shades
+#         - conditions:
+#             - condition: template
+#               value_template: "{{ ( position | int ) < ( states('sensor.'~shade) ) | int - 9 }}" #min 10% change
+#           sequence:
+# #            - service: script.lower_shades
+#             - service: script.turn_on
+#               entity_id:
+#                 - script.lower_shades
+#               data_template:
+#                 variables:
+#                   deltaporcento: "{{ ( ( states('sensor.'~shade) ) | int ) - ( position | int ) }}"
+#                   shade: "{{ shade }}"
+#             - service: mqtt.publish
+#               data:
+#                 topic: "void/Shades/Position"
+#               data_template:
+#                 payload: "{{ position }}"
