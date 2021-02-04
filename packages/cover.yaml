@@ -20,7 +20,7 @@ cover:
           service: cover.set_cover_position
           data_template:
             entity_id: cover.office_hmip
-            position: "{{ (( position | int ) * 0.8 ) | int }}"
+            position: "{{ (( position | int ) * 1.2 ) | int }}"
               
 # script:              
 #   set_cover_position:
