@@ -20,5 +20,7 @@ cover:
           service: cover.set_cover_position
           data_template:
             entity_id: cover.office_hmip
-            position: {{ (position * 0.8) | round(0) }}
+            position: >
+              {% set desired_position = "{{ position }}" %}
+              {{ (desired_position * 0.8) | round(0) }}
             
