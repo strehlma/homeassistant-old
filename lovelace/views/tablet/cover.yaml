@@ -342,8 +342,10 @@ cards:
 
       - type: 'custom:shutter-card'
         style: |
-          top: 20.35%;
-          left: 40.31%;
+          .element {
+            top: 20.35%;
+            left: 40.31%;
+          }
           ha-card {
             font-size: 11px !IMPORTANT;
           }
