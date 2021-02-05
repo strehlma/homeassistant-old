@@ -370,7 +370,7 @@ cards:
           }
         entities:
           - entity: cover.livingroom_hmip
-            name: Büro
+            name: Wohnzimmer
             buttons_position: left
             title_position: top
 
@@ -380,7 +380,7 @@ cards:
           left: 50.31%
         entities:
           - entity: cover.diningroom_hmip
-            name: Büro
+            name: Esszimmer
             buttons_position: left
             title_position: top
     
@@ -390,7 +390,7 @@ cards:
           left: 60.31%
         entities:
           - entity: cover.bedroom_hmip
-            name: Büro
+            name: Schlafzimmer
             buttons_position: left
             title_position: top
         
