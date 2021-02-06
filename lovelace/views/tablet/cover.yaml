@@ -1,3 +1,21 @@
+anchors:
+  anchor1: &title
+    entity: sensor.placeholder
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    type: state-label
+
+  anchor2: &title-style
+    color: '#bcbebf'
+    font-family: SF Text
+    font-size: 2.4vw
+    font-weight: 500
+    max-width: 1px
+    cursor: default
+
+
 title: Cover
 path: cover
 icon: 'mdi:window-shutter'
@@ -329,22 +347,23 @@ cards:
 
       ##########################################################################
       #                                                                        #
-      #                             * Wohnzimmer *                             #
+      #                             * Obergeschoss *                           #
       #                                                                        #
       ##########################################################################
 
-      # - prefix: Büro
-      #   <<: *title
-      #   style:
-      #     top: 9.15%
-      #     left: 25.4%
-      #     <<: *title-style
+      - prefix: Obergeschoss
+        <<: *title
+        style:
+          top: 9.15%
+          left: 25.4%
+          <<: *title-style
 
       - type: 'custom:shutter-card'
         style: |
           .element {
             top: 20.35%;
-            left: 40.31%;
+            left: 30%;
+            width: 200px;
           }
           ha-card {
             font-size: 11px !IMPORTANT;
@@ -375,9 +394,34 @@ cards:
             title_position: top
 
       - type: 'custom:shutter-card'
-        style: 
-          top: 20.35%
-          left: 50.31%
+        style: |
+          .element {
+            top: 20.35%;
+            left: 50%;
+            width: 200px;
+          }
+          ha-card {
+            font-size: 11px !IMPORTANT;
+          }
+          .sc-shutter-label {
+            font-size: 15px !IMPORTANT;
+          }
+          .sc-shutter-top {
+            text-align: left !IMPORTANT;
+          }
+          .card-header {
+            font-size: 20px !IMPORTANT;
+          }
+          .sc-shutter-selector-slide {
+            width: 54% !IMPORTANT;
+          }
+          .sc-shutter-selector-picture {
+            background-size: 100px 100% !IMPORTANT;
+            background-repeat: no-repeat !IMPORTANT;
+          }
+          .sc-shutter-selector-picker {
+            width: 54% !IMPORTANT;
+          }
         entities:
           - entity: cover.diningroom_hmip
             name: Esszimmer
@@ -385,9 +429,34 @@ cards:
             title_position: top
     
       - type: 'custom:shutter-card'
-        style: 
-          top: 20.35%
-          left: 60.31%
+        style: |
+          .element {
+            top: 20.35%;
+            left: 50%;
+            width: 200px;
+          }
+          ha-card {
+            font-size: 11px !IMPORTANT;
+          }
+          .sc-shutter-label {
+            font-size: 15px !IMPORTANT;
+          }
+          .sc-shutter-top {
+            text-align: left !IMPORTANT;
+          }
+          .card-header {
+            font-size: 20px !IMPORTANT;
+          }
+          .sc-shutter-selector-slide {
+            width: 54% !IMPORTANT;
+          }
+          .sc-shutter-selector-picture {
+            background-size: 100px 100% !IMPORTANT;
+            background-repeat: no-repeat !IMPORTANT;
+          }
+          .sc-shutter-selector-picker {
+            width: 54% !IMPORTANT;
+          }
         entities:
           - entity: cover.bedroom_hmip
             name: Schlafzimmer
@@ -395,25 +464,50 @@ cards:
             title_position: top
         
       - type: 'custom:shutter-card'
-        style: 
-          top: 20.35%
-          left: 70.31%
+        style: |
+          .element {
+            top: 20.35%;
+            left: 50%;
+            width: 200px;
+          }
+          ha-card {
+            font-size: 11px !IMPORTANT;
+          }
+          .sc-shutter-label {
+            font-size: 15px !IMPORTANT;
+          }
+          .sc-shutter-top {
+            text-align: left !IMPORTANT;
+          }
+          .card-header {
+            font-size: 20px !IMPORTANT;
+          }
+          .sc-shutter-selector-slide {
+            width: 54% !IMPORTANT;
+          }
+          .sc-shutter-selector-picture {
+            background-size: 100px 100% !IMPORTANT;
+            background-repeat: no-repeat !IMPORTANT;
+          }
+          .sc-shutter-selector-picker {
+            width: 54% !IMPORTANT;
+          }
         entities:
           - entity: cover.office_hmip
             name: Büro
             buttons_position: left
             title_position: top
             
-          # - entity: cover.office_hmip
-          #   name: Büro (Homematic)
-          #   buttons_position: left
-          #   title_position: bottom
 
-          #   - type: horizontal-stack
-          #   cards:                
-          #     - type: 'custom:shutter-card'
-          #       entities:
-          #         - entity: cover.google_eetkamer
-          #     - type: 'custom:shutter-card'
-          #       entities:
-          #         - entity: cover.google_living
+      ##########################################################################
+      #                                                                        #
+      #                             * Erdgeschoss *                            #
+      #                                                                        #
+      ##########################################################################
+
+      - prefix: Erdgeschoss
+        <<: *title
+        style:
+          top: 30%
+          left: 25.4%
+          <<: *title-style
