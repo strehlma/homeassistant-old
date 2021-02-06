@@ -418,7 +418,7 @@ input_text:
 ################################################
 automation:
 - alias: battery_persistent_notification
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: time_pattern
       minutes: '/15'
@@ -486,7 +486,7 @@ automation:
           {{ battery_level() }}
 
 - alias: battery_persistent_notification_clear
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: time_pattern
       minutes: '/15'
@@ -529,7 +529,7 @@ automation:
         notification_id: low_battery_alert
 
 - alias: battery_notification_default
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: time
       at: '10:00:00'
@@ -554,7 +554,7 @@ automation:
         title: "Low Battery Levels"
         message: *message
 - alias: battery_notification_slack
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: time
       at: '10:00:00'
@@ -583,7 +583,7 @@ automation:
             title: "These devices have low battery levels"
             text: *message
 - alias: battery_sensor_from_attributes
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: event
       event_type: state_changed
@@ -731,7 +731,7 @@ automation:
             "delete_battery_sensor": "homeassistant/sensor/{{ trigger.event.data.entity_id.split('.')[1] }}_battery"
           }
 - alias: update_battery_status_group_members
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: time_pattern
       minutes: '/1'
@@ -763,7 +763,7 @@ automation:
             {{ item.entity_id }}{% if not loop.last %}, {% endif %}
           {%- endfor -%}
 - alias: delete_battery_sensor
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id:

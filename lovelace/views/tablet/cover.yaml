@@ -21,37 +21,35 @@ path: cover
 icon: 'mdi:window-shutter'
 panel: true
 
+# ha-card {
+#   font-size: 11px !IMPORTANT;
+# }
+# .sc-shutter-label {
+#   font-size: 15px !IMPORTANT;
+# }
+# .sc-shutter-top {
+#   text-align: left !IMPORTANT;
+# }
+# .card-header {
+#   font-size: 20px !IMPORTANT;
+# }
+# .sc-shutter-selector-slide {
+#   width: 54% !IMPORTANT;
+# }
+# .sc-shutter-selector-picture {
+#   background-size: 100px 100% !IMPORTANT;
+#   background-repeat: no-repeat !IMPORTANT;
+# }
+# .sc-shutter-selector-picker {
+#   width: 54% !IMPORTANT;
+# }
+
 cards:
   - type: picture-elements
     image: /local/images/background.png
 
     style:
       .: |
-
-          ha-card {
-            font-size: 11px !IMPORTANT;
-          }
-          .sc-shutter-label {
-            font-size: 15px !IMPORTANT;
-          }
-          .sc-shutter-top {
-            text-align: left !IMPORTANT;
-          }
-          .card-header {
-            font-size: 20px !IMPORTANT;
-          }
-          .sc-shutter-selector-slide {
-            width: 54% !IMPORTANT;
-          }
-          .sc-shutter-selector-picture {
-            background-size: 100px 100% !IMPORTANT;
-            background-repeat: no-repeat !IMPORTANT;
-          }
-          .sc-shutter-selector-picker {
-            width: 54% !IMPORTANT;
-          }
-
-
         /* Global */
         #root > hui-icon-element {opacity: 0.1 !important; transition: 0.4s;}
         #root > hui-icon-element:hover {opacity: 0.25 !important; transition: none;}
