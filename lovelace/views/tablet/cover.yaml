@@ -27,6 +27,31 @@ cards:
 
     style:
       .: |
+
+          ha-card {
+            font-size: 11px !IMPORTANT;
+          }
+          .sc-shutter-label {
+            font-size: 15px !IMPORTANT;
+          }
+          .sc-shutter-top {
+            text-align: left !IMPORTANT;
+          }
+          .card-header {
+            font-size: 20px !IMPORTANT;
+          }
+          .sc-shutter-selector-slide {
+            width: 54% !IMPORTANT;
+          }
+          .sc-shutter-selector-picture {
+            background-size: 100px 100% !IMPORTANT;
+            background-repeat: no-repeat !IMPORTANT;
+          }
+          .sc-shutter-selector-picker {
+            width: 54% !IMPORTANT;
+          }
+
+
         /* Global */
         #root > hui-icon-element {opacity: 0.1 !important; transition: 0.4s;}
         #root > hui-icon-element:hover {opacity: 0.25 !important; transition: none;}
@@ -54,6 +79,9 @@ cards:
       "#root > hui-state-label-element":
         $: |
           div {padding: 0 !important;}
+
+
+      
 
     elements:
 
@@ -354,39 +382,15 @@ cards:
       - prefix: Obergeschoss
         <<: *title
         style:
-          top: 9.15%
+          top: 5%
           left: 25.4%
           <<: *title-style
 
       - type: 'custom:shutter-card'
-        style: |
-          .element {
-            top: 20.35%;
-            left: 30%;
-            width: 200px;
-          }
-          ha-card {
-            font-size: 11px !IMPORTANT;
-          }
-          .sc-shutter-label {
-            font-size: 15px !IMPORTANT;
-          }
-          .sc-shutter-top {
-            text-align: left !IMPORTANT;
-          }
-          .card-header {
-            font-size: 20px !IMPORTANT;
-          }
-          .sc-shutter-selector-slide {
-            width: 54% !IMPORTANT;
-          }
-          .sc-shutter-selector-picture {
-            background-size: 100px 100% !IMPORTANT;
-            background-repeat: no-repeat !IMPORTANT;
-          }
-          .sc-shutter-selector-picker {
-            width: 54% !IMPORTANT;
-          }
+        style: 
+          top: 20.35%;
+          left: 30%;
+          width: 200px;
         entities:
           - entity: cover.livingroom_hmip
             name: Wohnzimmer
@@ -394,34 +398,10 @@ cards:
             title_position: top
 
       - type: 'custom:shutter-card'
-        style: |
-          .element {
-            top: 20.35%;
-            left: 50%;
-            width: 200px;
-          }
-          ha-card {
-            font-size: 11px !IMPORTANT;
-          }
-          .sc-shutter-label {
-            font-size: 15px !IMPORTANT;
-          }
-          .sc-shutter-top {
-            text-align: left !IMPORTANT;
-          }
-          .card-header {
-            font-size: 20px !IMPORTANT;
-          }
-          .sc-shutter-selector-slide {
-            width: 54% !IMPORTANT;
-          }
-          .sc-shutter-selector-picture {
-            background-size: 100px 100% !IMPORTANT;
-            background-repeat: no-repeat !IMPORTANT;
-          }
-          .sc-shutter-selector-picker {
-            width: 54% !IMPORTANT;
-          }
+        style: 
+          top: 20.35%
+          left: 50%
+          width: 200px
         entities:
           - entity: cover.diningroom_hmip
             name: Esszimmer
@@ -429,34 +409,10 @@ cards:
             title_position: top
     
       - type: 'custom:shutter-card'
-        style: |
-          .element {
-            top: 20.35%;
-            left: 50%;
-            width: 200px;
-          }
-          ha-card {
-            font-size: 11px !IMPORTANT;
-          }
-          .sc-shutter-label {
-            font-size: 15px !IMPORTANT;
-          }
-          .sc-shutter-top {
-            text-align: left !IMPORTANT;
-          }
-          .card-header {
-            font-size: 20px !IMPORTANT;
-          }
-          .sc-shutter-selector-slide {
-            width: 54% !IMPORTANT;
-          }
-          .sc-shutter-selector-picture {
-            background-size: 100px 100% !IMPORTANT;
-            background-repeat: no-repeat !IMPORTANT;
-          }
-          .sc-shutter-selector-picker {
-            width: 54% !IMPORTANT;
-          }
+        style: 
+            top: 20.35%
+            left: 50%
+            width: 200px
         entities:
           - entity: cover.bedroom_hmip
             name: Schlafzimmer
@@ -464,34 +420,10 @@ cards:
             title_position: top
         
       - type: 'custom:shutter-card'
-        style: |
-          .element {
-            top: 20.35%;
-            left: 50%;
-            width: 200px;
-          }
-          ha-card {
-            font-size: 11px !IMPORTANT;
-          }
-          .sc-shutter-label {
-            font-size: 15px !IMPORTANT;
-          }
-          .sc-shutter-top {
-            text-align: left !IMPORTANT;
-          }
-          .card-header {
-            font-size: 20px !IMPORTANT;
-          }
-          .sc-shutter-selector-slide {
-            width: 54% !IMPORTANT;
-          }
-          .sc-shutter-selector-picture {
-            background-size: 100px 100% !IMPORTANT;
-            background-repeat: no-repeat !IMPORTANT;
-          }
-          .sc-shutter-selector-picker {
-            width: 54% !IMPORTANT;
-          }
+        style: 
+            top: 20.35%
+            left: 50%
+            width: 200px
         entities:
           - entity: cover.office_hmip
             name: Büro
@@ -508,6 +440,6 @@ cards:
       - prefix: Erdgeschoss
         <<: *title
         style:
-          top: 30%
+          top: 40%
           left: 25.4%
           <<: *title-style
