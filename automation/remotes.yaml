@@ -1,14 +1,56 @@
-- alias: 'Toggle bedroom TV'
+- alias: 'Open cover bathroom'
   initial_state: true
   trigger:
       - platform: event
         event_type: deconz_event
         event_data:
           id: remote_tradfri
-          event: 1002
+          event: 4002
   action:
-    service: switch.toggle
-    entity_id: switch.wellness_plug
+    service: cover.open_cover
+    data:
+      entity_id: cover.bathroom_eg_hmip
+
+- alias: 'Close cover bathroom'
+  initial_state: true
+  trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: remote_tradfri
+          event: 5002
+  action:
+    service: cover.close_cover
+    data:
+      entity_id: cover.bathroom_eg_hmip
+
+- alias: 'Open cover bathroom to 70%'
+  initial_state: true
+  trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: remote_tradfri
+          event: 2002
+  action:
+    service: cover.set_cover_position
+    data:
+      entity_id: cover.bathroom_eg_hmip
+      position: 70 
+
+- alias: 'Close cover bathroom to 10%'
+  initial_state: true
+  trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: remote_tradfri
+          event: 3002
+  action:
+    service: cover.set_cover_position
+    data:
+      entity_id: cover.bathroom_eg_hmip
+      position: 10 
 
 - alias: 'Turn on bedroom TV'
   initial_state: true
