@@ -1,3 +1,17 @@
+- alias: 'Stop cover bathroom'
+  initial_state: true
+  trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: remote_tradfri
+          event: 1002
+  action:
+    service: cover.stop_cover
+    data:
+      entity_id: cover.bathroom_eg_hmip
+
+
 - alias: 'Open cover bathroom'
   initial_state: true
   trigger:
