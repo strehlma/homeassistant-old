@@ -21,6 +21,17 @@ homekit:
       - switch.shelf
       - switch.showcase
 
+      # Rolläden
+      - cover.bathroom_eg_hmip
+      - cover.bedroom_eg_hmip
+      - cover.bedroom_hmip
+      - cover.diningroom_eg_hmip
+      - cover.diningroom_hmip
+      - cover.kaethe_hmip
+      - cover.livingroom_eg_hmip
+      - cover.livingroom_hmip
+      - cover.office_hmip
+
   entity_config:
     climate.bad:
       name: Bad
@@ -46,3 +57,22 @@ homekit:
       name: Wohnzimmerregal
     switch.showcase:
       name: Vitrine
+
+    cover.bathroom_eg_hmip:
+      name: Bad EG
+    cover.bedroom_eg_hmip:
+      name: Schlafzimmer EG
+    cover.bedroom_hmip:
+      name: Schlafzimmer
+    cover.diningroom_eg_hmip:
+      name: Esszimmer EG
+    cover.diningroom_hmip:
+      name: Esszimmer
+    cover.kaethe_hmip:
+      name: Käthe
+    cover.livingroom_eg_hmip:
+      name: Wohnzimmer EG
+    cover.livingroom_hmip:
+      name: Wohnzimmer
+    cover.office_hmip:
+      name: Büro
