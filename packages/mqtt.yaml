@@ -1,6 +1,6 @@
-mqtt:
-  discovery: true
-  discovery_prefix: homeassistant
+# mqtt:
+#   discovery: true
+#   discovery_prefix: homeassistant
   
 switch:
   - platform: mqtt
