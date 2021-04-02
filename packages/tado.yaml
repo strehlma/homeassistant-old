@@ -1,6 +1,6 @@
-tado:
-  username: !secret tado_username
-  password: !secret tado_password
+# tado:
+#   username: !secret tado_username
+#   password: !secret tado_password
 
 binary_sensor:
   - platform: template
