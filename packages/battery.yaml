@@ -336,6 +336,26 @@ homeassistant:
       friendly_name: "Delete a Battery Sensor"
       icon: mdi:server-remove
 
+    ################################################
+    ## Disabled Alerts
+    ################################################
+    sensor.battery_level_3:
+      battery_alert_disabled: true
+    sensor.battery_level_3:
+      battery_alert_disabled: true
+    sensor.kostal_battery_state_of_charge:
+      battery_alert_disabled: true
+    sensor.kostal_home_power_from_battery:
+      battery_alert_disabled: true
+    sensor.sandras_ipad_battery_level_2:
+      battery_alert_disabled: true
+    sensor.sandras_ipad_battery_state_2:
+      battery_alert_disabled: true
+    sensor.marios_ipad_battery_level:
+      battery_alert_disabled: true
+    sensor.marios_ipad_battery_state:
+      battery_alert_disabled: true
+      
 ################################################
 ## Group
 ################################################
