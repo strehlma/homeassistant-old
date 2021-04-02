@@ -342,15 +342,19 @@ cards:
           width: 400px
           height: 260px
         #  width: 400px
-        #general
-        house_consumption_entity: sensor.actual_energy_consumption_w #expects (k)W for the power being consumed in the house (can be a template sensor sum (grid_consumption, solar_consumptio and battery_consumption)
-        #grid
+        #bubbles
         grid_consumption_entity: sensor.actual_grid_consumption_w #(k)W for the power being fed from the grid to the house
-        grid_feed_in_entity: sensor.actual_grid_feed_in_w #expects (k)W for the power being fed from the panels to the grid (selling)
+        house_consumption_entity: sensor.actual_energy_consumption_w #expects (k)W for the power being consumed in the house (can be a template sensor sum (grid_consumption, solar_consumptio and battery_consumption)
+        generation_yield_entity: sensor.actual_energy_production_w #expects (k)W for the power being produced currently from the panels
+        # flows between bubbles
+        grid_to_house_entity: sensor.actual_grid_consumption_w
+        generation_to_grid_entity: sensor.actual_grid_feed_in_w
+        generation_to_house_entity: sensor.actual_solar_consumption_w
+        # grid_feed_in_entity: sensor.actual_grid_feed_in_w #expects (k)W for the power being fed from the panels to the grid (selling)
         #solar
-        solar_consumption_entity: sensor.actual_solar_consumption_w  #expects (k)W for the power being fed from the panels to the house
-        solar_yield_entity: sensor.actual_energy_production_w #expects (k)W for the power being produced currently from the panels
-        tap_action: !include popup/sidebar_solar_power.yaml
+        # solar_consumption_entity: sensor.actual_solar_consumption_w  #expects (k)W for the power being fed from the panels to the house
+        # solar_yield_entity: sensor.actual_energy_production_w #expects (k)W for the power being produced currently from the panels
+        # tap_action: !include popup/sidebar_solar_power.yaml
 
       # - type: custom:hui-entities-card
       #   style:
